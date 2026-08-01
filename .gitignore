@@ -1,0 +1,4 @@
+# Nothing from the parent project belongs here. This repo is PUBLIC.
+*.env
+*.db
+*.log

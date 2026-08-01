@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Ciel Study</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="brand">Ciel <span>Study</span></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="terms.html">Terms &amp; Conditions</a>
+    <a href="privacy.html" class="on">Privacy Policy</a>
+    <a href="refunds.html">Refund &amp; Cancellation</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</header>
+
+<h1>Privacy Policy</h1>
+<p class="updated">Last updated: <span id="d"></span></p>
+
+<p>This policy explains what Ciel Study collects, why, and what we do not collect. We
+have deliberately kept the amount of personal data to a minimum.</p>
+
+<h2>1. What we collect</h2>
+<table>
+  <tr><th>Data</th><th>Why</th></tr>
+  <tr><td>Your Telegram numeric user ID</td>
+      <td>To identify your account, apply your access, and keep your progress</td></tr>
+  <tr><td>Your Telegram display name</td>
+      <td>To address you in messages and show first names on the leaderboard</td></tr>
+  <tr><td>Questions you attempt and whether you answered correctly</td>
+      <td>To show your accuracy, streak, and schedule spaced repetition</td></tr>
+  <tr><td>Subscription status and expiry date</td>
+      <td>To know whether your access is active</td></tr>
+  <tr><td>Payment reference IDs from Razorpay</td>
+      <td>To match a completed payment to your account and avoid double-charging</td></tr>
+  <tr><td>Feedback you submit through the bot</td>
+      <td>To investigate and reply to the issue you reported</td></tr>
+</table>
+
+<h2>2. What we do NOT collect</h2>
+<ul>
+  <li><strong>We never see or store your card, UPI or bank details.</strong> Those are
+      handled entirely by Razorpay on their own secure pages.</li>
+  <li>We do not collect your phone number, email address or postal address.</li>
+  <li>We do not read your other Telegram chats. A bot can only see messages sent
+      directly to it.</li>
+  <li>We do not use advertising trackers or third-party analytics.</li>
+</ul>
+
+<h2>3. Where your data is stored</h2>
+<p>Your data is stored in a local database controlled by the operator, in India. It is
+not sold, rented, or shared for marketing.</p>
+
+<h2>4. Who we share data with</h2>
+<p>Only where necessary to run the Service:</p>
+<ul>
+  <li><strong>Telegram</strong> — because the Service is delivered through Telegram,
+      your use is also subject to Telegram's own privacy policy.</li>
+  <li><strong>Razorpay</strong> — our payment processor. When you pay, Razorpay
+      receives the payment details you enter and returns a payment reference to us.
+      Razorpay's handling of that data is governed by their privacy policy.</li>
+  <li><strong>Legal obligation</strong> — if required by applicable law.</li>
+</ul>
+
+<h2>5. How long we keep it</h2>
+<p>Practice history and account records are kept while your account exists, so that
+your progress and streak remain meaningful. Payment reference records are retained as
+long as needed for accounting and dispute handling.</p>
+
+<h2>6. Your choices</h2>
+<p>You may ask us to delete your account and practice history at any time by
+contacting us — see <a href="contact.html">Contact Us</a>. We will delete it within a
+reasonable period, except records we are required to keep for tax or dispute purposes.
+Deleting your data ends any active access and does not by itself create a refund
+entitlement; refunds are covered by the
+<a href="refunds.html">Refund &amp; Cancellation Policy</a>.</p>
+
+<h2>7. Children</h2>
+<p>The Service is intended for medical graduates preparing for licensing
+examinations and is not directed at children under 13.</p>
+
+<h2>8. Security</h2>
+<p>We take reasonable steps to protect your data. No system is completely secure, and
+we cannot guarantee absolute security. If a breach affects your data, we will inform
+affected users.</p>
+
+<h2>9. Changes</h2>
+<p>We may update this policy. The "last updated" date above reflects the current
+version, and material changes will be announced through the bot.</p>
+
+<h2>10. Contact</h2>
+<p>Privacy questions or a deletion request: see <a href="contact.html">Contact Us</a>.</p>
+
+<footer>
+  © <span id="y"></span> Ciel Study ·
+  <a href="terms.html">Terms</a> ·
+  <a href="privacy.html">Privacy</a> ·
+  <a href="refunds.html">Refunds</a> ·
+  <a href="contact.html">Contact</a>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById('d').textContent =
+      new Date().toLocaleDateString('en-IN', {day:'numeric', month:'long', year:'numeric'});
+  </script>
+</footer>
+</div>
+</body>
+</html>
