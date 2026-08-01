@@ -7,19 +7,24 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="wrap">
-<header>
-  <div class="brand">Ciel <span>Study</span></div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="pricing.html" class="on">Pricing</a>
-    <a href="terms.html">Terms &amp; Conditions</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="refunds.html">Refund &amp; Cancellation</a>
-    <a href="contact.html">Contact Us</a>
-  </nav>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="inner">
+    <a class="brand" href="index.html"><span class="dot"></span>Ciel <em>Study</em></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="pricing.html" class="on">Pricing</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="refunds.html">Refunds</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="https://t.me/Ciel_Study_bot">Open the bot</a>
+  </div>
 </header>
 
+<main id="main" class="wrap doc">
 <h1>Pricing</h1>
 <p class="updated">All prices in Indian Rupees (INR ₹). Prices include all applicable taxes.</p>
 
@@ -28,13 +33,13 @@
 required and there is no time-limited trial. The free allowance resets every day.</p>
 
 <h2>Paid plans</h2>
-<table>
+<div class="table-scroll"><table>
   <tr><th>Plan</th><th>Price (INR)</th><th>Access period</th><th>Renewal</th></tr>
   <tr><td>1 week</td><td>₹50</td><td>7 days</td><td>One-time payment. Does not renew.</td></tr>
   <tr><td>1 month</td><td>₹150</td><td>30 days</td><td>One-time payment. Does not renew.</td></tr>
   <tr><td>1 month (auto-renew)</td><td>₹100 per month</td><td>30 days, recurring</td>
       <td>Renews automatically each month until cancelled.</td></tr>
-</table>
+</table></div>
 
 <h2>What a paid plan includes</h2>
 <ul>
@@ -62,15 +67,26 @@ manually.</p>
   until you cancel. You can cancel at any time from within the bot or by contacting
   us — see the <a href="refunds.html">Refund &amp; Cancellation Policy</a>.
 </div>
+</main>
 
-<footer>
-  © <span id="y"></span> Ciel Study ·
-  <a href="terms.html">Terms</a> ·
-  <a href="privacy.html">Privacy</a> ·
-  <a href="refunds.html">Refunds</a> ·
-  <a href="contact.html">Contact</a>
+<footer class="site-foot">
+  <div class="inner">
+    <div>
+      <strong style="color:var(--text)">Ciel Study</strong>
+      <p class="fine">Operated by an individual (sole proprietor) in India. Not
+      affiliated with, endorsed by, or connected to the National Board of Examinations
+      (NBE) or any official examination body.</p>
+      <p class="fine">&copy; <span id="y"></span> Ciel Study</p>
+    </div>
+    <nav>
+      <a href="pricing.html">Pricing</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="refunds.html">Refunds</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </footer>
-</div>
 </body>
 </html>

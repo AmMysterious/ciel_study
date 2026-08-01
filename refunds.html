@@ -7,19 +7,24 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="wrap">
-<header>
-  <div class="brand">Ciel <span>Study</span></div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="terms.html">Terms &amp; Conditions</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="refunds.html" class="on">Refund &amp; Cancellation</a>
-    <a href="contact.html">Contact Us</a>
-  </nav>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="inner">
+    <a class="brand" href="index.html"><span class="dot"></span>Ciel <em>Study</em></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="refunds.html" class="on">Refunds</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="https://t.me/Ciel_Study_bot">Open the bot</a>
+  </div>
 </header>
 
+<main id="main" class="wrap doc">
 <h1>Refund &amp; Cancellation Policy</h1>
 <p class="updated">Last updated: <span id="d"></span></p>
 
@@ -38,13 +43,13 @@ immediately after payment is confirmed.</p>
 both conditions below are met. The window is proportionate to the length of the plan
 you bought.</p>
 
-<table>
+<div class="table-scroll"><table>
   <tr><th>Plan</th><th>Refund window</th><th>Question limit</th></tr>
   <tr><td>1 week (₹50)</td><td>Within <strong>1 day</strong> of payment</td>
       <td rowspan="3">Fewer than <strong>25 questions</strong> attempted on the paid plan</td></tr>
   <tr><td>1 month (₹150)</td><td>Within <strong>3 days</strong> of payment</td></tr>
   <tr><td>1 month auto-renew (₹100)</td><td>Within <strong>7 days</strong> of the charge</td></tr>
-</table>
+</table></div>
 
 <p>This lets you genuinely test the question bank while preventing a period of study
 being consumed and then reclaimed.</p>
@@ -91,19 +96,26 @@ charged after you cancelled, tell us and we will refund that renewal in full.</p
 Approved refunds are processed through Razorpay to the original payment method and
 typically reach your account within <strong>5–7 business days</strong>, depending on
 your bank. Refunds are made in Indian Rupees to the original payment method only.</p>
+</main>
 
-<footer>
-  © <span id="y"></span> Ciel Study ·
-  <a href="terms.html">Terms</a> ·
-  <a href="privacy.html">Privacy</a> ·
-  <a href="refunds.html">Refunds</a> ·
-  <a href="contact.html">Contact</a>
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-    document.getElementById('d').textContent =
-      new Date().toLocaleDateString('en-IN', {day:'numeric', month:'long', year:'numeric'});
-  </script>
+<footer class="site-foot">
+  <div class="inner">
+    <div>
+      <strong style="color:var(--text)">Ciel Study</strong>
+      <p class="fine">Operated by an individual (sole proprietor) in India. Not
+      affiliated with, endorsed by, or connected to the National Board of Examinations
+      (NBE) or any official examination body.</p>
+      <p class="fine">&copy; <span id="y"></span> Ciel Study</p>
+    </div>
+    <nav>
+      <a href="pricing.html">Pricing</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="refunds.html">Refunds</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </footer>
-</div>
 </body>
 </html>
