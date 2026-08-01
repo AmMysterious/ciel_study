@@ -24,9 +24,9 @@ no build step, no dependencies and no tracking.
 | Plan | Price | Access |
 |---|---|---|
 | Free | ₹0 | 3 questions per day, indefinitely |
-| 1 week | ₹50 | 7 days |
-| 1 month | ₹150 | 30 days |
-| 1 month, auto-renew | ₹100/month | 30 days, recurring until cancelled |
+| 1 week | ₹100 | 7 days |
+| 1 month | ₹300 | 30 days |
+| 1 month, auto-renew | ₹239/month | 30 days, recurring until cancelled |
 
 Payments are processed by Razorpay. Payment details are entered on Razorpay's hosted
 page and are never handled by Ciel Study.
