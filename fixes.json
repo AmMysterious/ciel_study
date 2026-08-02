@@ -1,0 +1,47 @@
+{
+  "_comment": "Public fixes log. PRIVACY RULE: never name a reporter, quote their message, or include a Telegram id. Show that reports get fixed, not who reported them. status: fixed | in progress | wont fix",
+  "fixes": [
+    {
+      "date": "2026-08-02",
+      "area": "Payments",
+      "what": "Subscription payments were not unlocking access. A payment made through the auto-renew plan was not being linked back to the buyer's account, so access stayed locked. Fixed the same day; affected payment refunded in full and access granted.",
+      "status": "fixed"
+    },
+    {
+      "date": "2026-08-02",
+      "area": "Payments",
+      "what": "Added /myplan so anyone can check their own plan, expiry and auto-renew status without asking.",
+      "status": "fixed"
+    },
+    {
+      "date": "2026-08-02",
+      "area": "Payments",
+      "what": "Added UPI QR as a payment option alongside the card/UPI link.",
+      "status": "fixed"
+    },
+    {
+      "date": "2026-08-02",
+      "area": "Question bank",
+      "what": "Corrected OCR damage across 780+ questions: glued-together words, Roman numerals misread as lowercase letters (CN Vll to CN VII, Angiotensin ll to II), and stray source-book page references left inside explanations.",
+      "status": "fixed"
+    },
+    {
+      "date": "2026-08-02",
+      "area": "Question bank",
+      "what": "Removed one question whose patient age was clearly corrupted. It is out of rotation until it can be checked against the source.",
+      "status": "fixed"
+    },
+    {
+      "date": "2026-08-02",
+      "area": "Question bank",
+      "what": "Six questions carry a duplicated answer option. The correct answer is unaffected in every case; the duplicate distractor is being replaced.",
+      "status": "in progress"
+    },
+    {
+      "date": "2026-08-02",
+      "area": "Website",
+      "what": "Corrected the advertised question counts to match what the bot actually serves, and stated the number of image questions still held back.",
+      "status": "fixed"
+    }
+  ]
+}
