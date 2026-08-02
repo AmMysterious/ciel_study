@@ -217,7 +217,10 @@ h3 { font-size: 1.08rem; margin: 0 0 7px; }
 
 /* ── Pricing ────────────────────────────────────────────────────────────── */
 
-.plans { display: grid; gap: 18px; grid-template-columns: repeat(4, 1fr); align-items: start; }
+/* ⚠ `align-items: start` was harmless while every card was a one-line summary,
+   but once the cards carry feature lists of different lengths it leaves them
+   ragged (467px next to 251px). `stretch` squares them off. */
+.plans { display: grid; gap: 18px; grid-template-columns: repeat(4, 1fr); align-items: stretch; }
 .plan {
   background: var(--surface); border: 1px solid var(--line);
   border-radius: var(--radius); padding: 24px 20px; position: relative;
@@ -232,6 +235,24 @@ h3 { font-size: 1.08rem; margin: 0 0 7px; }
 .plan .price { font-size: 1.95rem; font-weight: 700; letter-spacing: -.03em; }
 .plan .price small { font-size: .8rem; font-weight: 500; color: var(--text-dim); }
 .plan .per { color: var(--text-dim); font-size: .88rem; margin: 0 0 6px; }
+/* What each plan actually includes. The Free card previously said only
+   "3 questions a day", which undersold the tier a stranger judges you on. */
+.plan-list {
+  list-style: none; margin: 14px 0 0; padding: 14px 0 0;
+  border-top: 1px solid var(--line);
+  font-size: .86rem; line-height: 1.5; color: var(--text-dim);
+}
+.plan-list li { position: relative; padding-left: 18px; margin-bottom: 6px; }
+.plan-list li::before {
+  content: "✓"; position: absolute; left: 0; top: 0;
+  color: var(--amber); font-weight: 700;
+}
+.plan-list li:last-child { margin-bottom: 0; }
+.plan-list strong { color: var(--text); font-weight: 650; }
+.plan-list code {
+  font-size: .82em; background: rgba(255,255,255,.06);
+  padding: 1px 5px; border-radius: 4px;
+}
 
 /* ── Notes ──────────────────────────────────────────────────────────────── */
 
