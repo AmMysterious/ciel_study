@@ -104,8 +104,26 @@ def render_fixes() -> list[str]:
             for e in by_year[year])
         blocks.append(FIXES_TEMPLATE.format(year=year, rows=rows))
 
+    # ── what's next ──────────────────────────────────────────────────────────
+    # ⚠ NO DATES, deliberately. A missed date on a public page is a promise
+    # broken in writing; "planned" with no date is a direction, not a contract.
+    planned = data.get("planned", [])
+    if planned:
+        rows = "\n".join(
+            "<tr><td>{a}</td><td>{w}</td></tr>".format(
+                a=_esc(e.get("area", "")), w=_esc(e.get("what", "")))
+            for e in planned)
+        nxt = ("<h2>What's next</h2>\n"
+               "<p>Things I intend to build. No dates — I would rather ship them than "
+               "promise a day and miss it.</p>\n"
+               '<div class="table-scroll"><table>\n'
+               "<tr><th>Area</th><th>What</th></tr>\n" + rows + "\n</table></div>\n")
+    else:
+        nxt = ""
+
     page = (HERE / "_fixes_shell.html").read_text(encoding="utf-8")
     out = page.replace("<!--FIXES-->", "\n".join(blocks)) \
+              .replace("<!--PLANNED-->", nxt) \
               .replace("<!--COUNT-->", str(len(entries))) \
               .replace("<!--UPDATED-->", datetime.date.today().strftime("%d %B %Y"))
     target = HERE / "fixes.html"
