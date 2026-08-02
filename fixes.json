@@ -4,6 +4,30 @@
     {
       "date": "2026-08-03",
       "area": "Bot",
+      "what": "Added an optional daily reminder. Pick a time and get one short message a day, plus a summary of your week on Sundays. It is off unless you choose a time, it is never more than one message a day, and every reminder carries a one-tap Turn off button.",
+      "status": "fixed"
+    },
+    {
+      "date": "2026-08-03",
+      "area": "Bot",
+      "what": "Added a shareable progress card — your questions answered, accuracy, streak and rank as a single image you can post. Get it with /mycard or from Progress.",
+      "status": "fixed"
+    },
+    {
+      "date": "2026-08-03",
+      "area": "Questions",
+      "what": "Every question now shows which exam and year it came from, for example 'NEET-PG 2023'. Two older sets have no year recorded, so those show the exam alone rather than a guessed year.",
+      "status": "fixed"
+    },
+    {
+      "date": "2026-08-03",
+      "area": "Question bank",
+      "what": "Fixed 6 questions where OCR had duplicated one of the options, so the same choice appeared twice. The correct answer was never affected; the repeated option has been removed.",
+      "status": "fixed"
+    },
+    {
+      "date": "2026-08-03",
+      "area": "Bot",
       "what": "Reorganised the buttons under the message box. They are now grouped into Practice and My Account instead of one long list, so the menu takes up less of the screen while you are reading a question.",
       "status": "fixed"
     },
