@@ -2,6 +2,18 @@
   "_comment": "Public log. PRIVACY RULE: never name a reporter, quote their message, or include a Telegram id. Show that reports get fixed, not who reported them. status: fixed | in progress | planned | wont fix. ⚠ Only list PLANNED items you actually intend to build, and never put a DATE on one — a missed date on a public page is a promise broken in writing.",
   "fixes": [
     {
+      "date": "2026-08-03",
+      "area": "Bot",
+      "what": "Reorganised the buttons under the message box. They are now grouped into Practice and My Account instead of one long list, so the menu takes up less of the screen while you are reading a question.",
+      "status": "fixed"
+    },
+    {
+      "date": "2026-08-03",
+      "area": "Bot",
+      "what": "My Plan and Help can now be reached from the menu itself, under My Account. Previously you had to already know the command existed to check your own plan or find help.",
+      "status": "fixed"
+    },
+    {
       "date": "2026-08-02",
       "area": "Payments",
       "what": "Subscription payments were not unlocking access. A payment made through the auto-renew plan was not being linked back to the buyer's account, so access stayed locked. Fixed the same day; affected payment refunded in full and access granted.",
