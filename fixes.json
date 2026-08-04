@@ -112,60 +112,46 @@
   ],
   "planned": [
     {
-      "area": "Question bank",
-      "what": "Restore the ~89 image-based questions currently held back, by re-reading each figure clearly enough to be certain of the answer."
-    },
-    {
-      "area": "Question bank",
-      "what": "Finish cleaning the remaining OCR damage — a tail of run-together words in explanations. Nothing here affects an answer key; it is readability only."
-    },
-    {
-      "area": "Coverage",
-      "what": "Deeper NEET-PG and INI-CET coverage. Both are already in the bank and both will keep growing."
-    },
-    {
-      "area": "Coverage",
-      "what": "Other medical entrance and service exams, starting with UPSC CMS. The aim is one place to practise whichever exam you are sitting."
-    },
-    {
-      "area": "Questions",
-      "what": "Video-based questions. If you have material that would suit this, send it through — it genuinely helps."
-    },
-    {
-      "area": "Reliability",
-      "what": "Move the bot to always-on hosting so it keeps answering during a power cut or network drop at my end."
-    }
-  ],
-  "milestones": [
-    {
       "status": "building",
       "goal": "Always-on hosting, 24/7",
-      "why": "Right now the bot runs on my own laptop, so it can only answer while that machine is awake. Nothing is ever lost — messages queue and payments are picked up automatically — but you can be left waiting. Moving to a proper server ends that.",
-      "unlocks_when": "Subscriptions cover the monthly server cost"
+      "why": "Right now the bot runs on my own laptop, so it can only answer while that machine is awake. Nothing is ever lost — messages queue and payments are picked up automatically — but you can be left waiting. A proper server ends that.",
+      "when": "Subscriptions cover the monthly server cost"
     },
     {
       "status": "next",
       "goal": "Instant payment confirmation, every time",
-      "why": "Access already unlocks by itself, usually in seconds. Once the bot is on a server with a fixed address, the confirmation is immediate and never depends on my laptop being on.",
-      "unlocks_when": "The move to always-on hosting is done"
+      "why": "Access already unlocks by itself, usually in seconds. On a server with a fixed address the confirmation is immediate and never depends on my laptop being on.",
+      "when": "The move to always-on hosting is done"
     },
     {
       "status": "next",
       "goal": "Every image question available",
       "why": "89 image-based questions are held back because I can't yet read the figure clearly enough to be certain of the answer. I would rather withhold a question than serve one I'm unsure of.",
-      "unlocks_when": "Each figure has been re-checked by hand"
+      "when": "Each figure has been re-read and checked by hand"
+    },
+    {
+      "status": "next",
+      "goal": "The last of the OCR damage cleaned up",
+      "why": "A tail of run-together words still sits in some explanations. Nothing here affects an answer key — it is readability only — and it is being fixed by hand rather than by a script, because an automated fix on medical text does more harm than good.",
+      "when": "Ongoing — a batch at a time"
     },
     {
       "status": "next",
       "goal": "Deeper NEET-PG and INI-CET coverage",
       "why": "Both are already in the bank and both keep growing. FMGE is the deepest today; the aim is for all three to feel equally complete.",
-      "unlocks_when": "Ongoing — questions are added every week"
+      "when": "Ongoing — questions are added every week"
+    },
+    {
+      "status": "next",
+      "goal": "Video-based questions",
+      "why": "Some topics are far clearer in motion than in a still image.",
+      "when": "Suitable material exists — if you have some, send it through /feedback"
     },
     {
       "status": "next",
       "goal": "Other medical entrance and service exams, starting with UPSC CMS",
       "why": "One place to practise whichever exam you are sitting, rather than a different app for each.",
-      "unlocks_when": "The three current exams are where I want them"
+      "when": "The three current exams are where I want them"
     }
   ]
 }

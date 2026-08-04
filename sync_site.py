@@ -189,47 +189,35 @@ def render_fixes() -> list[str]:
             for e in by_year[year])
         blocks.append(FIXES_TEMPLATE.format(year=year, rows=rows))
 
-    # ── milestones ───────────────────────────────────────────────────────────
-    # ⚠ Same no-dates rule as "what's next", for the same reason. These are
-    # gated on a CONDITION being met, not on a calendar — which is both honest
-    # and checkable, where a date is a promise that can only be broken.
+    # ── what's next (one roadmap) ────────────────────────────────────────────
+    # ⚠ ONE section, not two. This was "Milestones" AND "What's next" until
+    # 4 Aug, and four of the six planned items were already milestones — the
+    # same facts written twice, which is the exact drift this whole file exists
+    # to prevent. Merged at Nawar's call.
+    # ⚠ NO DATES, deliberately: a missed date on a public page is a promise
+    # broken in writing. Each item is gated on a CONDITION instead, which is
+    # both honest and checkable.
     # ⚠ Never publish customer counts or revenue here. "When running costs are
     # covered" says what matters without turning the page into a balance sheet.
-    miles = data.get("milestones", [])
-    if miles:
+    planned = data.get("planned", [])
+    if planned:
         rows = "\n".join(
             "<tr><td>{s}</td><td><b>{g}</b><br><span class=\"fine\">{w}</span></td>"
             "<td>{u}</td></tr>".format(
                 s={"done": "✅", "building": "🔨", "next": "⏭"}.get(e.get("status"), "•"),
                 g=_esc(e.get("goal", "")), w=_esc(e.get("why", "")),
-                u=_esc(e.get("unlocks_when", "")))
-            for e in miles)
-        mstone = ("<h2>Milestones</h2>\n"
-                  "<p>The bigger upgrades I'm working towards, and what each one has to "
-                  "wait for. No dates &mdash; each is gated on something real rather than "
-                  "a day I'd rather not miss.</p>\n"
-                  '<div class="table-scroll"><table>\n'
-                  "<tr><th></th><th>Goal</th><th>Happens when</th></tr>\n"
-                  + rows + "\n</table></div>\n")
-    else:
-        mstone = ""
-
-    # ── what's next ──────────────────────────────────────────────────────────
-    # ⚠ NO DATES, deliberately. A missed date on a public page is a promise
-    # broken in writing; "planned" with no date is a direction, not a contract.
-    planned = data.get("planned", [])
-    if planned:
-        rows = "\n".join(
-            "<tr><td>{a}</td><td>{w}</td></tr>".format(
-                a=_esc(e.get("area", "")), w=_esc(e.get("what", "")))
+                u=_esc(e.get("when", "")))
             for e in planned)
         nxt = ("<h2>What's next</h2>\n"
-               "<p>Things I intend to build. No dates — I would rather ship them than "
-               "promise a day and miss it.</p>\n"
+               "<p>What I'm building, and what each one is waiting on. No dates "
+               "&mdash; I would rather ship something than promise a day and miss "
+               "it.</p>\n"
                '<div class="table-scroll"><table>\n'
-               "<tr><th>Area</th><th>What</th></tr>\n" + rows + "\n</table></div>\n")
+               "<tr><th></th><th>Goal</th><th>Happens when</th></tr>\n"
+               + rows + "\n</table></div>\n")
     else:
         nxt = ""
+    mstone = ""          # section merged into "What's next"
 
     page = (HERE / "_fixes_shell.html").read_text(encoding="utf-8")
     out = page.replace("<!--FIXES-->", "\n".join(blocks)) \
