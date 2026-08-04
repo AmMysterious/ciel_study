@@ -2,6 +2,36 @@
   "_comment": "Public log. PRIVACY RULE: never name a reporter, quote their message, or include a Telegram id. Show that reports get fixed, not who reported them. status: fixed | in progress | planned | wont fix. ⚠ Only list PLANNED items you actually intend to build, and never put a DATE on one — a missed date on a public page is a promise broken in writing.",
   "fixes": [
     {
+      "date": "2026-08-04",
+      "area": "Free plan",
+      "what": "The free plan now gives 5 questions a day instead of 3, and one of them is always an image-based question with the real figure.",
+      "status": "fixed"
+    },
+    {
+      "date": "2026-08-04",
+      "area": "Payments",
+      "what": "Added a safeguard against paying twice. If you already have access, or you opened a payment page in the last few minutes, the bot stops and tells you to check /myplan first rather than letting you pay again.",
+      "status": "fixed"
+    },
+    {
+      "date": "2026-08-04",
+      "area": "Payments",
+      "what": "Corrected the checkout wording. It said access unlocks 'instantly'; it now says access unlocks automatically, usually within seconds and always within a few minutes, which is what actually happens.",
+      "status": "fixed"
+    },
+    {
+      "date": "2026-08-04",
+      "area": "Bot",
+      "what": "The leaderboard now has three boards: most answered, best accuracy, and longest streak. The old single board ranked only by volume, which nobody on the free plan could ever top. Accuracy and streak are winnable by anyone.",
+      "status": "fixed"
+    },
+    {
+      "date": "2026-08-04",
+      "area": "Bot",
+      "what": "Opening the bot now starts you on a real question straight away instead of showing a page of description first.",
+      "status": "fixed"
+    },
+    {
       "date": "2026-08-03",
       "area": "Bot",
       "what": "Added an optional daily reminder. Pick a time and get one short message a day, plus a summary of your week on Sundays. It is off unless you choose a time, it is never more than one message a day, and every reminder carries a one-tap Turn off button.",

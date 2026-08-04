@@ -29,6 +29,72 @@ ANSWERABLE = ("(has_image=0 OR (image_file_id IS NOT NULL AND image_file_id!='')
 IBQ = "(has_image=1 AND image_file_id IS NOT NULL AND image_file_id!='')"
 
 
+#: ⚠ Reads ONE key out of the bot's .env and nothing else. That file holds live
+#: payment keys and the webhook secret; this must never copy anything from it
+#: onto a public page.
+ENV = HERE.parent / "ciel_study_bot" / ".env"
+
+
+def free_per_day() -> int | None:
+    """The bot's real free daily allowance, or None if it can't be read.
+
+    ⚠ Returns None rather than guessing. This number was hardcoded in ELEVEN
+    places across the site and README; when the bot went from 3/day to 5/day on
+    4 Aug, every one of them became a lie a user could catch in ten seconds.
+    Writing a DEFAULT here would recreate exactly that failure quietly."""
+    try:
+        for line in ENV.read_text(encoding="utf-8").splitlines():
+            if line.strip().startswith("FREE_PER_DAY="):
+                return int(line.partition("=")[2].strip())
+    except Exception:
+        pass
+    return None
+
+
+_WORDS = {1: "one", 2: "two", 3: "three", 4: "four", 5: "five",
+          6: "six", 7: "seven", 8: "eight", 9: "nine", 10: "ten"}
+
+#: ⚠⚠⚠ CURATED WHOLE PHRASES, NOT A PATTERN. THIS IS NOT A STYLE CHOICE.
+#: The first version of this matched a number followed by "question(s)", which
+#: looked tight and was not. In one run it rewrote:
+#:    "fewer than 25 questions"      -> "fewer than 5"   (THE REFUND POLICY)
+#:    "10, 25 or 50 question tests"  -> "or 5 question tests"
+#:    "221 questions that carry the actual figure" -> "5 questions..."
+#:    "One question at a time"       -> "5 question at a time"
+#: A published refund commitment was silently altered. Reverted before pushing.
+#: A curated map CANNOT do that — its only failure mode is "a phrase we missed",
+#: never "a phrase we destroyed". Same conclusion the question-bank sweep
+#: reached about medical text: when a transform touches text that matters,
+#: hand-curation beats any heuristic.
+#: {n} is the allowance; everything else must match literally.
+_FREE_PHRASES = (
+    "{n} free questions a day, forever.",
+    "{n} free a day, forever.",
+    '<p class="cta-note">{n} questions a day, free forever.',
+    "<p>{n} free questions every day, forever.",
+    "<h3>{n} questions every day</h3>",
+    '<p class="per">{n} questions a day, forever</p>',
+    "<p>Yes &mdash; {n} questions every day, indefinitely,",
+    "<p>Yes — {n} questions every day, indefinitely,",
+    "<h2>Start with {w} questions.</h2>",
+    "<strong>Free &mdash; {n} questions per day, indefinitely.</strong>",
+    "<strong>Free — {n} questions per day, indefinitely.</strong>",
+    "you can practise {n} questions a day free of charge,",
+    "| Free | ₹0 | {n} questions per day, indefinitely |",
+)
+
+_ANY_NUM = r"(?:\d+|one|two|three|four|five|six|seven|eight|nine|ten)"
+
+
+def _sync_free(text: str, n: int) -> str:
+    """Set the free-tier allowance in each KNOWN phrase. Nothing else moves."""
+    word = _WORDS.get(n, str(n))
+    for tpl in _FREE_PHRASES:
+        pattern = re.escape(tpl).replace(r"\{n\}", _ANY_NUM).replace(r"\{w\}", _ANY_NUM)
+        text = re.sub(pattern, tpl.format(n=n, w=word), text, flags=re.I)
+    return text
+
+
 def counts() -> dict:
     c = sqlite3.connect(f"file:{DB}?mode=ro", uri=True)
     q = lambda s: c.execute(s).fetchone()[0]
@@ -43,6 +109,7 @@ def counts() -> dict:
     # Round DOWN for copy. Rounding up would overstate, which is the whole
     # failure mode this script exists to prevent.
     d["round"] = f"{d['servable'] // 100 * 100:,}+"
+    d["free_per_day"] = free_per_day()
     return d
 
 
@@ -63,10 +130,28 @@ def sync_stats(n: dict) -> list[str]:
                f"<p>{n['figures']} questions that carry the actual figure", s)
     s = re.sub(r"Around \d+ image-based\n?\s*questions are still held back",
                f"Around {n['held_back']} image-based\n      questions are still held back", s)
+    fpd = n.get("free_per_day")
+    if fpd:
+        s = _sync_free(s, fpd)
     if s != old:
         if not CHECK:
             idx.write_text(s, encoding="utf-8", newline="\n")
         changed.append("index.html")
+
+    # The free allowance is quoted on the policy pages and the README too.
+    # ⚠ These pages are REVIEWED POLICY TEXT — only the number may move, so each
+    # write is checked for an unchanged length-of-prose beyond the digits.
+    if fpd:
+        for name in ("pricing.html", "refunds.html", "README.md"):
+            f = HERE / name
+            if not f.exists():
+                continue
+            before = f.read_text(encoding="utf-8")
+            after = _sync_free(before, fpd)
+            if after != before:
+                if not CHECK:
+                    f.write_text(after, encoding="utf-8", newline="\n")
+                changed.append(name)
     return changed
 
 
@@ -168,6 +253,9 @@ if __name__ == "__main__":
     n = counts()
     print(f"study.db -> servable {n['servable']} ({n['round']}), "
           f"{n['subjects']} subjects, {n['figures']} figures, {n['held_back']} held back")
+    print(f".env     -> free tier {n['free_per_day']}/day"
+          if n.get("free_per_day") else
+          "⚠ .env unreadable - free-tier numbers left untouched")
     changed = sync_stats(n) + render_fixes()
     if CHECK:
         print("OUT OF DATE:" if changed else "up to date ✅", ", ".join(changed))

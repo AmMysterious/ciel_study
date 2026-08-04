@@ -23,7 +23,7 @@ no build step, no dependencies and no tracking.
 
 | Plan | Price | Access |
 |---|---|---|
-| Free | ₹0 | 3 questions per day, indefinitely |
+| Free | ₹0 | 5 questions per day, indefinitely |
 | 1 week | ₹100 | 7 days |
 | 1 month | ₹300 | 30 days |
 | 1 month, auto-renew | ₹239/month | 30 days, recurring until cancelled |
