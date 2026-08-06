@@ -3,6 +3,12 @@
   "fixes": [
     {
       "date": "2026-08-04",
+      "area": "Bot",
+      "what": "You can now tell the bot which exam you're preparing for. FMGE, NEET-PG and INI-CET stay together on purpose — they overlap heavily and practising across all three is what builds exam-day speed. UPSC CMS and university subject exams are being built; you can join the list for either and I'll message you the day it opens.",
+      "status": "fixed"
+    },
+    {
+      "date": "2026-08-04",
       "area": "Free plan",
       "what": "The free plan now gives 5 questions a day instead of 3, and one of them is always an image-based question with the real figure.",
       "status": "fixed"
