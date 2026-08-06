@@ -4,6 +4,36 @@
     {
       "date": "2026-08-04",
       "area": "Bot",
+      "what": "Added Grand Tests — a full-length mock in the real exam's own shape. FMGE is 300 questions across two papers with sections of 50 and no negative marking; NEET-PG and INI-CET are simulated with their own question counts, timing and marking schemes. Two a month, included with the 1-month and auto-renew plans.",
+      "status": "fixed"
+    },
+    {
+      "date": "2026-08-04",
+      "area": "Bot",
+      "what": "A Grand Test can be paused for a break. The clock stops, and it costs marks — about ten questions' worth — because in the real exam a break costs you time you never get back. The price is shown before you start and again when you tap it.",
+      "status": "fixed"
+    },
+    {
+      "date": "2026-08-04",
+      "area": "Questions",
+      "what": "Got one wrong? Tap 'Why not X?' to see why the option you chose was wrong, taken from the same hand-checked explanation. If the explanation doesn't cover that option, the button isn't offered rather than showing something vague.",
+      "status": "fixed"
+    },
+    {
+      "date": "2026-08-04",
+      "area": "Question bank",
+      "what": "Every question now has a one-tap 'This looks wrong' button. It opens a real ticket you can follow with /myfeedback, and it goes straight to me.",
+      "status": "fixed"
+    },
+    {
+      "date": "2026-08-04",
+      "area": "Bot",
+      "what": "You can set your exam date with /examdate and see a countdown on your progress.",
+      "status": "fixed"
+    },
+    {
+      "date": "2026-08-04",
+      "area": "Bot",
       "what": "You can now tell the bot which exam you're preparing for. FMGE, NEET-PG and INI-CET stay together on purpose — they overlap heavily and practising across all three is what builds exam-day speed. UPSC CMS and university subject exams are being built; you can join the list for either and I'll message you the day it opens.",
       "status": "fixed"
     },
