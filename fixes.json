@@ -4,7 +4,19 @@
     {
       "date": "2026-08-06",
       "area": "Bot",
-      "what": "Added Grand Tests — a full-length mock in the real exam's own shape. FMGE is 300 questions across two papers with sections of 50 and no negative marking; NEET-PG and INI-CET are simulated with their own question counts, timing and marking schemes. Two a month, included with the 1-month and auto-renew plans.",
+      "what": "Added Grand Tests — a full-length mock in the real exam's own shape. FMGE is 300 questions across two papers with sections of 50 and no negative marking; NEET-PG and INI-CET are simulated with their own question counts, timing and marking schemes. Two a month on the 1-month and auto-renew plans, and one on the 1-week plan.",
+      "status": "fixed"
+    },
+    {
+      "date": "2026-08-06",
+      "area": "Plans",
+      "what": "The 1-week plan now includes one Grand Test. It previously included none.",
+      "status": "fixed"
+    },
+    {
+      "date": "2026-08-06",
+      "area": "Plans",
+      "what": "Fixed: Grand Tests were not unlocking for everyone entitled to them. Access was being checked against how a plan was recorded rather than how long it runs for, so some people on an active plan were told their plan did not include a Grand Test when it did. Anyone affected now has their full allowance, and nothing was deducted for a test they were refused.",
       "status": "fixed"
     },
     {
