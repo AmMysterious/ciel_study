@@ -2,6 +2,18 @@
   "_comment": "Public log. PRIVACY RULE: never name a reporter, quote their message, or include a Telegram id. Show that reports get fixed, not who reported them. status: fixed | in progress | planned | wont fix. ⚠ Only list PLANNED items you actually intend to build, and never put a DATE on one — a missed date on a public page is a promise broken in writing.",
   "fixes": [
     {
+      "date": "2026-08-09",
+      "area": "Question bank",
+      "what": "A reader flagged a question and it turned out to be broken four ways — its explanation belonged to a different question, two options were near-identical, and the figure it depends on had never been stored. That one report led to a check of the whole bank, which found 30 more questions where the parser had merged the NEXT question's text into an answer option. 20 of those are now repaired — including one where an option had swallowed a second answer, so restoring it gave the question its missing fourth choice back. 13 are held back until I can rebuild them properly, and the question that was flagged is out of circulation until its figure is in place.",
+      "status": "fixed"
+    },
+    {
+      "date": "2026-08-09",
+      "area": "Question bank",
+      "what": "When you tap 'This looks wrong', you're now asked what looked wrong — one tap, six options. Previously a report told me only that something was off, which is hard to act on and impossible to reply to properly. The report still files if you skip the question.",
+      "status": "fixed"
+    },
+    {
       "date": "2026-08-06",
       "area": "Bot",
       "what": "Added Grand Tests — a full-length mock in the real exam's own shape. FMGE is 300 questions across two papers with sections of 50 and no negative marking; NEET-PG and INI-CET are simulated with their own question counts, timing and marking schemes. Two a month on the 1-month and auto-renew plans, and one on the 1-week plan.",
