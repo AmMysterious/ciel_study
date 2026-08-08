@@ -162,7 +162,7 @@ def sync_stats(n: dict) -> list[str]:
 # fixed, not to expose who reported.
 FIXES_JSON = HERE / "fixes.json"
 
-FIXES_TEMPLATE = """<h2>{year}</h2>
+FIXES_TEMPLATE = """<h3>{year}</h3>
 <div class="table-scroll"><table>
 <tr><th>Date</th><th>Area</th><th>What changed</th><th>Status</th></tr>
 {rows}

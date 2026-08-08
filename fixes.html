@@ -53,7 +53,25 @@ including the ones that were my fault.</p>
 
 
 
-<h2>2026</h2>
+<h2>What's next</h2>
+<p>What I'm building, and what each one is waiting on. No dates &mdash; I would rather ship something than promise a day and miss it.</p>
+<div class="table-scroll"><table>
+<tr><th></th><th>Goal</th><th>Happens when</th></tr>
+<tr><td>🔨</td><td><b>Always-on hosting, 24/7</b><br><span class="fine">Right now the bot runs on my own laptop, so it can only answer while that machine is awake. Nothing is ever lost — messages queue and payments are picked up automatically — but you can be left waiting. A proper server ends that.</span></td><td>Subscriptions cover the monthly server cost</td></tr>
+<tr><td>⏭</td><td><b>Instant payment confirmation, every time</b><br><span class="fine">Access already unlocks by itself, usually in seconds. On a server with a fixed address the confirmation is immediate and never depends on my laptop being on.</span></td><td>The move to always-on hosting is done</td></tr>
+<tr><td>⏭</td><td><b>Every image question available</b><br><span class="fine">89 image-based questions are held back because I can't yet read the figure clearly enough to be certain of the answer. I would rather withhold a question than serve one I'm unsure of.</span></td><td>Each figure has been re-read and checked by hand</td></tr>
+<tr><td>⏭</td><td><b>The last of the OCR damage cleaned up</b><br><span class="fine">A tail of run-together words still sits in some explanations. Nothing here affects an answer key — it is readability only — and it is being fixed by hand rather than by a script, because an automated fix on medical text does more harm than good.</span></td><td>Ongoing — a batch at a time</td></tr>
+<tr><td>⏭</td><td><b>Deeper NEET-PG and INI-CET coverage</b><br><span class="fine">Both are already in the bank and both keep growing. FMGE is the deepest today; the aim is for all three to feel equally complete.</span></td><td>Ongoing — questions are added every week</td></tr>
+<tr><td>⏭</td><td><b>Video-based questions</b><br><span class="fine">Some topics are far clearer in motion than in a still image.</span></td><td>Suitable material exists — if you have some, send it through /feedback</td></tr>
+<tr><td>⏭</td><td><b>Other medical entrance and service exams, starting with UPSC CMS</b><br><span class="fine">One place to practise whichever exam you are sitting, rather than a different app for each.</span></td><td>The three current exams are where I want them</td></tr>
+</table></div>
+
+
+<h2>Everything I've fixed</h2>
+<p class="fine">Newest first. It's a long list on purpose &mdash; scroll it, or take the
+length as the point.</p>
+<div class="log-scroll">
+<h3>2026</h3>
 <div class="table-scroll"><table>
 <tr><th>Date</th><th>Area</th><th>What changed</th><th>Status</th></tr>
 <tr><td>2026-08-09</td><td>Question bank</td><td>A reader flagged a question and it turned out to be broken four ways — its explanation belonged to a different question, two options were near-identical, and the figure it depends on had never been stored. That one report led to a check of the whole bank, which found 30 more questions where the parser had merged the NEXT question's text into an answer option. 20 of those are now repaired — including one where an option had swallowed a second answer, so restoring it gave the question its missing fourth choice back. 13 are held back until I can rebuild them properly, and the question that was flagged is out of circulation until its figure is in place.</td><td>✅ fixed</td></tr>
@@ -86,20 +104,7 @@ including the ones that were my fault.</p>
 <tr><td>2026-08-02</td><td>Question bank</td><td>Six questions carry a duplicated answer option. The correct answer is unaffected in every case; the duplicate distractor is being replaced.</td><td>⏳ in progress</td></tr>
 </table></div>
 
-
-<h2>What's next</h2>
-<p>What I'm building, and what each one is waiting on. No dates &mdash; I would rather ship something than promise a day and miss it.</p>
-<div class="table-scroll"><table>
-<tr><th></th><th>Goal</th><th>Happens when</th></tr>
-<tr><td>🔨</td><td><b>Always-on hosting, 24/7</b><br><span class="fine">Right now the bot runs on my own laptop, so it can only answer while that machine is awake. Nothing is ever lost — messages queue and payments are picked up automatically — but you can be left waiting. A proper server ends that.</span></td><td>Subscriptions cover the monthly server cost</td></tr>
-<tr><td>⏭</td><td><b>Instant payment confirmation, every time</b><br><span class="fine">Access already unlocks by itself, usually in seconds. On a server with a fixed address the confirmation is immediate and never depends on my laptop being on.</span></td><td>The move to always-on hosting is done</td></tr>
-<tr><td>⏭</td><td><b>Every image question available</b><br><span class="fine">89 image-based questions are held back because I can't yet read the figure clearly enough to be certain of the answer. I would rather withhold a question than serve one I'm unsure of.</span></td><td>Each figure has been re-read and checked by hand</td></tr>
-<tr><td>⏭</td><td><b>The last of the OCR damage cleaned up</b><br><span class="fine">A tail of run-together words still sits in some explanations. Nothing here affects an answer key — it is readability only — and it is being fixed by hand rather than by a script, because an automated fix on medical text does more harm than good.</span></td><td>Ongoing — a batch at a time</td></tr>
-<tr><td>⏭</td><td><b>Deeper NEET-PG and INI-CET coverage</b><br><span class="fine">Both are already in the bank and both keep growing. FMGE is the deepest today; the aim is for all three to feel equally complete.</span></td><td>Ongoing — questions are added every week</td></tr>
-<tr><td>⏭</td><td><b>Video-based questions</b><br><span class="fine">Some topics are far clearer in motion than in a still image.</span></td><td>Suitable material exists — if you have some, send it through /feedback</td></tr>
-<tr><td>⏭</td><td><b>Other medical entrance and service exams, starting with UPSC CMS</b><br><span class="fine">One place to practise whichever exam you are sitting, rather than a different app for each.</span></td><td>The three current exams are where I want them</td></tr>
-</table></div>
-
+</div>
 
 <p class="fine">Reports are never identified here. No names, no messages and no Telegram
 IDs appear on this page &mdash; only what was wrong and what changed.</p>

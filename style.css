@@ -345,3 +345,14 @@ td strong { color: var(--text); }
   .wrap { padding: 0 16px; }
   .cta-row .btn { width: 100%; }
 }
+
+/* Fixes log: capped so "What's next" is reachable without scrolling past 28
+   entries. The list is meant to be long — it is the evidence — but it must not
+   bury the roadmap underneath it. */
+.log-scroll{max-height:58vh;overflow-y:auto;padding-right:6px;
+  border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;
+  background:var(--surface-2)}
+.log-scroll h3{margin-top:18px}
+.log-scroll h3:first-child{margin-top:0}
+.log-scroll::-webkit-scrollbar{width:10px}
+.log-scroll::-webkit-scrollbar-thumb{background:var(--slate-600);border-radius:6px}
