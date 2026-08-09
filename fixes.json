@@ -1,217 +1,235 @@
 {
-  "_comment": "Public log. PRIVACY RULE: never name a reporter, quote their message, or include a Telegram id. Show that reports get fixed, not who reported them. status: fixed | in progress | planned | wont fix. ⚠ Only list PLANNED items you actually intend to build, and never put a DATE on one — a missed date on a public page is a promise broken in writing.",
-  "fixes": [
-    {
-      "date": "2026-08-09",
-      "area": "Question bank",
-      "what": "A reader flagged a question and it turned out to be broken four ways — its explanation belonged to a different question, two options were near-identical, and the figure it depends on had never been stored. That one report led to a check of the whole bank, which found 30 more questions where the parser had merged the NEXT question's text into an answer option. 20 of those are now repaired — including one where an option had swallowed a second answer, so restoring it gave the question its missing fourth choice back. 13 are held back until I can rebuild them properly, and the question that was flagged is out of circulation until its figure is in place.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-08-09",
-      "area": "Question bank",
-      "what": "When you tap 'This looks wrong', you're now asked what looked wrong — one tap, six options. Previously a report told me only that something was off, which is hard to act on and impossible to reply to properly. The report still files if you skip the question.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-08-06",
-      "area": "Bot",
-      "what": "Added Grand Tests — a full-length mock in the real exam's own shape. FMGE is 300 questions across two papers with sections of 50 and no negative marking; NEET-PG and INI-CET are simulated with their own question counts, timing and marking schemes. Two a month on the 1-month and auto-renew plans, and one on the 1-week plan.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-08-06",
-      "area": "Plans",
-      "what": "The 1-week plan now includes one Grand Test. It previously included none.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-08-06",
-      "area": "Plans",
-      "what": "Fixed: Grand Tests were not unlocking for everyone entitled to them. Access was being checked against how a plan was recorded rather than how long it runs for, so some people on an active plan were told their plan did not include a Grand Test when it did. Anyone affected now has their full allowance, and nothing was deducted for a test they were refused.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-08-06",
-      "area": "Bot",
-      "what": "A Grand Test can be paused for a break. The clock stops, and it costs marks — about ten questions' worth — because in the real exam a break costs you time you never get back. The price is shown before you start and again when you tap it.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-08-06",
-      "area": "Questions",
-      "what": "Got one wrong? Tap 'Why not X?' to see why the option you chose was wrong, taken from the same hand-checked explanation. If the explanation doesn't cover that option, the button isn't offered rather than showing something vague.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-08-06",
-      "area": "Question bank",
-      "what": "Every question now has a one-tap 'This looks wrong' button. It opens a real ticket you can follow with /myfeedback, and it goes straight to me.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-08-06",
-      "area": "Bot",
-      "what": "You can set your exam date with /examdate and see a countdown on your progress.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-08-06",
-      "area": "Bot",
-      "what": "You can now tell the bot which exam you're preparing for. FMGE, NEET-PG and INI-CET stay together on purpose — they overlap heavily and practising across all three is what builds exam-day speed. UPSC CMS and university subject exams are being built; you can join the list for either and I'll message you the day it opens.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-08-04",
-      "area": "Free plan",
-      "what": "The free plan now gives 5 questions a day instead of 3, and one of them is always an image-based question with the real figure.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-08-04",
-      "area": "Payments",
-      "what": "Added a safeguard against paying twice. If you already have access, or you opened a payment page in the last few minutes, the bot stops and tells you to check /myplan first rather than letting you pay again.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-08-04",
-      "area": "Payments",
-      "what": "Corrected the checkout wording. It said access unlocks 'instantly'; it now says access unlocks automatically, usually within seconds and always within a few minutes, which is what actually happens.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-08-04",
-      "area": "Bot",
-      "what": "The leaderboard now has three boards: most answered, best accuracy, and longest streak. The old single board ranked only by volume, which nobody on the free plan could ever top. Accuracy and streak are winnable by anyone.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-08-04",
-      "area": "Bot",
-      "what": "Opening the bot now starts you on a real question straight away instead of showing a page of description first.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-08-03",
-      "area": "Bot",
-      "what": "Added an optional daily reminder. Pick a time and get one short message a day, plus a summary of your week on Sundays. It is off unless you choose a time, it is never more than one message a day, and every reminder carries a one-tap Turn off button.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-08-03",
-      "area": "Bot",
-      "what": "Added a shareable progress card — your questions answered, accuracy, streak and rank as a single image you can post. Get it with /mycard or from Progress.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-08-03",
-      "area": "Questions",
-      "what": "Every question now shows which exam and year it came from, for example 'NEET-PG 2023'. Two older sets have no year recorded, so those show the exam alone rather than a guessed year.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-08-03",
-      "area": "Question bank",
-      "what": "Fixed 6 questions where OCR had duplicated one of the options, so the same choice appeared twice. The correct answer was never affected; the repeated option has been removed.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-08-03",
-      "area": "Bot",
-      "what": "Reorganised the buttons under the message box. They are now grouped into Practice and My Account instead of one long list, so the menu takes up less of the screen while you are reading a question.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-08-03",
-      "area": "Bot",
-      "what": "My Plan and Help can now be reached from the menu itself, under My Account. Previously you had to already know the command existed to check your own plan or find help.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-08-02",
-      "area": "Payments",
-      "what": "Subscription payments were not unlocking access. A payment made through the auto-renew plan was not being linked back to the buyer's account, so access stayed locked. Fixed the same day; affected payment refunded in full and access granted.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-08-02",
-      "area": "Payments",
-      "what": "Added /myplan so anyone can check their own plan, expiry and auto-renew status without asking.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-08-02",
-      "area": "Payments",
-      "what": "Added UPI QR as a payment option alongside the card/UPI link.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-08-02",
-      "area": "Question bank",
-      "what": "Corrected OCR damage across 780+ questions: glued-together words, Roman numerals misread as lowercase letters (CN Vll to CN VII, Angiotensin ll to II), and stray source-book page references left inside explanations.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-08-02",
-      "area": "Question bank",
-      "what": "Removed one question whose patient age was clearly corrupted. It is out of rotation until it can be checked against the source.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-08-02",
-      "area": "Website",
-      "what": "Corrected the advertised question counts to match what the bot actually serves, and stated the number of image questions still held back.",
-      "status": "fixed"
-    },
-    {
-      "date": "2026-08-02",
-      "area": "Question bank",
-      "what": "Six questions carry a duplicated answer option. The correct answer is unaffected in every case; the duplicate distractor is being replaced.",
-      "status": "in progress"
-    }
-  ],
-  "planned": [
-    {
-      "status": "building",
-      "goal": "Always-on hosting, 24/7",
-      "why": "Right now the bot runs on my own laptop, so it can only answer while that machine is awake. Nothing is ever lost — messages queue and payments are picked up automatically — but you can be left waiting. A proper server ends that.",
-      "when": "Subscriptions cover the monthly server cost"
-    },
-    {
-      "status": "next",
-      "goal": "Instant payment confirmation, every time",
-      "why": "Access already unlocks by itself, usually in seconds. On a server with a fixed address the confirmation is immediate and never depends on my laptop being on.",
-      "when": "The move to always-on hosting is done"
-    },
-    {
-      "status": "next",
-      "goal": "Every image question available",
-      "why": "89 image-based questions are held back because I can't yet read the figure clearly enough to be certain of the answer. I would rather withhold a question than serve one I'm unsure of.",
-      "when": "Each figure has been re-read and checked by hand"
-    },
-    {
-      "status": "next",
-      "goal": "The last of the OCR damage cleaned up",
-      "why": "A tail of run-together words still sits in some explanations. Nothing here affects an answer key — it is readability only — and it is being fixed by hand rather than by a script, because an automated fix on medical text does more harm than good.",
-      "when": "Ongoing — a batch at a time"
-    },
-    {
-      "status": "next",
-      "goal": "Deeper NEET-PG and INI-CET coverage",
-      "why": "Both are already in the bank and both keep growing. FMGE is the deepest today; the aim is for all three to feel equally complete.",
-      "when": "Ongoing — questions are added every week"
-    },
-    {
-      "status": "next",
-      "goal": "Video-based questions",
-      "why": "Some topics are far clearer in motion than in a still image.",
-      "when": "Suitable material exists — if you have some, send it through /feedback"
-    },
-    {
-      "status": "next",
-      "goal": "Other medical entrance and service exams, starting with UPSC CMS",
-      "why": "One place to practise whichever exam you are sitting, rather than a different app for each.",
-      "when": "The three current exams are where I want them"
-    }
-  ]
+ "_comment": "Public log. PRIVACY RULE: never name a reporter, quote their message, or include a Telegram id. Show that reports get fixed, not who reported them. status: fixed | in progress | planned | wont fix. ⚠ Only list PLANNED items you actually intend to build, and never put a DATE on one — a missed date on a public page is a promise broken in writing.",
+ "fixes": [
+  {
+   "date": "2026-08-10",
+   "area": "Question bank",
+   "what": "Six questions had the correct answer's text accidentally appended to the end of option D, so the answer was sitting inside a wrong option. Four of them were live. The proper wording for each was read back off the original paper rather than guessed at, and no answer key was changed. The same import fault had also truncated another question's options at a line break and glued the missing halves onto the front of the next question; both are repaired.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-10",
+   "area": "Question bank",
+   "what": "Two more reports closed. One was a question the scanner had mangled — words run together, and a vaccine printed with the letter O where a zero belonged, which quietly broke one of the options. The other challenged an answer key: the key was right, but the explanation had been damaged into near-nonsense, which is a perfectly fair reason to doubt it. It has been rewritten. A report that turns out to be a false alarm is still worth sending — this one found a real fault.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-10",
+   "area": "Question bank",
+   "what": "Wrote explanations for 68 image-based questions that had none. Each was written after looking at that question's own figure, and each says why the other options are wrong rather than only why the answer is right. They stay held back until their figures have been checked by hand. Also corrected subject labels on questions filed under plainly the wrong subject — a hip dislocation listed under Biochemistry, for one. The cause was an automatic classifier matching fragments of words instead of whole words; it now says it is unsure rather than guessing.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-09",
+   "area": "Question bank",
+   "what": "A reader flagged a question and it turned out to be broken four ways — its explanation belonged to a different question, two options were near-identical, and the figure it depends on had never been stored. That one report led to a check of the whole bank, which found 30 more questions where the parser had merged the NEXT question's text into an answer option. 20 of those are now repaired — including one where an option had swallowed a second answer, so restoring it gave the question its missing fourth choice back. 13 are held back until I can rebuild them properly, and the question that was flagged is out of circulation until its figure is in place.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-09",
+   "area": "Question bank",
+   "what": "When you tap 'This looks wrong', you're now asked what looked wrong — one tap, six options. Previously a report told me only that something was off, which is hard to act on and impossible to reply to properly. The report still files if you skip the question.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-06",
+   "area": "Bot",
+   "what": "Added Grand Tests — a full-length mock in the real exam's own shape. FMGE is 300 questions across two papers with sections of 50 and no negative marking; NEET-PG and INI-CET are simulated with their own question counts, timing and marking schemes. Two a month on the 1-month and auto-renew plans, and one on the 1-week plan.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-06",
+   "area": "Plans",
+   "what": "The 1-week plan now includes one Grand Test. It previously included none.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-06",
+   "area": "Plans",
+   "what": "Fixed: Grand Tests were not unlocking for everyone entitled to them. Access was being checked against how a plan was recorded rather than how long it runs for, so some people on an active plan were told their plan did not include a Grand Test when it did. Anyone affected now has their full allowance, and nothing was deducted for a test they were refused.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-06",
+   "area": "Bot",
+   "what": "A Grand Test can be paused for a break. The clock stops, and it costs marks — about ten questions' worth — because in the real exam a break costs you time you never get back. The price is shown before you start and again when you tap it.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-06",
+   "area": "Questions",
+   "what": "Got one wrong? Tap 'Why not X?' to see why the option you chose was wrong, taken from the same hand-checked explanation. If the explanation doesn't cover that option, the button isn't offered rather than showing something vague.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-06",
+   "area": "Question bank",
+   "what": "Every question now has a one-tap 'This looks wrong' button. It opens a real ticket you can follow with /myfeedback, and it goes straight to me.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-06",
+   "area": "Bot",
+   "what": "You can set your exam date with /examdate and see a countdown on your progress.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-06",
+   "area": "Bot",
+   "what": "You can now tell the bot which exam you're preparing for. FMGE, NEET-PG and INI-CET stay together on purpose — they overlap heavily and practising across all three is what builds exam-day speed. UPSC CMS and university subject exams are being built; you can join the list for either and I'll message you the day it opens.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-04",
+   "area": "Free plan",
+   "what": "The free plan now gives 5 questions a day instead of 3, and one of them is always an image-based question with the real figure.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-04",
+   "area": "Payments",
+   "what": "Added a safeguard against paying twice. If you already have access, or you opened a payment page in the last few minutes, the bot stops and tells you to check /myplan first rather than letting you pay again.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-04",
+   "area": "Payments",
+   "what": "Corrected the checkout wording. It said access unlocks 'instantly'; it now says access unlocks automatically, usually within seconds and always within a few minutes, which is what actually happens.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-04",
+   "area": "Bot",
+   "what": "The leaderboard now has three boards: most answered, best accuracy, and longest streak. The old single board ranked only by volume, which nobody on the free plan could ever top. Accuracy and streak are winnable by anyone.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-04",
+   "area": "Bot",
+   "what": "Opening the bot now starts you on a real question straight away instead of showing a page of description first.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-03",
+   "area": "Bot",
+   "what": "Added an optional daily reminder. Pick a time and get one short message a day, plus a summary of your week on Sundays. It is off unless you choose a time, it is never more than one message a day, and every reminder carries a one-tap Turn off button.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-03",
+   "area": "Bot",
+   "what": "Added a shareable progress card — your questions answered, accuracy, streak and rank as a single image you can post. Get it with /mycard or from Progress.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-03",
+   "area": "Questions",
+   "what": "Every question now shows which exam and year it came from, for example 'NEET-PG 2023'. Two older sets have no year recorded, so those show the exam alone rather than a guessed year.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-03",
+   "area": "Question bank",
+   "what": "Fixed 6 questions where OCR had duplicated one of the options, so the same choice appeared twice. The correct answer was never affected; the repeated option has been removed.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-03",
+   "area": "Bot",
+   "what": "Reorganised the buttons under the message box. They are now grouped into Practice and My Account instead of one long list, so the menu takes up less of the screen while you are reading a question.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-03",
+   "area": "Bot",
+   "what": "My Plan and Help can now be reached from the menu itself, under My Account. Previously you had to already know the command existed to check your own plan or find help.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-02",
+   "area": "Payments",
+   "what": "Subscription payments were not unlocking access. A payment made through the auto-renew plan was not being linked back to the buyer's account, so access stayed locked. Fixed the same day; affected payment refunded in full and access granted.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-02",
+   "area": "Payments",
+   "what": "Added /myplan so anyone can check their own plan, expiry and auto-renew status without asking.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-02",
+   "area": "Payments",
+   "what": "Added UPI QR as a payment option alongside the card/UPI link.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-02",
+   "area": "Question bank",
+   "what": "Corrected OCR damage across 780+ questions: glued-together words, Roman numerals misread as lowercase letters (CN Vll to CN VII, Angiotensin ll to II), and stray source-book page references left inside explanations.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-02",
+   "area": "Question bank",
+   "what": "Removed one question whose patient age was clearly corrupted. It is out of rotation until it can be checked against the source.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-02",
+   "area": "Website",
+   "what": "Corrected the advertised question counts to match what the bot actually serves, and stated the number of image questions still held back.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-02",
+   "area": "Question bank",
+   "what": "Six questions carry a duplicated answer option. The correct answer is unaffected in every case; the duplicate distractor is being replaced.",
+   "status": "in progress"
+  }
+ ],
+ "planned": [
+  {
+   "status": "building",
+   "goal": "Always-on hosting, 24/7",
+   "why": "Right now the bot runs on my own laptop, so it can only answer while that machine is awake. Nothing is ever lost — messages queue and payments are picked up automatically — but you can be left waiting. A proper server ends that.",
+   "when": "Subscriptions cover the monthly server cost"
+  },
+  {
+   "status": "next",
+   "goal": "Instant payment confirmation, every time",
+   "why": "Access already unlocks by itself, usually in seconds. On a server with a fixed address the confirmation is immediate and never depends on my laptop being on.",
+   "when": "The move to always-on hosting is done"
+  },
+  {
+   "status": "next",
+   "goal": "Every image question available",
+   "why": "89 image-based questions are held back because I can't yet read the figure clearly enough to be certain of the answer. I would rather withhold a question than serve one I'm unsure of.",
+   "when": "Each figure has been re-read and checked by hand"
+  },
+  {
+   "status": "next",
+   "goal": "The last of the OCR damage cleaned up",
+   "why": "A tail of run-together words still sits in some explanations. Nothing here affects an answer key — it is readability only — and it is being fixed by hand rather than by a script, because an automated fix on medical text does more harm than good.",
+   "when": "Ongoing — a batch at a time"
+  },
+  {
+   "status": "next",
+   "goal": "Deeper NEET-PG and INI-CET coverage",
+   "why": "Both are already in the bank and both keep growing. FMGE is the deepest today; the aim is for all three to feel equally complete.",
+   "when": "Ongoing — questions are added every week"
+  },
+  {
+   "status": "next",
+   "goal": "Video-based questions",
+   "why": "Some topics are far clearer in motion than in a still image.",
+   "when": "Suitable material exists — if you have some, send it through /feedback"
+  },
+  {
+   "status": "next",
+   "goal": "Other medical entrance and service exams, starting with UPSC CMS",
+   "why": "One place to practise whichever exam you are sitting, rather than a different app for each.",
+   "when": "The three current exams are where I want them"
+  }
+ ]
 }

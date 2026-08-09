@@ -37,7 +37,7 @@
 
 <main id="main" class="wrap doc">
 <h1>Fixes &amp; what's next</h1>
-<p class="updated">Last updated 09 August 2026 &middot; 28 entries</p>
+<p class="updated">Last updated 10 August 2026 &middot; 31 entries</p>
 
 <p>If you report a problem, you should be able to see what happened to it. This page
 lists every issue I've fixed in the question bank, the bot and the payment flow &mdash;
@@ -74,6 +74,9 @@ length as the point.</p>
 <h3>2026</h3>
 <div class="table-scroll"><table>
 <tr><th>Date</th><th>Area</th><th>What changed</th><th>Status</th></tr>
+<tr><td>2026-08-10</td><td>Question bank</td><td>Six questions had the correct answer's text accidentally appended to the end of option D, so the answer was sitting inside a wrong option. Four of them were live. The proper wording for each was read back off the original paper rather than guessed at, and no answer key was changed. The same import fault had also truncated another question's options at a line break and glued the missing halves onto the front of the next question; both are repaired.</td><td>✅ fixed</td></tr>
+<tr><td>2026-08-10</td><td>Question bank</td><td>Two more reports closed. One was a question the scanner had mangled — words run together, and a vaccine printed with the letter O where a zero belonged, which quietly broke one of the options. The other challenged an answer key: the key was right, but the explanation had been damaged into near-nonsense, which is a perfectly fair reason to doubt it. It has been rewritten. A report that turns out to be a false alarm is still worth sending — this one found a real fault.</td><td>✅ fixed</td></tr>
+<tr><td>2026-08-10</td><td>Question bank</td><td>Wrote explanations for 68 image-based questions that had none. Each was written after looking at that question's own figure, and each says why the other options are wrong rather than only why the answer is right. They stay held back until their figures have been checked by hand. Also corrected subject labels on questions filed under plainly the wrong subject — a hip dislocation listed under Biochemistry, for one. The cause was an automatic classifier matching fragments of words instead of whole words; it now says it is unsure rather than guessing.</td><td>✅ fixed</td></tr>
 <tr><td>2026-08-09</td><td>Question bank</td><td>A reader flagged a question and it turned out to be broken four ways — its explanation belonged to a different question, two options were near-identical, and the figure it depends on had never been stored. That one report led to a check of the whole bank, which found 30 more questions where the parser had merged the NEXT question's text into an answer option. 20 of those are now repaired — including one where an option had swallowed a second answer, so restoring it gave the question its missing fourth choice back. 13 are held back until I can rebuild them properly, and the question that was flagged is out of circulation until its figure is in place.</td><td>✅ fixed</td></tr>
 <tr><td>2026-08-09</td><td>Question bank</td><td>When you tap 'This looks wrong', you're now asked what looked wrong — one tap, six options. Previously a report told me only that something was off, which is hard to act on and impossible to reply to properly. The report still files if you skip the question.</td><td>✅ fixed</td></tr>
 <tr><td>2026-08-06</td><td>Bot</td><td>Added Grand Tests — a full-length mock in the real exam's own shape. FMGE is 300 questions across two papers with sections of 50 and no negative marking; NEET-PG and INI-CET are simulated with their own question counts, timing and marking schemes. Two a month on the 1-month and auto-renew plans, and one on the 1-week plan.</td><td>✅ fixed</td></tr>
