@@ -233,6 +233,63 @@ def render_fixes() -> list[str]:
     return []
 
 
+def donate_url() -> str | None:
+    """The Razorpay payment link for voluntary contributions, or None.
+
+    ⚠ Returns None rather than a guess, exactly like free_per_day(). A donate
+    button pointing at a dead or wrong URL is worse than no button: the person
+    who taps it either loses money into the wrong account or concludes the
+    product is broken at the moment they were feeling generous.
+    ⚠ This reads ONE key and copies no secret onto a public page. A Razorpay
+    PAYMENT LINK is public by design — it is the thing you send to a payer —
+    unlike the API keys and webhook secret that live in the same file.
+    """
+    try:
+        for line in ENV.read_text(encoding="utf-8").splitlines():
+            if line.strip().startswith("DONATE_URL="):
+                v = line.partition("=")[2].strip().strip('"').strip("'")
+                if v.startswith("https://"):
+                    return v
+    except Exception:
+        pass
+    return None
+
+
+def render_support() -> list[str]:
+    """support.html — the voluntary-contribution page.
+
+    ⚠ NO AMOUNT IS SUGGESTED ANYWHERE. A default of "₹500" turns a gift into a
+    price, and the moment it reads as a price a contributor reasonably expects
+    something back — which is the one thing this page promises not to give.
+    Razorpay's own page collects whatever the payer chooses.
+    """
+    url = donate_url()
+    if url:
+        block = (
+            '<p><a class="btn btn-primary" href="{u}" rel="noopener">'
+            'Contribute through Razorpay</a></p>\n'
+            '<p class="fine">Any amount, once. You choose it — nothing is '
+            'suggested or pre-filled, and no amount is expected.</p>'
+        ).format(u=_esc(url))
+    else:
+        # ⚠ The honest empty state. Publishing a dead button to look finished
+        # is how a user loses money or trust; saying "not open yet" costs
+        # nothing and is true.
+        block = ('<div class="callout"><p>Contributions are not open yet — '
+                 'I am still setting the payment link up. Nothing to do here '
+                 'for now; the free ways to help above are the ones that '
+                 'matter more anyway.</p></div>')
+    page = (HERE / "_support_shell.html").read_text(encoding="utf-8")
+    out = page.replace("<!--DONATE_BLOCK-->", block) \
+              .replace("<!--UPDATED-->", datetime.date.today().strftime("%d %B %Y"))
+    target = HERE / "support.html"
+    if not target.exists() or target.read_text(encoding="utf-8") != out:
+        if not CHECK:
+            target.write_text(out, encoding="utf-8", newline="\n")
+        return ["support.html"]
+    return []
+
+
 def _esc(s) -> str:
     return (str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
 
@@ -244,7 +301,8 @@ if __name__ == "__main__":
     print(f".env     -> free tier {n['free_per_day']}/day"
           if n.get("free_per_day") else
           "⚠ .env unreadable - free-tier numbers left untouched")
-    changed = sync_stats(n) + render_fixes()
+    print(f".env     -> donate link " + ("configured" if donate_url() else "NOT SET (support page will say 'not open yet')"))
+    changed = sync_stats(n) + render_fixes() + render_support()
     if CHECK:
         print("OUT OF DATE:" if changed else "up to date ✅", ", ".join(changed))
         sys.exit(1 if changed else 0)
