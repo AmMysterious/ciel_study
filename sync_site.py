@@ -265,20 +265,17 @@ def render_support() -> list[str]:
     """
     url = donate_url()
     if url:
-        block = (
-            '<p><a class="btn btn-primary" href="{u}" rel="noopener">'
-            'Contribute through Razorpay</a></p>\n'
-            '<p class="fine">Any amount, once. You choose it — nothing is '
-            'suggested or pre-filled, and no amount is expected.</p>'
-        ).format(u=_esc(url))
+        # The button sits inside a .cta-band that already carries the heading
+        # and the "any amount, once" line, so this is only the button.
+        block = ('<a class="btn btn-primary" href="{u}" rel="noopener">'
+                 '❤️ Contribute through Razorpay</a>').format(u=_esc(url))
     else:
         # ⚠ The honest empty state. Publishing a dead button to look finished
         # is how a user loses money or trust; saying "not open yet" costs
         # nothing and is true.
-        block = ('<div class="callout"><p>Contributions are not open yet — '
-                 'I am still setting the payment link up. Nothing to do here '
-                 'for now; the free ways to help above are the ones that '
-                 'matter more anyway.</p></div>')
+        block = ('<p class="fine">Not open yet — I am still setting the '
+                 'payment link up. The free ways to help above matter more '
+                 'anyway.</p>')
     page = (HERE / "_support_shell.html").read_text(encoding="utf-8")
     out = page.replace("<!--DONATE_BLOCK-->", block) \
               .replace("<!--UPDATED-->", datetime.date.today().strftime("%d %B %Y"))
