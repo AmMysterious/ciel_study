@@ -220,7 +220,15 @@ h3 { font-size: 1.08rem; margin: 0 0 7px; }
 /* ⚠ `align-items: start` was harmless while every card was a one-line summary,
    but once the cards carry feature lists of different lengths it leaves them
    ragged (467px next to 251px). `stretch` squares them off. */
-.plans { display: grid; gap: 18px; grid-template-columns: repeat(4, 1fr); align-items: stretch; }
+/* ⚠ THE COLUMN COUNT WAS HARDCODED AT 4 AND THE CARD COUNT CHANGED (S54).
+   Retiring the auto-renew plan left three cards in a four-column grid, so the
+   row rendered with an empty slot on the right — found by measuring the grid in
+   the browser, not by reading this file. `auto-fit` collapses the empty track,
+   so the row fills correctly at three cards today AND at four when the ₹449 GT
+   plan lands, with no further edit. The explicit 2-column and 1-column rules at
+   the breakpoints below still win where they apply. */
+.plans { display: grid; gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); align-items: stretch; }
 .plan {
   background: var(--surface); border: 1px solid var(--line);
   border-radius: var(--radius); padding: 24px 20px; position: relative;
