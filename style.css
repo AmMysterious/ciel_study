@@ -291,16 +291,34 @@ details.faq .body p:last-child { margin: 0; }
 
 /* ── Document pages ─────────────────────────────────────────────────────── */
 
-.doc { max-width: 800px; padding-top: 44px; padding-bottom: 10px; }
+/* ⚠ THE DOCUMENT PAGES USED TO BE NARROWER THAN THE HOME PAGE, AND IT SHOWED.
+   `.doc` sits on `<main class="wrap doc">`, so it was overriding .wrap's
+   --maxw (1080px) down to 800px — while the nav and the footer on those same
+   pages kept using --maxw. The result was text starting ~140px inside the
+   header above it, which reads as a different site rather than a deliberate
+   measure. Nawar spotted it as the pages "not matching the home page".
+   ⇒ The container now matches the home page, and the READING MEASURE is capped
+     on the text itself instead. That is exactly what index.html already does
+     (.lede is 62ch and .hero p.sub is 52ch inside the same 1080px wrap), so
+     this makes the inner pages consistent with the home page's own method,
+     not just with its width.
+   ⚠ Capped on p and li ONLY. Headings keep their full width because .doc h2
+     carries the rule line that separates sections, and a half-width divider
+     looks broken; tables are full width because a table has its own measure
+     and .table-scroll already handles overflow. */
+.doc { padding-top: 44px; padding-bottom: 10px; }
 .doc h1 { font-size: clamp(1.7rem, 4vw, 2.3rem); margin: 0 0 6px; }
 .doc h2 {
   font-size: 1.2rem; margin: 34px 0 10px; padding-bottom: 7px;
   border-bottom: 1px solid var(--line);
 }
-.doc p, .doc li { color: var(--text-dim); }
+.doc p, .doc li { color: var(--text-dim); max-width: 70ch; }
 .doc strong { color: var(--text); }
 .doc ul, .doc ol { padding-left: 22px; }
 .doc li { margin-bottom: 7px; }
+/* A cell is inside a table's own measure; capping it there would fight the
+   column widths. */
+.doc td p, .doc td li, .doc th p { max-width: none; }
 .updated { color: var(--faint); font-size: .9rem; margin: 0 0 8px; }
 
 .table-scroll { overflow-x: auto; margin: 18px 0; }
