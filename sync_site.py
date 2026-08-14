@@ -278,12 +278,99 @@ def render_support() -> list[str]:
                  'anyway.</p>')
     page = (HERE / "_support_shell.html").read_text(encoding="utf-8")
     out = page.replace("<!--DONATE_BLOCK-->", block) \
+              .replace("<!--CONTRIBUTORS-->", render_contributors()[0]) \
               .replace("<!--UPDATED-->", datetime.date.today().strftime("%d %B %Y"))
     target = HERE / "support.html"
     if not target.exists() or target.read_text(encoding="utf-8") != out:
         if not CHECK:
             target.write_text(out, encoding="utf-8", newline="\n")
         return ["support.html"]
+    return []
+
+
+def render_contributors() -> list[str]:
+    """The Credits list on the support page, from contributors.json.
+
+    ⚠⚠ CONSENT, NOT CONVENIENCE. Names go in that file only after the person has
+    said yes in the bot. The standing rule everywhere else in this product is that
+    one person never learns another's identity from it, and this page is the single
+    deliberate exception — so it is opt-in, per person, and the page says so.
+    ⚠ No amount, no plan, no ranking. "Paid for a month of the server" is as
+    specific as money is ever allowed to get here; a list ordered by rupees turns
+    a thank-you into a leaderboard.
+    ⚠ The EMPTY STATE IS HONEST AND SHIPS. An invented placeholder name, or a
+    real name lifted from the users table, would both be worse than a short list.
+    """
+    src = HERE / "contributors.json"
+    people = []
+    if src.exists():
+        try:
+            people = json.loads(src.read_text(encoding="utf-8")).get("credits", [])
+        except Exception as e:
+            print(f"⚠ contributors.json unreadable ({e}) — rendering empty")
+    if people:
+        rows = "\n".join(
+            '  <li><strong>{}</strong>{}</li>'.format(
+                _esc(p.get("name", "").strip() or "anonymous"),
+                (" — " + _esc(p["for"])) if p.get("for") else "")
+            for p in people)
+        block = f'<ul class="plan-list">\n{rows}\n</ul>'
+    else:
+        block = ('<p class="fine">Nobody is listed yet. Several people have '
+                 'already reported wrong keys and mangled text — I have not asked '
+                 'them yet whether they want naming, and I will not add anyone '
+                 'before I do.</p>')
+    return [block]
+
+
+def render_milestones(n: dict) -> list[str]:
+    """The home page's milestone band, from milestones.json + the live count.
+
+    ⚠ HISTORY FROM THE FILE, THE CURRENT NUMBER FROM THE DATABASE. That split is
+    the point: a past milestone is a fixed fact and belongs in version control, but
+    "how many questions now" moves every session and must never be typed into HTML.
+    ⚠ It deliberately does NOT duplicate fixes.html. That page answers "what changed
+    and what is next"; this band answers "how far has this come". If a milestone
+    starts explaining a fix, it belongs on the other page.
+    """
+    src = HERE / "milestones.json"
+    if not src.exists():
+        return []
+    try:
+        items = json.loads(src.read_text(encoding="utf-8")).get("milestones", [])
+    except Exception as e:
+        print(f"⚠ milestones.json unreadable ({e}) — band left untouched")
+        return []
+    items = sorted(items, key=lambda m: m.get("date", ""), reverse=True)
+    lis = []
+    for m in items:
+        try:
+            when = datetime.date.fromisoformat(m["date"]).strftime("%d %b %Y")
+        except Exception:
+            when = _esc(m.get("date", ""))
+        note = f'<span>{_esc(m["note"])}</span>' if m.get("note") else ""
+        lis.append(f'    <li><b>{_esc(m.get("label",""))}</b>'
+                   f'<time>{when}</time>{note}</li>')
+    block = ("\n".join([
+        '  <p class="eyebrow">How far this has come</p>',
+        f'  <h2>{n["round"]} questions today, from a few hundred in July</h2>',
+        '  <p class="lede">Small numbers, honestly counted. Every figure here is '
+        'read out of the live database, not typed in.</p>',
+        '  <ol class="milestones">',
+        *lis,
+        '  </ol>',
+    ]))
+    idx = HERE / "index.html"
+    s = old = idx.read_text(encoding="utf-8")
+    pat = re.compile(r"(<!--MILESTONES:START-->).*?(<!--MILESTONES:END-->)", re.S)
+    if not pat.search(s):
+        print("⚠ index.html has no MILESTONES markers — band not injected")
+        return []
+    s = pat.sub(lambda _m: f"<!--MILESTONES:START-->\n{block}\n  <!--MILESTONES:END-->", s)
+    if s != old:
+        if not CHECK:
+            idx.write_text(s, encoding="utf-8", newline="\n")
+        return ["index.html (milestones)"]
     return []
 
 
@@ -299,8 +386,15 @@ if __name__ == "__main__":
           if n.get("free_per_day") else
           "⚠ .env unreadable - free-tier numbers left untouched")
     print(f".env     -> donate link " + ("configured" if donate_url() else "NOT SET (support page will say 'not open yet')"))
-    changed = sync_stats(n) + render_fixes() + render_support()
+    changed = (sync_stats(n) + render_fixes() + render_support()
+               + render_milestones(n))
     if CHECK:
-        print("OUT OF DATE:" if changed else "up to date ✅", ", ".join(changed))
+        # ⚠ ASCII ONLY ON THIS LINE. It used to print a tick emoji and crashed with
+        # UnicodeEncodeError under Windows' cp1252 console — after having already
+        # done all the work, so --check could not be used as a gate at all. The
+        # project has hit this before (see the state file's note about setting
+        # PYTHONIOENCODING), and requiring an environment variable to read your own
+        # tool's output is not a fix.
+        print("OUT OF DATE:" if changed else "up to date [ok]", ", ".join(changed))
         sys.exit(1 if changed else 0)
     print("rewrote:", ", ".join(changed) if changed else "(nothing — already current)")

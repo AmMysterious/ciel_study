@@ -1,0 +1,45 @@
+{
+  "_comment": "HISTORY for the home page's milestone band, rendered by sync_site.py.  ⚠⚠ THE CURRENT QUESTION COUNT IS NOT IN THIS FILE ON PURPOSE. It comes from study.db through counts(), because a number that lives in two places drifts — which is the entire reason sync_site.py exists (on 2 Aug 2026 four hardcoded numbers were wrong at once). Put only PAST, DATED facts here; anything still moving belongs in the database.  ⚠ EVERY DATE BELOW WAS CHECKED AGAINST THE DATABASES, not remembered. Three of them were wrong on the first draft: the first real payment is 2 Aug (not 1 Aug), the 100th person arrived on 7 Aug (not 4 Aug), and the exam-family split was 6 Aug (not 13 Aug, which was the grand-test pool split). A milestone list is a public claim about the product's history and it is the cheapest thing in the world for a reader to check.  Verify with: MIN(ts) FROM attempts; first_seen ordered from users; MIN(ts) FROM processed_payments excluding test_payments.  ⚠ Keep 'note' short. This is a band on the home page, not the fixes log — what changed and why lives on fixes.html, and these two must not turn into the same page.  ⚠ NO USER NAMES, NO PERSONAL NUMBERS. 'the 100th person arrived' is fine; who they were is not.  ⚠⚠ 'SERVABLE' MEANS WHAT THE BOT CAN ACTUALLY SEND, and the milestone labels must use the same rounded-DOWN figure the site shows. study.db holds 3,811 rows but 35 image questions have no uploaded figure, so 3,776 are servable and the site says 3,700+. The first draft of the 14 Aug entry said 3,800+ — an overstatement a reader could catch, and precisely what sync_site.py exists to prevent. Never take a milestone number from a row count.",
+  "milestones": [
+    {
+      "date": "2026-07-23",
+      "label": "The bot went live",
+      "note": "First question answered by a real person the same day."
+    },
+    {
+      "date": "2026-08-02",
+      "label": "First real payment",
+      "note": "Rails proven with actual rupees, not test mode."
+    },
+    {
+      "date": "2026-08-02",
+      "label": "3,200+ questions servable",
+      "note": "Every one with a key checked by hand."
+    },
+    {
+      "date": "2026-08-03",
+      "label": "50 people had used it",
+      "note": ""
+    },
+    {
+      "date": "2026-08-06",
+      "label": "Exam families separated",
+      "note": "FMGE, NEET-PG and INI-CET drawn apart, so a paper looks like the real one."
+    },
+    {
+      "date": "2026-08-07",
+      "label": "100 people had used it",
+      "note": ""
+    },
+    {
+      "date": "2026-08-10",
+      "label": "343 questions carry their real figure",
+      "note": "The actual diagram uploaded, not a description of one."
+    },
+    {
+      "date": "2026-08-14",
+      "label": "3,700+ questions servable",
+      "note": "500 INI-CET questions imported and explained by hand, and 73 figures redrawn from scratch so they are ours."
+    }
+  ]
+}

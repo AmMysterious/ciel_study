@@ -356,3 +356,32 @@ td strong { color: var(--text); }
 .log-scroll h3:first-child{margin-top:0}
 .log-scroll::-webkit-scrollbar{width:10px}
 .log-scroll::-webkit-scrollbar-thumb{background:var(--slate-600);border-radius:6px}
+
+/* Milestone band on the home page.
+   Deliberately quiet: a timeline of small honest numbers, not a trophy shelf.
+   It must not read like the Fixes page — that one is a changelog with a
+   "what's next"; this is only "how far this has come". */
+.milestone-band { background: var(--surface-2); border-block: 1px solid var(--line) }
+ol.milestones { list-style: none; margin: 26px 0 0; padding: 0;
+  display: grid; gap: 0; counter-reset: none }
+ol.milestones li { display: grid; grid-template-columns: 1fr auto;
+  gap: 2px 18px; align-items: baseline; padding: 14px 0 14px 22px;
+  border-top: 1px solid var(--line); position: relative }
+ol.milestones li:first-child { border-top: 0 }
+/* the dot on the spine */
+ol.milestones li::before { content: ""; position: absolute; left: 4px; top: 20px;
+  width: 7px; height: 7px; border-radius: 50%; background: var(--text-dim) }
+ol.milestones li:first-child::before { background: var(--accent, #6ea8c8);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent, #6ea8c8) 22%, transparent) }
+/* the spine itself */
+ol.milestones li:not(:last-child)::after { content: ""; position: absolute;
+  left: 7px; top: 27px; bottom: -14px; width: 1px; background: var(--line) }
+ol.milestones b { font-weight: 600; font-size: 1rem }
+ol.milestones time { color: var(--faint); font-size: .8rem;
+  font-variant-numeric: tabular-nums; white-space: nowrap }
+ol.milestones span { grid-column: 1 / -1; color: var(--text-dim);
+  font-size: .9rem; line-height: 1.5 }
+@media (max-width: 560px) {
+  ol.milestones li { grid-template-columns: 1fr }
+  ol.milestones time { grid-row: 1; justify-self: start }
+}
