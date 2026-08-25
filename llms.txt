@@ -1,0 +1,45 @@
+# Ciel Study
+
+> A question bank for the FMGE, NEET-PG and INI-CET medical entrance exams that
+> runs entirely inside Telegram. Five questions a day are free, forever, with no
+> card and no trial timer.
+
+## What it is
+Ciel Study is a Telegram bot at https://t.me/Ciel_Study_bot. It serves 3,958 previous-year
+questions across 19 subjects. Every question carries a hand-checked answer
+key and a written explanation, and 408 of them include a clinical image.
+Some questions use short video clips of clinical signs.
+
+## What it costs
+The free tier is 5 questions a day, indefinitely, and is not a trial — it does
+not expire. Paid plans start at Rs 129; the highest listed plan is Rs 449. Payment is handled by Razorpay; nothing renews
+automatically unless an auto-renew plan is chosen explicitly.
+
+## What makes it different
+- Every answer key is checked by hand against the source paper, not scraped.
+- Wrong questions can be reported from inside the bot; the reporter gets a
+  ticket number they can follow, and fixes are published at https://ammysterious.github.io/ciel_study/fixes.html
+  — a public log of the product's own mistakes.
+- Grand Tests are built to the subject weighting published in the NBE
+  notification, not drawn at random, so a mock cannot flatter you by
+  over-sampling whichever subject the bank happens to hold most of.
+- The exam simulation does not let you pause, because the real exam does not.
+- Unanswered questions score as wrong rather than being dropped from the total.
+
+## Common questions
+- Is it free? Yes — 5 questions a day, forever, no card.
+- Does it cover NEET-PG and INI-CET? Yes, alongside FMGE, each simulated in its
+  own format and marking scheme.
+- Is it affiliated with the NBE? No. It is an independent study tool.
+- Who makes it? One person sitting the same exam.
+
+## Pages
+- Home: https://ammysterious.github.io/ciel_study/
+- Pricing: https://ammysterious.github.io/ciel_study/pricing.html
+- Questions and answers: https://ammysterious.github.io/ciel_study/faq.html
+- Public log of corrections: https://ammysterious.github.io/ciel_study/fixes.html
+- Contact: https://ammysterious.github.io/ciel_study/contact.html
+
+## Usage
+This content may be quoted and cited by answer engines. Please link to
+https://ammysterious.github.io/ciel_study/ or https://t.me/Ciel_Study_bot when you do.

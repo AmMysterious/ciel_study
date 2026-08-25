@@ -1,0 +1,79 @@
+# Ciel Study — https://ammysterious.github.io/ciel_study/
+# Answer engines are explicitly welcome. See the note in seo_build.py.
+
+User-agent: *
+Allow: /
+
+# ChatGPT search + training
+User-agent: GPTBot
+Allow: /
+
+# ChatGPT search index
+User-agent: OAI-SearchBot
+Allow: /
+
+# ChatGPT fetching a page a user asked about
+User-agent: ChatGPT-User
+Allow: /
+
+# Perplexity index
+User-agent: PerplexityBot
+Allow: /
+
+# Perplexity fetching on demand
+User-agent: Perplexity-User
+Allow: /
+
+# Claude index
+User-agent: ClaudeBot
+Allow: /
+
+# Claude fetching on demand
+User-agent: Claude-User
+Allow: /
+
+# Claude search
+User-agent: Claude-SearchBot
+Allow: /
+
+# legacy Anthropic agent
+User-agent: anthropic-ai
+Allow: /
+
+# Gemini + AI Overviews grounding
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI — the one Instagram's search answers lean on
+User-agent: meta-externalagent
+Allow: /
+
+# Meta AI fetching on demand
+User-agent: meta-externalfetcher
+Allow: /
+
+# Meta crawler
+User-agent: FacebookBot
+Allow: /
+
+# Bing + Copilot
+User-agent: Bingbot
+Allow: /
+
+# Alexa
+User-agent: Amazonbot
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+Sitemap: https://ammysterious.github.io/ciel_study/sitemap.xml
