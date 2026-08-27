@@ -154,6 +154,14 @@ def counts() -> dict:
         "figures":   q(f"SELECT COUNT(*) FROM questions WHERE {IBQ}"),
         "held_back": q("SELECT COUNT(*) FROM questions WHERE has_image=1 AND "
                        "(image_file_id IS NULL OR image_file_id='')"),
+        # ⚠ VIDEO QUESTIONS ARE COUNTED THE SAME WAY EVERY OTHER NUMBER HERE IS:
+        #   only the ones that can actually be SERVED. A vbq row without a
+        #   `video_file_id` has no video the bot can send, exactly as a figure
+        #   row without `image_file_id` has no picture. 75 questions across 55
+        #   clips — the QUESTION count is what goes on the page, because that is
+        #   the unit the other stats use and the unit a reader compares.
+        "videos": q("SELECT COUNT(*) FROM vbq WHERE video_file_id IS NOT NULL "
+                    "AND video_file_id!=''"),
     }
     c.close()
     # Round DOWN for copy. Rounding up would overstate, which is the whole
@@ -171,7 +179,7 @@ def sync_stats(n: dict) -> list[str]:
 
     # Machine-readable markers first — these cannot mangle prose.
     for key, val in (("questions", n["round"]), ("subjects", str(n["subjects"])),
-                     ("figures", str(n["figures"]))):
+                     ("figures", str(n["figures"])), ("videos", str(n["videos"]))):
         s = re.sub(rf'(<b data-stat="{key}">)[^<]*(</b>)', rf'\g<1>{val}\g<2>', s)
 
     # Prose, each anchored tightly enough that it cannot match anything else.
@@ -438,7 +446,8 @@ def _esc(s) -> str:
 if __name__ == "__main__":
     n = counts()
     print(f"study.db -> servable {n['servable']} ({n['round']}), "
-          f"{n['subjects']} subjects, {n['figures']} figures, {n['held_back']} held back")
+          f"{n['subjects']} subjects, {n['figures']} figures, {n['videos']} videos, "
+          f"{n['held_back']} held back")
     print(f".env     -> free tier {n['free_per_day']}/day"
           if n.get("free_per_day") else
           "⚠ .env unreadable - free-tier numbers left untouched")

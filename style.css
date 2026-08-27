@@ -178,7 +178,7 @@ h3 { font-size: 1.08rem; margin: 0 0 7px; }
 /* ── Stat strip ─────────────────────────────────────────────────────────── */
 
 .stats {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px;
   background: var(--line); border: 1px solid var(--line);
   border-radius: var(--radius); overflow: hidden; margin-top: 46px;
 }
@@ -355,10 +355,18 @@ td strong { color: var(--text); }
 
 /* ── Responsive ─────────────────────────────────────────────────────────── */
 
+@media (max-width: 1040px) {
+  /* 5 stats do not fit here, and 4-across would leave one orphan on its own
+     row. Three and two both divide five into rows that look deliberate. */
+  .stats { grid-template-columns: repeat(3, 1fr); }
+}
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; gap: 30px; }
   .grid-3, .steps { grid-template-columns: repeat(2, 1fr); }
   .plans { grid-template-columns: repeat(2, 1fr); }
+  .stats { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 620px) {
   .stats { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 560px) {

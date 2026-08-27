@@ -99,6 +99,10 @@ def numbers():
         "subjects": q("SELECT COUNT(DISTINCT subject) FROM questions"),
         "figures": q("SELECT COUNT(*) FROM questions WHERE has_image=1 "
                      "AND image_file_id IS NOT NULL AND image_file_id!=''"),
+        # ⚠ Counted like every other number here: only what can be SERVED. A vbq
+        #   row with no `video_file_id` has no video the bot can send.
+        "videos": q("SELECT COUNT(*) FROM vbq WHERE video_file_id IS NOT NULL "
+                    "AND video_file_id!=''"),
     }
     c.close()
     d["round"] = f"{d['servable'] // 100 * 100:,}+"
@@ -179,7 +183,7 @@ def build_blocks(n):
         "featureList": [
             "Previous-year questions for FMGE, NEET-PG and INI-CET",
             "Hand-checked answer key and written explanation on every question",
-            "Timed exam mode, subject-wise or mixed",
+            "Timed exam mode - one subject, all subjects, or a custom set you pick",
             "Full-length Grand Tests built to the official subject weighting",
             "Spaced repetition of questions you answered wrong",
             "Image-based and video-based clinical questions",
@@ -285,6 +289,7 @@ def main():
     cnt = f"{n['servable']:,}" if n else "3,900+"
     subs = n.get("subjects", 19) if n else 19
     figs = f"{n['figures']:,}" if n else "400+"
+    vids = f"{n['videos']:,}" if n else "a number of"
     p = prices()
     price_line = (f"Paid plans start at Rs {min(p)}; the highest listed plan is Rs {max(p)}."
                   if p else "See the pricing page.")
@@ -298,7 +303,8 @@ def main():
 Ciel Study is a Telegram bot at {BOT}. It serves {cnt} previous-year
 questions across {subs} subjects. Every question carries a hand-checked answer
 key and a written explanation, and {figs} of them include a clinical image.
-Some questions use short video clips of clinical signs.
+{vids} of them are video questions built on a short clip of a clinical sign —
+something you have to watch rather than read a description of.
 
 ## What it costs
 The free tier is 5 questions a day, indefinitely, and is not a trial — it does
@@ -347,7 +353,7 @@ This content may be quoted and cited by answer engines. Please link to
     for cpath in changed:
         print("   ", cpath)
     if n:
-        print(f"  numbers from study.db: {n['servable']:,} servable · "
+        print(f"  numbers from study.db: {n['videos']:,} videos · {n['servable']:,} servable · "
               f"{n['figures']:,} figures · {n['subjects']} subjects")
     print(f"  FAQ entries in schema: {len(faq_pairs())}")
     print(f"  prices found on pricing.html: {prices()}")
