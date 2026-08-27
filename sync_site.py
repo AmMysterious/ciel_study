@@ -95,6 +95,56 @@ def _sync_free(text: str, n: int) -> str:
     return text
 
 
+#: ⚠⚠ THE TWO SITE BUILDERS WERE OVERWRITING EACH OTHER, AND THE CASUALTY WAS
+#: THE ONE GUARD THAT KEEPS THE NUMBERS HONEST. `fixes.html` and `support.html`
+#: are GENERATED here from a shell plus JSON, while `seo_build.py` INJECTS a
+#: schema block into the finished file between `<!--SEO:start-->` and
+#: `<!--SEO:end-->`. So a normal build left `sync_site.py --check` permanently
+#: reporting OUT OF DATE — sync regenerating without the block, seo re-adding
+#: it, forever. A check that is red in the shipped state is a check nobody can
+#: use, which is exactly how the four simultaneously-wrong numbers of 2 August
+#: got there. Regeneration now CARRIES THE EXISTING BLOCK ACROSS, so the two
+#: scripts are order-independent and --check means something again.
+SEO_START, SEO_END = "<!--SEO:start-->", "<!--SEO:end-->"
+
+
+def _keep_seo(target: pathlib.Path, out: str) -> str:
+    """Carry any existing SEO block from `target` into freshly generated `out`."""
+    if SEO_START in out or not target.exists():
+        return out
+    live = target.read_text(encoding="utf-8")
+    i, j = live.find(SEO_START), live.find(SEO_END)
+    if i < 0 or j < i:
+        return out
+    block = live[i:j + len(SEO_END)]
+    # The block belongs in <head>; seo_build puts it immediately before </head>.
+    k = out.lower().find("</head>")
+    if k < 0:
+        return out
+    return out[:k] + block + "\n" + out[k:]
+
+
+_HELD_SOME = ("Around {k} image-based\n      questions are still held back because I "
+              "couldn't read the figure well enough to\n      be certain, and they stay "
+              "out until I can.")
+_HELD_NONE = ("Every image-based question in the bank right now carries its own "
+              "figure.\n      Where I couldn't read one well enough to be certain, the "
+              "question stays out\n      of the bank rather than going in without it.")
+#: Matches whichever of the two sentences is currently on the page, so the copy
+#: can move between them in either direction and never end up with both.
+_HELD_ANY = re.compile(
+    r"Around \d+ image-based\s*questions are still held back because I couldn't read "
+    r"the figure well enough to\s*be certain, and they stay out until I can\."
+    r"|Every image-based question in the bank right now carries its own figure\.\s*"
+    r"Where I couldn't read one well enough to be certain, the question stays out\s*"
+    r"of the bank rather than going in without it\.",
+    re.S)
+
+
+def _sync_held_back(text: str, k: int) -> str:
+    return _HELD_ANY.sub(lambda _m: (_HELD_NONE if not k else _HELD_SOME.format(k=k)), text)
+
+
 def counts() -> dict:
     c = sqlite3.connect(f"file:{DB}?mode=ro", uri=True)
     q = lambda s: c.execute(s).fetchone()[0]
@@ -128,8 +178,13 @@ def sync_stats(n: dict) -> list[str]:
     s = re.sub(r"\b\d{1,3},\d00\+ (MCQs|previous-year)", lambda m: f"{n['round']} {m.group(1)}", s)
     s = re.sub(r"<p>\d+ questions that carry the actual figure",
                f"<p>{n['figures']} questions that carry the actual figure", s)
-    s = re.sub(r"Around \d+ image-based\n?\s*questions are still held back",
-               f"Around {n['held_back']} image-based\n      questions are still held back", s)
+    # ⚠⚠ "AROUND 0 IMAGE-BASED QUESTIONS ARE STILL HELD BACK" WENT LIVE ON THIS
+    #   PAGE. The count is a real number that reached zero, and the sentence
+    #   built around it stopped being English — inside the one paragraph whose
+    #   whole subject is that these numbers are honest. ⇒ A SYNCED NUMBER NEEDS
+    #   A SENTENCE FOR EVERY VALUE IT CAN TAKE, AND ZERO IS ALWAYS ONE OF THEM.
+    #   Both forms are curated whole sentences, per the rule above the phrase map.
+    s = _sync_held_back(s, n["held_back"])
     fpd = n.get("free_per_day")
     if fpd:
         s = _sync_free(s, fpd)
@@ -226,6 +281,7 @@ def render_fixes() -> list[str]:
               .replace("<!--COUNT-->", str(len(entries))) \
               .replace("<!--UPDATED-->", datetime.date.today().strftime("%d %B %Y"))
     target = HERE / "fixes.html"
+    out = _keep_seo(target, out)
     if not target.exists() or target.read_text(encoding="utf-8") != out:
         if not CHECK:
             target.write_text(out, encoding="utf-8", newline="\n")
@@ -281,6 +337,7 @@ def render_support() -> list[str]:
               .replace("<!--CONTRIBUTORS-->", render_contributors()[0]) \
               .replace("<!--UPDATED-->", datetime.date.today().strftime("%d %B %Y"))
     target = HERE / "support.html"
+    out = _keep_seo(target, out)
     if not target.exists() or target.read_text(encoding="utf-8") != out:
         if not CHECK:
             target.write_text(out, encoding="utf-8", newline="\n")

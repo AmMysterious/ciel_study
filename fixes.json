@@ -2,6 +2,36 @@
  "_comment": "Public log. PRIVACY RULE: never name a reporter, quote their message, or include a Telegram id. Show that reports get fixed, not who reported them. status: fixed | in progress | planned | wont fix. ⚠ Only list PLANNED items you actually intend to build, and never put a DATE on one — a missed date on a public page is a promise broken in writing.",
  "fixes": [
   {
+   "date": "2026-08-27",
+   "area": "Bot",
+   "what": "Mixed practice was not spreading questions across subjects. It avoided repeating a question you had recently seen, but it never looked at the SUBJECT, so the same subject could come up two or three times in a row — measured at roughly one back-to-back repeat every fifteen questions. Tutor Mode now holds back the last three subjects you were served, so the feed moves through all 19. Picking a subject deliberately still keeps you in that subject.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-27",
+   "area": "Bot",
+   "what": "Exam Mode has a new Custom module. Tick any set of subjects and it builds a timed paper from just those. The questions are split evenly across what you tick rather than by how many the bank happens to hold, so pairing a small subject with a large one gives you half of each instead of a paper that is almost entirely the large one. Between drilling a single subject and sitting the whole syllabus, there was nothing — this is that middle.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-27",
+   "area": "Question bank",
+   "what": "Four questions were carrying an advertisement for someone else's app, printed into the question text by the scanner along with the rest of the page. They were live. A search of the whole bank for anything of that kind — app names, links, channel invitations — found those four and nothing else, and all four are clean now. It should never have been possible to read that inside a question you had paid to study from.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-27",
+   "area": "Question bank",
+   "what": "Nine questions had the next chapter's heading printed onto the end of their last option — an option that read \"Ogive is a cumulative frequency curve. Community Medicine\". One of them had been reported as having a wrong answer key. The key was right; the question simply looked untrustworthy, which is a fair reason to doubt it. Alongside these, fourteen questions were repaired where the scan had run words together, including one whose explanation said \"Themis match\" where the word was \"mismatch\" — the exact concept that question tests.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-27",
+   "area": "Question bank",
+   "what": "Every question that had been withheld from the bank was re-read — thirty-nine of them. Ten went back in, including one whose picture turned out to be a photograph of an entire book page with two unrelated questions in the margin, now cropped to the instrument it was asking about. Three were pulled because their own stated answer disagrees with the reference table printed inside the same question, and those stay out until I can check them against the original paper. The remaining thirty stay out: most of them are missing the question itself, not just an explanation, and a question I cannot rebuild honestly is one I will not serve.",
+   "status": "fixed"
+  },
+  {
    "date": "2026-08-20",
    "area": "Grand Tests",
    "what": "You can now add two extra Grand Tests to an active plan for ₹99, instead of having to buy another whole month to get more mock sittings. It is offered only when you have actually used up the tests your plan includes, it adds tests and nothing else — no extra days, no new plan, nothing renews — and the tests stay valid for 30 days. Because it can only be bought on top of a plan you are already using, it is not covered by the cooling-off refund window; if the tests fail to arrive or do not work, that is still refunded in full. See the Refund Policy for the detail.",
@@ -221,9 +251,9 @@
   },
   {
    "status": "next",
-   "goal": "Every image question available",
-   "why": "89 image-based questions are held back because I can't yet read the figure clearly enough to be certain of the answer. I would rather withhold a question than serve one I'm unsure of.",
-   "when": "Each figure has been re-read and checked by hand"
+   "goal": "The questions that are still missing their figure",
+   "why": "Every image question the bot serves today carries its own figure — none are held back mid-flight any more. What is left is a smaller set that never made it into the bank at all, because the figure they depend on could not be read clearly enough to be sure of the answer. Those stay out until I can crop and check each one by hand.",
+   "when": "Ongoing — a batch at a time"
   },
   {
    "status": "next",
@@ -236,12 +266,6 @@
    "goal": "Deeper NEET-PG and INI-CET coverage",
    "why": "Both are already in the bank and both keep growing. FMGE is the deepest today; the aim is for all three to feel equally complete.",
    "when": "Ongoing — questions are added every week"
-  },
-  {
-   "status": "next",
-   "goal": "Video-based questions",
-   "why": "Some topics are far clearer in motion than in a still image.",
-   "when": "Suitable material exists — if you have some, send it through /feedback"
   },
   {
    "status": "next",
