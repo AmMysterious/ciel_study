@@ -43,7 +43,7 @@
 
 <main id="main" class="wrap doc">
 <h1>Fixes &amp; what's next</h1>
-<p class="updated">Last updated 27 August 2026 &middot; 39 entries</p>
+<p class="updated">Last updated 27 August 2026 &middot; 41 entries</p>
 
 <p>If you report a problem, you should be able to see what happened to it. This page
 lists every issue I've fixed in the question bank, the bot and the payment flow &mdash;
@@ -79,6 +79,8 @@ length as the point.</p>
 <h3>2026</h3>
 <div class="table-scroll"><table>
 <tr><th>Date</th><th>Area</th><th>What changed</th><th>Status</th></tr>
+<tr><td>2026-08-27</td><td>Question bank</td><td>Twenty-five questions were deleted permanently. These are the ones that had been held out of the bank because they could not be rebuilt honestly — a question whose entire text was "Assessment of resources.", one with four clean options and no question above them, one where a head-injury case had been fused onto four options about urinary chemistry by a bad scan. Every deleted row was written to a file first and read back and compared before anything was removed, and they were taken out of the import files too so a future re-import cannot quietly put them back. The number of questions you can actually practise did not change: none of these was ever being served.</td><td>✅ fixed</td></tr>
+<tr><td>2026-08-27</td><td>Question bank</td><td>Four answer keys were corrected and the questions put back into the bank. A newborn galactosaemia question was keyed to the wrong enzyme; a forensic question cited the wrong section of the law; a milestones question was keyed "all of the above" when only one of its four statements is true; and a breast cancer staging question was keyed to a stage its own printed staging table contradicts. All four had been held back rather than served while the keys were in doubt, so nobody was ever shown the wrong answer. One more question stays held: it asks which type of gastric ulcer goes with low stomach acid and two of its four options are correct, which no answer key can fix.</td><td>✅ fixed</td></tr>
 <tr><td>2026-08-27</td><td>Bot</td><td>Mixed practice was not spreading questions across subjects. It avoided repeating a question you had recently seen, but it never looked at the SUBJECT, so the same subject could come up two or three times in a row — measured at roughly one back-to-back repeat every fifteen questions. Tutor Mode now holds back the last three subjects you were served, so the feed moves through all 19. Picking a subject deliberately still keeps you in that subject.</td><td>✅ fixed</td></tr>
 <tr><td>2026-08-27</td><td>Bot</td><td>Exam Mode has a new Custom module. Tick any set of subjects and it builds a timed paper from just those. The questions are split evenly across what you tick rather than by how many the bank happens to hold, so pairing a small subject with a large one gives you half of each instead of a paper that is almost entirely the large one. Between drilling a single subject and sitting the whole syllabus, there was nothing — this is that middle.</td><td>✅ fixed</td></tr>
 <tr><td>2026-08-27</td><td>Question bank</td><td>Four questions were carrying an advertisement for someone else's app, printed into the question text by the scanner along with the rest of the page. They were live. A search of the whole bank for anything of that kind — app names, links, channel invitations — found those four and nothing else, and all four are clean now. It should never have been possible to read that inside a question you had paid to study from.</td><td>✅ fixed</td></tr>

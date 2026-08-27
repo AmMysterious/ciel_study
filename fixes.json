@@ -3,6 +3,18 @@
  "fixes": [
   {
    "date": "2026-08-27",
+   "area": "Question bank",
+   "what": "Twenty-five questions were deleted permanently. These are the ones that had been held out of the bank because they could not be rebuilt honestly — a question whose entire text was \"Assessment of resources.\", one with four clean options and no question above them, one where a head-injury case had been fused onto four options about urinary chemistry by a bad scan. Every deleted row was written to a file first and read back and compared before anything was removed, and they were taken out of the import files too so a future re-import cannot quietly put them back. The number of questions you can actually practise did not change: none of these was ever being served.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-27",
+   "area": "Question bank",
+   "what": "Four answer keys were corrected and the questions put back into the bank. A newborn galactosaemia question was keyed to the wrong enzyme; a forensic question cited the wrong section of the law; a milestones question was keyed \"all of the above\" when only one of its four statements is true; and a breast cancer staging question was keyed to a stage its own printed staging table contradicts. All four had been held back rather than served while the keys were in doubt, so nobody was ever shown the wrong answer. One more question stays held: it asks which type of gastric ulcer goes with low stomach acid and two of its four options are correct, which no answer key can fix.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-08-27",
    "area": "Bot",
    "what": "Mixed practice was not spreading questions across subjects. It avoided repeating a question you had recently seen, but it never looked at the SUBJECT, so the same subject could come up two or three times in a row — measured at roughly one back-to-back repeat every fifteen questions. Tutor Mode now holds back the last three subjects you were served, so the feed moves through all 19. Picking a subject deliberately still keeps you in that subject.",
    "status": "fixed"
