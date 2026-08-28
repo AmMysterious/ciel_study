@@ -3,6 +3,18 @@
   "fixes": [
     {
       "date": "2026-08-28",
+      "area": "Free tier",
+      "what": "New free-tier users could get a message saying their free trial had ended, sometimes after answering a single question. There is no time-limited trial on this bot (never has been on the free tier's daily allowance) - a background message was miscalculating and firing anyway. Fixed; it can no longer send.",
+      "status": "fixed"
+    },
+    {
+      "date": "2026-08-28",
+      "area": "Question bank",
+      "what": "A question about semen analysis was keyed to the wrong WHO reference number - it asked for the PROGRESSIVE motility figure (30%) but was keyed to the TOTAL motility figure (42%), a different measurement. One user had already been told the old answer was correct; the key is now fixed and the question is back in the bank.",
+      "status": "fixed"
+    },
+    {
+      "date": "2026-08-28",
       "area": "Question bank",
       "what": "A question was reported where the options referred to numbered statements that were never actually printed in the question - so there was no way to know what the statements said. Checked, and it was a real gap in the original source, not something that got lost along the way. Scanned every live question for the same pattern (options pointing at a numbered or lettered list that never appears) and found three more the same way. All four are held back rather than guessed at.",
       "status": "fixed"
