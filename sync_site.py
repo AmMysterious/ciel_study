@@ -439,6 +439,46 @@ def render_milestones(n: dict) -> list[str]:
     return []
 
 
+def sync_llms(n: dict) -> list[str]:
+    """Keep llms.txt's numbers tied to the database like every page here.
+
+    ⚠⚠ IT WAS NOT COVERED UNTIL S59 AND HAD DRIFTED. While the HTML said
+    4,400+, llms.txt still said 3,967 — the exact failure this whole script was
+    written to stop, hiding in the one file nobody opens. It matters more than
+    its traffic suggests: llms.txt is what ANSWER ENGINES read and quote, so a
+    stale number here is repeated by machines that never see the site.
+
+    ⚠ EXACT numbers here on purpose, not the rounded-down copy figure. The HTML
+    rounds because it is prose a reader skims; this file is a factual record for
+    a machine, and it already used exact counts. Rounding it would be a second
+    number for the same fact, which is the drift this file just suffered from.
+
+    ⚠ Curated literal phrases, same rule as _FREE_PHRASES above. A pattern like
+    r"\\d+ questions" would happily rewrite the price or the free tier.
+    """
+    p = HERE / "llms.txt"
+    if not p.exists():
+        return []
+    s = old = p.read_text(encoding="utf-8")
+    subs = [
+        (re.compile(r"It serves [\d,]+ previous-year"),
+         f"It serves {n['servable']:,} previous-year"),
+        (re.compile(r"questions across \d+ subjects"),
+         f"questions across {n['subjects']} subjects"),
+        (re.compile(r"and [\d,]+ of them include a clinical image"),
+         f"and {n['figures']:,} of them include a clinical image"),
+        (re.compile(r"^[\d,]+ of them are video questions", re.M),
+         f"{n['videos']:,} of them are video questions"),
+    ]
+    for pat, rep in subs:
+        s = pat.sub(rep, s)
+    if s != old:
+        if not CHECK:
+            p.write_text(s, encoding="utf-8", newline="\n")
+        return ["llms.txt"]
+    return []
+
+
 def _esc(s) -> str:
     return (str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
 
@@ -453,7 +493,7 @@ if __name__ == "__main__":
           "⚠ .env unreadable - free-tier numbers left untouched")
     print(f".env     -> donate link " + ("configured" if donate_url() else "NOT SET (support page will say 'not open yet')"))
     changed = (sync_stats(n) + render_fixes() + render_support()
-               + render_milestones(n))
+               + render_milestones(n) + sync_llms(n))
     if CHECK:
         # ⚠ ASCII ONLY ON THIS LINE. It used to print a tick emoji and crashed with
         # UnicodeEncodeError under Windows' cp1252 console — after having already
