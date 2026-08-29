@@ -5,7 +5,7 @@
 > card and no trial timer.
 
 ## What it is
-Ciel Study is a Telegram bot at https://t.me/Ciel_Study_bot. It serves 4,428 previous-year
+Ciel Study is a Telegram bot at https://t.me/Ciel_Study_bot. It serves 4,492 previous-year
 questions across 19 subjects. Every question carries a hand-checked answer
 key and a written explanation, and 411 of them include a clinical image.
 75 of them are video questions built on a short clip of a clinical sign —
