@@ -43,7 +43,7 @@
 
 <main id="main" class="wrap doc">
 <h1>Fixes &amp; what's next</h1>
-<p class="updated">Last updated 29 August 2026 &middot; 45 entries</p>
+<p class="updated">Last updated 05 September 2026 &middot; 46 entries</p>
 
 <p>If you report a problem, you should be able to see what happened to it. This page
 lists every issue I've fixed in the question bank, the bot and the payment flow &mdash;
@@ -79,6 +79,7 @@ length as the point.</p>
 <h3>2026</h3>
 <div class="table-scroll"><table>
 <tr><th>Date</th><th>Area</th><th>What changed</th><th>Status</th></tr>
+<tr><td>2026-09-05</td><td>Tutor mode</td><td>After answering a question that happened to include an image, the button underneath could lock you into image-only questions from then on - even if you never asked for image-only practice. Fixed; the next button now follows the mode you're actually in, not just whatever the last question happened to look like.</td><td>✅ fixed</td></tr>
 <tr><td>2026-08-28</td><td>Free tier</td><td>New free-tier users could get a message saying their free trial had ended, sometimes after answering a single question. There is no time-limited trial on this bot (never has been on the free tier's daily allowance) - a background message was miscalculating and firing anyway. Fixed; it can no longer send.</td><td>✅ fixed</td></tr>
 <tr><td>2026-08-28</td><td>Question bank</td><td>A question about semen analysis was keyed to the wrong WHO reference number - it asked for the PROGRESSIVE motility figure (30%) but was keyed to the TOTAL motility figure (42%), a different measurement. One user had already been told the old answer was correct; the key is now fixed and the question is back in the bank.</td><td>✅ fixed</td></tr>
 <tr><td>2026-08-28</td><td>Question bank</td><td>A question was reported where the options referred to numbered statements that were never actually printed in the question - so there was no way to know what the statements said. Checked, and it was a real gap in the original source, not something that got lost along the way. Scanned every live question for the same pattern (options pointing at a numbered or lettered list that never appears) and found three more the same way. All four are held back rather than guessed at.</td><td>✅ fixed</td></tr>
