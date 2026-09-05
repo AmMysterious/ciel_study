@@ -3,6 +3,12 @@
   "fixes": [
     {
       "date": "2026-09-05",
+      "area": "Review mode",
+      "what": "Two matching problems with the spaced-review queue. The /review command was serving an ordinary practice question instead of your review queue - only the button did the right thing. And stepping out of review into Tutor Mode left the old \"Next review\" button underneath, so the buttons disagreed with the questions you were being given. Both fixed; the command and the button now do the same thing, and switching modes always redraws the right button.",
+      "status": "fixed"
+    },
+    {
+      "date": "2026-09-05",
       "area": "Tutor mode",
       "what": "After answering a question that happened to include an image, the button underneath could lock you into image-only questions from then on - even if you never asked for image-only practice. Fixed; the next button now follows the mode you're actually in, not just whatever the last question happened to look like.",
       "status": "fixed"
