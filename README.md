@@ -7,9 +7,9 @@ and INI-CET aspirants, delivered through Telegram as [@Ciel_Study_bot](https://t
 
 ## What the bot actually is
 
-4,492+ previous-year questions across 19 subjects, every one with a hand-checked answer key
+4,491+ previous-year questions across 19 subjects, every one with a hand-checked answer key
 and a written explanation — not auto-generated, each independently re-solved and confirmed
-against the stored key before it ships. 411 questions carry an attached figure, 75 are
+against the stored key before it ships. 410 questions carry an attached figure, 75 are
 video-based. Features: Tutor mode, timed Exam Mode with full-length Grand Tests built to the
 official subject weighting, spaced repetition of questions answered wrong, streaks, a referral
 program, and a public fix log (`fixes.html`) — every reported defect and its resolution, logged

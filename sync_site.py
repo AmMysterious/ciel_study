@@ -193,6 +193,16 @@ def sync_stats(n: dict) -> list[str]:
     #   A SENTENCE FOR EVERY VALUE IT CAN TAKE, AND ZERO IS ALWAYS ONE OF THEM.
     #   Both forms are curated whole sentences, per the rule above the phrase map.
     s = _sync_held_back(s, n["held_back"])
+    # ⚠⚠ S64 — THE JSON-LD DESCRIPTION WAS NEVER COVERED AND HAD DRIFTED.
+    #   It sits in a <script type="application/ld+json"> block, so nothing above
+    #   touches it: the visible page said 4,400+ while the structured data
+    #   Google reads said 4,492 after one question was pulled. Same failure as
+    #   llms.txt in S59 — a machine-read number nobody opens the file to check.
+    #   EXACT count here, like llms.txt: this is structured data, not prose.
+    s = re.sub(r"Telegram\. [\d,]+ previous-year questions",
+               f"Telegram. {n['servable']:,} previous-year questions", s)
+    s = re.sub(r"across \d+ subjects\. Five questions",
+               f"across {n['subjects']} subjects. Five questions", s)
     fpd = n.get("free_per_day")
     if fpd:
         s = _sync_free(s, fpd)
@@ -200,6 +210,23 @@ def sync_stats(n: dict) -> list[str]:
         if not CHECK:
             idx.write_text(s, encoding="utf-8", newline="\n")
         changed.append("index.html")
+
+    # ⚠ S64 — THE README CARRIES THE SAME NUMBERS AND WAS ALSO UNCOVERED.
+    # It is the repo's front page on GitHub, so it drifts in public exactly like
+    # llms.txt did. Exact counts, curated literal phrases (same rule as the
+    # phrase maps above — a bare r"\d+ questions" would eat the price line).
+    readme = HERE / "README.md"
+    if readme.exists():
+        rs = rold = readme.read_text(encoding="utf-8")
+        rs = re.sub(r"^[\d,]+\+ previous-year questions across \d+ subjects",
+                    f"{n['servable']:,}+ previous-year questions across {n['subjects']} subjects",
+                    rs, flags=re.M)
+        rs = re.sub(r"[\d,]+ questions carry an attached figure, [\d,]+ are",
+                    f"{n['figures']:,} questions carry an attached figure, {n['videos']:,} are", rs)
+        if rs != rold:
+            if not CHECK:
+                readme.write_text(rs, encoding="utf-8", newline="\n")
+            changed.append("README.md")
 
     # The free allowance is quoted on the policy pages and the README too.
     # ⚠ These pages are REVIEWED POLICY TEXT — only the number may move, so each
