@@ -47,19 +47,19 @@
    "note": "Every explanation checked against its own answer key by hand."
   },
   {
-   "date": "2026-09-06",
-   "label": "5,100+ questions servable",
-   "note": "277 image-based questions unlocked after every figure in them was checked by eye."
-  },
-  {
-   "date": "2026-09-06",
-   "label": "687 questions carry their real figure",
-   "note": "Up from 343 in August. The actual diagram, radiograph or specimen, not a description of one."
-  },
-  {
    "date": "2026-08-28",
    "label": "200 people had used it",
    "note": ""
+  },
+  {
+   "date": "2026-09-06",
+   "label": "5,500+ questions servable",
+   "note": "Another 590 explanations written, each checked by re-solving the question first."
+  },
+  {
+   "date": "2026-09-06",
+   "label": "740 questions carry their real figure",
+   "note": "Every one looked at by eye before it shipped."
   }
  ]
 }
