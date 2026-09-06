@@ -43,7 +43,7 @@
 
 <main id="main" class="wrap doc">
 <h1>Fixes &amp; what's next</h1>
-<p class="updated">Last updated 06 September 2026 &middot; 49 entries</p>
+<p class="updated">Last updated 06 September 2026 &middot; 50 entries</p>
 
 <p>If you report a problem, you should be able to see what happened to it. This page
 lists every issue I've fixed in the question bank, the bot and the payment flow &mdash;
@@ -79,6 +79,7 @@ length as the point.</p>
 <h3>2026</h3>
 <div class="table-scroll"><table>
 <tr><th>Date</th><th>Area</th><th>What changed</th><th>Status</th></tr>
+<tr><td>2026-09-06</td><td>Question bank</td><td>Reported by a user: a question asked about "the instrument shown here" and no picture was ever attached. It was right, so that question has been taken down. Every other live question was then checked for the same fault - a question that points at an image, a scan or a photograph it does not actually show. Most turned out to be answerable from the case description alone and were left in place, but two more genuinely could not be answered without the missing picture and have been taken down as well. One was repaired instead of removed: a "identify this national health programme logo" question whose photograph was found and put back, so it now shows the emblem it always should have. Two further questions were being served as picture questions whose figure had never finished uploading; both are fixed. No answer key was changed.</td><td>✅ fixed</td></tr>
 <tr><td>2026-09-06</td><td>Question bank</td><td>Garbled letters in the explanation text of some questions have been corrected. In one of the source books a font problem had replaced certain characters with a capital I, so words came out as "Ixation" instead of "fixation", "gramInegative" instead of "gram-negative", and names lost their accents. The most important of these were roman numerals: "antithrombin Ill", "CN Ill" and "Type Ill" should all have read III. Every affected word was read in context and corrected by hand rather than by find-and-replace, because a few lookalikes were correct as printed and had to be left alone. No answer key was changed.</td><td>✅ fixed</td></tr>
 <tr><td>2026-09-06</td><td>Question bank</td><td>41 duplicate questions removed. A handful of questions appeared twice in the bank - the same stem and the same options, usually because the same question was reprinted in two different years' papers - so it was possible to be served one you had already answered. Each pair was checked before anything was deleted, and the copy with the fuller explanation was the one kept. Two pairs that look identical in text were deliberately LEFT IN: they are picture questions whose stems read the same but whose images, and answers, are different.</td><td>✅ fixed</td></tr>
 <tr><td>2026-09-05</td><td>Review mode</td><td>Two matching problems with the spaced-review queue. The /review command was serving an ordinary practice question instead of your review queue - only the button did the right thing. And stepping out of review into Tutor Mode left the old "Next review" button underneath, so the buttons disagreed with the questions you were being given. Both fixed; the command and the button now do the same thing, and switching modes always redraws the right button.</td><td>✅ fixed</td></tr>

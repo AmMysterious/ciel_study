@@ -4,6 +4,12 @@
   {
    "date": "2026-09-06",
    "area": "Question bank",
+   "what": "Reported by a user: a question asked about \"the instrument shown here\" and no picture was ever attached. It was right, so that question has been taken down. Every other live question was then checked for the same fault - a question that points at an image, a scan or a photograph it does not actually show. Most turned out to be answerable from the case description alone and were left in place, but two more genuinely could not be answered without the missing picture and have been taken down as well. One was repaired instead of removed: a \"identify this national health programme logo\" question whose photograph was found and put back, so it now shows the emblem it always should have. Two further questions were being served as picture questions whose figure had never finished uploading; both are fixed. No answer key was changed.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-09-06",
+   "area": "Question bank",
    "what": "Garbled letters in the explanation text of some questions have been corrected. In one of the source books a font problem had replaced certain characters with a capital I, so words came out as \"Ixation\" instead of \"fixation\", \"gramInegative\" instead of \"gram-negative\", and names lost their accents. The most important of these were roman numerals: \"antithrombin Ill\", \"CN Ill\" and \"Type Ill\" should all have read III. Every affected word was read in context and corrected by hand rather than by find-and-replace, because a few lookalikes were correct as printed and had to be left alone. No answer key was changed.",
    "status": "fixed"
   },
