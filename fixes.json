@@ -4,6 +4,30 @@
   {
    "date": "2026-09-08",
    "area": "Question bank",
+   "what": "Every answer in the part of the bank that had never been double-checked was re-derived by hand — 1,083 questions, read one at a time, working out the answer from the question and its options before looking at what was stored. 1,080 agreed. That is the headline and it is meant to be reassuring: the answers are sound. What follows is the nineteen that were not.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-09-08",
+   "area": "Question bank",
+   "what": "A question with a wrong answer key. A 13-year-old boy with one-sided nasal blockage and repeated nosebleeds over six months is the classic description of a juvenile nasopharyngeal angiofibroma, and that was offered as an option — but the stored answer was antrochoanal polyp, and the explanation had been written to defend it by claiming those polyps commonly bleed in teenage boys. They do not; that is exactly the point the question was testing. It has been taken down. Eighteen more questions were withdrawn in the same pass: some where two options were equally defensible as written, some where the question had lost the words that carried it, and five that were not really questions at all — three of them named their own answer in the question text.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-09-08",
+   "area": "Question bank",
+   "what": "Explanations that pointed at the wrong option letter. In some questions the \"other options\" section had labels shifted by one, so a paragraph headed \"Option B\" would describe what was actually option C. Ten questions had this, and in eight of them the mislabelled paragraph landed on the correct answer itself — so a student was told the answer was B and then read a paragraph headed \"Option B\" describing something else entirely. All ten are corrected. No answer key was changed by this: the answers were right, the labels were not. The whole written bank has now been checked for this, which had never been done before.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-09-08",
+   "area": "Question bank",
+   "what": "More questions pointing at a picture that is not there. An earlier entry on this page said no question that mentions an image now ships without one. That was true of the check that had been run, and the check turned out to have a gap — it was not looking for the words ultrasound, MRI, mammogram or barium study at all, or for phrasings like \"the swelling shown below\". Twenty-five more were found. Most are answerable from the case description and only the dangling sentence has been removed, or the finding written into the question where it was previously only in the picture. Two could not be answered without the missing image and have been taken down. Recorded here rather than quietly corrected, because the earlier entry claimed more than it should have.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-09-08",
+   "area": "Question bank",
    "what": "The bank grew from 6,125 to 7,085 questions, and the number carrying their own figure went from 748 to 1,329. Nothing was removed to make room. The figures had been finished for a while but were deliberately held back until every one of them had been looked at by eye, because one had been found with a publisher's watermark still on it.",
    "status": "fixed"
   },
