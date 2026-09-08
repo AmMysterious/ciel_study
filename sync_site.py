@@ -178,14 +178,18 @@ def sync_stats(n: dict) -> list[str]:
     s = old = idx.read_text(encoding="utf-8")
 
     # Machine-readable markers first — these cannot mangle prose.
+    # ⚠ Thousands separators, because every other number on the page has one.
+    # This was invisible while the figure count was 748 and shipped as a bare
+    # "1329" the moment it crossed a thousand — beside a "7,085" in the same
+    # block. A formatter that is only ever tested on small numbers is not tested.
     for key, val in (("questions", n["round"]), ("subjects", str(n["subjects"])),
-                     ("figures", str(n["figures"])), ("videos", str(n["videos"]))):
+                     ("figures", f"{n['figures']:,}"), ("videos", f"{n['videos']:,}")):
         s = re.sub(rf'(<b data-stat="{key}">)[^<]*(</b>)', rf'\g<1>{val}\g<2>', s)
 
     # Prose, each anchored tightly enough that it cannot match anything else.
     s = re.sub(r"\b\d{1,3},\d00\+ (MCQs|previous-year)", lambda m: f"{n['round']} {m.group(1)}", s)
-    s = re.sub(r"<p>\d+ questions that carry the actual figure",
-               f"<p>{n['figures']} questions that carry the actual figure", s)
+    s = re.sub(r"<p>[\d,]+ questions that carry the actual figure",
+               f"<p>{n['figures']:,} questions that carry the actual figure", s)
     # ⚠⚠ "AROUND 0 IMAGE-BASED QUESTIONS ARE STILL HELD BACK" WENT LIVE ON THIS
     #   PAGE. The count is a real number that reached zero, and the sentence
     #   built around it stopped being English — inside the one paragraph whose

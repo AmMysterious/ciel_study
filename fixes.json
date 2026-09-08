@@ -2,6 +2,36 @@
  "_comment": "Public log. PRIVACY RULE: never name a reporter, quote their message, or include a Telegram id. Show that reports get fixed, not who reported them. status: fixed | in progress | planned | wont fix. ⚠ Only list PLANNED items you actually intend to build, and never put a DATE on one — a missed date on a public page is a promise broken in writing.",
  "fixes": [
   {
+   "date": "2026-09-08",
+   "area": "Question bank",
+   "what": "The bank grew from 6,125 to 7,085 questions, and the number carrying their own figure went from 748 to 1,329. Nothing was removed to make room. The figures had been finished for a while but were deliberately held back until every one of them had been looked at by eye, because one had been found with a publisher's watermark still on it.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-09-08",
+   "area": "Question bank",
+   "what": "Questions that talked about a picture that was not there. Some explanations ended with a line like \"the image below shows...\" when no image had ever been attached. 124 questions were corrected: where the finding was already described in words, the dangling sentence was removed or rewritten so nothing was lost. Eleven others could not be fixed that way - the picture WAS the question - and those have been taken down rather than left as a guess. No question that mentions an image now ships without one.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-09-08",
+   "area": "Question bank",
+   "what": "Roman numerals that had been mangled into look-alike letters. A font problem in one of the source books turned II into \"Il\", VII into \"Vll\" and XII into \"Xll\", so questions and explanations read \"CN Vll (Facial)\", \"Angiotensin ll\" and \"Grade Il reflux\". One of them was in a question stem itself - an ECG described as showing changes \"in leads Il, III and aVF\". 58 of these were corrected across 31 questions.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-09-08",
+   "area": "Question bank",
+   "what": "Words that had run together when the source books were scanned - \"Whichof the following\", \"Itis themost commonly affected vein\", \"shownin the image\". 435 of these were separated. Medical terms were left strictly alone: names like Microsporum canis, alopecia areata and tabes dorsalis look like run-together words to a computer and are not.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-09-08",
+   "area": "Question bank",
+   "what": "A small number of questions were found carrying an explanation that belonged to a completely different question - a spirometry question explained with the oxygen dissociation curve, for instance. Seven were found. Their explanations have been removed and those questions are out of the bank until they are rewritten properly, rather than left to mislead.",
+   "status": "fixed"
+  },
+  {
    "date": "2026-09-06",
    "area": "Question bank",
    "what": "Reported by a user: a question asked about \"the instrument shown here\" and no picture was ever attached. It was right, so that question has been taken down. Every other live question was then checked for the same fault - a question that points at an image, a scan or a photograph it does not actually show. Most turned out to be answerable from the case description alone and were left in place, but two more genuinely could not be answered without the missing picture and have been taken down as well. One was repaired instead of removed: a \"identify this national health programme logo\" question whose photograph was found and put back, so it now shows the emblem it always should have. Two further questions were being served as picture questions whose figure had never finished uploading; both are fixed. No answer key was changed.",
@@ -318,7 +348,7 @@
   {
    "status": "next",
    "goal": "The questions that are still missing their figure",
-   "why": "Every image question the bot serves today carries its own figure — none are held back mid-flight any more. What is left is a smaller set that never made it into the bank at all, because the figure they depend on could not be read clearly enough to be sure of the answer. Those stay out until I can crop and check each one by hand.",
+   "why": "Every image question the bot serves carries its own figure. What is left is a set of about sixty whose picture still has a publisher's watermark on it or was cropped badly, plus a few whose figure was never printed clearly enough in the source to be sure of the answer. Those stay out until each one has been cleaned and checked by hand.",
    "when": "Ongoing — a batch at a time"
   },
   {
