@@ -177,12 +177,20 @@ h3 { font-size: 1.08rem; margin: 0 0 7px; }
 
 /* ── Stat strip ─────────────────────────────────────────────────────────── */
 
+/* ⚠ FLEX, NOT A FIXED COLUMN COUNT. There are five stats and the grid was
+   repeat(5,1fr), so the moment it dropped to three columns the fifth left a
+   dead cell — and because the strip is a 1px gap over a line-coloured
+   background, that hole is a visible empty panel, not just whitespace.
+   ★ With flex-wrap the last row STRETCHES to fill the strip, so it reads as a
+   deliberate 3-then-2 layout at every width, and it stays correct if a sixth
+   stat is ever added. */
 .stats {
-  display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px;
+  display: flex; flex-wrap: wrap; gap: 1px;
   background: var(--line); border: 1px solid var(--line);
   border-radius: var(--radius); overflow: hidden; margin-top: 46px;
 }
-.stat { background: var(--surface); padding: 20px 16px; text-align: center; }
+.stat { flex: 1 1 170px; background: var(--surface);
+  padding: 20px 16px; text-align: center; }
 .stat b {
   display: block; font-size: 1.5rem; font-weight: 700;
   color: var(--text); letter-spacing: -.02em;
@@ -192,7 +200,17 @@ h3 { font-size: 1.08rem; margin: 0 0 7px; }
 /* ── Cards / steps ──────────────────────────────────────────────────────── */
 
 .grid { display: grid; gap: 18px; }
-.grid-3 { grid-template-columns: repeat(3, 1fr); }
+/* ⚠ The feature grid holds TEN cards in three columns, so the last row was one
+   card with two empty slots beside it — read as a broken layout rather than as
+   the end of a list.
+   ★ Flex-wrap plus justify-content:center leaves the orphans CENTRED, with
+   equal space either side, which reads as deliberate. The max-width is what
+   keeps it to three per row; without it a lone card would stretch across the
+   whole width, which looks worse than the hole did. Cards are not padded out
+   with invented features to make the count divide — the layout gives way, not
+   the content. */
+.grid-3 { display: flex; flex-wrap: wrap; justify-content: center; }
+.grid-3 > * { flex: 1 1 250px; max-width: calc((100% - 36px) / 3); }
 
 .card {
   background: var(--surface); border: 1px solid var(--line);
@@ -357,22 +375,27 @@ td strong { color: var(--text); }
 
 @media (max-width: 1040px) {
   /* 5 stats do not fit here, and 4-across would leave one orphan on its own
-     row. Three and two both divide five into rows that look deliberate. */
-  .stats { grid-template-columns: repeat(3, 1fr); }
+     row. Three and two both divide five into rows that look deliberate.
+     ⚠ These are flex-basis values now, not column counts: the basis decides
+     how many fit per row, and the last row then STRETCHES to fill instead of
+     leaving the dead cell the old fixed grid produced. */
+  .stat { flex-basis: 30%; }
 }
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; gap: 30px; }
-  .grid-3, .steps { grid-template-columns: repeat(2, 1fr); }
+  .steps { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 > * { max-width: calc((100% - 18px) / 2); }
   .plans { grid-template-columns: repeat(2, 1fr); }
-  .stats { grid-template-columns: repeat(3, 1fr); }
+  .stat { flex-basis: 30%; }
 }
 @media (max-width: 620px) {
-  .stats { grid-template-columns: repeat(2, 1fr); }
+  .stat { flex-basis: 45%; }
 }
 @media (max-width: 560px) {
   body { font-size: 16px; }
   section { padding: 44px 0; }
-  .grid-3, .steps, .plans { grid-template-columns: 1fr; }
+  .steps, .plans { grid-template-columns: 1fr; }
+  .grid-3 > * { max-width: 100%; }
   .site-head .inner { padding: 10px 16px; gap: 8px; }
   .brand { font-size: 1.08rem; }
   nav a { padding: 5px 8px; font-size: .85rem; }
