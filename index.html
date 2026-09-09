@@ -137,13 +137,32 @@
   </div>
 </section>
 
+<!-- ⚠ GENERATED BAND — do not hand-edit between the markers. The source is
+     exam_dates.json, rendered by sync_site.py's render_exams(). Add or change a
+     date THERE, with the link to the notice it came from, then run sync_site.py. -->
+<section class="exam-band">
+  <div class="wrap">
+  <!--EXAMS:START-->
+  <p class="eyebrow">Exam dates</p>
+  <h2>FMGE is three times a year now.</h2>
+  <p class="lede">NBEMS has moved FMGE from twice a year to three times, and added a sitting on 31 October 2026. Every date below is quoted from the notice that set it, and linked, so you can check it yourself rather than take my word for it.</p>
+  <ul class="exams">
+    <li class="exam-row" data-exam-date="2026-10-31"><b>FMGE — the extra sitting</b><time datetime="2026-10-31">31 October 2026</time><span class="exam-countdown" hidden></span><span class="exam-note">Newly added. NBEMS has moved FMGE from twice a year to three times a year, and this sitting is the first result of that.</span><a class="exam-src" href="https://natboard.edu.in/viewNotice.php?NBE=OHUzVGIvZWlvVDVvTjVPTklKS1RVUT09" rel="nofollow noopener" target="_blank">NBEMS notice, 28 Aug 2026 ↗</a></li>
+    <li class="exam-row" data-exam-date="2026-11-01"><b>INI-CET — January 2027 session</b><time datetime="2026-11-01">1 November 2026</time><span class="exam-countdown" hidden></span> <span class="exam-tent">tentative</span><span class="exam-note">The day after FMGE. Results are listed for 7 November.</span><a class="exam-src" href="https://www.aiimsexams.ac.in/landingpage/key-dates" rel="nofollow noopener" target="_blank">AIIMS key dates ↗</a></li>
+    <li class="exam-row"><b>FMGE — the January sitting</b><span class="exam-tbd">Not yet announced</span><span class="exam-note">This was set for 9 January 2027. NBEMS is moving it to a later date in January or February 2027 and has not said which yet. If you were planning your year around 9 January, that date is gone.</span><a class="exam-src" href="https://natboard.edu.in/viewNotice.php?NBE=OHUzVGIvZWlvVDVvTjVPTklKS1RVUT09" rel="nofollow noopener" target="_blank">NBEMS notice, 28 Aug 2026 ↗</a></li>
+    <li class="exam-row"><b>NEET-PG</b><span class="exam-tbd">Not yet announced</span><span class="exam-note">The 2026 sitting is behind us. The next one has not been announced.</span><span class="exam-src exam-nosrc">no official notice yet</span></li>
+  </ul>
+  <!--EXAMS:END-->
+  </div>
+</section>
+
 <section>
   <div class="wrap">
     <p class="eyebrow">Why this exists</p>
     <h2>Built because the PDFs weren't good enough</h2>
-    <p class="lede">I'm sitting for FMGE again in January 2027. Somewhere between the
-    fourth PDF dump and the tenth "recall" screenshot, I gave up and built the thing I
-    actually wanted to study from.</p>
+    <p class="lede">I'm sitting FMGE on 31 October 2026 — the same paper as most of the
+    people reading this. Somewhere between the fourth PDF dump and the tenth "recall"
+    screenshot, I gave up and built the thing I actually wanted to study from.</p>
 
     <div class="note">
       <strong>About the answer keys.</strong> Not spot-checked — every question I
@@ -422,7 +441,7 @@
     <details class="faq">
       <summary>Who runs this?</summary>
       <div class="body"><p>One person, not a company. I'm an FMGE candidate myself,
-      sitting the exam again in January 2027. Contact details are on the
+      sitting the exam again on 31 October 2026. Contact details are on the
       <a href="contact.html">contact page</a>.</p></div>
     </details>
 
@@ -470,6 +489,36 @@
     </nav>
   </div>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+
+  <!-- Exam countdown. ⚠ It holds NO date of its own — it reads the date the
+       generator already wrote into each row, so there is exactly one source of
+       truth (exam_dates.json) and this can never disagree with the page.
+       With JavaScript off, every date and every source link is still on the
+       page; all that is lost is the words "N days to go".
+       ★ Days are counted to MIDNIGHT IST, not to the reader's own midnight. A
+       reader in Manila or London must see the same number of days to an Indian
+       exam as a reader in Kerala. -->
+  <script>
+  (function () {
+    try {
+      var IST = 5.5 * 3600 * 1000;
+      var now = Date.now();
+      document.querySelectorAll('.exam-row[data-exam-date]').forEach(function (row) {
+        var p = row.getAttribute('data-exam-date').split('-');
+        var due = Date.UTC(+p[0], +p[1] - 1, +p[2]) - IST;
+        var days = Math.ceil((due - now) / 86400000);
+        if (days < 0) { row.remove(); return; }   // silence beats "-4 days"
+        var el = row.querySelector('.exam-countdown');
+        if (!el) return;
+        el.textContent = days === 0 ? 'today'
+                       : days === 1 ? 'tomorrow'
+                       : days + ' days to go';
+        if (days <= 1) el.classList.add('is-now');
+        el.hidden = false;
+      });
+    } catch (e) { /* the plain dates are already on the page */ }
+  })();
+  </script>
 </footer>
 </body>
 </html>

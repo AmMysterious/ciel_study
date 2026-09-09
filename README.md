@@ -30,8 +30,10 @@ Free tier: 5 questions a day, forever, no card and no time-limited trial.
 | `fixes.html` | Public log of reported issues and their fixes |
 | `support.html` | Help and FAQ |
 
-`style.css` is the only stylesheet. There is no JavaScript beyond a copyright year,
-no build step, no dependencies and no tracking.
+`style.css` is the only stylesheet. The only JavaScript on the site is a copyright
+year and the exam-date countdown on the home page — both of which the page reads
+correctly without: with scripts off you still get every exam date and every link to
+the notice it came from. No build step, no dependencies and no tracking.
 
 ## Plans
 

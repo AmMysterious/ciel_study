@@ -1,0 +1,38 @@
+{
+ "_comment": "Exam dates for the home page band. ⚠ RULE: a date goes in here ONLY if it is quoted from the body that sets it, with the URL of that notice in `source`. Never a coaching page, never a forum, never a number remembered from somewhere. These are NOT Ciel's promises - they are NBEMS's and AIIMS's, quoted and linked so a reader can check them in one click, which is the only reason it is safe to print a date at all (see the rule in fixes.json). A row with \"date\": null is the honest way to show an exam nobody has scheduled yet: it prints the situation and no number, so it cannot go stale. Rows whose date has passed are dropped automatically at render time - do not delete them by hand, the history is worth keeping. `tentative` prints the word the source itself uses.",
+ "updated": "2026-09-09",
+ "exams": [
+  {
+   "label": "FMGE — the extra sitting",
+   "date": "2026-10-31",
+   "note": "Newly added. NBEMS has moved FMGE from twice a year to three times a year, and this sitting is the first result of that.",
+   "tentative": false,
+   "source": "https://natboard.edu.in/viewNotice.php?NBE=OHUzVGIvZWlvVDVvTjVPTklKS1RVUT09",
+   "source_label": "NBEMS notice, 28 Aug 2026"
+  },
+  {
+   "label": "INI-CET — January 2027 session",
+   "date": "2026-11-01",
+   "note": "The day after FMGE. Results are listed for 7 November.",
+   "tentative": true,
+   "source": "https://www.aiimsexams.ac.in/landingpage/key-dates",
+   "source_label": "AIIMS key dates"
+  },
+  {
+   "label": "FMGE — the January sitting",
+   "date": null,
+   "note": "This was set for 9 January 2027. NBEMS is moving it to a later date in January or February 2027 and has not said which yet. If you were planning your year around 9 January, that date is gone.",
+   "tentative": false,
+   "source": "https://natboard.edu.in/viewNotice.php?NBE=OHUzVGIvZWlvVDVvTjVPTklKS1RVUT09",
+   "source_label": "NBEMS notice, 28 Aug 2026"
+  },
+  {
+   "label": "NEET-PG",
+   "date": null,
+   "note": "The 2026 sitting is behind us. The next one has not been announced.",
+   "tentative": false,
+   "source": null,
+   "source_label": null
+  }
+ ]
+}

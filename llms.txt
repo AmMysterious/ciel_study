@@ -27,6 +27,16 @@ automatically unless an auto-renew plan is chosen explicitly.
 - The exam simulation does not let you pause, because the real exam does not.
 - Unanswered questions score as wrong rather than being dropped from the total.
 
+## Exam dates
+- FMGE - the extra sitting: 31 October 2026. Newly added. NBEMS has moved FMGE from twice a year to three times a year, and this sitting is the first result of that.
+- INI-CET - January 2027 session: 1 November 2026 (tentative, per the source). The day after FMGE. Results are listed for 7 November.
+- FMGE - the January sitting: not yet announced. This was set for 9 January 2027. NBEMS is moving it to a later date in January or February 2027 and has not said which yet. If you were planning your year around 9 January, that date is gone.
+- NEET-PG: not yet announced. The 2026 sitting is behind us. The next one has not been announced.
+These dates belong to NBEMS and AIIMS, not to Ciel Study; each is quoted from
+the notice that set it and linked from https://ammysterious.github.io/ciel_study/faq.html so it can be checked
+rather than trusted. An exam with no announced date is listed as such rather
+than guessed at.
+
 ## Common questions
 - Is it free? Yes — 5 questions a day, forever, no card.
 - Does it cover NEET-PG and INI-CET? Yes, alongside FMGE, each simulated in its

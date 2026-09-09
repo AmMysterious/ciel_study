@@ -470,6 +470,103 @@ def render_milestones(n: dict) -> list[str]:
     return []
 
 
+def render_exams() -> list[str]:
+    """The home page's exam-dates band, from exam_dates.json.
+
+    ⚠⚠ EVERY DATE HERE BELONGS TO SOMEBODY ELSE. fixes.json's rule - "never put a
+    DATE on one, a missed date on a public page is a promise broken in writing" -
+    is about CIEL's promises, and it still stands. These are NBEMS's and AIIMS's
+    dates, so the safety comes from a different place: each one is printed with
+    the notice it came from and a link to it, and a row with no date prints the
+    situation instead of a guess. If a source link is ever missing, the row is
+    still rendered but the reader is told it is unsourced - never quietly.
+
+    ★ THE COUNTDOWN IS NOT COMPUTED HERE. This band would be correct only on the
+    day it was generated, and the site is regenerated when content changes, not
+    daily - so a number baked in at build time is wrong within 24 hours and
+    nobody would notice. The date goes into the HTML; index.html's script turns
+    it into "N days to go" in the reader's own browser. With JavaScript off the
+    reader still gets every date and every link.
+
+    ⏭ A row whose date has passed is dropped, so the band retires itself.
+    """
+    src = HERE / "exam_dates.json"
+    if not src.exists():
+        return []
+    try:
+        items = json.loads(src.read_text(encoding="utf-8")).get("exams", [])
+    except Exception as e:
+        print(f"⚠ exam_dates.json unreadable ({e}) — band left untouched")
+        return []
+
+    today = datetime.date.today()
+    rows, dated = [], []
+    for m in items:
+        d = None
+        if m.get("date"):
+            try:
+                d = datetime.date.fromisoformat(m["date"])
+            except Exception:
+                print(f"⚠ exam_dates.json: bad date {m.get('date')!r} — row skipped")
+                continue
+            if d < today:
+                continue                      # it has happened; the band moves on
+            dated.append(d)
+        rows.append((m, d))
+
+    if not rows:
+        block = ('  <p class="eyebrow">Exam dates</p>\n'
+                 '  <h2>Nothing scheduled that I can source</h2>\n'
+                 '  <p class="lede">When a date is announced it will appear here, '
+                 'with a link to the notice it came from.</p>')
+    else:
+        lis = []
+        for m, d in rows:
+            # "1 November", not "01 November" — %d pads, and a leading zero in
+            # running prose reads like a form field rather than a date.
+            pretty = f'{d.day} {d.strftime("%B %Y")}' if d else ""
+            when = (f'<time datetime="{d.isoformat()}">{pretty}</time>'
+                    if d else '<span class="exam-tbd">Not yet announced</span>')
+            cd = ('<span class="exam-countdown" hidden></span>' if d else "")
+            tent = (' <span class="exam-tent">tentative</span>'
+                    if d and m.get("tentative") else "")
+            note = f'<span class="exam-note">{_esc(m["note"])}</span>' if m.get("note") else ""
+            if m.get("source"):
+                cite = (f'<a class="exam-src" href="{_esc(m["source"])}" '
+                        f'rel="nofollow noopener" target="_blank">'
+                        f'{_esc(m.get("source_label") or "the notice")} ↗</a>')
+            else:
+                cite = '<span class="exam-src exam-nosrc">no official notice yet</span>'
+            attr = f' data-exam-date="{d.isoformat()}"' if d else ""
+            lis.append(f'    <li class="exam-row"{attr}>'
+                       f'<b>{_esc(m.get("label", ""))}</b>{when}{cd}{tent}'
+                       f'{note}{cite}</li>')
+        block = "\n".join([
+            '  <p class="eyebrow">Exam dates</p>',
+            '  <h2>FMGE is three times a year now.</h2>',
+            '  <p class="lede">NBEMS has moved FMGE from twice a year to three times, '
+            'and added a sitting on 31 October 2026. Every date below is quoted from '
+            'the notice that set it, and linked, so you can check it yourself rather '
+            'than take my word for it.</p>',
+            '  <ul class="exams">',
+            *lis,
+            '  </ul>',
+        ])
+
+    idx = HERE / "index.html"
+    s = old = idx.read_text(encoding="utf-8")
+    pat = re.compile(r"(<!--EXAMS:START-->).*?(<!--EXAMS:END-->)", re.S)
+    if not pat.search(s):
+        print("⚠ index.html has no EXAMS markers — band not injected")
+        return []
+    s = pat.sub(lambda _m: f"<!--EXAMS:START-->\n{block}\n  <!--EXAMS:END-->", s)
+    if s != old:
+        if not CHECK:
+            idx.write_text(s, encoding="utf-8", newline="\n")
+        return ["index.html (exam dates)"]
+    return []
+
+
 def sync_llms(n: dict) -> list[str]:
     """Keep llms.txt's numbers tied to the database like every page here.
 
@@ -524,7 +621,7 @@ if __name__ == "__main__":
           "⚠ .env unreadable - free-tier numbers left untouched")
     print(f".env     -> donate link " + ("configured" if donate_url() else "NOT SET (support page will say 'not open yet')"))
     changed = (sync_stats(n) + render_fixes() + render_support()
-               + render_milestones(n) + sync_llms(n))
+               + render_milestones(n) + render_exams() + sync_llms(n))
     if CHECK:
         # ⚠ ASCII ONLY ON THIS LINE. It used to print a tick emoji and crashed with
         # UnicodeEncodeError under Windows' cp1252 console — after having already

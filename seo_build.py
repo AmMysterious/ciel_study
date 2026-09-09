@@ -138,6 +138,43 @@ def faq_pairs():
     return out
 
 
+def _exam_lines() -> str:
+    """The exam dates for llms.txt, read from exam_dates.json — never typed here.
+
+    ⚠ Same drop-the-past rule as the home page band, so an agent crawling this
+    file in December is not told about an exam that happened in October. A row
+    with no date is still listed: "not yet announced" is a useful answer and a
+    guess is not.
+    """
+    src = HERE / "exam_dates.json"
+    if not src.exists():
+        return "- No exam dates are currently published."
+    try:
+        items = json.loads(src.read_text(encoding="utf-8")).get("exams", [])
+    except Exception as e:
+        print(f"⚠ exam_dates.json unreadable ({e}) — llms.txt lists no dates")
+        return "- No exam dates are currently published."
+    today = datetime.date.today()
+    out = []
+    for m in items:
+        label = (m.get("label") or "").replace("—", "-").strip()
+        if m.get("date"):
+            try:
+                d = datetime.date.fromisoformat(m["date"])
+            except Exception:
+                continue
+            if d < today:
+                continue
+            when = f'{d.day} {d.strftime("%B %Y")}'
+            if m.get("tentative"):
+                when += " (tentative, per the source)"
+        else:
+            when = "not yet announced"
+        note = (m.get("note") or "").replace("—", "-").strip()
+        out.append(f"- {label}: {when}." + (f" {note}" if note else ""))
+    return "\n".join(out) if out else "- No exam dates are currently published."
+
+
 def prices():
     """The INR figures actually printed on the pricing page, low to high."""
     h = (HERE / "pricing.html").read_text(encoding="utf-8")
@@ -283,6 +320,10 @@ def main():
     write("sitemap.xml", "\n".join(out) + "\n", changed)
 
     # ---- llms.txt ----------------------------------------------------------
+    # ⚠ Exam dates come from exam_dates.json, the same file the home page band
+    # renders from, and NEVER from a literal typed into the f-string below. An
+    # agent quoting a date this file invented would be the worst version of the
+    # p1_slide5 failure: wrong, uncorrectable, and repeated by a machine.
     # ★ The point of this file is to answer, in plain prose, the questions an
     # agent is actually asked — "is there a free FMGE question bank", "how much
     # does it cost" — so the answer can be lifted without parsing the site.
@@ -293,6 +334,7 @@ def main():
     p = prices()
     price_line = (f"Paid plans start at Rs {min(p)}; the highest listed plan is Rs {max(p)}."
                   if p else "See the pricing page.")
+    exam_lines = _exam_lines()
     llms = f"""# Ciel Study
 
 > A question bank for the FMGE, NEET-PG and INI-CET medical entrance exams that
@@ -321,6 +363,13 @@ automatically unless an auto-renew plan is chosen explicitly.
   over-sampling whichever subject the bank happens to hold most of.
 - The exam simulation does not let you pause, because the real exam does not.
 - Unanswered questions score as wrong rather than being dropped from the total.
+
+## Exam dates
+{exam_lines}
+These dates belong to NBEMS and AIIMS, not to Ciel Study; each is quoted from
+the notice that set it and linked from {BASE}/faq.html so it can be checked
+rather than trusted. An exam with no announced date is listed as such rather
+than guessed at.
 
 ## Common questions
 - Is it free? Yes — 5 questions a day, forever, no card.

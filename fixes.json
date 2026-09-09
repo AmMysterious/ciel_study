@@ -3,6 +3,12 @@
  "fixes": [
   {
    "date": "2026-09-09",
+   "area": "Site",
+   "what": "The home page now carries the exam dates. NBEMS announced on 28 August that FMGE will be held three times a year instead of twice, with an extra sitting on 31 October 2026 — and that the exam which was set for 9 January 2027 is being moved to a later date in January or February that has not been announced yet. Both are on the page, with the days remaining beside them and a link to the notice each one came from, so you can check them rather than take my word for it. INI-CET's session is listed there too, marked tentative because AIIMS marks it tentative. The bot will also show you a personal countdown if you send it your own exam date.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-09-09",
    "area": "Question bank",
    "what": "Ten questions pointed at something that was never shown. Each one said the biopsy, the scan or the smear \"showed the following\" and then showed nothing — the picture or the report had gone missing somewhere between the source paper and the bot. Nine of them are still perfectly answerable from the words that remain, so the dangling sentence has been removed rather than the question; the missing finding has deliberately NOT been written in, because doing that would hand you the answer. The tenth has been taken down: its picture was gone AND the question itself stopped mid-sentence, so there was nothing left to answer. Two earlier checks for exactly this fault had missed all ten, because both were looking for words like \"shown below\" and these questions said \"the following\" instead.",
    "status": "fixed"

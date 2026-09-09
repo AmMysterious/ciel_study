@@ -419,3 +419,51 @@ ol.milestones span { grid-column: 1 / -1; color: var(--text-dim);
   ol.milestones li { grid-template-columns: 1fr }
   ol.milestones time { grid-row: 1; justify-self: start }
 }
+
+/* ── EXAM DATES BAND ──────────────────────────────────────────────────────────
+   Sits directly under the hero stats: the first thing below the fold, because
+   for seven weeks it is the most useful sentence on the page.
+
+   ⚠ THE WORD "COUNTDOWN" IS DELIBERATELY ABSENT from the copy here. Three
+   places on this site say the free tier is "not a countdown" and there is "no
+   trial, no countdown" — that is a promise about the ALLOWANCE and it is still
+   true. This band counts down to an exam, not to the end of anything the reader
+   has. Hence "31 days to go", never "expires" and never "trial".
+
+   ★ Amber is spent on ONE thing: the number of days. It is the only part that
+   changes while you look at the page, and the only part a reader scans for. */
+.exam-band { background: var(--surface-2); border-block: 1px solid var(--line) }
+ul.exams { list-style: none; margin: 26px 0 0; padding: 0 }
+li.exam-row { display: grid; grid-template-columns: 1fr auto auto;
+  gap: 4px 14px; align-items: baseline;
+  padding: 15px 0; border-top: 1px solid var(--line) }
+li.exam-row:first-child { border-top: 0 }
+li.exam-row b { font-weight: 600; font-size: 1rem }
+li.exam-row time { color: var(--text); font-size: .92rem;
+  font-variant-numeric: tabular-nums; white-space: nowrap }
+.exam-tbd { color: var(--faint); font-size: .92rem; font-style: italic;
+  white-space: nowrap }
+.exam-countdown { color: var(--amber); font-weight: 700; font-size: .92rem;
+  font-variant-numeric: tabular-nums; white-space: nowrap }
+.exam-countdown.is-now { color: var(--on-accent); background: var(--amber);
+  border-radius: var(--radius-sm); padding: 2px 9px; font-size: .85rem }
+/* the source is not a footnote — it is the reason the date above it is safe to
+   print at all, so it stays on the row, not in a citation list at the bottom */
+.exam-src { grid-column: 1 / -1; justify-self: start;
+  color: var(--faint); font-size: .8rem; text-decoration: none;
+  border-bottom: 1px solid var(--line) }
+.exam-src:hover { color: var(--text-dim) }
+.exam-nosrc { border-bottom: 0; font-style: italic }
+.exam-note { grid-column: 1 / -1; color: var(--text-dim);
+  font-size: .9rem; line-height: 1.5 }
+.exam-tent { color: var(--faint); font-size: .72rem; letter-spacing: .04em;
+  text-transform: uppercase; border: 1px solid var(--line);
+  border-radius: 999px; padding: 1px 8px; white-space: nowrap }
+@media (max-width: 620px) {
+  /* Stack rather than squeeze: the date and the days are the two things worth
+     reading on a phone, so they get their own line instead of three columns
+     fighting over 340px. */
+  li.exam-row { grid-template-columns: auto auto; justify-content: start;
+    column-gap: 10px }
+  li.exam-row b { grid-column: 1 / -1 }
+}
