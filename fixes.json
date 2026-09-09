@@ -2,6 +2,30 @@
  "_comment": "Public log. PRIVACY RULE: never name a reporter, quote their message, or include a Telegram id. Show that reports get fixed, not who reported them. status: fixed | in progress | planned | wont fix. ⚠ Only list PLANNED items you actually intend to build, and never put a DATE on one — a missed date on a public page is a promise broken in writing.",
  "fixes": [
   {
+   "date": "2026-09-09",
+   "area": "Question bank",
+   "what": "1,404 questions now come with their own picture, up from 1,300. Most of that is a batch of figures that had been finished for a while but were held back because they still carried a publisher's watermark; those have now been cleaned by hand, one file at a time, and released. Sixteen more had never been shown to anyone for a duller reason — a newer source had simply never been added to the list of sources whose pictures are cleared, so its written questions had been going out normally while its picture questions sat invisible.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-09-09",
+   "area": "Question bank",
+   "what": "52 questions that had a picture but no written explanation now have one. Every figure was opened and read before the explanation was written, and three did not survive that look: one diagram pointed at the wrong hole in the skull from the one the question named, one promised an ultrasound scan and was actually a microscope slide, and one chest X-ray still had a website's logo across the corner. Those three are corrected or taken down rather than shipped.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-09-09",
+   "area": "Question bank",
+   "what": "The answer was too often (b). In one large block of the bank — about a thousand questions from recalled papers — the correct answer landed on option (b) roughly 47% of the time and on (d) only 8%, which means someone answering (b) to everything would have scored far better than chance and their practice score would have been flattering them. No individual answer was wrong; the pattern was in the set. The options on 953 of those questions have been reshuffled so the answer now falls evenly across (a), (b), (c) and (d). The questions, the answers and the explanations are unchanged — only which letter the right answer sits under.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-09-09",
+   "area": "Question bank",
+   "what": "One weak source rewritten. A set of recalled questions had explanations averaging a single line — 88 characters — which is not an explanation. Eleven have been rewritten properly, and four of those needed the question itself repaired, including one whose premise was simply false. Three could not be rewritten because the question was wrong at the source rather than badly explained: one of them dated a medical declaration to the wrong subject entirely, and another offered four fluids for a situation in which none of the four is correct. Those three are off the bank pending review.",
+   "status": "fixed"
+  },
+  {
    "date": "2026-09-08",
    "area": "Question bank",
    "what": "Every answer in the part of the bank that had never been double-checked was re-derived by hand — 1,083 questions, read one at a time, working out the answer from the question and its options before looking at what was stored. 1,080 agreed. That is the headline and it is meant to be reassuring: the answers are sound. What follows is the nineteen that were not.",
