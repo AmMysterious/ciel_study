@@ -3,25 +3,25 @@
  "updated": "2026-09-09",
  "exams": [
   {
-   "label": "FMGE — the extra sitting",
+   "label": "FMGE — extra sitting",
    "date": "2026-10-31",
-   "note": "Newly added. NBEMS has moved FMGE from twice a year to three times a year, and this sitting is the first result of that.",
+   "note": "NBEMS moved FMGE from twice a year to three times.",
    "tentative": false,
    "source": "https://natboard.edu.in/viewNotice.php?NBE=OHUzVGIvZWlvVDVvTjVPTklKS1RVUT09",
    "source_label": "NBEMS notice, 28 Aug 2026"
   },
   {
-   "label": "INI-CET — January 2027 session",
+   "label": "INI-CET — Jan 2027",
    "date": "2026-11-01",
-   "note": "The day after FMGE. Results are listed for 7 November.",
+   "note": "The day after FMGE. Results listed for 7 November.",
    "tentative": true,
    "source": "https://www.aiimsexams.ac.in/landingpage/key-dates",
    "source_label": "AIIMS key dates"
   },
   {
-   "label": "FMGE — the January sitting",
+   "label": "FMGE — January sitting",
    "date": null,
-   "note": "This was set for 9 January 2027. NBEMS is moving it to a later date in January or February 2027 and has not said which yet. If you were planning your year around 9 January, that date is gone.",
+   "note": "Was 9 January 2027. Moved to an unnamed date in Jan/Feb 2027.",
    "tentative": false,
    "source": "https://natboard.edu.in/viewNotice.php?NBE=OHUzVGIvZWlvVDVvTjVPTklKS1RVUT09",
    "source_label": "NBEMS notice, 28 Aug 2026"
@@ -29,7 +29,7 @@
   {
    "label": "NEET-PG",
    "date": null,
-   "note": "The 2026 sitting is behind us. The next one has not been announced.",
+   "note": "The 2026 sitting is behind us.",
    "tentative": false,
    "source": null,
    "source_label": null

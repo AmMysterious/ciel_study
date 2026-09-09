@@ -530,7 +530,7 @@ def render_exams() -> list[str]:
             cd = ('<span class="exam-countdown" hidden></span>' if d else "")
             tent = (' <span class="exam-tent">tentative</span>'
                     if d and m.get("tentative") else "")
-            note = f'<span class="exam-note">{_esc(m["note"])}</span>' if m.get("note") else ""
+            note = (_esc(m["note"]) + " ") if m.get("note") else ""
             if m.get("source"):
                 cite = (f'<a class="exam-src" href="{_esc(m["source"])}" '
                         f'rel="nofollow noopener" target="_blank">'
@@ -538,16 +538,21 @@ def render_exams() -> list[str]:
             else:
                 cite = '<span class="exam-src exam-nosrc">no official notice yet</span>'
             attr = f' data-exam-date="{d.isoformat()}"' if d else ""
+            # ⚠ THE BADGE LIVES INSIDE THE LABEL CELL AND THE SOURCE INSIDE THE
+            # NOTE. As separate grid children they each claimed a row of their
+            # own — "tentative" alone pushed the INI-CET row 26px taller than
+            # its neighbours, and four rows of citation added another 88px to a
+            # band whose whole job is to be read in one glance.
             lis.append(f'    <li class="exam-row"{attr}>'
-                       f'<b>{_esc(m.get("label", ""))}</b>{when}{cd}{tent}'
-                       f'{note}{cite}</li>')
+                       f'<b>{_esc(m.get("label", ""))}{tent}</b>{when}{cd}'
+                       f'<span class="exam-note">{note}{cite}</span></li>')
         block = "\n".join([
             '  <p class="eyebrow">Exam dates</p>',
             '  <h2>FMGE is three times a year now.</h2>',
-            '  <p class="lede">NBEMS has moved FMGE from twice a year to three times, '
-            'and added a sitting on 31 October 2026. Every date below is quoted from '
-            'the notice that set it, and linked, so you can check it yourself rather '
-            'than take my word for it.</p>',
+            # ⚠ Short on purpose. The band sits above the fold and its job is the
+            # dates; the explaining belongs in the FAQ answer, which is linked.
+            '  <p class="lede">Each date is quoted from the notice that set it — '
+            'follow the link and check.</p>',
             '  <ul class="exams">',
             *lis,
             '  </ul>',

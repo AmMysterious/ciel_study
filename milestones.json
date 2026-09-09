@@ -60,6 +60,21 @@
    "date": "2026-09-06",
    "label": "740 questions carry their real figure",
    "note": "Every one looked at by eye before it shipped."
+  },
+  {
+   "date": "2026-09-07",
+   "label": "300 people had used it",
+   "note": ""
+  },
+  {
+   "date": "2026-09-09",
+   "label": "7,100+ questions servable",
+   "note": "The writing backlog reached zero — every question in the bank now has an explanation."
+  },
+  {
+   "date": "2026-09-09",
+   "label": "1,400+ questions carry their real figure",
+   "note": "Every image question the bot serves has its own picture."
   }
  ]
 }

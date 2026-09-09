@@ -432,30 +432,37 @@ ol.milestones span { grid-column: 1 / -1; color: var(--text-dim);
 
    ★ Amber is spent on ONE thing: the number of days. It is the only part that
    changes while you look at the page, and the only part a reader scans for. */
-.exam-band { background: var(--surface-2); border-block: 1px solid var(--line) }
-ul.exams { list-style: none; margin: 26px 0 0; padding: 0 }
+/* ⚠ NARROWER THAN THE PAGE. The wrap is 1080px and a four-row list stretched
+   across all of it reads as a wall — the eye has to travel the full width to
+   pair a label with its date. 560px keeps label, date and days in one glance,
+   which is the only thing this band is for. */
+.exam-band { background: var(--surface-2); border-block: 1px solid var(--line);
+  padding: 34px 0 }
+.exam-band h2 { font-size: 1.5rem }
+.exam-band .lede { max-width: 560px }
+ul.exams { list-style: none; margin: 18px 0 0; padding: 0; max-width: 560px }
 li.exam-row { display: grid; grid-template-columns: 1fr auto auto;
-  gap: 4px 14px; align-items: baseline;
-  padding: 15px 0; border-top: 1px solid var(--line) }
+  gap: 2px 12px; align-items: baseline;
+  padding: 11px 0; border-top: 1px solid var(--line) }
 li.exam-row:first-child { border-top: 0 }
-li.exam-row b { font-weight: 600; font-size: 1rem }
-li.exam-row time { color: var(--text); font-size: .92rem;
+li.exam-row b { font-weight: 600; font-size: .95rem }
+li.exam-row time { color: var(--text); font-size: .88rem;
   font-variant-numeric: tabular-nums; white-space: nowrap }
-.exam-tbd { color: var(--faint); font-size: .92rem; font-style: italic;
+.exam-tbd { color: var(--faint); font-size: .88rem; font-style: italic;
   white-space: nowrap }
-.exam-countdown { color: var(--amber); font-weight: 700; font-size: .92rem;
+.exam-countdown { color: var(--amber); font-weight: 700; font-size: .88rem;
   font-variant-numeric: tabular-nums; white-space: nowrap }
 .exam-countdown.is-now { color: var(--on-accent); background: var(--amber);
-  border-radius: var(--radius-sm); padding: 2px 9px; font-size: .85rem }
-/* the source is not a footnote — it is the reason the date above it is safe to
-   print at all, so it stays on the row, not in a citation list at the bottom */
-.exam-src { grid-column: 1 / -1; justify-self: start;
-  color: var(--faint); font-size: .8rem; text-decoration: none;
-  border-bottom: 1px solid var(--line) }
+  border-radius: var(--radius-sm); padding: 2px 9px; font-size: .82rem }
+/* The source and the note share the second line: the note earns its place only
+   because it is short, and the citation is the reason the date is safe to
+   print, so neither gets a row of its own. */
+.exam-note { grid-column: 1 / -1; color: var(--text-dim);
+  font-size: .84rem; line-height: 1.45 }
+.exam-src { color: var(--faint); font-size: .75rem; text-decoration: none;
+  white-space: nowrap; border-bottom: 1px solid var(--line) }
 .exam-src:hover { color: var(--text-dim) }
 .exam-nosrc { border-bottom: 0; font-style: italic }
-.exam-note { grid-column: 1 / -1; color: var(--text-dim);
-  font-size: .9rem; line-height: 1.5 }
 .exam-tent { color: var(--faint); font-size: .72rem; letter-spacing: .04em;
   text-transform: uppercase; border: 1px solid var(--line);
   border-radius: 999px; padding: 1px 8px; white-space: nowrap }
