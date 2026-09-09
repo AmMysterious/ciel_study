@@ -4,6 +4,24 @@
   {
    "date": "2026-09-09",
    "area": "Question bank",
+   "what": "Ten questions pointed at something that was never shown. Each one said the biopsy, the scan or the smear \"showed the following\" and then showed nothing — the picture or the report had gone missing somewhere between the source paper and the bot. Nine of them are still perfectly answerable from the words that remain, so the dangling sentence has been removed rather than the question; the missing finding has deliberately NOT been written in, because doing that would hand you the answer. The tenth has been taken down: its picture was gone AND the question itself stopped mid-sentence, so there was nothing left to answer. Two earlier checks for exactly this fault had missed all ten, because both were looking for words like \"shown below\" and these questions said \"the following\" instead.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-09-09",
+   "area": "Question bank",
+   "what": "A question was reported for having the wrong answer. It did not — but the report was fair, because the explanation gave the right answer without ever saying why the most tempting wrong answer was wrong, and that reads exactly like a mistake. The explanation has been rewritten to take that option on directly and say why it does not fit this patient. If an answer looks wrong to you, please do report it: the answer being right does not mean nothing is.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-09-09",
+   "area": "Question bank",
+   "what": "Two options were printed with damaged text — one was a misspelling of the correct answer itself, so anyone who knew the answer would not have found it on the list, and one had an internal tag left stuck on the end of it. Both corrected.",
+   "status": "fixed"
+  },
+  {
+   "date": "2026-09-09",
+   "area": "Question bank",
    "what": "1,404 questions now come with their own picture, up from 1,300. Most of that is a batch of figures that had been finished for a while but were held back because they still carried a publisher's watermark; those have now been cleaned by hand, one file at a time, and released. Sixteen more had never been shown to anyone for a duller reason — a newer source had simply never been added to the list of sources whose pictures are cleared, so its written questions had been going out normally while its picture questions sat invisible.",
    "status": "fixed"
   },
@@ -416,6 +434,12 @@
    "goal": "Other medical entrance and service exams, starting with UPSC CMS",
    "why": "One place to practise whichever exam you are sitting, rather than a different app for each.",
    "when": "The three current exams are where I want them"
+  },
+  {
+   "status": "next",
+   "goal": "Fuller explanations on the older recalled papers",
+   "why": "Every question the bot serves has an explanation, but on some of the older recalled papers that explanation is a single line — it states the right answer without working through why the other three are wrong. About 1,700 questions are in that state. They are being rewritten in batches, the same way the INI-CET recalls already were.",
+   "when": "Ongoing — a batch at a time"
   }
  ]
 }
