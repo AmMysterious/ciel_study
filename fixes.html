@@ -43,7 +43,7 @@
 
 <main id="main" class="wrap doc">
 <h1>Fixes &amp; what's next</h1>
-<p class="updated">Last updated 09 September 2026 &middot; 67 entries</p>
+<p class="updated">Last updated 11 September 2026 &middot; 70 entries</p>
 
 <p>If you report a problem, you should be able to see what happened to it. This page
 lists every issue I've fixed in the question bank, the bot and the payment flow &mdash;
@@ -80,6 +80,9 @@ length as the point.</p>
 <h3>2026</h3>
 <div class="table-scroll"><table>
 <tr><th>Date</th><th>Area</th><th>What changed</th><th>Status</th></tr>
+<tr><td>2026-09-11</td><td>Question bank</td><td>99 more picture questions are live — 7,223 questions now, 1,520 of them with a figure. Every one was checked twice: the picture by eye for watermarks and bad crops, then the answer worked out again with the picture open. The second check mattered: six pictures that looked perfectly clean turned out to belong to a different question (an audiogram filed under an ovarian cyst, a chest X-ray under a question that asks about an MRI). Those six are held back until their real figure is found, and nine text questions were deliberately not given a picture for the same reason.</td><td>✅ fixed</td></tr>
+<tr><td>2026-09-11</td><td>Figures</td><td>Four pictures were still showing a coaching watermark even though a cleaned version already existed — the clean copy had been saved, but never swapped in for the one the bot actually sends. All four now send the clean picture, and the old ones are deleted. Two questions corrected last week had also quietly stopped being shown at all; both are back.</td><td>✅ fixed</td></tr>
+<tr><td>2026-09-10</td><td>Question bank</td><td>Every one of the 1,700 shortest explanations — the ones that just named the answer and stopped — has been rewritten. Each now explains why the answer is right and why every other option is wrong. Working through them turned up answer keys that did not survive a second look: 12 were corrected after checking, and 12 that looked suspicious were confirmed right and kept. Questions that could not be settled were taken out rather than served uncertain.</td><td>✅ fixed</td></tr>
 <tr><td>2026-09-09</td><td>Site</td><td>The home page now carries the exam dates, with the days remaining beside each one and a link to the notice it came from. NBEMS announced on 28 August that FMGE runs three times a year now instead of twice: an extra sitting on 31 October 2026, and the exam that was set for 9 January 2027 moved to a date in January or February that hasn't been named yet. INI-CET is there too, marked tentative because AIIMS marks it tentative. The bot will count down to your own exam date if you send it one.</td><td>✅ fixed</td></tr>
 <tr><td>2026-09-09</td><td>Question bank</td><td>Ten questions pointed at something that was never shown — the biopsy or the scan "showed the following", and then showed nothing. Nine are still answerable from the words that remain, so the dangling sentence was cut rather than the question; the missing finding was deliberately not written in, because that would hand you the answer. The tenth is withdrawn: its picture was gone and its question stopped mid-sentence. Two earlier checks for this fault had missed all ten.</td><td>✅ fixed</td></tr>
 <tr><td>2026-09-09</td><td>Question bank</td><td>A question was reported for a wrong answer key. It wasn't wrong — but the report was fair: the explanation stated the answer without ever saying why the most tempting option was wrong, which reads exactly like a mistake. Rewritten to take that option on directly. Please keep reporting: an answer being right doesn't mean nothing is.</td><td>✅ fixed</td></tr>
