@@ -43,7 +43,7 @@
 
 <main id="main" class="wrap doc">
 <h1>Fixes &amp; what's next</h1>
-<p class="updated">Last updated 12 September 2026 &middot; 70 entries</p>
+<p class="updated">Last updated 12 September 2026 &middot; 71 entries</p>
 
 <p>If you report a problem, you should be able to see what happened to it. This page
 lists every issue I've fixed in the question bank, the bot and the payment flow &mdash;
@@ -80,6 +80,7 @@ length as the point.</p>
 <h3>2026</h3>
 <div class="table-scroll"><table>
 <tr><th>Date</th><th>Area</th><th>What changed</th><th>Status</th></tr>
+<tr><td>2026-09-12</td><td>Question bank</td><td>The scanned question books left words stuck together — "riskof", "theleft", "amnioticfluid" — and a few pulled apart, like "int uss us ce ption". 889 of them across 501 questions have been repaired, in the questions, the options and the explanations. Every repair was checked to change spacing only: with all spaces removed, the text before and after is identical character for character, so no wording could drift. Real medical terms that look glued, such as midaxillary and methylergometrine, were deliberately left alone.</td><td>✅ fixed</td></tr>
 <tr><td>2026-09-11</td><td>Question bank</td><td>99 more picture questions are live — 7,223 questions now, 1,520 of them with a figure. Every one was checked twice: the picture by eye for watermarks and bad crops, then the answer worked out again with the picture open. The second check mattered: six pictures that looked perfectly clean turned out to belong to a different question (an audiogram filed under an ovarian cyst, a chest X-ray under a question that asks about an MRI). Those six are held back until their real figure is found, and nine text questions were deliberately not given a picture for the same reason.</td><td>✅ fixed</td></tr>
 <tr><td>2026-09-11</td><td>Figures</td><td>Four pictures were still showing a coaching watermark even though a cleaned version already existed — the clean copy had been saved, but never swapped in for the one the bot actually sends. All four now send the clean picture, and the old ones are deleted. Two questions corrected last week had also quietly stopped being shown at all; both are back.</td><td>✅ fixed</td></tr>
 <tr><td>2026-09-10</td><td>Question bank</td><td>Every one of the 1,700 shortest explanations — the ones that just named the answer and stopped — has been rewritten. Each now explains why the answer is right and why every other option is wrong. Working through them turned up answer keys that did not survive a second look: 12 were corrected after checking, and 12 that looked suspicious were confirmed right and kept. Questions that could not be settled were taken out rather than served uncertain.</td><td>✅ fixed</td></tr>

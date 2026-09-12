@@ -2,6 +2,12 @@
  "_comment": "Public log. PRIVACY RULE: never name a reporter, quote their message, or include a Telegram id. Show that reports get fixed, not who reported them. status: fixed | in progress | planned | wont fix. ⚠ Only list PLANNED items you actually intend to build, and never put a DATE on one — a missed date on a public page is a promise broken in writing.",
  "fixes": [
   {
+   "date": "2026-09-12",
+   "area": "Question bank",
+   "what": "The scanned question books left words stuck together — \"riskof\", \"theleft\", \"amnioticfluid\" — and a few pulled apart, like \"int uss us ce ption\". 889 of them across 501 questions have been repaired, in the questions, the options and the explanations. Every repair was checked to change spacing only: with all spaces removed, the text before and after is identical character for character, so no wording could drift. Real medical terms that look glued, such as midaxillary and methylergometrine, were deliberately left alone.",
+   "status": "fixed"
+  },
+  {
    "date": "2026-09-11",
    "area": "Question bank",
    "what": "99 more picture questions are live — 7,223 questions now, 1,520 of them with a figure. Every one was checked twice: the picture by eye for watermarks and bad crops, then the answer worked out again with the picture open. The second check mattered: six pictures that looked perfectly clean turned out to belong to a different question (an audiogram filed under an ovarian cyst, a chest X-ray under a question that asks about an MRI). Those six are held back until their real figure is found, and nine text questions were deliberately not given a picture for the same reason.",
