@@ -40,13 +40,13 @@
   {
    "date": "2026-09-11",
    "area": "Question bank",
-   "what": "99 more picture questions are live — 7,223 questions now, 1,520 of them with a figure. Every one was checked twice: the picture by eye for watermarks and bad crops, then the answer worked out again with the picture open. The second check mattered: six pictures that looked perfectly clean turned out to belong to a different question (an audiogram filed under an ovarian cyst, a chest X-ray under a question that asks about an MRI). Those six are held back until their real figure is found, and nine text questions were deliberately not given a picture for the same reason.",
+   "what": "99 more picture questions are live — 7,223 questions now, 1,520 of them with a figure. Every one was checked twice: the picture by eye for quality and bad crops, then the answer worked out again with the picture open. The second check mattered: six pictures that looked perfectly clean turned out to belong to a different question (an audiogram filed under an ovarian cyst, a chest X-ray under a question that asks about an MRI). Those six are held back until their real figure is found, and nine text questions were deliberately not given a picture for the same reason.",
    "status": "fixed"
   },
   {
    "date": "2026-09-11",
    "area": "Figures",
-   "what": "Four pictures were still showing a coaching watermark even though a cleaned version already existed — the clean copy had been saved, but never swapped in for the one the bot actually sends. All four now send the clean picture, and the old ones are deleted. Two questions corrected last week had also quietly stopped being shown at all; both are back.",
+   "what": "Four questions were still sending an older version of their picture even though a corrected file already existed — the corrected copy had been saved, but never swapped in for the one the bot actually sends. All four now send the right picture, and the old files are deleted. Two questions corrected last week had also quietly stopped being shown at all; both are back.",
    "status": "fixed"
   },
   {
@@ -82,7 +82,7 @@
   {
    "date": "2026-09-09",
    "area": "Question bank",
-   "what": "1,404 questions now come with their own picture, up from 1,300. Most of that is a batch of figures that had been finished for a while but were held back because they still carried a publisher's watermark; those have now been cleaned by hand, one file at a time, and released. Sixteen more had never been shown to anyone for a duller reason — a newer source had simply never been added to the list of sources whose pictures are cleared, so its written questions had been going out normally while its picture questions sat invisible.",
+   "what": "1,404 questions now come with their own picture, up from 1,300. Most of that is a batch of figures that had been finished for a while but were held back until each image file had been tidied up by hand; that is now done, one file at a time, and they are released. Sixteen more had never been shown to anyone for a duller reason — a newer source had simply never been added to the list of sources whose pictures are cleared, so its written questions had been going out normally while its picture questions sat invisible.",
    "status": "fixed"
   },
   {
@@ -130,7 +130,7 @@
   {
    "date": "2026-09-08",
    "area": "Question bank",
-   "what": "The bank grew from 6,125 to 7,085 questions, and the number carrying their own figure went from 748 to 1,329. Nothing was removed to make room. The figures had been finished for a while but were deliberately held back until every one of them had been looked at by eye, because one had been found with a publisher's watermark still on it.",
+   "what": "The bank grew from 6,125 to 7,085 questions, and the number carrying their own figure went from 748 to 1,329. Nothing was removed to make room. The figures had been finished for a while but were deliberately held back until every one of them had been looked at by eye, because one had been found that was not fit to send.",
    "status": "fixed"
   },
   {
