@@ -463,7 +463,7 @@
    "status": "building",
    "goal": "Always-on hosting, 24/7 — now in testing",
    "why": "The bot has moved off my laptop and is being trialled on a proper server, so it no longer depends on my machine being awake. It is a trial: I am watching how reliable it is and what it really costs before calling it permanent. If it ever has to move back for a while, nothing is lost — messages queue and payments are picked up automatically.",
-   "when": "The trial proves reliable and affordable"
+   "when": "Subscriptions cover the monthly server cost"
   },
   {
    "status": "next",
