@@ -461,15 +461,15 @@
  "planned": [
   {
    "status": "building",
-   "goal": "Always-on hosting, 24/7",
-   "why": "Right now the bot runs on my own laptop, so it can only answer while that machine is awake. Nothing is ever lost — messages queue and payments are picked up automatically — but you can be left waiting. A proper server ends that.",
-   "when": "Subscriptions cover the monthly server cost"
+   "goal": "Always-on hosting, 24/7 — now in testing",
+   "why": "The bot has moved off my laptop and is being trialled on a proper server, so it no longer depends on my machine being awake. It is a trial: I am watching how reliable it is and what it really costs before calling it permanent. If it ever has to move back for a while, nothing is lost — messages queue and payments are picked up automatically.",
+   "when": "The trial proves reliable and affordable"
   },
   {
    "status": "next",
    "goal": "Instant payment confirmation, every time",
-   "why": "Access already unlocks by itself, usually in seconds. On a server with a fixed address the confirmation is immediate and never depends on my laptop being on.",
-   "when": "The move to always-on hosting is done"
+   "why": "Access already unlocks by itself, usually within a few minutes. Instant confirmation needs the payment provider to reach the server directly, and that is switched on once hosting is permanent.",
+   "when": "Always-on hosting leaves testing"
   },
   {
    "status": "next",
