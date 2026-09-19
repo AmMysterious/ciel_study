@@ -2,6 +2,42 @@
  "_comment": "Public log. PRIVACY RULE: never name a reporter, quote their message, or include a Telegram id. Show that reports get fixed, not who reported them. status: fixed | in progress | planned | wont fix. ⚠ Only list PLANNED items you actually intend to build, and never put a DATE on one — a missed date on a public page is a promise broken in writing.",
  "fixes": [
   {
+   "date": "2026-09-19",
+   "area": "Answers",
+   "status": "fixed",
+   "what": "Long explanations no longer arrive as a wall of text. The answer and the reason for it come first; the rest — how the other options compare, and the extra detail — sits in a section you tap to open. Nothing was cut from any explanation: the only thing decided was where the fold goes."
+  },
+  {
+   "date": "2026-09-19",
+   "area": "Answers",
+   "status": "fixed",
+   "what": "After a wrong answer there is now a \"Why not X?\" button that explains why the option you picked is wrong, followed by \"What about the others?\" for the remaining options. After a right answer, \"Why not the others?\" does the same. Every Pharmacology and Anaesthesia question now has a line written for each wrong option; the other subjects are being filled in."
+  },
+  {
+   "date": "2026-09-19",
+   "area": "Practice",
+   "status": "fixed",
+   "what": "Mixed practice now asks which exam you are sitting first — FMGE, NEET-PG or INI-CET — and about half of your mixed questions then come from that exam's papers. The rest stay mixed on purpose, because the three share a syllabus. Change it any time with /myexam."
+  },
+  {
+   "date": "2026-09-19",
+   "area": "Question bank",
+   "status": "fixed",
+   "what": "Every subject's scanned questions have now been read through by hand. About 400 questions were repaired and 234 misspelled options corrected. This time the damage was not only spacing: some sentences had lost words at the page edge, a few explanations had the next question's text glued on, and several explanations of the wrong options had been torn off by the scanner — those were rewritten. Reading them also turned up about twenty explanations that stated something wrong, for example that tertian malaria fever comes every 48–72 hours (it is every 48) or that strychnine acts on GABA receptors (it blocks glycine receptors). All are corrected."
+  },
+  {
+   "date": "2026-09-19",
+   "area": "Question bank",
+   "status": "fixed",
+   "what": "One answer key changed. A diabetic patient on telmisartan whose kidney function is falling, with normal potassium: the keyed answer was to switch to ramipril, but swapping one kidney-protecting drug for another of the same effect adds nothing. Current guidance is to raise the drug she is already on to the highest dose she tolerates, so the answer is now \"Increase the dose of telmisartan\", and the explanation says why."
+  },
+  {
+   "date": "2026-09-19",
+   "area": "Question bank",
+   "status": "fixed",
+   "what": "Some explanations pointed at a picture or table that was never part of the question — \"The image below shows…\". Those references were removed or reworded so each explanation stands on its own, without adding anything that would give the answer away."
+  },
+  {
    "date": "2026-09-18",
    "area": "Question bank",
    "status": "fixed",
@@ -488,12 +524,6 @@
    "goal": "Instant payment confirmation, every time",
    "why": "Access already unlocks by itself, usually within a few minutes. Instant confirmation needs the payment provider to reach the server directly, and that is switched on once hosting is permanent.",
    "when": "Always-on hosting leaves testing"
-  },
-  {
-   "status": "next",
-   "goal": "The last of the OCR damage cleaned up",
-   "why": "The scanned books left words welded together and others shattered into fragments. Most of that is now repaired, and every repair is checked to change spacing only — with all the spaces removed, the text is identical before and after, so no wording can drift. What is left is the hardest case: short welds where the join could just as easily be a real compound word, which has to be judged one at a time rather than guessed at.",
-   "when": "Ongoing — a batch at a time"
   },
   {
    "status": "next",
