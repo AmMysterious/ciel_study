@@ -2,6 +2,24 @@
  "_comment": "Public log. PRIVACY RULE: never name a reporter, quote their message, or include a Telegram id. Show that reports get fixed, not who reported them. status: fixed | in progress | planned | wont fix. ⚠ Only list PLANNED items you actually intend to build, and never put a DATE on one — a missed date on a public page is a promise broken in writing.",
  "fixes": [
   {
+   "date": "2026-09-28",
+   "area": "Answers",
+   "status": "fixed",
+   "what": "\"Why not X?\" now covers nine more subjects: Community Medicine, Microbiology, Pathology, Physiology, Anatomy, Biochemistry, Psychiatry, Radiology and Anaesthesia. Every wrong option has its own one-line reason. Paediatrics is next; the remaining subjects follow one at a time."
+  },
+  {
+   "date": "2026-09-28",
+   "area": "Question bank",
+   "status": "fixed",
+   "what": "About twenty explanations or options stated something wrong and are corrected — for example that a voluntary admission under the Mental Healthcare Act is capped at 30 days (that limit is for supported admission), that TAPVC is acyanotic (it is cyanotic), or that an AED must not be used under 8 years (it is used, with paediatric pads). Questions where a second option can also be defended now say so in a short note, and a few recalled questions with two correct answers were reworded."
+  },
+  {
+   "date": "2026-09-28",
+   "area": "Question bank",
+   "status": "fixed",
+   "what": "Two reader reports resolved. A radiology question described a chest X-ray that was not on screen — the picture from the printed paper is restored, and so is the barium swallow for its neighbour on the same page. A malaria smear question now explains what the picture actually shows, the enlarged, stippled red cell that makes it P. vivax."
+  },
+  {
    "date": "2026-09-25",
    "area": "Answers",
    "status": "fixed",
