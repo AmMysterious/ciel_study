@@ -2,6 +2,42 @@
  "_comment": "Public log. PRIVACY RULE: never name a reporter, quote their message, or include a Telegram id. Show that reports get fixed, not who reported them. status: fixed | in progress | planned | wont fix. ⚠ Only list PLANNED items you actually intend to build, and never put a DATE on one — a missed date on a public page is a promise broken in writing.",
  "fixes": [
   {
+   "date": "2026-10-03",
+   "area": "Question bank",
+   "status": "fixed",
+   "what": "834 questions added from three FMGE recall papers: January 2023, July 2024 and July 2025. Each has a written explanation, a reason for every wrong option and, where the paper had one, its picture (179 of them). Where a recalled answer key was wrong it is corrected; where two options can be defended, a short note says so. The bank now holds 8,136 questions."
+  },
+  {
+   "date": "2026-10-03",
+   "area": "Answers",
+   "status": "fixed",
+   "what": "\"📚 Revise this topic\": after the explanation, the bot now shows which previous-year exam topic the question belongs to and how much it matters: Must-do, High-yield or Asked, with a mark when the topic keeps coming back. 7,876 of 8,136 questions carry one."
+  },
+  {
+   "date": "2026-10-03",
+   "area": "Answers",
+   "status": "fixed",
+   "what": "\"Why not X?\" now covers every subject. Paediatrics, Forensic Medicine, ENT, Ophthalmology, Orthopaedics and Dermatology are done, and the rest of Pharmacology is rewritten, so every wrong option in the bank has its own one-line reason."
+  },
+  {
+   "date": "2026-10-03",
+   "area": "Question bank",
+   "status": "fixed",
+   "what": "Four answer keys corrected after a re-check (two in Forensic Medicine, one in Paediatrics, and the reading-glasses power for a 50-year-old in Ophthalmology). Several recalled questions had an impossible detail, such as a patient's age that did not fit; those are corrected."
+  },
+  {
+   "date": "2026-10-03",
+   "area": "Progress",
+   "status": "fixed",
+   "what": "A quick double tap on an answer no longer counts twice in your answered total and accuracy. Grand Test answers now count toward your progress, as Exam mode's always did."
+  },
+  {
+   "date": "2026-09-29",
+   "area": "Progress",
+   "status": "fixed",
+   "what": "Answer-count clubs (50, 100, 250 … 5,000) on your progress card and in Progress, with your best streak. A Community Medicine answer key on the dose of DEC for Brugian filariasis was corrected after a reader report."
+  },
+  {
    "date": "2026-09-28",
    "area": "Answers",
    "status": "fixed",
