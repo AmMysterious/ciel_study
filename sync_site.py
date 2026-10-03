@@ -419,6 +419,9 @@ def render_contributors() -> list[str]:
     return [block]
 
 
+SHOW_MILESTONES = 6
+
+
 def render_milestones(n: dict) -> list[str]:
     """The home page's milestone band, from milestones.json + the live count.
 
@@ -453,8 +456,14 @@ def render_milestones(n: dict) -> list[str]:
         '  <p class="lede">Small numbers, honestly counted. Every figure here is '
         'read out of the live database, not typed in.</p>',
         '  <ol class="milestones">',
-        *lis,
+        *lis[:SHOW_MILESTONES],
         '  </ol>',
+        # ★ 3 Oct 2026: the band had grown to 22 entries (~1,600 px on a laptop, far
+        # more on a phone). The newest few stay in view; the rest is one tap away.
+        *([f'  <details class="ms-more"><summary>Show the full history '
+           f'({len(lis) - SHOW_MILESTONES} more)</summary>',
+           '  <ol class="milestones">', *lis[SHOW_MILESTONES:], '  </ol>',
+           '  </details>'] if len(lis) > SHOW_MILESTONES else []),
     ]))
     idx = HERE / "index.html"
     s = old = idx.read_text(encoding="utf-8")
