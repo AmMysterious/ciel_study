@@ -598,6 +598,12 @@
  ],
  "planned": [
   {
+   "status": "next",
+   "goal": "Practise one topic at a time",
+   "why": "Your Revise list already shows the exam topics you missed, most important first. Next, a tap on one of them will drill you on that topic alone. For the paid plans.",
+   "when": "After the Revise list has settled in"
+  },
+  {
    "status": "building",
    "goal": "Always-on hosting, 24/7 — now in testing",
    "why": "The bot has moved off my laptop and is being trialled on a proper server, so it no longer depends on my machine being awake. It is a trial: I am watching how reliable it is and what it really costs before calling it permanent. If it ever has to move back for a while, nothing is lost — messages queue and payments are picked up automatically.",
