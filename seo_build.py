@@ -228,7 +228,7 @@ def build_blocks(n):
             "A public page listing every correction made",
         ],
         "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR",
-                   "description": "5 questions a day, free, forever. No card required."},
+                   "description": "5 questions a day, free, forever - growing by 2 for every day in a row, up to 25. No card required."},
     }
     blocks = {"index.html": ld(org) + "\n" + ld(site) + "\n" + ld(app)}
 
@@ -349,7 +349,7 @@ key and a written explanation, and {figs} of them include a clinical image.
 something you have to watch rather than read a description of.
 
 ## What it costs
-The free tier is 5 questions a day, indefinitely, and is not a trial — it does
+The free tier is 5 questions a day, indefinitely, growing by 2 for every consecutive day up to 25 a day (a missed day steps it down, it does not reset). It is not a trial — it does
 not expire. {price_line} Payment is handled by Razorpay; nothing renews
 automatically unless an auto-renew plan is chosen explicitly.
 
@@ -372,7 +372,7 @@ rather than trusted. An exam with no announced date is listed as such rather
 than guessed at.
 
 ## Common questions
-- Is it free? Yes — 5 questions a day, forever, no card.
+- Is it free? Yes — 5 questions a day, forever, no card. Come back daily and it grows to 25 a day.
 - Does it cover NEET-PG and INI-CET? Yes, alongside FMGE, each simulated in its
   own format and marking scheme.
 - Is it affiliated with the NBE? No. It is an independent study tool.

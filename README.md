@@ -15,7 +15,7 @@ official subject weighting, spaced repetition of questions answered wrong, strea
 program, and a public fix log (`fixes.html`) — every reported defect and its resolution, logged
 without naming the reporter.
 
-Free tier: 5 questions a day, forever, no card and no time-limited trial.
+Free tier: 5 questions a day, forever, no card and no time-limited trial - growing by 2 for every day in a row, up to 25 a day.
 
 ## Pages
 
