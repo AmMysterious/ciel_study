@@ -1,5 +1,5 @@
 /* ─────────────────────────────────────────────────────────────────────────────
-   Ciel Study — motion layer (home page only)
+   Ciel Study — motion layer (every page; the home page gets the most)
    GSAP + ScrollTrigger + SplitText, Lenis for the wheel. All four are vendored in
    vendor/ — no CDN, nothing here phones anyone.
 
@@ -26,6 +26,8 @@
     var desktop = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
     /* ── Smooth wheel (desktop only; a phone keeps its own native scroll) ──── */
+    /* A box with its own scrollbar (the fixes log) keeps its own wheel. */
+    all('.log-scroll, .table-scroll').forEach(function (el) { el.setAttribute('data-lenis-prevent', ''); });
     if (desktop && window.Lenis) {
       var lenis = new window.Lenis({ lerp: 0.12, anchors: true });
       lenis.on('scroll', ScrollTrigger.update);
@@ -41,9 +43,14 @@
       scrollTrigger: { start: 0, end: 'max', scrub: 0.3 } });
 
     /* ── Hero ──────────────────────────────────────────────────────────────── */
+    var isHome = !!document.querySelector('.hero');
     var hero = gsap.timeline({ defaults: { ease: 'power3.out' } });
     var h1 = document.querySelector('.hero h1');
-    if (h1 && window.SplitText) {
+    if (!isHome) {
+      /* Inner pages: the title block arrives, nothing more. */
+      hero.fromTo(all('.doc > h1, .doc > .updated'), { opacity: 0, y: 16 },
+        { opacity: 1, y: 0, duration: 0.7, stagger: 0.08, clearProps: 'transform' }, 0.05);
+    } else if (h1 && window.SplitText) {
       gsap.set(h1, { opacity: 1 });
       window.SplitText.create(h1, { type: 'lines', mask: 'lines', autoSplit: true,
         onSplit: function (self) {
@@ -53,10 +60,12 @@
     } else if (h1) {
       hero.fromTo(h1, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8 }, 0);
     }
-    hero.fromTo(all('.hero .eyebrow, .hero .sub, .hero .cta-row, .hero .cta-note'),
-      { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.7, stagger: 0.08 }, 0.25);
-    hero.fromTo('.hero-media', { opacity: 0, y: 26, scale: 0.965 },
-      { opacity: 1, y: 0, scale: 1, duration: 1, clearProps: 'transform' }, 0.3);
+    if (isHome) {
+      hero.fromTo(all('.hero .eyebrow, .hero .sub, .hero .cta-row, .hero .cta-note'),
+        { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.7, stagger: 0.08 }, 0.25);
+      hero.fromTo(all('.hero-media'), { opacity: 0, y: 26, scale: 0.965 },
+        { opacity: 1, y: 0, scale: 1, duration: 1, clearProps: 'transform' }, 0.3);
+    }
 
     /* ── Stat strip: count up to the number the page already carries ───────── */
     all('.stat b').forEach(function (el) {
@@ -71,8 +80,15 @@
     });
 
     /* ── Sections arrive as you reach them ─────────────────────────────────── */
+    /* ⚠ Only what is BELOW the screen at load is hidden and brought in. Anything
+       already visible is left alone - hiding it now would be a flash, and on a
+       policy page the top of the text must simply be there. */
+    var fold = window.innerHeight * 0.95;
     function reveal(sel, y, each) {
-      var els = all(sel);
+      var els = all(sel).filter(function (el) {
+        var r = el.getBoundingClientRect();
+        return r.height > 0 && r.top > fold;
+      });
       if (!els.length) return;
       gsap.set(els, { opacity: 0, y: y });
       ScrollTrigger.batch(els, { start: 'top 90%', once: true,
@@ -81,11 +97,18 @@
             stagger: each, overwrite: true, clearProps: 'transform' });
         } });
     }
-    reveal('main > section:not(.hero) .wrap > .eyebrow, main > section:not(.hero) .wrap > h2,' +
-           'main > section:not(.hero) .wrap > .lede, .demo-copy > *', 18, 0.07);
-    reveal('.card', 24, 0.05);
-    reveal('.step, .plan, .note, details.faq, .cta-band', 22, 0.07);
-    reveal('li.exam-row, .milestone-band .wrap > ol.milestones > li', 14, 0.06);
+    if (isHome) {
+      reveal('main > section:not(.hero) .wrap > .eyebrow, main > section:not(.hero) .wrap > h2,' +
+             'main > section:not(.hero) .wrap > .lede, .demo-copy > *, .group-grid > div > *', 18, 0.07);
+      reveal('.card', 24, 0.05);
+      reveal('.step, .plan, .note, details.faq, .cta-band', 22, 0.07);
+      reveal('li.exam-row, .milestone-band .wrap > ol.milestones > li, .group-list li', 14, 0.06);
+    } else {
+      /* A document page: each block of the text, as one piece. A grid is left
+         whole and its cards come in instead, so nothing fades twice. */
+      reveal('.doc > *:not(h1):not(.updated):not(.grid)', 12, 0.04);
+      reveal('.doc > .grid > *', 20, 0.05);
+    }
 
     /* ── Desktop: a light that follows the pointer, a button that leans in ─── */
     if (desktop) {
@@ -96,7 +119,7 @@
           c.style.setProperty('--my', (e.clientY - r.top) + 'px');
         });
       });
-      all('.hero .btn-primary, .cta-band .btn-primary').forEach(function (b) {
+      all('.hero .btn-primary, .cta-band .btn-primary, .group-band .btn-primary').forEach(function (b) {
         b.classList.add('magnet');
         var x = gsap.quickTo(b, 'x', { duration: 0.35, ease: 'power3.out' });
         var y = gsap.quickTo(b, 'y', { duration: 0.35, ease: 'power3.out' });

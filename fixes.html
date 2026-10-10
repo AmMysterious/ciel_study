@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fixes &amp; what's next — Ciel Study</title>
 <link rel="stylesheet" href="style.css">
+<!-- Motion gate. Adds `.motion` only when the reader has not asked for reduced
+     motion, and takes it away again if motion.js has not reported in after 3 s -
+     so a slow or failed script can never leave anything hidden. -->
+<script>(function(){try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches){var d=document.documentElement;d.classList.add('motion');setTimeout(function(){if(!window.__cielMotion)d.classList.remove('motion')},3000)}}catch(e){}})();</script>
 <link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="icon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -187,6 +191,13 @@ length as the point.</p>
 
 <p class="fine">Reports are never identified here. No names, no messages and no Telegram
 IDs appear on this page &mdash; only what was wrong and what changed.</p>
+<!-- The group invite. The full version, with what the bot posts and when, is
+     the band on the home page - change the wording in both places. -->
+<aside class="group-strip">
+  <p><b>Don't prepare alone.</b> Daily questions from the bot and a room to talk &mdash; free on Telegram.</p>
+  <a class="btn btn-primary btn-sm" href="https://t.me/+a0JQ6SQ6TVM0NDJl" rel="noopener">Join the FMG gang &rarr;</a>
+</aside>
+
 </main>
 
 <footer class="site-foot">
@@ -211,5 +222,11 @@ IDs appear on this page &mdash; only what was wrong and what changed.</p>
   </div>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </footer>
+<!-- Motion: vendored copies. The page is complete without them. -->
+<script defer src="vendor/gsap.min.js"></script>
+<script defer src="vendor/ScrollTrigger.min.js"></script>
+<script defer src="vendor/SplitText.min.js"></script>
+<script defer src="vendor/lenis.min.js"></script>
+<script defer src="motion.js"></script>
 </body>
 </html>

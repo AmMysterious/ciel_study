@@ -601,3 +601,38 @@ html.lenis { scroll-behavior: auto; }
   .phone { max-width: 380px; width: 100%; margin-inline: auto; }
 }
 #demo { scroll-margin-top: 56px; }
+
+/* ── MOTION ON THE INNER PAGES (10 Oct 2026, Nawar: "all the pages") ──────────
+   Only the title block is hidden before the script runs; everything else on a
+   document page is either left alone (already on screen) or fades up as it is
+   reached. Text stays text: no effect here changes a word a reviewer must find. */
+.motion .doc > h1, .motion .doc > .updated { opacity: 0; }
+
+/* ── THE GROUP INVITE ─────────────────────────────────────────────────────── */
+.group-band { background: var(--surface-2); border-block: 1px solid var(--line); }
+.group-band .hl { color: var(--amber); }
+.group-band .lede { margin-bottom: 24px; }
+.group-grid { display: grid; gap: 44px; align-items: center;
+  grid-template-columns: 1fr minmax(0, 440px); }
+.group-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.group-list li { display: grid; grid-template-columns: 1fr auto; gap: 2px 14px;
+  align-items: baseline; background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius-sm); padding: 13px 16px; }
+.group-list b { font-weight: 650; font-size: .98rem; }
+.group-list .when { grid-column: 2; grid-row: 1; color: var(--amber); font-size: .76rem;
+  font-weight: 700; letter-spacing: .04em; white-space: nowrap;
+  font-variant-numeric: tabular-nums; }
+.group-list li > span:last-child { grid-column: 1 / -1; color: var(--text-dim);
+  font-size: .9rem; line-height: 1.45; }
+.group-strip { display: flex; flex-wrap: wrap; gap: 14px 22px; align-items: center;
+  justify-content: space-between; margin: 40px 0 6px; padding: 18px 20px;
+  background: var(--surface); border: 1px solid var(--line);
+  border-left: 3px solid var(--amber); border-radius: var(--radius-sm); }
+.group-strip p { margin: 0; flex: 1 1 280px; }
+@media (max-width: 900px) { .group-grid { grid-template-columns: 1fr; gap: 28px; } }
+@media (max-width: 560px) { .group-strip .btn { width: 100%; } }
+/* Paper has no scroll position: nothing waits to be "reached" when printing. */
+@media print {
+  .doc > *, main section * { opacity: 1 !important; transform: none !important; }
+  .scroll-bar { display: none; }
+}
