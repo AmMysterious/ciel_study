@@ -515,3 +515,89 @@ details.ms-more ol.milestones { margin-top: 8px }
 @media (max-width: 560px) {
   .hero h1 { font-size: 1.85rem }
 }
+
+/* ── MOTION LAYER (10 Oct 2026) ───────────────────────────────────────────────
+   Pairs with motion.js and the gate script in index.html's <head>. `.motion` is
+   on <html> ONLY while the animation code is alive and the reader has not asked
+   for reduced motion — so nothing below can hide content on a page where the
+   scripts did not arrive. The policy pages load none of this, on purpose. */
+html.lenis, html.lenis body { height: auto; }
+html.lenis { scroll-behavior: auto; }
+.lenis:not(.lenis-autoToggle).lenis-stopped { overflow: clip; }
+.lenis [data-lenis-prevent] { overscroll-behavior: contain; }
+
+/* The only things hidden before the script runs: the hero's own pieces, which
+   are on screen at load and would otherwise flash in and then animate. */
+.motion .hero h1, .motion .hero .eyebrow, .motion .hero .sub,
+.motion .hero .cta-row, .motion .hero .cta-note, .motion .hero-media { opacity: 0; }
+
+.scroll-bar { position: fixed; inset: 0 0 auto 0; height: 2px; z-index: 60;
+  background: var(--amber); transform-origin: 0 50%; transform: scaleX(0);
+  pointer-events: none; }
+
+.stat b { font-variant-numeric: tabular-nums; }
+
+/* A light under the pointer. Desktop only — a phone has no pointer to follow,
+   and a glow stuck where the last tap landed reads as a stain. */
+@media (hover: hover) and (pointer: fine) {
+  .card, .plan { position: relative; transition: border-color .25s, transform .25s; }
+  .card::after, .plan::after { content: ""; position: absolute; inset: 0;
+    border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .3s;
+    background: radial-gradient(240px circle at var(--mx, 50%) var(--my, 50%),
+      rgba(245,197,66,.10), transparent 70%); }
+  .card:hover::after, .plan:hover::after { opacity: 1; }
+  .card:hover, .plan:hover { border-color: color-mix(in srgb, var(--amber) 38%, var(--line)); }
+  .card:hover { transform: translateY(-2px); }
+  /* GSAP moves this one; a CSS transition on transform would fight it. */
+  .btn.magnet { transition: box-shadow .15s, background .15s; }
+  .btn.magnet:hover { transform: none; }
+}
+
+/* ── SEE IT IN ACTION ─────────────────────────────────────────────────────────
+   A real question from the bank, set as the bot sends it. Without the script the
+   whole exchange is simply on the page, top to bottom. With it (`.demo-live`)
+   the screen takes a fixed height and the messages arrive in order. */
+.demo-grid { display: grid; gap: 48px; align-items: center;
+  grid-template-columns: 1fr minmax(0, 380px); }
+.demo-copy .lede { margin-bottom: 22px; }
+.demo-points { list-style: none; margin: 0 0 24px; padding: 0; display: grid; gap: 14px; }
+.demo-points li { padding-left: 16px; border-left: 2px solid var(--amber);
+  color: var(--text-dim); font-size: .96rem; }
+.demo-points b { display: block; color: var(--text); font-weight: 650; }
+
+.phone { margin: 0; border-radius: 30px; padding: 9px; background: #0b0f11;
+  border: 1px solid var(--slate-600); box-shadow: var(--shadow), 0 30px 70px rgba(0,0,0,.4);
+  color: #e7ebee; }
+.phone-head { display: flex; align-items: center; gap: 10px; padding: 10px 12px 11px; }
+.phone-head img { width: 34px; height: 34px; border-radius: 50%; }
+.phone-head b { display: block; font-size: .92rem; line-height: 1.2; }
+.phone-head span { font-size: .74rem; color: #8a979f; }
+.phone-screen { background: #151c21; border-radius: 0 0 22px 22px; padding: 12px 10px;
+  display: flex; flex-direction: column; font-size: .82rem; line-height: 1.5; }
+.demo-live .phone-screen { height: 540px; overflow-y: auto; scrollbar-width: none; }
+.demo-live .phone-screen::-webkit-scrollbar { display: none; }
+.demo-live .phone-screen > :first-child { margin-top: auto; }
+.d-row { overflow: hidden; flex-shrink: 0; }
+.bubble { background: #212b32; border-radius: 14px; padding: 10px 12px; margin-bottom: 6px; }
+.bubble p { margin: 0 0 9px; }
+.bubble p:last-child { margin: 0; }
+.bubble .meta { color: #b9c4cb; }
+.bubble .meta i { color: #8a979f; }
+.revise { border-left: 3px solid #4fae6a; background: rgba(79,174,106,.13);
+  border-radius: 6px; padding: 5px 10px; display: inline-block; }
+.kb { display: grid; gap: 5px; grid-template-columns: 1fr 1fr; margin-bottom: 6px; }
+.kb-4 { grid-template-columns: repeat(4, 1fr); }
+.kb span { position: relative; background: #1c252b; border-radius: 9px; padding: 8px 6px;
+  text-align: center; font-weight: 600; font-size: .78rem; }
+.kb .wide { grid-column: 1 / -1; }
+.kb .tap { position: absolute; left: 50%; top: 50%; width: 30px; height: 30px;
+  margin: -15px 0 0 -15px; border-radius: 50%; border: 2px solid var(--amber);
+  opacity: 0; pointer-events: none; }
+.demo-replay { cursor: pointer; font-family: inherit; }
+/* `.btn` sets display, which beats the bare `hidden` attribute. */
+.demo-replay[hidden] { display: none; }
+@media (max-width: 900px) {
+  .demo-grid { grid-template-columns: 1fr; gap: 30px; }
+  .phone { max-width: 380px; width: 100%; margin-inline: auto; }
+}
+#demo { scroll-margin-top: 56px; }
