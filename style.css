@@ -740,3 +740,10 @@ ol.milestones li::before { top: 16px; }
 .doc .plan-list { padding-left: 0; }
 .doc .plan-list li { margin-bottom: 4px; max-width: none; }
 .doc .plan .per { margin: 0 0 6px; }
+
+/* Terms, Privacy and Refunds are one "Policies" item in the header; these tabs
+   sit at the top of each of the three pages. The pages themselves stay separate. */
+.policy-tabs { display: inline-flex; flex-wrap: wrap; gap: 3px; margin: 0 0 20px; padding: 4px;
+  background: var(--surface-2); border: 1px solid var(--line); border-radius: 11px; }
+.policy-tabs a.on { color: var(--amber); }
+.doc .plans-foot { margin: 0 0 6px; font-size: .92rem; max-width: none; }
