@@ -715,3 +715,28 @@ ol.milestones li::before { top: 16px; }
   section .grid-3::-webkit-scrollbar { display: none; }
   section .grid-3 > * { flex: 0 0 78%; max-width: none; scroll-snap-align: start; }
 }
+
+/* ── PRICE TILES (home) and the plan cards on the Pricing page ───────────────
+   The home page shows the four prices as small tiles; each one is a link to the
+   full cards on pricing.html#plans. */
+.price-tiles { display: grid; gap: 12px; grid-template-columns: repeat(4, 1fr); }
+.price-tile { position: relative; display: block; text-decoration: none; color: var(--text);
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 16px 18px; transition: border-color .2s, transform .2s; }
+.price-tile:hover { color: var(--text); transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--amber) 55%, var(--line)); }
+.price-tile.featured { border-color: var(--amber); }
+.price-tile h3 { margin: 0 0 2px; font-size: .92rem; color: var(--text-dim); font-weight: 600; }
+.price-tile .price { font-size: 1.6rem; font-weight: 700; letter-spacing: -.03em; line-height: 1.2; }
+.price-tile .per { margin: 4px 0 0; color: var(--text-dim); font-size: .84rem; line-height: 1.4; }
+.price-tile .tag { position: absolute; top: -10px; right: 14px; background: var(--amber);
+  color: var(--on-accent); font-size: .66rem; font-weight: 750; letter-spacing: .06em;
+  text-transform: uppercase; padding: 2px 9px; border-radius: 999px; }
+@media (max-width: 900px) { .price-tiles { grid-template-columns: repeat(2, 1fr); } }
+#plans { scroll-margin-top: 104px; }
+/* On a document page `.doc ul` and `.doc p` would otherwise indent the plan
+   lists and cap their width. */
+.doc .plans { margin: 22px 0 10px; }
+.doc .plan-list { padding-left: 0; }
+.doc .plan-list li { margin-bottom: 4px; max-width: none; }
+.doc .plan .per { margin: 0 0 6px; }

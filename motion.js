@@ -101,18 +101,18 @@
       reveal('main > section:not(.hero) .wrap > .eyebrow, main > section:not(.hero) .wrap > h2,' +
              'main > section:not(.hero) .wrap > .lede, .demo-copy > *, .group-grid > div > *', 18, 0.07);
       reveal('.card', 24, 0.05);
-      reveal('.step, .plan, .note, details.faq, .cta-band', 22, 0.07);
+      reveal('.step, .price-tile, .note, details.faq, .cta-band', 22, 0.07);
       reveal('li.exam-row, .milestone-band .wrap > ol.milestones > li, .group-list li', 14, 0.06);
     } else {
       /* A document page: each block of the text, as one piece. A grid is left
          whole and its cards come in instead, so nothing fades twice. */
-      reveal('.doc > *:not(h1):not(.updated):not(.grid)', 12, 0.04);
-      reveal('.doc > .grid > *', 20, 0.05);
+      reveal('.doc > *:not(h1):not(.updated):not(.grid):not(.plans)', 12, 0.04);
+      reveal('.doc > .grid > *, .doc > .plans > *', 20, 0.05);
     }
 
     /* ── Desktop: a light that follows the pointer, a button that leans in ─── */
     if (desktop) {
-      all('.card, .plan').forEach(function (c) {
+      all('.card, .plan, .price-tile').forEach(function (c) {
         c.addEventListener('pointermove', function (e) {
           var r = c.getBoundingClientRect();
           c.style.setProperty('--mx', (e.clientX - r.left) + 'px');
