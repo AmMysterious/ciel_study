@@ -636,3 +636,82 @@ html.lenis { scroll-behavior: auto; }
   .doc > *, main section * { opacity: 1 !important; transform: none !important; }
   .scroll-bar { display: none; }
 }
+
+/* ── COMPACT PASS (10 Oct 2026, Nawar: "a lot of scrolling - make the whole page
+   more compact") ─────────────────────────────────────────────────────────────
+   The home page was ~8,000 px on a laptop. Nothing was removed: the space came
+   out of padding, and bands that were one narrow column beside an empty half
+   now use both halves. Overrides only - the rules above still say why each
+   layout is what it is. */
+section { padding: 44px 0; }
+.lede { margin-bottom: 24px; }
+.hero { padding: 40px 0 44px; }
+.stats { margin-top: 32px; }
+.stat { padding: 14px 12px; }
+.exam-band { padding: 30px 0; }
+
+/* Feature cards: icon beside the title, four across on a laptop. */
+.grid { gap: 12px; }
+.card { padding: 15px 16px; display: grid; grid-template-columns: auto 1fr;
+  gap: 7px 10px; align-items: center; align-content: start; }
+.card .ic { width: 28px; height: 28px; margin: 0; font-size: .92rem; border-radius: 8px; }
+.card h3 { margin: 0; font-size: 1rem; }
+.card p { grid-column: 1 / -1; font-size: .9rem; line-height: 1.5; }
+.grid-3 > * { flex-basis: 220px; max-width: calc((100% - 36px) / 4); }
+
+.steps { gap: 14px; }
+.plans { gap: 12px; }
+.plan { padding: 20px 18px; }
+.plan-list { margin-top: 11px; padding-top: 11px; font-size: .84rem; }
+.plan-list li { margin-bottom: 4px; }
+ol.milestones { margin-top: 12px; }
+ol.milestones li { padding-block: 10px; }
+ol.milestones li::before { top: 16px; }
+.cta-band { padding: 34px 24px; }
+.group-list { gap: 8px; }
+.group-list li { padding: 10px 14px; }
+.demo-live .phone-screen { height: 470px; }
+.demo-points { gap: 10px; margin-bottom: 18px; }
+.site-foot { margin-top: 24px; padding: 26px 0 32px; }
+.doc { padding-top: 32px; }
+.doc h2 { margin-top: 26px; }
+
+@media (min-width: 901px) {
+  /* Heading on the left, the list or note on the right - the right half of
+     these bands used to be empty. The last row (1fr) takes the slack, so the
+     heading block stays packed at the top when the right side is taller. */
+  .exam-band .wrap, .why-band .wrap { display: grid; column-gap: 44px;
+    grid-template-columns: 1fr minmax(0, 540px); grid-template-rows: auto auto auto 1fr; }
+  .exam-band .wrap > *, .why-band .wrap > * { grid-column: 1; }
+  .exam-band ul.exams, .why-band .note { grid-column: 2; grid-row: 1 / span 4;
+    margin: 0; align-self: start; }
+  .exam-band .lede, .why-band .lede { margin-bottom: 0; }
+  /* The five first questions, two across. */
+  .faq-band .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 0 12px;
+    align-items: start; }
+  .faq-band .wrap > :not(details) { grid-column: 1 / -1; }
+}
+@media (max-width: 1040px) { .grid-3 > * { max-width: calc((100% - 24px) / 3); } }
+@media (max-width: 900px)  { .grid-3 > * { max-width: calc((100% - 12px) / 2); } }
+@media (max-width: 560px) {
+  section { padding: 32px 0; }
+  .hero { padding: 26px 0 32px; }
+  .grid-3 > * { max-width: 100%; }
+  .demo-live .phone-screen { height: 440px; }
+}
+
+/* Compact pass, phones. Two things ate the screen: a header that wrapped to
+   three rows on every page, and fourteen feature cards stacked one per row. */
+@media (max-width: 560px) {
+  /* Brand and button on one row; the menu is one row under it that slides. */
+  .site-head nav { order: 3; flex: 1 0 100%; flex-wrap: nowrap; overflow-x: auto;
+    scrollbar-width: none; margin-inline: -16px; padding-inline: 12px; }
+  .site-head nav::-webkit-scrollbar { display: none; }
+  .site-head .btn-sm { padding: 6px 14px; }
+  /* Home page feature cards: one row you swipe, the next card always peeking. */
+  section .grid-3 { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto;
+    scroll-snap-type: x mandatory; scrollbar-width: none;
+    margin-inline: -16px; padding-inline: 16px; scroll-padding-inline: 16px; }
+  section .grid-3::-webkit-scrollbar { display: none; }
+  section .grid-3 > * { flex: 0 0 78%; max-width: none; scroll-snap-align: start; }
+}

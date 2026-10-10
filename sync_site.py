@@ -419,7 +419,7 @@ def render_contributors() -> list[str]:
     return [block]
 
 
-SHOW_MILESTONES = 6
+SHOW_MILESTONES = 3
 
 
 def render_milestones(n: dict) -> list[str]:
