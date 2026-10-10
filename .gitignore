@@ -3,3 +3,4 @@
 *.db
 *.log
 __pycache__/
+.impeccable/
