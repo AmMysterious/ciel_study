@@ -1,14 +1,30 @@
 {
  "_comment": "Exam dates for the home page band. ⚠ RULE: a date goes in here ONLY if it is quoted from the body that sets it, with the URL of that notice in `source`. Never a coaching page, never a forum, never a number remembered from somewhere. These are NOT Ciel's promises - they are NBEMS's and AIIMS's, quoted and linked so a reader can check them in one click, which is the only reason it is safe to print a date at all (see the rule in fixes.json). A row with \"date\": null is the honest way to show an exam nobody has scheduled yet: it prints the situation and no number, so it cannot go stale. Rows whose date has passed are dropped automatically at render time - do not delete them by hand, the history is worth keeping. `tentative` prints the word the source itself uses.",
- "updated": "2026-09-09",
+ "updated": "2026-10-22",
  "exams": [
   {
-   "label": "FMGE — extra sitting",
-   "date": "2026-10-31",
-   "note": "NBEMS moved FMGE from twice a year to three times.",
+   "label": "FMGE — mock test",
+   "date": "2026-10-22",
+   "note": "NBEMS's own practice test goes live at 11:00 AM - the same screen you will see on exam day.",
    "tentative": false,
-   "source": "https://natboard.edu.in/viewNotice.php?NBE=OHUzVGIvZWlvVDVvTjVPTklKS1RVUT09",
-   "source_label": "NBEMS notice, 28 Aug 2026"
+   "source": "https://natboard.edu.in/viewnbeexam?exam=fmge",
+   "source_label": "NBEMS FMGE page"
+  },
+  {
+   "label": "FMGE — admit card",
+   "date": "2026-10-27",
+   "note": "Download it from the NBEMS site. Your test city was announced on 20 October.",
+   "tentative": false,
+   "source": "https://nbe.edu.in/IB/FMGE%20october%202026%20information%20bulletin%20v2.2.pdf",
+   "source_label": "FMGE Oct 2026 bulletin, p.2"
+  },
+  {
+   "label": "FMGE — exam day",
+   "date": "2026-10-31",
+   "note": "The extra October sitting - FMGE is three times a year now.",
+   "tentative": false,
+   "source": "https://nbe.edu.in/IB/FMGE%20october%202026%20information%20bulletin%20v2.2.pdf",
+   "source_label": "FMGE Oct 2026 bulletin, p.2"
   },
   {
    "label": "INI-CET — Jan 2027",
@@ -17,6 +33,14 @@
    "tentative": true,
    "source": "https://www.aiimsexams.ac.in/landingpage/key-dates",
    "source_label": "AIIMS key dates"
+  },
+  {
+   "label": "FMGE — result",
+   "date": "2026-11-30",
+   "note": "Declared by this date at the latest.",
+   "tentative": false,
+   "source": "https://nbe.edu.in/IB/FMGE%20october%202026%20information%20bulletin%20v2.2.pdf",
+   "source_label": "FMGE Oct 2026 bulletin, p.2"
   },
   {
    "label": "FMGE — January sitting",

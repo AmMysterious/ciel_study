@@ -557,7 +557,7 @@ def render_exams() -> list[str]:
                        f'<span class="exam-note">{note}{cite}</span></li>')
         block = "\n".join([
             '  <p class="eyebrow">Exam dates</p>',
-            '  <h2>FMGE is three times a year now.</h2>',
+            '  <h2>The dates that matter now</h2>',
             # ⚠ Short on purpose. The band sits above the fold and its job is the
             # dates; the explaining belongs in the FAQ answer, which is linked.
             '  <p class="lede">Each date is quoted from the notice that set it — '
