@@ -536,7 +536,11 @@ def render_exams() -> list[str]:
             pretty = f'{d.day} {d.strftime("%B %Y")}' if d else ""
             when = (f'<time datetime="{d.isoformat()}">{pretty}</time>'
                     if d else '<span class="exam-tbd">Not yet announced</span>')
-            cd = ('<span class="exam-countdown" hidden></span>' if d else "")
+            # A result date is not something to count down to - "39 days to go" beside a
+            # result read, to Nawar (22 Oct), as if the EXAM were 39 days away. Rows with
+            # "countdown": false print the date only.
+            cd = ('<span class="exam-countdown" hidden></span>'
+                  if d and m.get("countdown", True) else "")
             tent = (' <span class="exam-tent">tentative</span>'
                     if d and m.get("tentative") else "")
             note = (_esc(m["note"]) + " ") if m.get("note") else ""

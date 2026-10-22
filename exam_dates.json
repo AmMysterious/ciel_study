@@ -35,12 +35,13 @@
    "source_label": "AIIMS key dates"
   },
   {
-   "label": "FMGE — result",
+   "label": "FMGE — result (by)",
    "date": "2026-11-30",
    "note": "Declared by this date at the latest.",
    "tentative": false,
    "source": "https://nbe.edu.in/IB/FMGE%20october%202026%20information%20bulletin%20v2.2.pdf",
-   "source_label": "FMGE Oct 2026 bulletin, p.2"
+   "source_label": "FMGE Oct 2026 bulletin, p.2",
+   "countdown": false
   },
   {
    "label": "FMGE — January sitting",
