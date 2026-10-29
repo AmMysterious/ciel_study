@@ -176,10 +176,11 @@ def _exam_lines() -> str:
 
 
 def prices():
-    """The INR figures actually printed on the pricing page, low to high."""
+    """The PAID INR figures printed on the pricing page, low to high. The Free tile's
+    ₹0 is left out - with it the brief said "paid plans start at Rs 0" (29 Oct)."""
     h = (HERE / "pricing.html").read_text(encoding="utf-8")
     vals = sorted({int(v.replace(",", "")) for v in re.findall(r"&#8377;([\d,]+)", h)
-                   + re.findall(r"₹([\d,]+)", h) if v.strip()})
+                   + re.findall(r"₹([\d,]+)", h) if v.strip()} - {0})
     return vals
 
 

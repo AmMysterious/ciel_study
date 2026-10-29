@@ -28,8 +28,9 @@ automatically unless an auto-renew plan is chosen explicitly.
 - Unanswered questions score as wrong rather than being dropped from the total.
 
 ## Exam dates
-- FMGE - extra sitting: 31 October 2026. NBEMS moved FMGE from twice a year to three times.
+- FMGE - exam day: 31 October 2026. The extra October sitting - FMGE is three times a year now.
 - INI-CET - Jan 2027: 1 November 2026 (tentative, per the source). The day after FMGE. Results listed for 7 November.
+- FMGE - result (by): 30 November 2026. Declared by this date at the latest.
 - FMGE - January sitting: not yet announced. Was 9 January 2027. Moved to an unnamed date in Jan/Feb 2027.
 - NEET-PG: not yet announced. The 2026 sitting is behind us.
 These dates belong to NBEMS and AIIMS, not to Ciel Study; each is quoted from
