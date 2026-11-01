@@ -264,8 +264,11 @@ def inject(path, block, changed):
     """Put `block` between the markers in <head>, replacing any previous one."""
     f = HERE / path
     h = f.read_text(encoding="utf-8")
-    canon = (f'<link rel="canonical" href="{BASE}/{path}">\n'
-             f'<meta property="og:url" content="{BASE}/{path}">')
+    # the home page's one address is the bare folder, same as the sitemap: /index.html here
+    # told Google the page it was asked to index was a copy of another (1 Nov)
+    url = f"{BASE}/" if path == "index.html" else f"{BASE}/{path}"
+    canon = (f'<link rel="canonical" href="{url}">\n'
+             f'<meta property="og:url" content="{url}">')
     payload = f"{START}\n{canon}\n{block}\n{END}"
     if START in h and END in h:
         new = re.sub(re.escape(START) + r".*?" + re.escape(END), lambda _m: payload,
