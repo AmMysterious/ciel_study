@@ -3,6 +3,12 @@
  "fixes": [
   {
    "date": "2026-11-01",
+   "area": "Questions",
+   "status": "fixed",
+   "what": "A surgery question said the histopathology was shown below, but its picture was a photo of the patient's neck, so it could not be answered. It is out of the bank. A reader reported it."
+  },
+  {
+   "date": "2026-11-01",
    "area": "Bot",
    "status": "fixed",
    "what": "Added: practise one topic at a time, on the paid plans. Send /topics, or tap a topic in your Revise list. Questions you haven't seen come first, then the ones you got wrong."
