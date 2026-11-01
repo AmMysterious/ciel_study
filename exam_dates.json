@@ -1,6 +1,6 @@
 {
  "_comment": "Exam dates for the home page band. ⚠ RULE: a date goes in here ONLY if it is quoted from the body that sets it, with the URL of that notice in `source`. Never a coaching page, never a forum, never a number remembered from somewhere. These are NOT Ciel's promises - they are NBEMS's and AIIMS's, quoted and linked so a reader can check them in one click, which is the only reason it is safe to print a date at all (see the rule in fixes.json). A row with \"date\": null is the honest way to show an exam nobody has scheduled yet: it prints the situation and no number, so it cannot go stale. Rows whose date has passed are dropped automatically at render time - do not delete them by hand, the history is worth keeping. `tentative` prints the word the source itself uses.",
- "updated": "2026-10-22",
+ "updated": "2026-11-01",
  "exams": [
   {
    "label": "FMGE — mock test",

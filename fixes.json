@@ -2,6 +2,12 @@
  "_comment": "Public log. PRIVACY RULE: never name a reporter, quote their message, or include a Telegram id. Show that reports get fixed, not who reported them. status: fixed | in progress | planned | wont fix. ⚠ Only list PLANNED items you actually intend to build, and never put a DATE on one — a missed date on a public page is a promise broken in writing.",
  "fixes": [
   {
+   "date": "2026-11-01",
+   "area": "Site",
+   "status": "fixed",
+   "what": "The Terms and Privacy pages said 'Last updated' with no date after it. They show the date now."
+  },
+  {
    "date": "2026-10-22",
    "area": "Questions",
    "status": "fixed",
@@ -646,16 +652,16 @@
    "when": "After the Revise list has settled in"
   },
   {
-   "status": "building",
-   "goal": "Always-on hosting, 24/7 — now in testing",
-   "why": "The bot has moved off my laptop and is being trialled on a proper server, so it no longer depends on my machine being awake. It is a trial: I am watching how reliable it is and what it really costs before calling it permanent. If it ever has to move back for a while, nothing is lost — messages queue and payments are picked up automatically.",
+   "status": "partial",
+   "goal": "Always-on hosting, 24/7: partly done",
+   "why": "The bot now runs on a proper server around the clock, so it no longer depends on my laptop being awake. It is not finished: I am still watching how reliable it is and what it really costs before calling it permanent. If it ever has to move back for a while, nothing is lost: messages queue and payments are picked up automatically.",
    "when": "Subscriptions cover the monthly server cost"
   },
   {
-   "status": "next",
-   "goal": "Instant payment confirmation, every time",
-   "why": "Access already unlocks by itself, usually within a few minutes. Instant confirmation needs the payment provider to reach the server directly, and that is switched on once hosting is permanent.",
-   "when": "Always-on hosting leaves testing"
+   "status": "done",
+   "goal": "Access unlocks by itself after you pay",
+   "why": "You do not have to wait for me. The bot checks for your payment every few minutes and unlocks your access automatically. It is not instant, so it can take a few minutes.",
+   "when": "Done"
   },
   {
    "status": "next",

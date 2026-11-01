@@ -52,6 +52,7 @@ PAGES = [
     ("index.html",    "1.0", "weekly"),
     ("pricing.html",  "0.9", "monthly"),
     ("faq.html",      "0.9", "monthly"),
+    ("fmge-previous-year-questions.html", "0.8", "monthly"),
     ("fixes.html",    "0.7", "weekly"),
     ("support.html",  "0.6", "monthly"),
     ("contact.html",  "0.5", "yearly"),

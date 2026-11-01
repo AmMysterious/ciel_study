@@ -298,7 +298,7 @@ def render_fixes() -> list[str]:
         rows = "\n".join(
             "<tr><td>{s}</td><td><b>{g}</b><br><span class=\"fine\">{w}</span></td>"
             "<td>{u}</td></tr>".format(
-                s={"done": "✅", "building": "🔨", "next": "⏭"}.get(e.get("status"), "•"),
+                s={"done": "✅", "partial": "🟡", "building": "🔨", "next": "⏭"}.get(e.get("status"), "•"),
                 g=_esc(e.get("goal", "")), w=_esc(e.get("why", "")),
                 u=_esc(e.get("when", "")))
             for e in planned)
