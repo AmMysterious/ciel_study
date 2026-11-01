@@ -3,6 +3,12 @@
  "fixes": [
   {
    "date": "2026-11-01",
+   "area": "Bot",
+   "status": "fixed",
+   "what": "Added: practise one topic at a time, on the paid plans. Send /topics, or tap a topic in your Revise list. Questions you haven't seen come first, then the ones you got wrong."
+  },
+  {
+   "date": "2026-11-01",
    "area": "Site",
    "status": "fixed",
    "what": "The Terms and Privacy pages said 'Last updated' with no date after it. They show the date now."
@@ -646,10 +652,10 @@
  ],
  "planned": [
   {
-   "status": "next",
+   "status": "done",
    "goal": "Practise one topic at a time",
-   "why": "Your Revise list already shows the exam topics you missed, most important first. Next, a tap on one of them will drill you on that topic alone. For the paid plans.",
-   "when": "After the Revise list has settled in"
+   "why": "On any paid plan: send /topics, pick a subject and a topic, must-do topics first. Topics in your Revise list are buttons too.",
+   "when": "Done"
   },
   {
    "status": "partial",
