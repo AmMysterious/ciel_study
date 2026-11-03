@@ -758,3 +758,7 @@ ol.milestones li::before { top: 16px; }
 .grid-3 > .card { position: relative; }
 .grid-3 > .card h3 { padding-right: 52px; }
 .grid-3 > .card h3 .pill { position: absolute; top: 18px; right: 14px; margin: 0; }
+/* 3 Nov (his: "the text is cut off to next paragraph" on desktop): text on the document pages was capped at 70ch
+   (~640px) inside a 1036px column, so every paragraph stopped two-thirds across while the headings' rules and the
+   tables ran the full width. His call: text runs the full column, like everything around it. */
+.doc p, .doc li, .doc .lede { max-width: none; }
