@@ -775,3 +775,9 @@ ol.milestones li::before { top: 16px; }
 @media (max-width: 620px) { .site-foot nav { margin-left: -8px; } }   /* phone links carry 8px padding, not 11px */
 /* S76: six plans (free, week, 2 months, 3 and 6 months) = two even rows of three on a laptop, not 4 + 2 orphans */
 @media (min-width: 1041px) { .plans { grid-template-columns: repeat(3, 1fr); } }
+/* 3 Nov (contrast audit): in LIGHT mode the links kept the dark theme's bright amber, 1.5:1 on the cream page -
+   unreadable - and the faint grey was 4.2:1. Darker amber for text links and a darker grey, light mode only. */
+@media (prefers-color-scheme: light) {
+  :root { --faint: #5c666c; }
+  p a:not([class]), li a:not([class]), td a:not([class]) { color: #8a6200; }   /* plain text links only, never buttons */
+}

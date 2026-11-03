@@ -62,7 +62,7 @@ plan, **no Grand Test** has been started, **and** the request falls inside the w
 | 3 months (₹799) | 3 days from payment |
 | 6 months (₹1,299) | 3 days from payment |
 
-On the 3-month and 6-month plans, passing earns **25% back** (proof of the result, plus practice on at least one day in three of the plan, or a public post about Ciel Study): see section 2b of `refunds.html`.
+On the 3-month and 6-month plans, passing earns **15% back (3 months) or 25% back (6 months)** (proof of the result, plus practice on at least one day in three of the plan, or a public post about Ciel Study): see section 2b of `refunds.html`.
 
 `refunds.html` is the authoritative version; this table is a summary.
 
