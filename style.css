@@ -747,3 +747,14 @@ ol.milestones li::before { top: 16px; }
   background: var(--surface-2); border: 1px solid var(--line); border-radius: 11px; }
 .policy-tabs a.on { color: var(--amber); }
 .doc .plans-foot { margin: 0 0 6px; font-size: .92rem; max-width: none; }
+
+/* 3 Nov (his "alignment issues on desktop"): the footer links carried the top nav's 11px padding, so their text
+   sat 11px right of everything above; and the 3 paid feature cards, centred under a row of 4, lined up with
+   nothing. Paid cards now fill their own row in thirds on a laptop - a deliberate "paid" row, not orphans. */
+.site-foot nav { margin-left: -11px; }
+@media (min-width: 1041px) { .grid-3 > .card:has(.pill-paid) { max-width: calc((100% - 24px) / 3); } }
+/* the Free/Paid pill wrapped under the longer titles ("Spaced repetition") and sat beside the short ones: pinned to
+   the card's top-right corner on every card instead, so all titles start and line up the same way */
+.grid-3 > .card { position: relative; }
+.grid-3 > .card h3 { padding-right: 52px; }
+.grid-3 > .card h3 .pill { position: absolute; top: 18px; right: 14px; margin: 0; }

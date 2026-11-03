@@ -195,7 +195,7 @@ def build_blocks(n):
         "@context": "https://schema.org", "@type": "Organization",
         "name": "Ciel Study", "url": BASE + "/",
         "logo": BASE + "/icon-512.png",
-        "sameAs": [BOT],
+        "sameAs": [BOT, "https://www.instagram.com/ciel_study_bot/"],
         "contactPoint": [{"@type": "ContactPoint", "contactType": "customer support",
                           "url": BASE + "/contact.html"}],
     }
