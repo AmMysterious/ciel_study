@@ -43,6 +43,8 @@ the notice it came from. No build step, no dependencies and no tracking.
 | 1 week | ₹129 | 7 days |
 | 1 month | ₹349 | 30 days, includes 2 Grand Tests |
 | 1 month + extra Grand Tests | ₹449 | 30 days, includes 4 Grand Tests |
+| 3 months | ₹799 | 90 days, 6 Grand Tests (half from day 45), pass bonus |
+| 6 months | ₹1,299 | 180 days, 12 Grand Tests (half from day 90), pass bonus |
 
 Payments are processed by Razorpay. Payment details are entered on Razorpay's hosted
 page and are never handled by Ciel Study.
@@ -50,13 +52,17 @@ page and are never handled by Ciel Study.
 ## Refund policy summary
 
 A refund is offered where **fewer than 25 questions** have been attempted on the paid
-plan **and** the request falls inside the window for that plan:
+plan, **no Grand Test** has been started, **and** the request falls inside the window for that plan:
 
 | Plan | Window |
 |---|---|
 | 1 week (₹129) | 1 day from payment |
 | 1 month (₹349) | 3 days from payment |
 | 1 month + Grand Tests (₹449) | 3 days from payment |
+| 3 months (₹799) | 3 days from payment |
+| 6 months (₹1,299) | 3 days from payment |
+
+On the 3-month and 6-month plans, passing earns **25% back** (proof of the result, plus practice on at least one day in three of the plan, or a public post about Ciel Study): see section 2b of `refunds.html`.
 
 `refunds.html` is the authoritative version; this table is a summary.
 

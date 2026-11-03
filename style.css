@@ -719,7 +719,7 @@ ol.milestones li::before { top: 16px; }
 /* ── PRICE TILES (home) and the plan cards on the Pricing page ───────────────
    The home page shows the four prices as small tiles; each one is a link to the
    full cards on pricing.html#plans. */
-.price-tiles { display: grid; gap: 12px; grid-template-columns: repeat(4, 1fr); }
+.price-tiles { display: grid; gap: 12px; grid-template-columns: repeat(3, 1fr); }   /* 6 tiles = 2 even rows (S76) */
 .price-tile { position: relative; display: block; text-decoration: none; color: var(--text);
   background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
   padding: 16px 18px; transition: border-color .2s, transform .2s; }
@@ -773,3 +773,5 @@ ol.milestones li::before { top: 16px; }
 .site-foot .fine { max-width: none; }
 .site-foot .inner > div { flex: 1 1 100%; }
 @media (max-width: 620px) { .site-foot nav { margin-left: -8px; } }   /* phone links carry 8px padding, not 11px */
+/* S76: six plans (free, week, 2 months, 3 and 6 months) = two even rows of three on a laptop, not 4 + 2 orphans */
+@media (min-width: 1041px) { .plans { grid-template-columns: repeat(3, 1fr); } }
