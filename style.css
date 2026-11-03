@@ -771,3 +771,5 @@ ol.milestones li::before { top: 16px; }
 @media (min-width: 2200px) { :root { --maxw: 1440px; } html { font-size: 19px; } body { font-size: 20px; } }
 /* the footer disclaimer wrapped at 52ch into three short lines under a full-width footer: same fix as the text */
 .site-foot .fine { max-width: none; }
+.site-foot .inner > div { flex: 1 1 100%; }
+@media (max-width: 620px) { .site-foot nav { margin-left: -8px; } }   /* phone links carry 8px padding, not 11px */
