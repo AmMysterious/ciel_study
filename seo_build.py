@@ -53,6 +53,11 @@ PAGES = [
     ("pricing.html",  "0.9", "monthly"),
     ("faq.html",      "0.9", "monthly"),
     ("fmge-previous-year-questions.html", "0.8", "monthly"),
+    ("exams.html",    "0.8", "monthly"),
+    ("exam-fmge.html", "0.7", "monthly"),
+    ("exam-neet-pg.html", "0.7", "monthly"),
+    ("exam-ini-cet.html", "0.7", "monthly"),
+    ("exam-upsc-cms.html", "0.7", "monthly"),
     ("fixes.html",    "0.7", "weekly"),
     ("support.html",  "0.6", "monthly"),
     ("contact.html",  "0.5", "yearly"),
@@ -94,12 +99,14 @@ def numbers():
         return {}
     c = sqlite3.connect(f"file:{DB}?mode=ro", uri=True)
     q = lambda s: c.execute(s).fetchone()[0]
-    live = ("has_image=0 OR (image_file_id IS NOT NULL AND image_file_id!='')")
+    # S76: UPSC CMS is its own bank; the headline numbers are the FMGE / NEET-PG / INI-CET bank (as sync_site.py)
+    not_cms = " AND COALESCE(source,'') NOT LIKE 'UPSC CMS%'"
+    live = ("(has_image=0 OR (image_file_id IS NOT NULL AND image_file_id!=''))" + not_cms)
     d = {
         "servable": q(f"SELECT COUNT(*) FROM questions WHERE {live}"),
         "subjects": q("SELECT COUNT(DISTINCT subject) FROM questions"),
         "figures": q("SELECT COUNT(*) FROM questions WHERE has_image=1 "
-                     "AND image_file_id IS NOT NULL AND image_file_id!=''"),
+                     "AND image_file_id IS NOT NULL AND image_file_id!=''" + not_cms),
         # ⚠ Counted like every other number here: only what can be SERVED. A vbq
         #   row with no `video_file_id` has no video the bot can send.
         "videos": q("SELECT COUNT(*) FROM vbq WHERE video_file_id IS NOT NULL "

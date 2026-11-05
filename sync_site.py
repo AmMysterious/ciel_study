@@ -24,9 +24,12 @@ CHECK = "--check" in sys.argv
 
 # The bot's own serving filter, copied deliberately rather than imported: this
 # script must keep working if the site is ever split from the bot repo.
+# S76: UPSC CMS is a separate bank (bot.py _CMS_SRC); the site's headline counts are the FMGE / NEET-PG /
+# INI-CET bank, same as the bot's own content_counts().
+NOT_CMS = " AND COALESCE(source,'') NOT LIKE 'UPSC CMS%'"
 ANSWERABLE = ("(has_image=0 OR (image_file_id IS NOT NULL AND image_file_id!=''))"
-              " AND (vetted IS NULL OR vetted<>0)")
-IBQ = "(has_image=1 AND image_file_id IS NOT NULL AND image_file_id!='')"
+              " AND (vetted IS NULL OR vetted<>0)" + NOT_CMS)
+IBQ = "(has_image=1 AND image_file_id IS NOT NULL AND image_file_id!='')" + NOT_CMS
 
 
 #: ⚠ Reads ONE key out of the bot's .env and nothing else. That file holds live
@@ -163,6 +166,15 @@ def counts() -> dict:
         "videos": q("SELECT COUNT(*) FROM vbq WHERE video_file_id IS NOT NULL "
                     "AND video_file_id!=''"),
     }
+    # S76: per-exam counts for the Exams pages, same grouping as the bot (a source naming INI-CET or NEET-PG is
+    # that exam, "UPSC CMS" is CMS, the rest is FMGE). Exact, not rounded: each page names one exam's bank.
+    allq = ANSWERABLE.replace(NOT_CMS, "")
+    src = "UPPER(COALESCE(source,''))"
+    for key, cond in (("cms", f"{src} LIKE 'UPSC CMS%'"),
+                      ("inicet", f"{src} NOT LIKE 'UPSC CMS%' AND {src} LIKE '%INI%'"),
+                      ("neetpg", f"{src} NOT LIKE 'UPSC CMS%' AND {src} NOT LIKE '%INI%' AND {src} LIKE '%NEET%'"),
+                      ("fmge", f"{src} NOT LIKE 'UPSC CMS%' AND {src} NOT LIKE '%INI%' AND {src} NOT LIKE '%NEET%'")):
+        d["exam_" + key] = q(f"SELECT COUNT(*) FROM questions WHERE {allq} AND {cond}")
     c.close()
     # Round DOWN for copy. Rounding up would overstate, which is the whole
     # failure mode this script exists to prevent.
@@ -262,6 +274,22 @@ FIXES_TEMPLATE = """<h3>{year}</h3>
 {rows}
 </table></div>
 """
+
+
+def sync_exam_pages(n: dict) -> list[str]:
+    """S76: exams.html and exam-*.html carry <b data-stat="exam_fmge"> etc.; refill them from study.db."""
+    changed = []
+    for f in sorted([HERE / "exams.html", *HERE.glob("exam-*.html")]):
+        if not f.exists():
+            continue
+        s = old = f.read_text(encoding="utf-8")
+        for key in ("exam_fmge", "exam_neetpg", "exam_inicet", "exam_cms"):
+            s = re.sub(rf'(<b data-stat="{key}">)[^<]*(</b>)', rf'\g<1>{n[key]:,}\g<2>', s)
+        if s != old:
+            if not CHECK:
+                f.write_text(s, encoding="utf-8", newline="\n")
+            changed.append(f.name)
+    return changed
 
 
 def render_fixes() -> list[str]:
@@ -638,7 +666,7 @@ if __name__ == "__main__":
           if n.get("free_per_day") else
           "⚠ .env unreadable - free-tier numbers left untouched")
     print(f".env     -> donate link " + ("configured" if donate_url() else "NOT SET (support page will say 'not open yet')"))
-    changed = (sync_stats(n) + render_fixes() + render_support()
+    changed = (sync_stats(n) + sync_exam_pages(n) + render_fixes() + render_support()
                + render_milestones(n) + render_exams() + sync_llms(n))
     if CHECK:
         # ⚠ ASCII ONLY ON THIS LINE. It used to print a tick emoji and crashed with

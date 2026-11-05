@@ -2,6 +2,30 @@
  "_comment": "Public log. PRIVACY RULE: never name a reporter, quote their message, or include a Telegram id. Show that reports get fixed, not who reported them. status: fixed | in progress | planned | wont fix. ⚠ Only list PLANNED items you actually intend to build, and never put a DATE on one — a missed date on a public page is a promise broken in writing.",
  "fixes": [
   {
+   "date": "2026-11-06",
+   "area": "Exams",
+   "status": "fixed",
+   "what": "Added: UPSC CMS. 434 questions from the official 2024 and 2026 papers, each with UPSC's answer key and a written explanation, in a bank of its own that never mixes with FMGE, NEET-PG or INI-CET. Pick UPSC CMS in /myexam to get CMS only, including a Grand Test for each paper (120 questions, 2 hours, minus a third for a wrong answer)."
+  },
+  {
+   "date": "2026-11-06",
+   "area": "Questions",
+   "status": "fixed",
+   "what": "Added: 183 NEET-PG 2026 recall questions, each with an answer key and a written explanation."
+  },
+  {
+   "date": "2026-11-06",
+   "area": "Group",
+   "status": "fixed",
+   "what": "The daily question in the updates group is now a Telegram quiz: tap an answer to see if you were right, and open the bot for the full explanation."
+  },
+  {
+   "date": "2026-11-06",
+   "area": "Site",
+   "status": "fixed",
+   "what": "New Exams page: every exam the bot supports, what is in its bank, and how its Grand Test runs, step by step."
+  },
+  {
    "date": "2026-11-03",
    "area": "Plans",
    "status": "fixed",
@@ -700,10 +724,10 @@
    "when": "Ongoing — questions are added every week"
   },
   {
-   "status": "next",
-   "goal": "Other medical entrance and service exams, starting with UPSC CMS",
-   "why": "One place to practise whichever exam you are sitting, rather than a different app for each.",
-   "when": "The three current exams are where I want them"
+   "status": "partial",
+   "goal": "Other medical entrance and service exams: UPSC CMS is open",
+   "why": "UPSC CMS is live with the 2024 and 2026 papers, in its own bank. Earlier CMS years and university subject exams come next.",
+   "when": "CMS years are added one paper at a time"
   }
  ]
 }
