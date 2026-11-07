@@ -815,12 +815,6 @@
    "at": "2026-11-08T03:07+05:30",
    "found": 1
   },
-  "UPSC": {
-   "ok": false,
-   "at": "2026-11-08T03:08+05:30",
-   "error": "HTTPSConnectionPool(host='upsc.gov.in', port=443): Max retries exceeded with url: /whats-new (Caused by ConnectTimeoutError(<HTTPSConnection(host='upsc.gov.in', port=443) at 0x7dac073d3710>, 'Connecti",
-   "failing_since": "2026-11-08"
-  },
   "MCC": {
    "ok": true,
    "at": "2026-11-08T03:08+05:30",

@@ -215,7 +215,9 @@ def main() -> int:
     seen = set(store.get("seen", [])) | set(have)   # every id ever read - an old notice that fell off the
                                                     # 80 kept is NOT new when the board still lists it
     found, new = [], []
-    for name, fn in (("NBEMS", nbems), ("AIIMS", aiims), ("UPSC", upsc), ("MCC", mcc)):
+    # UPSC is OFF on GitHub: upsc.gov.in times out from GitHub's (US) servers every run (8 Nov, two runs) - it reads
+    # fine from India. Turn it back on (add ("UPSC", upsc)) only from a runner that can reach it.
+    for name, fn in (("NBEMS", nbems), ("AIIMS", aiims), ("MCC", mcc)):
         try:
             got = fn()
             store["sources"][name] = {"ok": True, "at": now().isoformat(timespec="minutes"), "found": len(got)}
