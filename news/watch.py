@@ -174,7 +174,6 @@ def render(store: dict) -> list[str]:
     since = (now().date() - dt.timedelta(days=SHOW_DAYS)).isoformat()
     items = [i for i in store["items"] if not i.get("hidden") and i["date"] >= since]
     items.sort(key=lambda i: (i["date"] or "", i["first_seen"]), reverse=True)
-    checked = dt.datetime.fromisoformat(store["checked"]).strftime("%d %b %Y, %I:%M %p IST").lstrip("0").replace(" 0", " ")
     changed = []
     for exam, (page, n) in PAGES.items():
         show = [i for i in items if exam == "all" or i["exam"] == exam][:n]
@@ -187,7 +186,7 @@ def render(store: dict) -> list[str]:
         block = (f'<!--NEWS:{exam}-->\n<section class="news" aria-labelledby="news-{PAGES[exam][0][:-5]}">\n'
                  f'<h2 id="news-{PAGES[exam][0][:-5]}">Latest official notices</h2>\n{body}\n'
                  f'<p class="news-note">Straight from NBEMS, MCC, AIIMS and UPSC, each linked to the original. '
-                 f'Checked {checked}.</p>\n</section>\n<!--/NEWS-->')
+                 f'Read every 3 hours.</p>\n</section>\n<!--/NEWS-->')
         f = SITE / page
         s = f.read_text(encoding="utf-8")
         new = re.sub(rf"<!--NEWS:{re.escape(exam)}-->.*?<!--/NEWS-->", lambda _: block, s, flags=re.S)
@@ -199,14 +198,22 @@ def render(store: dict) -> list[str]:
     return changed
 
 
+def signature(store: dict) -> str:
+    return json.dumps([[i["id"] for i in store["items"]],
+                       {n: (s.get("ok"), s.get("failing_since")) for n, s in store["sources"].items()}])
+
+
 def main() -> int:
     store = json.loads(STORE.read_text(encoding="utf-8")) if STORE.exists() else {"items": [], "sources": {}}
+    before = signature(store)
     if "--offline" in sys.argv:
         print("rendered:", render(store))
         return 0
     seeding = not store["items"]
     today = now().date().isoformat()
     have = {i["id"]: i for i in store["items"]}
+    seen = set(store.get("seen", [])) | set(have)   # every id ever read - an old notice that fell off the
+                                                    # 80 kept is NOT new when the board still lists it
     found, new = [], []
     for name, fn in (("NBEMS", nbems), ("AIIMS", aiims), ("UPSC", upsc), ("MCC", mcc)):
         try:
@@ -219,7 +226,7 @@ def main() -> int:
                                       "error": str(e)[:200], "failing_since": prev.get("failing_since") or today}
     for it in found:
         it["id"] = key(it)
-        if it["id"] in have:
+        if it["id"] in have or it["id"] in seen:
             continue
         it["first_seen"] = today
         if it["date"] is None:                       # UPSC (and an odd MCC file): no date on the site
@@ -231,6 +238,7 @@ def main() -> int:
         new.append(it)
     store["items"].sort(key=lambda i: (i["date"], i["first_seen"]), reverse=True)
     store["items"] = store["items"][:KEEP]
+    store["seen"] = sorted(seen | {i["id"] for i in found})
     # cross-check: news headlines with no official notice of the same exam in the last 4 days
     try:
         recent = [i for i in store["items"]
@@ -241,8 +249,11 @@ def main() -> int:
     except Exception as e:
         store["unconfirmed_error"] = str(e)[:200]
     store["checked"] = now().isoformat(timespec="minutes")
-    STORE.write_text(json.dumps(store, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    changed = render(store)
+    # write only when a notice or a source's health changed: a timestamp alone would republish the site 8x a day
+    changed = []
+    if signature(store) != before:
+        STORE.write_text(json.dumps(store, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+        changed = render(store)
     bad = [f"{n}: {s.get('error')}" for n, s in store["sources"].items() if not s.get("ok")]
     print(f"{'SEEDED' if seeding else 'new'}: {len(new)} · shown: {sum(1 for i in store['items'] if not i.get('hidden'))}"
           f" · unconfirmed headlines: {len(store.get('unconfirmed', []))} · pages: {changed or 'none'}")
