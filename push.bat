@@ -26,6 +26,8 @@ set MSG=%*
 if "%MSG%"=="" set MSG=update policy pages
 
 git commit -m "%MSG%"
+REM the exam-news robot (GitHub Actions) commits too - take its commits first
+git pull --rebase origin main
 git push -u origin main
 
 echo.

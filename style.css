@@ -781,3 +781,15 @@ ol.milestones li::before { top: 16px; }
   :root { --faint: #5c666c; }
   p a:not([class]), li a:not([class]), td a:not([class]) { color: #8a6200; }   /* plain text links only, never buttons */
 }
+
+/* Latest official notices (news/watch.py writes the list; 8 Nov 2026) */
+.news { margin: 30px 0 8px; }
+.news-list { list-style: none; padding: 0 !important; margin: 10px 0 0; border-top: 1px solid var(--line); }
+.news-list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; max-width: none;
+  padding: 11px 0; margin: 0; border-bottom: 1px solid var(--line); }
+.news-list time { color: var(--faint); font-size: .86rem; font-variant-numeric: tabular-nums; min-width: 6.6em; }
+.news-list a { flex: 1 1 22rem; color: var(--text); text-decoration: none; }
+.news-list a:hover { color: var(--amber); text-decoration: underline; }
+.news-exam, .news-src { font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); }
+.news-exam { color: var(--amber); min-width: 5.5em; }
+.news-note, .news-none { font-size: .86rem; color: var(--faint) !important; margin-top: 10px; }

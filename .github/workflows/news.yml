@@ -1,0 +1,56 @@
+# Exam news: reads the official NBEMS / MCC / AIIMS / UPSC notice lists every 3 hours and updates
+# news/news.json + the "Latest official notices" blocks on the exam pages (news/watch.py). 8 Nov 2026.
+name: exam news
+on:
+  schedule:
+    - cron: "17 */3 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: exam-news
+  cancel-in-progress: false
+jobs:
+  news:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: |
+          pip install --quiet requests playwright
+          python -m playwright install --with-deps chromium
+      - name: Read the official sites
+        run: python news/watch.py
+      - name: Publish if anything changed
+        run: |
+          git config user.name "Ciel Study news"
+          git config user.email "news-bot@users.noreply.github.com"
+          git add news/news.json exams.html exam-*.html
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -m "Exam news: checked $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase --quiet origin main
+          git push
+      - name: Tell the owner if a source has been failing for a day
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          msg=$(python - <<'EOF'
+          import json, datetime as dt
+          d = json.load(open("news/news.json", encoding="utf-8"))
+          today = dt.date.today()
+          bad = [f"{n}: {s.get('error')}" for n, s in d["sources"].items()
+                 if not s.get("ok") and (today - dt.date.fromisoformat(s["failing_since"])).days >= 1]
+          print("; ".join(bad))
+          EOF
+          )
+          if [ -n "$msg" ]; then
+            open=$(gh issue list --state open --search "Exam news source failing in:title" --json number --jq length)
+            if [ "$open" = "0" ]; then
+              gh issue create --title "Exam news source failing" --body "Failing for a day or more: $msg. The other sources still update. Fix news/watch.py for that site."
+            fi
+          fi
