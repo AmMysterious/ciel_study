@@ -3,6 +3,18 @@
  "fixes": [
   {
    "date": "2026-11-08",
+   "area": "Exams",
+   "status": "fixed",
+   "what": "UPSC CMS grew from 434 to 2,202 questions: every official paper from 2016 to 2026 (except 2025, which has no published key), each with UPSC's answer key and a written explanation. Questions where the key is doubtful or two answers fit were left out."
+  },
+  {
+   "date": "2026-11-08",
+   "area": "Site",
+   "status": "fixed",
+   "what": "Exams pages now show the latest official notices from NBEMS, MCC and AIIMS, each linked to the original, checked every 3 hours."
+  },
+  {
+   "date": "2026-11-08",
    "area": "Questions",
    "status": "fixed",
    "what": "Added: 2,446 FMGE questions across all 19 subjects, 408 of them with a picture. Every explanation and every \"why not\" line was written fresh for the bot, every picture was checked by hand, and repeats of questions already in the bank were left out."

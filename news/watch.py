@@ -37,7 +37,8 @@ IST = dt.timezone(dt.timedelta(hours=5, minutes=30))
 KEEP = 80                  # items kept in news.json
 SHOW_DAYS = 180            # older notices stay in news.json but leave the pages
 PAGES = {"all": ("exams.html", 8), "FMGE": ("exam-fmge.html", 5), "NEET-PG": ("exam-neet-pg.html", 5),
-         "INI-CET": ("exam-ini-cet.html", 5), "UPSC CMS": ("exam-upsc-cms.html", 5)}
+         "INI-CET": ("exam-ini-cet.html", 5)}
+#: UPSC CMS news is PARKED (his call, 8 Nov: build the CMS bank first; upsc.gov.in also refuses GitHub's servers)
 
 
 def now() -> dt.datetime:
@@ -185,7 +186,7 @@ def render(store: dict) -> list[str]:
         body = (f'<ul class="news-list">\n{li}\n</ul>' if show else '<p class="news-none">No new official notice yet.</p>')
         block = (f'<!--NEWS:{exam}-->\n<section class="news" aria-labelledby="news-{PAGES[exam][0][:-5]}">\n'
                  f'<h2 id="news-{PAGES[exam][0][:-5]}">Latest official notices</h2>\n{body}\n'
-                 f'<p class="news-note">Straight from NBEMS, MCC, AIIMS and UPSC, each linked to the original. '
+                 f'<p class="news-note">Straight from NBEMS, MCC and AIIMS, each linked to the original. '
                  f'Read every 3 hours.</p>\n</section>\n<!--/NEWS-->')
         f = SITE / page
         s = f.read_text(encoding="utf-8")

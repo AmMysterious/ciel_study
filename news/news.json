@@ -1,39 +1,6 @@
 {
  "items": [
   {
-   "exam": "UPSC CMS",
-   "title": "Written Result (with name): Combined Medical Services Examination, 2026",
-   "date": "2026-11-08",
-   "source": "UPSC",
-   "url": "https://upsc.gov.in/whats-new/Combined%20Medical%20Services%20Examination%2C%202026/Written%20Result%20%28with%20name%29",
-   "id": "fd17d4cab788",
-   "first_seen": "2026-11-08",
-   "hidden": true,
-   "posted": true
-  },
-  {
-   "exam": "UPSC CMS",
-   "title": "Written Result: Combined Medical Services Examination, 2026",
-   "date": "2026-11-08",
-   "source": "UPSC",
-   "url": "https://upsc.gov.in/whats-new/Combined%20Medical%20Services%20Examination%2C%202026/Written%20Result",
-   "id": "14bf48b17f4b",
-   "first_seen": "2026-11-08",
-   "hidden": true,
-   "posted": true
-  },
-  {
-   "exam": "UPSC CMS",
-   "title": "Interview Schedule: Combined Medical Services Examination, 2026",
-   "date": "2026-11-08",
-   "source": "UPSC",
-   "url": "https://upsc.gov.in/whats-new/Combined%20Medical%20Services%20Examination%2C%202026/Interview%20Schedule",
-   "id": "8f8a1306c12a",
-   "first_seen": "2026-11-08",
-   "hidden": false,
-   "posted": false
-  },
-  {
    "exam": "INI-CET",
    "title": "List of the qualified candidates in the INICET January 2027 session",
    "date": "2026-11-07",
