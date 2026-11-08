@@ -292,6 +292,33 @@ def sync_exam_pages(n: dict) -> list[str]:
     return changed
 
 
+FMGE_SRC = ("UPPER(COALESCE(source,'')) NOT LIKE 'UPSC CMS%' AND UPPER(COALESCE(source,'')) NOT LIKE '%INI%' "
+            "AND UPPER(COALESCE(source,'')) NOT LIKE '%NEET%'")
+
+
+def sync_fmge_pyq() -> list[str]:
+    """S77 (8 Nov): the FMGE page's 'Questions in each subject' table and its picture line were a hand snapshot
+    (1 Nov, 3,148 questions) that went stale after the Selected set. Refilled from study.db like every other number."""
+    f = HERE / "fmge-previous-year-questions.html"
+    if not f.exists():
+        return []
+    c = sqlite3.connect(f"file:{DB}?mode=ro", uri=True)
+    allq = ANSWERABLE.replace(NOT_CMS, "")
+    rows = c.execute(f"SELECT subject, COUNT(*) FROM questions WHERE {allq} AND {FMGE_SRC} "
+                     "GROUP BY subject ORDER BY 2 DESC, 1").fetchall()
+    pics = c.execute(f"SELECT COUNT(*) FROM questions WHERE {allq} AND {FMGE_SRC} AND {IBQ}").fetchone()[0]
+    c.close()
+    ul = '<ul class="subs">' + "".join(f"<li><span>{_esc(s)}</span><b>{k:,}</b></li>" for s, k in rows) + "</ul>"
+    day = datetime.date.today().strftime("%d %B %Y").lstrip("0")
+    s = old = f.read_text(encoding="utf-8")
+    s = re.sub(r'<ul class="subs">.*?</ul>', lambda _: ul, s, count=1, flags=re.S)
+    s = re.sub(r"FMGE recall questions in the bank on [^.]+\. [\d,]+ come with a picture",
+               f"FMGE recall questions in the bank on {day}. {pics:,} come with a picture", s)
+    if s != old and not CHECK:
+        f.write_text(s, encoding="utf-8", newline="\n")
+    return [f.name] if s != old else []
+
+
 def render_fixes() -> list[str]:
     if not FIXES_JSON.exists():
         return []
@@ -666,7 +693,7 @@ if __name__ == "__main__":
           if n.get("free_per_day") else
           "⚠ .env unreadable - free-tier numbers left untouched")
     print(f".env     -> donate link " + ("configured" if donate_url() else "NOT SET (support page will say 'not open yet')"))
-    changed = (sync_stats(n) + sync_exam_pages(n) + render_fixes() + render_support()
+    changed = (sync_stats(n) + sync_exam_pages(n) + sync_fmge_pyq() + render_fixes() + render_support()
                + render_milestones(n) + render_exams() + sync_llms(n))
     if CHECK:
         # ⚠ ASCII ONLY ON THIS LINE. It used to print a tick emoji and crashed with
