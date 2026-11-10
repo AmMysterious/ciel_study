@@ -1,6 +1,46 @@
 {
  "items": [
   {
+   "exam": "FMGE",
+   "title": "Result of Foreign Medical Graduate Examination (FMGE) October 2026",
+   "date": "2026-11-10",
+   "source": "NBEMS",
+   "url": "https://www.natboard.edu.in/viewNotice.php?NBE=SnJTOW14ZGZEc1JPc1l6WHNZNmRCdz09",
+   "id": "60b7cad21b6a",
+   "first_seen": "2026-11-10",
+   "posted": false
+  },
+  {
+   "exam": "NEET-PG",
+   "title": "PG counselling: CLEAR VACANCY ROUND 2 (MD/MS/DNB) – PG COUNSELLING 2026",
+   "date": "2026-11-10",
+   "source": "MCC",
+   "url": "https://cdnbbsr.s3waas.gov.in/s3e0f7a4d0ef9b84b83b693bbf3feb8e6e/uploads/2026/11/202611101579995383.pdf",
+   "id": "09d393bb9b62",
+   "first_seen": "2026-11-10",
+   "posted": false
+  },
+  {
+   "exam": "NEET-PG",
+   "title": "PG counselling: NEWLY ADDED SEATS ROUND 2 (MD/MS/DNB) – PG COUNSELLING 2026",
+   "date": "2026-11-10",
+   "source": "MCC",
+   "url": "https://cdnbbsr.s3waas.gov.in/s3e0f7a4d0ef9b84b83b693bbf3feb8e6e/uploads/2026/11/202611101718716060.pdf",
+   "id": "78eaf968153f",
+   "first_seen": "2026-11-10",
+   "posted": false
+  },
+  {
+   "exam": "NEET-PG",
+   "title": "PG counselling: VIRTUAL VACANCY ROUND 2 (MD/MS/DNB) – PG COUNSELLING 2026",
+   "date": "2026-11-10",
+   "source": "MCC",
+   "url": "https://cdnbbsr.s3waas.gov.in/s3e0f7a4d0ef9b84b83b693bbf3feb8e6e/uploads/2026/11/2026111073855246.pdf",
+   "id": "a1b9b1c6fcb6",
+   "first_seen": "2026-11-10",
+   "posted": false
+  },
+  {
    "exam": "INI-CET",
    "title": "List of the qualified candidates in the INICET January 2027 session",
    "date": "2026-11-07",
@@ -759,158 +799,136 @@
    "id": "5b9d415448b1",
    "first_seen": "2026-11-08",
    "posted": true
-  },
-  {
-   "exam": "FMGE",
-   "title": "Admit Cards for FMGE JUNE 2024 applicants",
-   "date": "2024-06-28",
-   "source": "NBEMS",
-   "url": "https://www.natboard.edu.in/viewNotice.php?NBE=VGpFSjZCUFE5K3FyNWUwYTU2dTFBQT09",
-   "id": "c67909e338f9",
-   "first_seen": "2026-11-08",
-   "posted": true
   }
  ],
  "sources": {
   "NBEMS": {
    "ok": true,
-   "at": "2026-11-08T03:07+05:30",
-   "found": 191
+   "at": "2026-11-10T21:20+05:30",
+   "found": 192
   },
   "AIIMS": {
    "ok": true,
-   "at": "2026-11-08T03:07+05:30",
+   "at": "2026-11-10T21:20+05:30",
    "found": 1
   },
   "MCC": {
    "ok": true,
-   "at": "2026-11-08T03:08+05:30",
+   "at": "2026-11-10T21:20+05:30",
    "found": 16
   }
  },
  "unconfirmed": [
   {
    "exam": "FMGE",
-   "title": "NEET PG 2026 Round 2 Counselling registration date revised; check details - Education Times",
-   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOU21jLWQ4WHJkUENmcUJpYXZWeklLVTQ0eTlhSXVzUl9hZmMySHMxQjRnZUdvVmNnZGhwLVptRXBFRnVmZVY4TW8wN2hZd3Y3UGp2ek1ZcTJvd3AtQUxSUDRtMG00VkNiUXVBVFZkQzRrZEVESXo0dHZQcmkzLUFab2h2QUtKOTRfekVsUGlkQVVTRm56MkZnYkZuYVFzOUZEdFltaEpmX28tLVRSTUt5M3loYzBsclEta1hQLWtZU3NweHNYdHgzSDdKWk80N0k?oc=5",
-   "date": "Fri, 06 Nov 2026 09:42:00 GMT"
+   "title": "FMGE Application Form 2026 Released; Download Information Brochure @natboard.edu.in - Shiksha.com",
+   "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQa0ZNb3Q0UW93SmlfZ3ZtRmpxemYtajJGUV8wZjN5VmdJLWRTSXozZlBWa3dldW1yREpnSExFWDRCcnQzcFplTUdoYzZKb3k0bUV5czBDWnlmRjZtd0lPQUdJSG1XdU1kXzZXb2U1UUFWT1JwZUJ4OElSQ0stQm9zMi1XSFd0SW9SYkNUYWNJbjlZUHVWQm9UTm9BVzFPLXFBZ3MxeHd1ZDl6cWVBdkRLRUhUb2ZMbXdnT1duLTFNNmxCQXBQQUMwdUNXWGpNY1h1czRNNGs4QnRqd2tLbDlJS3FsYw?oc=5",
+   "date": "Mon, 09 Nov 2026 16:54:10 GMT"
   },
   {
    "exam": "NEET-PG",
-   "title": "MP NEET PG counselling 2026 process withheld: DME issues notice - Medical Dialogues",
-   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOSnBXVERhbXBBOUFTZG9NUGJpUGJOTUdBVHVXRXpFWEhkRkFIOW9NbGhSdWhKNHRaTlBpNVRJTV9MNGNieEVPRkVJRW1SeUhTLUxQRXpLM0VUWXdiMHM0dDdQampFaXcwMEYxOVJSR3V5YjJRV2JqSEgwV0VhM29ZcVBXZF9ia1lCUFozWkJpR0JIMENBZzB5MENmUmx0emRfQlh0QWZmS011dVpoQmFBQ0FUZjl0OXdWX1RhdjR3OEVkdmd6UFJhcUp0NNIB0AFBVV95cUxOSWRkN2hsWDIxSkE5VzI5SC1rN0ZBUjNMRG5uejktcjFMM2gxc1NVUGVMNVdSVmEtazNPU3dPLVlzcE1yRnBncnhDZkNHRGp5VlZiRmRoeEFkZmJDOUE5QURrLWxOVUNHU09mU0laZjlSaXN6UVVZbVRESl9rbTJvSFJaeVh3TjVNYUVxWGJQUVlIZnpQam93b0JuS290a2RlbTk1UkNDb28zTGRjTklUUm12ZUQteUFKa0U0R0xQdmtfWTJoajBlT2h3MGNvZ0cy?oc=5",
-   "date": "Fri, 06 Nov 2026 13:05:59 GMT"
+   "title": "NEET PG cutoff: Qualifying standards should not be diluted to admit candidates with grossly inadequate or negative performance, says Panel - Medical Dialogues",
+   "url": "https://news.google.com/rss/articles/CBMimgJBVV95cUxNVl9uTlBDWGI0QndfY1hFLUV0TV81RnV1bWZGN0VJQnVjZFNVeGR1eDd5NHlfeV80QTRjODNkRHNoR3ZIRGxEODJPVHEzdGVvQ0Z3SjNOTl9Hc1NRVzRUSmp5SXNTbWRRNGlqaXRUR1lac0dDVkdTSUNSQU9wYlJZVHFJQzQ0LU91VTl6VEh5WTlJTTJyWDV1UktLbXFlMFNhX0F1ZUY4MmVGM1Vtb2NUWVJqZEdULVIzaEhlZG1DQlJwUTliVXNUT2lKV04wSzJPV1JDdzIxZW96cjZpaDdXbEJBc0U2SXBEMWo3Wm1Ed05QcUg5bUcwVkxGc1RiandDVFFyNzRBUms2OWxKd0dZS3VrVUxZVlUyNHc?oc=5",
+   "date": "Tue, 10 Nov 2026 04:00:56 GMT"
   },
   {
    "exam": "NEET-PG",
-   "title": "NEET PG: 68,305 PG medical seats in India- NMC releases updated seat matrix, issues directions for medical colleges, counselling authorities - Medical Dialogues",
-   "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxQVUxBTUJTQjhwSFB1Q2F2ZHk4ZmZ3bEJzYWxnR29pY19ZR3E2MWdCWnp4bUJrS0Fna2xtSkpENmwxckM0OUFCTktOQkVmSHpPRzdBVmhaakNlQjBKS1RVcVpCZi1aZk52aDJQa3Bqd3VZU3dqdHR0Q0JZLUY4Q2N0eXRZZkRpdFJpeUthVWlLT0l0SUI3NEtBU1ZLU3p2eG1kamFKNlFRNk55MlJxcUpkU0QzbWN1LVFUZVJ4NUpMRlBxMFFnc0ZQeEdieDdINFduNGEyYmNOSnVZNFdfZ2dmcVVOS1pjS28yclVsd2tPQnhfV25VY2hESXV1NXFKdkdnWG5WNVgxcnpXNG5jeVgtTTI5b0JjcjRW?oc=5",
-   "date": "Fri, 06 Nov 2026 11:30:05 GMT"
+   "title": "KEA NEET PG Round 1 Allotment 2026 Final Result Out: Last Date to Report Is November 14 - Aakash",
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPX2lWbWVPRDNXVkZHM0JUVGgwWWFhSC1HOHprTWRmU3FQOE9YUW5WSDJjWmZRUUR3VkhzTlZGRE5TTFktU3FFSW51Vlpma1UybUZZamZuOG1ybDRTRjlWU2dBT3hhb3Q1a2k4UmtiX05fVF81cmhnTXJVY200S1pGN2psT3ZuNGlocWZPQlNEQjViUGRYenRyczVRN1U?oc=5",
+   "date": "Tue, 10 Nov 2026 09:31:12 GMT"
   },
   {
    "exam": "NEET-PG",
-   "title": "DNB Paediatrics NEET-PG Cutoff Trends: Round 2 vs Round 3 Rank Movement 2026 - medadmit.in",
-   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOb01peTE4M1hGYXlnUDMzNWtrVTI0NUhKbjlSdF8xcTdER1lVVUdxRmZjOEJCRWl5QTUxRy1WelVGMjFQX1ZvaU5RZGF2WnhaVjZvY194c0xEenBmQThFYkt0aTVKTHE4VTdXck5CQ2dZM3BrWWRVd09xRzN4Q2k3WDFWUVlhdm5pa08xRDBYRE8zRU90eU85Uw?oc=5",
-   "date": "Sat, 07 Nov 2026 17:36:54 GMT"
+   "title": "J&K NEET PG Counselling 2026: Dates, Registration (Re-Opened) - Careers360",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBHZmhVUFdJeU11SW5TaEJfV3U3elRoZDhHQ013SnBnbzRzckhzTm4wa3B2SFQwZkxaV0JZTEpoZkVoVkJIZkVjZmhORHFqN21ZTUFheEVFd0hwRUtuOW1pRTNkWndHYldJU2drc2pHRW8?oc=5",
+   "date": "Mon, 09 Nov 2026 19:55:00 GMT"
   },
   {
    "exam": "NEET-PG",
-   "title": "ANIIMS Granted 20 MD/MS Seats; Applications Invited from NEET-PG Qualified Candidates - Nicobar Times - Nicobar Times",
-   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQVkZOZWN3eXdfdHQ4Q2NKV1dKNVRpb2M2T1YxZ1Z1WHUxOG5scGVkYXNPU3NVMkpTS0I4MkI3MUJReFZDOFdKMTIzUU5tS2xabDN1bDhpTDEzZkxuX3k1QnJqMjNQcFllNTFBb3A5TU5HdDRQRTVpVGZ3bVFQUFRmWnVIZTdyUUlhdDcydFF6OWV1dXJjUGY2cXdjYjlmQ1pwYVk5ZEV2SExjU19Gbl9qdEZTN05BZWdHYmlYSHFn0gG-AUFVX3lxTFBWRk5lY3d5d190dDhDY0pXV0o1VGlvYzZPVjFnVnVYdTE4bmxwZWRhc09Tc1UySlNLQjgyQjcxQlF4VkM4V0oxMjNRTm1LbFpsM3VsOGlMMTNmTG5feTVCcmoyM1BwWWU1MUFvcDlNTkd0NFBFNWlUZndtUVBQVGZadUhlN3JRSWF0NzJ0UXo5ZXV1cmNQZjZxd2NiOWZDWnBhWTlkRXZITGNTX0ZuX2p0RlM3TkFlZ0diaVhIcWc?oc=5",
-   "date": "Fri, 06 Nov 2026 19:29:40 GMT"
+   "title": "AMRU HP NEET PG 2026: Final Merit List 1st Round Released - medadmit.in",
+   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNZGIzNnJKSXhrZ3l1QkdDNllORzJZRnpLRkNiUlBrcUlHMmdiQUY3cTRSUi0ybk9lRzJWZlNRcVl5ZjRUUlZ2N19UdUFXYkR5YURBYzRVcTFRem5HRUJZY2ZkMnI5U21OUVhiaG9zWlN0eTExUUtMbXQzV1VCLVFzUw?oc=5",
+   "date": "Tue, 10 Nov 2026 12:10:36 GMT"
   },
   {
    "exam": "NEET-PG",
-   "title": "AMRU HP NEET PG 2026: Provisional Merit List Round 1 Released - medadmit.in",
-   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQTElyOFhuanBNZ0w0UTl2THM3TDU3SkRoNUx3R1VKNnBmWVd4RTNVOTFTWk5FSXotRldhdVVVQUt0Q3FJNWFXQlBTaWFjcHE5RHYyNTk2UXVzNDlNZjA4Y2tfWmUwcUtrSWZWSmdJdW1TN1gwWi1jMzlQaEhzQmVudGlMVTFPdw?oc=5",
-   "date": "Sat, 07 Nov 2026 12:35:12 GMT"
+   "title": "NEET-PG Cutoff Standards: Expert Panel Warns Against Diluting Qualifying Marks - medadmit.in",
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQRXh6TFdzeVdnUGt1S2IzRUt6R1g5Y1VEWjVKMmdIeFU1M0ExeVU1bUhrVGRqR25xV2IzRUNGbkhPSGN5WHp0cGladTJlXzBldzdJbFFwOHk3ZmhIQV9ldzF2SFM3d3ZzQ1FBUmZpZzJ5STBneU5DbFVfbDhyTkpJaXlBYmh2T2tN?oc=5",
+   "date": "Tue, 10 Nov 2026 13:10:47 GMT"
   },
   {
    "exam": "NEET-PG",
-   "title": "NEET PG 2026 Round 2 Registration Date Revised to Nov 7 - PW",
-   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNWGJjX3Z6VW01dS15bWF1YlQ3Ui0yR1h1TnVvb3BvY19DTjFyOFVOU015d3M2eGgyUnNVQVF5a083dEZkb3ZuUjZZTFJCSFJTWjlyUlk0QmluYW9BelpWeWhwOUlTZHpobDlfUmtxcmhGMng1aGJzTWtsOVNIMGdLdjJ1cGplakROaUxz?oc=5",
-   "date": "Fri, 06 Nov 2026 07:43:51 GMT"
+   "title": "Himachal Pradesh NEET PG Admission 2026: Round 1 Registration Extended, Choice Filling, Seat Allotment - Careers360",
+   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxONUlXejFEUnA4ZzRnLXRZWnNPTU5kLWVrdnpUNDJSdmtjSzcxMUloam10Y2JsTWx2cUtURGtpMVlmZGRDLVFOSXZjQjBLMU5wc2pUd2pZS0hHSG9LcHlSay1nMHkxVmFwWWFTQl9kNnVWRlBSSGhXZHBPZmMxbmV1TWVCVmc?oc=5",
+   "date": "Mon, 09 Nov 2026 05:32:00 GMT"
   },
   {
    "exam": "NEET-PG",
-   "title": "NEET PG Round 2 Registration Delayed to November 7, 2026: What Changed - medadmit.in",
-   "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPeWZaS01WdXl5bWVTM0N2WWNMVFNrSlBGOEhsT2NtSEF3amU4MGZQd0pBSHFreTdHNDBtTVlRaFVQUDdkSjdSTmZ4LUI4MUZvUVRwdnNERFptTWhlNmVESV9jUERkVnI1clcxelRrT1hpVkJZQmtRazZaZ2ZhY2t4Y3ZlcXFjSFptLVE?oc=5",
-   "date": "Fri, 06 Nov 2026 12:05:02 GMT"
+   "title": "SARKARI JOBS: AFMS recruitment 2026 applications open for 120 medical officer posts, check details - Education Times",
+   "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQZGtXZW9Ga1BlMjd0d001U3hlbzVyMXJYNWF5aHR2bE56S3VjTktxeU1YM0hBMTJkN3B5QVRCWmJRSzdMeTgzR2U0UkczS0xxSXhLV1dWMWcwdTdjUXpzUUlWZlJuaTI0RkNEa1NoRDV5bTRvSkJIZlB0RHZESWRlZmNVUW1BNjF5ZXB2SUs0ekV6eS1tZnkyalpwb2NWd1lhdkFxMGJjNkdfUEJoS1lSUENFR2p4X0ZUZXhOb1ZvU1A1UmVfMjcyMkc2TGY0TFhxQnh4Z1MycTZwdkE4RjJPSy05bGVwci1CdTlFSjctVQ?oc=5",
+   "date": "Mon, 09 Nov 2026 05:56:00 GMT"
   },
   {
    "exam": "NEET-PG",
-   "title": "NEET PG 2026 Round 2 Registration Delayed: What MD/MS Aspirants Need to Know - medadmit.in",
-   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOcXJKMFdPSnROS3luXzhNMkM1RU12amdaa1lyY2UxcmEwSEhhR09neWhoeHdjUC1pUTdpRlRvYUNZSXFfWlZxTm9DWnh5ZHc2ZTV1dTZwU3hPTWR4VGVCTE1ucnVKeU50VFg1X2hhUnI2cDNuZDR1dkMtcGpTWE1rMjVmUlhBWTFENTY3SnZLTWZjNEprZ09kdQ?oc=5",
-   "date": "Fri, 06 Nov 2026 09:15:20 GMT"
+   "title": "JKBOPEE NEET PG 2026: Registration Portal Reopened for J&K/Ladakh Candidates - medadmit.in",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOTzdybUt5Z0dQMkZYTVl4OXRKZ2Y5WWJyS3BjaXhPempjWFM3UmNOWnJtOVh0OTd5U25IQWw3TXQ4TkE1d3lsbTkzTFNDTU15ZkZCd2JjdnFpRXFUVzJxMlRJSEhjVGJxUUh6TzFOOW5GQi1pY3FSZUwzNWtaY0VnbndpLWVmV2ItTFV4OXJJVmY?oc=5",
+   "date": "Mon, 09 Nov 2026 17:49:56 GMT"
   },
   {
    "exam": "NEET-PG",
-   "title": "Bihar NEET PG 2026 Round 1 Cutoff Ranks: All Colleges & Specialties - medadmit.in",
-   "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBtNWpNYmpDSEhtZDFvanNzSWx6ZU54QnRzWFJrY3BaTFRtTmFJNVJPT1Q2empYbFpOQ3RtVFUxZ3hkVHEzclZENE14cnpUN1BDWWJIS04tWkhVNjNvQ2doMHNZcTVQYm83Uy1zMGdYajBBOVd1MVQ3U3JjYXpJQQ?oc=5",
-   "date": "Fri, 06 Nov 2026 08:16:26 GMT"
+   "title": "NEET PG 2026 DNB Cutoff 2026 Anaesthesiology: Cut Off, Seats, Closing Rank - Careers360",
+   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNMGhvX3dRUElKd2V0NE85aUlpbEFmM21rWTZTNHo3SzVkRGJSYm5tdS0tbmRUS1Z6VjA2UU5OYVRkcnBya0U3MjN1LXhDVFM0LWFGZExCQmdRajRmeVQ5YW9ycHNoclNudWhZWnFLUHgta2xDakUtcHNKY29XN0ZoMktCOVVqNC1DNXRQWmh3?oc=5",
+   "date": "Mon, 09 Nov 2026 10:42:00 GMT"
   },
   {
-   "exam": "NEET-PG",
-   "title": "Gujarat NEET UG Special Stray Round 2026: Cutoff, Seats & Fee Payment Guide - medadmit.in",
-   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOQXBSc0tSaGZNcGJUemc3SHhHWVZ1NHdyVkI5cll4bEJQOXBzTXVFR1AyNklCSlgzcGIxSl9YSjFFdUFqZ3BjdVFsQ29uN3QyUjY3VFRmZ0dTRi00cnU2NnNpUDZxT3Z6NHZBTmxCUGl1eEZFdlV4bUROOFB5d1p5VGJITTViZHZpV2JILV9GU2hkbGR0NFVjOA?oc=5",
-   "date": "Sat, 07 Nov 2026 08:35:21 GMT"
+   "exam": "INI-CET",
+   "title": "FMGE October 2026 Result Expected by November 30; Candidates Demand Release of Answer Key - Telegraph India",
+   "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOc0lfRmVhTkFkQ1lpTEw5a2stMXJsSVYxMlFQOXE5d284TnA1bWJfRHNNSlVwT25ZQ0NTQ1JqTFNGY2gzNVFFY000czF5ZUVBUFFSNkVRbzJoNTFZb28xbWUtdUtVTWYxeGo4T0x1d2pxWGZHeGRkc19GX3Yyclk0a0NBRElTLTdJSGU5dUJ2MTFKaHZnbS03Z3luOHA4cm51c3JOWEthNEhlckpwbXZCYlRoRXpmU0JyVjNCSk5LZWZBRkhYWk5kS2JYd0JpbW5ORGJxTllUd1ZxdlptZS1WV0dwRdIB4wFBVV95cUxOc0lfRmVhTkFkQ1lpTEw5a2stMXJsSVYxMlFQOXE5d284TnA1bWJfRHNNSlVwT25ZQ0NTQ1JqTFNGY2gzNVFFY000czF5ZUVBUFFSNkVRbzJoNTFZb28xbWUtdUtVTWYxeGo4T0x1d2pxWGZHeGRkc19GX3Yyclk0a0NBRElTLTdJSGU5dUJ2MTFKaHZnbS03Z3luOHA4cm51c3JOWEthNEhlckpwbXZCYlRoRXpmU0JyVjNCSk5LZWZBRkhYWk5kS2JYd0JpbW5ORGJxTllUd1ZxdlptZS1WV0dwRQ?oc=5",
+   "date": "Tue, 10 Nov 2026 08:27:31 GMT"
   },
   {
-   "exam": "NEET-PG",
-   "title": "DNB Dermatology Cutoff 2026: Rank Trends Round 2 to 3 for NEET-PG - medadmit.in",
-   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPb291ejVlNGtrSlhPQVNWWUR3Rmg1Y2dORy1FSkVtazhHTFRMaWJFRDNxSTZLdWRpWnBzSmNYQ0dxdFY4OE9OaFhjZF8yUUloSGhnMzNIQXpfQl9yQXVDdDMwUUkxcTJCai1tT0ljTWJFckNxRG1uSjVhSGJRanpBcHIwLTNQWWhqd0d2NHE4ZGFkSWt6VmtjTw?oc=5",
-   "date": "Fri, 06 Nov 2026 18:25:50 GMT"
+   "exam": "INI-CET",
+   "title": "FMGE October 2026 result expected by November 30; candidates demand early announcement, answer key - Moneycontrol.com",
+   "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOa25ZajJCN3lTZDZBN1hNbGhyRXdHMEFwR2ZPdkthLS1KS0h2NEdob0Nza1BUbEllQWt1c19SbVU3WTMyNzMwTkQxTVhib0hVdHNKTVJzT0F0dVJYb0c3Wmt5S1YtN3MzWVBDa2xBTE0zOV93Ykd4c1UwYkh6SDZudEVsejFEY1hxRWtwZlBXSnV0Qnp5cmxLV2ZUb2VIZVcwbFJVWVRSZEh5WFFjN180X1BoUzlhWHlPUEZDMzRDQzh2eERBai1YVFIxTVdPODVkQWc0Z3NuY0ZJSjJDYWJ2bmNKTnpBTjFfVS04UGV30gHzAUFVX3lxTE1JSElQbzBoODFIbWJheE5QR2RNLVk2SG1FTmh4clduQ0tRU2xuRmM0d0ZEYmc0ZWVadnFyRFMtLTVLQ3dYVmNyMnVKLVZEcE9helcxcEdJRVNfbXNQa1J6MVlTcVhiY0hjZzhiTWtxaEE0Wi1TSU1PRlE0STQtU2htdFo0ckVjTnI1VzZGVzduWWliMi1zbG95R3NudW5RZFVORjI2ZDhqYlpESTgwZGJBeVhqRGJvYTl2Ynl3ekVzSWI2NWpEQ1BQRGxBaVNRUFFoX2YtMDBkUGlpRElzclgwT2JiYk5XLVE2ekFSTWRjNWlzcw?oc=5",
+   "date": "Tue, 10 Nov 2026 05:30:25 GMT"
   },
   {
-   "exam": "NEET-PG",
-   "title": "INI CET November 2026 Result Download Link OUT: PDF Download Link - Careers360",
-   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNbUIyRU5mLXBKS1ZvMGtCMmR4bU9NWUZoemRUS0t0Q0h1NWpBUE5wNzBPamhmMWo2NHVMdl9IQlllQkpBMWVDdDZrNExvWXdodzZ5aEx0Y0hoQnE4TU5Ja0M0RlVVZmdRRGExRU1RUGV6WndhOWx0R0hZWW9Cb3hCaWtIaW5oOWhwVFlF?oc=5",
-   "date": "Sat, 07 Nov 2026 03:17:00 GMT"
+   "exam": "INI-CET",
+   "title": "FMGE Result October 2026 not delayed, NBEMS sets Nov 30 deadline; candidates seek early release - Careers360",
+   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNZ3Q0THdPb1JBOTUwNFl3NFVTRDd5MW9uTkRjOFppSXJoZXg2MnMtUF9GWDdsWXlESkJNeVkxY0dqRHVDemk3aWpEUWdDc1ZZSWU3RU43ZDZFNkI5U25ESG4xU1lhUzFOUXNDUlFDVTlIWXRKaXE0ckhSYlFjOWdFOWVILVhCOVNNM21TbGdJVDl4dmZKT2ZEOTFDWHVaQWRhYWNKZVNxNVBubnhLQUZuZEdnR1lOUEtvaTFZd09mVFRsNEFSM1FDZklIX1ctd9IBzgFBVV95cUxNZ3Q0THdPb1JBOTUwNFl3NFVTRDd5MW9uTkRjOFppSXJoZXg2MnMtUF9GWDdsWXlESkJNeVkxY0dqRHVDemk3aWpEUWdDc1ZZSWU3RU43ZDZFNkI5U25ESG4xU1lhUzFOUXNDUlFDVTlIWXRKaXE0ckhSYlFjOWdFOWVILVhCOVNNM21TbGdJVDl4dmZKT2ZEOTFDWHVaQWRhYWNKZVNxNVBubnhLQUZuZEdnR1lOUEtvaTFZd09mVFRsNEFSM1FDZklIX1ctdw?oc=5",
+   "date": "Tue, 10 Nov 2026 02:27:29 GMT"
   },
   {
-   "exam": "NEET-PG",
-   "title": "Bihar PGMAC 2026 Round 1 Cutoff & Seat Allotment: Key Dates & Steps - medadmit.in",
-   "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPQmlXamUzcGJSNVhwQ3J3ZmFWRFgyWV8yUnAzNVU5SFZyRDZqN3N1X3AtYUlaWFE3eFpPNHZIbVVib2dVdERZLVVBSXlET0hHQ29XWnRwT3VOVmQzdnFKbF9QU2Q0OFBfS0lmekhkdDdmeXhtRkdzcG9UbHp3c3FOTGQtYUJhZUQ1akE?oc=5",
-   "date": "Fri, 06 Nov 2026 11:13:39 GMT"
+   "exam": "INI-CET",
+   "title": "AP NEET PG 2026 Counselling Round 1 Seat Allotment Result: Download PDF at drntr.uhsap.in - Careers360",
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQTkNkWU1FQjFveWxVd3M2N2Nxb3FKeGRLc01fUXA1a21SMkpqb1YxeElDMWdweWllVDdKaHo2cGUxWDY5ZG9naXFReFJVdk53WGpRVVVkUEFYRlpQbmNyZ21PNk0zdEdHRktrUTIyRm55WVVuVURWeURMX3pHOFFrRDdhLTViY2h6T3R5ZVVKWUsxdEIxaGRWQ2hpelJCZE0?oc=5",
+   "date": "Tue, 10 Nov 2026 13:31:00 GMT"
   },
   {
-   "exam": "NEET-PG",
-   "title": "INI CET November 2026 Result Link Out Live Updates: Direct Link at aiimsexams.ac.in - Careers360",
-   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOaFpDUWsydTVlLTVTZkhWLUJPaGo3RW8zek1pOGNLWDBmdFVaeVQzY2l0OTgzU05wWnB2bGkzVjNzX2NQV3JTVVhXZElqLXZsWTRQaDZxRkFET1NsLXBqd2JOYjF0OEw2Ry1qeFpJUkJ4WFYwWlZ4c2pudjVsTUFpbzVFcnB6cXFBRGpmMS1nWmQ?oc=5",
-   "date": "Fri, 06 Nov 2026 11:11:03 GMT"
+   "exam": "INI-CET",
+   "title": "NEET PG 2026 DNB Cutoff 2026 Anaesthesiology: Cut Off, Seats, Closing Rank - Careers360",
+   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNMGhvX3dRUElKd2V0NE85aUlpbEFmM21rWTZTNHo3SzVkRGJSYm5tdS0tbmRUS1Z6VjA2UU5OYVRkcnBya0U3MjN1LXhDVFM0LWFGZExCQmdRajRmeVQ5YW9ycHNoclNudWhZWnFLUHgta2xDakUtcHNKY29XN0ZoMktCOVVqNC1DNXRQWmh3?oc=5",
+   "date": "Mon, 09 Nov 2026 10:42:00 GMT"
   },
   {
-   "exam": "NEET-PG",
-   "title": "Bihar PGMAC 2026 Round 1 Seat Allotment Result – Check Your Status - medadmit.in",
-   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE14SlBtaEwtQXdCWTNwNlVZbmZyaHlDNmZsbnVtdVFSNzlqRVZFeG4xVkRyM3BHSW9kZ2l0QmtPUkNMSm1VcjVFcElGVEVYS2N6LUJZd044Y1FiU1kzZ1hVaXV6cWg4ZzNld0t6TTNvMlNZU0YxUEhWU3R0aXhVRTA?oc=5",
-   "date": "Fri, 06 Nov 2026 08:16:26 GMT"
+   "exam": "INI-CET",
+   "title": "‘Where Is The Accountability?’ FMGE Candidates, Medical Associations Demand Early Results on X - Times Now",
+   "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPYWRPMlZsdWdHc3QxbXU2b3pEcjhaZEZYSWl1VDhyM2lhWFJWRjF5RXllUU1RZXF5dksyZTkyYWRqd2JMbjNRWktrWGpUYVQtbTV1Tkt4VlNZZFZrV0syNkxsOUdrVWpOVG93RldaVDhmWUNiSWpWQlkyTTNlbmdMaVZYUFM3YUpsSDVOVDZzQW1ZOERNRjdndGdqdnF5SnNubXhfZ1gyQ1lsTF9EeWpITC0zV285cHpuOFI3UXdYbWNERVNzYkxuZGhJV0EwZWZ1V2FoUDZEd0ZOOVNkVkgxStIB5gFBVV95cUxPQjlMNEpqakc2Y0wzdlZtaWdBMEpaLUF2NVd0bGlhVnRxdHR2WmV4cFZXOVpDcF9Dd2lYNFZrbm8xS19NVEYxZW5yaFlVazFJSGpPOG5UOE5ibG5XQVVxVElrN1BXN2lzSkZfbVQxeDhZb1pHLUNSWGJubjA3dkkwc1JnbVlhM3ducExnczN2N1JoRUJsaHE2SWk5Vy10NFJGWnhRQmg2VE8wZXB3OE1GaFFDV3hhcThUTU0yX1ZzSW00UkkzU2RhSERnUERsTjc2aHJmTHd2dUdHcUFUYVNGU1Fpc1VSQQ?oc=5",
+   "date": "Tue, 10 Nov 2026 04:46:38 GMT"
   },
   {
-   "exam": "NEET-PG",
-   "title": "NEET UG Stray Vacancy Round 5: Allotment Result Released Early - medadmit.in",
-   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNeFQwX1BfZUJ0dm1tX1cxY3hSd1JSZlppWXhHcFZzTVpWZFJadnNfblNqNGtpN1lkREtCbENDVGdpcWxlR3dOQnU5SGFLbFJHM2FUemloM29EUjQtU09zd2hxUGtibzg1bjlKVEl6ZHBjQjBJeUt3UG1USGg5WTcyU3c5YVZDUQ?oc=5",
-   "date": "Fri, 06 Nov 2026 07:16:45 GMT"
+   "exam": "INI-CET",
+   "title": "FMGE October 2026 Result Expected by November 30; Candidates Demand Early Release - KollegeApply News",
+   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQdWhucnBQSy1EYUt4WlBwMkdVUGlEaVVHTHlVWHo1STNUQk4tUm5iNGxTSndBSzNhNXh3S21uemRXM0N0UWtRZG5SZDZHdmFzTGlFMnhDSWFIV3BXUXBVaGQ3V0xJVlJMazRSd1ZsVlhMc1J6dzhkMTc2UEgwbndoMnRzVmdaTm8teVVV?oc=5",
+   "date": "Tue, 10 Nov 2026 06:04:21 GMT"
   },
   {
-   "exam": "NEET-PG",
-   "title": "Tripura NEET UG Special Stray Round 2026: Seat Matrix & Registration Guide - medadmit.in",
-   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNaGxXYmpCUUNQeUNiZmJLZmNJTVdNY1lvWGdRc3AxeW1fUmlYVUZfZy1KQk9fZ1pDcUkyWERVZElyS2tQbWxKRjFwV3luVlF4Zk1MWTNFQUhxYkp6UDlZcjZjSFc5UkN5VHJrTkJhTWxBRUVwMFVvTm5NSVBDOS13bzlxWEU5SzY4TTlzSHV5Y3o3N2VyVkZNSg?oc=5",
-   "date": "Fri, 06 Nov 2026 07:37:21 GMT"
-  },
-  {
-   "exam": "NEET-PG",
-   "title": "DNB NEET PG Cutoff 2026: NBEMS Paediatrics Round 2 and 3 Previous Year Closing Rank Analysis - Jagran Josh",
-   "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQS3V4aUttTUprVy1FY1dOZmpBcGRZdXVWVGFobEJXRjNJR0Fyc3ZvRjZTNUF4X1M4N0g3WTBTbDdmWmgwSlVEWUxtM1FwSDV2YTlCak16TllpOGo5MkhMeUJyYm9KUWZsemwxbDFLNEVLUGdMeDZUcjhyUm13VUhKaEpTWmRSREpZdVE2OTZod19qTEEwS015eXE3bjc1ZTBBWDJhVGNmNUlzSjdNaHZvTFQ3SjhDTlNKVFBNSGpuQTM1YS1zYW5FZGJ0NjZaUmdXcEhJV0QzRdIB3gFBVV95cUxOS1ZMOHptMk9qeDUyVFRZdm96UjlnOG9rNHZyQkdQMXJTNC0wR2ZnNDRNejdXbF9vRUdJZU9iYkh4RlVaNkJ0WmVFbFA1d293MDc0UE9TMDRCUjd4TEM5UjdnMlBya0J0T1JtWFBRd01EYzVvRllSMEpBUHdQTFN3UkM5V054S3ZIbjlGSEc3dHFUb1FiVzFvRDR1alZHTzRjN0VncUpsM3NWWmt2M0F2QS1qTWFFR2theWRxdWlRVG02LTlWN1hyeXBuaDhKdmt3OGY4YVVINzJVTUkwdGc?oc=5",
-   "date": "Sat, 07 Nov 2026 17:12:32 GMT"
-  },
-  {
-   "exam": "NEET-PG",
-   "title": "DNB NEET PG Cutoff 2026: NBEMS Radio Diagnosis Round 2 and 3 Previous Year Closing Rank Analysis - Jagran Josh",
-   "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPbnY0U3hJN2RidllBdmMzNDlSVTFzUDFxN1Z5YVVZcTNiWHV1QVBmNU1ITWUweGhHMGZLZHJpcUlRdWFoaGVfd1BsYmMyLThrRHU1ZkRHazhzNUNDV2VhV3RrR0E0Z3htSWx6cnVYb0NDdGFfaVhMTnRsU3ktMjJ3S1d1Z3NFSkdXTmlHWjlOa0pTam9ScDMzZUEzREpYYVk1NXNMNEkzS3FBQUdwMFpMSXIzYUNpU2tDVUxvajJKRFZIT3hmYVR1V3NJMlE2aWNFb2QwRVBJclRtOFZC0gHjAUFVX3lxTE50UzFKcmVyQ2doTHctcGVTRlFTUmxHSG5peEVZdTZIbEJXbFNJN0gtcWl5S3N5T1JDMjMxd1NyeDRRVkNzdmhQUGtFcHJKc2lrcWk1MEtidFZYTS1kVlRaN1R5UjVmS2prMUU5eHFTR1VaUm1LZnMxYXRLNzNOem5kdnRVQTJlZWZkX0gyaVVRY290Z1EzaHhpeXNiMU9nZlZuYWMwQWo5U2xSZHBWS3NmZHVRR1NhRktDcDNpUFdpNU5VY2h5b0hBU1YtT09TYVRyZXAxUVcxN3lJRkh2Z01IXzU4?oc=5",
-   "date": "Sat, 07 Nov 2026 15:28:16 GMT"
+   "exam": "UPSC CMS",
+   "title": "NICL AO Prelims Admit Card 2026 Out: Download Call Letter PDF - Careers360",
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQQ0lQTlduUGF4NkZDUS1rN3dFQU1aRlJJNm50WXFUWlhMZzJ0UTlTaFgzcWRCa25ZSkhtODZUNGh3VXpuMWNDUlZ2ZFhWODNPajVoMzRXQjJLUi1LU01ZblVmSnRBYzFtS29EZGc2Z3VzTnpTS0plOVNrTW54bGJMR241SGJlM3JZUEYyeUtsMFdLYXpIYXFYY09rSTA2ZXVyVXhReXNrNA?oc=5",
+   "date": "Tue, 10 Nov 2026 08:22:00 GMT"
   }
  ],
- "checked": "2026-11-08T03:08+05:30",
+ "checked": "2026-11-10T21:20+05:30",
  "seen": [
   "007bb1065d0e",
   "008510bc5ab6",
@@ -919,6 +937,7 @@
   "0867cc7cd687",
   "08ea0af7ea82",
   "09d16e5d4efd",
+  "09d393bb9b62",
   "0cfa1c6f0195",
   "0e494af66dbd",
   "0ec040bd675d",
@@ -1002,6 +1021,7 @@
   "5fcdcbc71a82",
   "5ff3285045d2",
   "60517db2211c",
+  "60b7cad21b6a",
   "635e688c0a79",
   "64efca6833d1",
   "6540c1c9ed8e",
@@ -1021,6 +1041,7 @@
   "73a50f5d16f2",
   "73e6eb393150",
   "7481edab754b",
+  "78eaf968153f",
   "79c13e3cd997",
   "7ac090fd16c3",
   "7ae438410e08",
@@ -1048,6 +1069,7 @@
   "9b741bef2223",
   "9c9bb1ff6421",
   "9dd717ea1314",
+  "a1b9b1c6fcb6",
   "a1df154f473b",
   "a56b4cced7a0",
   "a74e13e64955",
