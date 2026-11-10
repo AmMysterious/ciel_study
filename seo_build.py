@@ -257,7 +257,7 @@ def build_blocks(n):
             "@context": "https://schema.org", "@type": "Product",
             "name": "Ciel Study — unlimited access",
             "description": ("Unlimited questions, timed exam mode and Grand Tests for "
-                            "FMGE, NEET-PG and INI-CET preparation."),
+                            "FMGE, NEET-PG, INI-CET and UPSC CMS preparation."),
             "brand": {"@type": "Brand", "name": "Ciel Study"},
             "offers": {
                 "@type": "AggregateOffer", "priceCurrency": "INR",

@@ -1,6 +1,6 @@
 {
  "_comment": "Exam dates for the home page band. ⚠ RULE: a date goes in here ONLY if it is quoted from the body that sets it, with the URL of that notice in `source`. Never a coaching page, never a forum, never a number remembered from somewhere. These are NOT Ciel's promises - they are NBEMS's and AIIMS's, quoted and linked so a reader can check them in one click, which is the only reason it is safe to print a date at all (see the rule in fixes.json). A row with \"date\": null is the honest way to show an exam nobody has scheduled yet: it prints the situation and no number, so it cannot go stale. Rows whose date has passed are dropped automatically at render time - do not delete them by hand, the history is worth keeping. `tentative` prints the word the source itself uses.",
- "updated": "2026-11-01",
+ "updated": "2026-11-11",
  "exams": [
   {
    "label": "FMGE — mock test",
@@ -35,18 +35,35 @@
    "source_label": "AIIMS key dates"
   },
   {
-   "label": "FMGE — result (by)",
-   "date": "2026-11-30",
-   "note": "Declared by this date at the latest.",
+   "label": "FMGE Oct 2026 — result",
+   "date": "2026-11-10",
+   "note": "Declared. 9,354 of 40,923 passed (22.86%).",
    "tentative": false,
-   "source": "https://nbe.edu.in/IB/FMGE%20october%202026%20information%20bulletin%20v2.2.pdf",
-   "source_label": "FMGE Oct 2026 bulletin, p.2",
+   "source": "https://www.natboard.edu.in/viewNotice.php?NBE=SnJTOW14ZGZEc1JPc1l6WHNZNmRCdz09",
+   "source_label": "NBEMS result notice, 10 Nov 2026",
    "countdown": false
+  },
+  {
+   "label": "FMGE Oct 2026 — scorecards",
+   "date": "2026-11-20",
+   "note": "Download from the NBEMS site on or after this date. Pass certificates are given in person; NBEMS will post that schedule.",
+   "tentative": false,
+   "source": "https://www.natboard.edu.in/viewNotice.php?NBE=SnJTOW14ZGZEc1JPc1l6WHNZNmRCdz09",
+   "source_label": "NBEMS result notice, 10 Nov 2026, point 4",
+   "countdown": false
+  },
+  {
+   "label": "INI-CET — July 2027 session",
+   "date": "2027-05-22",
+   "note": "Result listed for 29 May 2027.",
+   "tentative": true,
+   "source": "https://www.aiimsexams.ac.in/landingpage/key-dates",
+   "source_label": "AIIMS key dates, 2027 calendar"
   },
   {
    "label": "FMGE — January sitting",
    "date": null,
-   "note": "Was 9 January 2027. Moved to an unnamed date in Jan/Feb 2027.",
+   "note": "Was 9 January 2027. Moved to an unnamed date in Jan/Feb 2027; no new date from NBEMS as of 11 November.",
    "tentative": false,
    "source": "https://natboard.edu.in/viewNotice.php?NBE=OHUzVGIvZWlvVDVvTjVPTklKS1RVUT09",
    "source_label": "NBEMS notice, 28 Aug 2026"
@@ -54,7 +71,7 @@
   {
    "label": "NEET-PG",
    "date": null,
-   "note": "The 2026 sitting is behind us.",
+   "note": "The 2026 sitting is behind us. NBEMS has not announced the 2027 date yet.",
    "tentative": false,
    "source": null,
    "source_label": null

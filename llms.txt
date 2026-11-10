@@ -28,9 +28,10 @@ automatically unless an auto-renew plan is chosen explicitly.
 - Unanswered questions score as wrong rather than being dropped from the total.
 
 ## Exam dates
-- FMGE - result (by): 30 November 2026. Declared by this date at the latest.
-- FMGE - January sitting: not yet announced. Was 9 January 2027. Moved to an unnamed date in Jan/Feb 2027.
-- NEET-PG: not yet announced. The 2026 sitting is behind us.
+- FMGE Oct 2026 - scorecards: 20 November 2026. Download from the NBEMS site on or after this date. Pass certificates are given in person; NBEMS will post that schedule.
+- INI-CET - July 2027 session: 22 May 2027 (tentative, per the source). Result listed for 29 May 2027.
+- FMGE - January sitting: not yet announced. Was 9 January 2027. Moved to an unnamed date in Jan/Feb 2027; no new date from NBEMS as of 11 November.
+- NEET-PG: not yet announced. The 2026 sitting is behind us. NBEMS has not announced the 2027 date yet.
 These dates belong to NBEMS and AIIMS, not to Ciel Study; each is quoted from
 the notice that set it and linked from https://ammysterious.github.io/ciel_study/faq.html so it can be checked
 rather than trusted. An exam with no announced date is listed as such rather
