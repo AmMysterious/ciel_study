@@ -77,7 +77,7 @@ you bought.</p>
   <tr><th>Plan</th><th>Refund window</th><th>Question limit</th></tr>
   <tr><td>1 week (₹129)</td><td>Within <strong>1 day</strong> of payment</td>
       <td rowspan="5">Fewer than <strong>25 questions</strong> attempted on the paid plan, <strong>and no Grand Test started</strong></td></tr>
-  <tr><td>1 month (₹349; ₹249 until 17 Nov)</td><td>Within <strong>3 days</strong> of payment</td></tr>
+  <tr><td><span class="promo" data-until="2026-11-17T18:30:00Z" data-after="1 month (₹349)">1 month (₹349; ₹249 until 17 Nov)</span></td><td>Within <strong>3 days</strong> of payment</td></tr>
   <tr><td>1 month + Grand Tests (₹449)</td><td>Within <strong>3 days</strong> of payment</td></tr>
   <tr><td>3 months (₹799)</td><td>Within <strong>3 days</strong> of payment</td></tr>
   <tr><td>6 months (₹1,299)</td><td>Within <strong>3 days</strong> of payment</td></tr>
@@ -221,5 +221,6 @@ current status. We can find the payment and either grant your access or refund i
 <script defer src="vendor/SplitText.min.js"></script>
 <script defer src="vendor/lenis.min.js"></script>
 <script defer src="motion.js"></script>
+<script>/* result-week price: shows the normal price again from 18 Nov 00:00 IST, no edit needed */(function(){try{var n=Date.now();document.querySelectorAll(".promo[data-until]").forEach(function(e){if(n>=Date.parse(e.getAttribute("data-until")))e.innerHTML=e.getAttribute("data-after");});}catch(_){}})();</script>
 </body>
 </html>

@@ -359,8 +359,8 @@
         <p class="per">Unlimited · 1 Grand Test</p>
       </a>
       <a class="price-tile" href="pricing.html#plans">
-        <h3>1 month</h3><div class="price">₹249 <small><s>₹349</s></small></div>
-        <p class="per">Result week, till 17 Nov · Unlimited · 2 Grand Tests</p>
+        <h3>1 month</h3><div class="price"><span class="promo" data-until="2026-11-17T18:30:00Z" data-after="₹349">₹249 <small><s>₹349</s></small></span></div>
+        <p class="per"><span class="promo" data-until="2026-11-17T18:30:00Z" data-after="Unlimited · 2 Grand Tests · video">Result week, till 17 Nov · Unlimited · 2 Grand Tests</span></p>
       </a>
       <a class="price-tile featured" href="pricing.html#plans">
         <span class="tag">Most mocks</span>
@@ -574,5 +574,6 @@
 <script defer src="vendor/SplitText.min.js"></script>
 <script defer src="vendor/lenis.min.js"></script>
 <script defer src="motion.js"></script>
+<script>/* result-week price: shows the normal price again from 18 Nov 00:00 IST, no edit needed */(function(){try{var n=Date.now();document.querySelectorAll(".promo[data-until]").forEach(function(e){if(n>=Date.parse(e.getAttribute("data-until")))e.innerHTML=e.getAttribute("data-after");});}catch(_){}})();</script>
 </body>
 </html>

@@ -103,8 +103,8 @@
   </div>
   <div class="plan">
     <h3>1 month</h3>
-    <div class="price">₹249 <small><s>₹349</s></small></div>
-    <p class="per">Result-week price until 17 November, then ₹349. Unlimited for 30 days</p>
+    <div class="price"><span class="promo" data-until="2026-11-17T18:30:00Z" data-after="₹349">₹249 <small><s>₹349</s></small></span></div>
+    <p class="per"><span class="promo" data-until="2026-11-17T18:30:00Z" data-after="Unlimited for 30 days">Result-week price until 17 November, then ₹349. Unlimited for 30 days</span></p>
     <ul class="plan-list">
       <li>Everything in Free</li>
       <li><strong>No daily limit</strong></li>
@@ -184,7 +184,7 @@ limit on the number of friends you may invite.</p>
 <div class="table-scroll"><table>
   <tr><th>Plan</th><th>Price (INR)</th><th>Access period</th><th>Renewal</th></tr>
   <tr><td>1 week</td><td>₹129</td><td>7 days</td><td>One-time payment. Does not renew.</td></tr>
-  <tr><td>1 month</td><td>₹249 until 17 Nov (then ₹349)</td><td>30 days</td><td>One-time payment. Does not renew.</td></tr>
+  <tr><td>1 month</td><td><span class="promo" data-until="2026-11-17T18:30:00Z" data-after="₹349">₹249 until 17 Nov (then ₹349)</span></td><td>30 days</td><td>One-time payment. Does not renew.</td></tr>
   <tr><td>1 month + Grand Tests</td><td>₹449</td><td>30 days</td>
       <td>One-time payment. Does not renew.</td></tr>
   <tr><td>3 months</td><td>₹799</td><td>90 days</td><td>One-time payment. Does not renew.</td></tr>
@@ -267,5 +267,6 @@ manually.</p>
 <script defer src="vendor/SplitText.min.js"></script>
 <script defer src="vendor/lenis.min.js"></script>
 <script defer src="motion.js"></script>
+<script>/* result-week price: shows the normal price again from 18 Nov 00:00 IST, no edit needed */(function(){try{var n=Date.now();document.querySelectorAll(".promo[data-until]").forEach(function(e){if(n>=Date.parse(e.getAttribute("data-until")))e.innerHTML=e.getAttribute("data-after");});}catch(_){}})();</script>
 </body>
 </html>
