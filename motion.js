@@ -132,6 +132,69 @@
       });
     }
 
+    /* ── Passed with Ciel Study (S77, 11 Nov): cards deal in, marks count up, the
+       PASSED stamp lands; on a laptop the cards tilt to the pointer and the row drags.
+       The words and numbers are all in the HTML - this only stages their arrival. */
+    var passTrack = document.querySelector('.pass-track');
+    if (passTrack) {
+      var passCards = all('.pass-card', passTrack);
+      gsap.set(passCards, { transformPerspective: 900 });
+      if (passTrack.getBoundingClientRect().top > fold) {
+        gsap.set(passCards, { opacity: 0, x: 70, rotationY: -14 });
+        ScrollTrigger.create({ trigger: passTrack, start: 'top 86%', once: true, onEnter: function () {
+          gsap.to(passCards, { opacity: 1, x: 0, rotationY: 0, duration: 0.85, ease: 'power3.out', stagger: 0.12 });
+        } });
+      }
+      all('.pass-score b', passTrack).forEach(function (el, i) {
+        var txt = el.textContent.trim(), target = parseInt(txt, 10), o = { v: 0 };
+        if (!target) return;
+        gsap.to(o, { v: target, duration: 1.3, delay: 0.25 + i * 0.12, ease: 'power2.out',
+          scrollTrigger: { trigger: passTrack, start: 'top 86%', once: true },
+          onUpdate: function () { el.textContent = Math.round(o.v); },
+          onComplete: function () { el.textContent = txt; } });
+      });
+      all('.pass-stamp', passTrack).forEach(function (st) {
+        var card = st.closest('.pass-card');
+        var tl = gsap.timeline({ paused: true });
+        tl.fromTo(st, { scale: 2.6, opacity: 0, rotation: -22 },
+                      { scale: 1, opacity: 1, rotation: -7, duration: 0.45, ease: 'back.out(2.2)' })
+          .fromTo(card, { y: 0 }, { y: 4, duration: 0.07, yoyo: true, repeat: 1, ease: 'power1.inOut' }, '-=0.08');
+        ScrollTrigger.create({ trigger: passTrack, start: 'top 80%', once: true,
+          onEnter: function () { gsap.delayedCall(0.9, function () { tl.play(); }); } });
+      });
+      if (desktop) {
+        passCards.forEach(function (c) {
+          var rx = gsap.quickTo(c, 'rotationX', { duration: 0.4, ease: 'power3.out' });
+          var ry = gsap.quickTo(c, 'rotationY', { duration: 0.4, ease: 'power3.out' });
+          c.addEventListener('pointermove', function (e) {
+            var r = c.getBoundingClientRect(), px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
+            c.style.setProperty('--mx', (px * 100) + '%'); c.style.setProperty('--my', (py * 100) + '%');
+            ry((px - 0.5) * 12); rx((0.5 - py) * 9);
+          });
+          c.addEventListener('pointerleave', function () { rx(0); ry(0); });
+        });
+        /* drag the row with the mouse (touch keeps its native swipe) */
+        var down = null, moved = false;
+        passTrack.setAttribute('data-lenis-prevent-horizontal', '');
+        passTrack.addEventListener('pointerdown', function (e) {
+          if (e.pointerType !== 'mouse' || e.button !== 0) return;
+          down = { x: e.clientX, left: passTrack.scrollLeft }; moved = false;
+        });
+        window.addEventListener('pointermove', function (e) {
+          if (!down) return;
+          var dx = e.clientX - down.x;
+          if (!moved && Math.abs(dx) > 5) { moved = true; passTrack.classList.add('dragging'); }
+          if (moved) passTrack.scrollLeft = down.left - dx;
+        });
+        window.addEventListener('pointerup', function () {
+          if (!down) return;
+          down = null; passTrack.classList.remove('dragging');
+        });
+        /* a drag must not also follow the Instagram link it started on */
+        passTrack.addEventListener('click', function (e) { if (moved) { e.preventDefault(); moved = false; } }, true);
+      }
+    }
+
     /* ── The demo: one real question, played as the bot sends it ───────────── */
     var screen = document.querySelector('.phone-screen');
     if (screen) {

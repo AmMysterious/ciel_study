@@ -534,6 +534,73 @@ def render_milestones(n: dict) -> list[str]:
     return []
 
 
+def render_passes() -> list[str]:
+    """The home page's "Passed with Ciel Study" band, from the testimonials list. S77, 11 Nov 2026.
+
+    Source: ../ciel_study_bot/marketing/testimonials/testimonials.json (laptop only - it also holds how each person
+    agreed, which never reaches this site). Only POSTED entries are shown and only their public fields: name, the
+    exam line, the score when they chose to show it, their exact words, their Instagram handle and post link.
+    ⚠ NO PHOTOS on the site (his call, 11 Nov): an amber monogram of their initials instead.
+    ⚠ A private mark has no `score` at all -> a PASSED stamp; nothing here may infer or print a number for them.
+    """
+    src = HERE.parent / "ciel_study_bot" / "marketing" / "testimonials" / "testimonials.json"
+    idx = HERE / "index.html"
+    if not src.exists():
+        return []
+    data = json.loads(src.read_text(encoding="utf-8"))
+    cards = []
+    for slug, e in data.items():
+        if slug.startswith("_") or not (e.get("posted") or {}).get("instagram"):
+            continue
+        words = [w for w in re.sub(r"^Dr\.?\s+", "", e["name"]).split() if w[:1].isalpha()]
+        mono = (words[0][0] + (words[1][0] if len(words) > 1 else "")).upper()
+        if e.get("score") not in (None, ""):
+            big = (f'<p class="pass-score"><b>{_esc(e["score"])}</b><span>/ {_esc(e.get("out_of", 300))}</span></p>')
+        else:
+            big = '<p class="pass-score"><span class="pass-stamp">PASSED</span></p>'
+        ig = e.get("instagram")
+        link = (f'<a class="pass-ig" href="{_esc(e["posted"]["instagram"])}" rel="noopener" target="_blank">'
+                f'@{_esc(ig)} on Instagram <span aria-hidden="true">↗</span></a>') if ig else ""
+        cards.append(
+            f'    <li class="pass-card">\n'
+            f'      <div class="pass-top"><span class="pass-mono" aria-hidden="true">{_esc(mono)}</span>'
+            f'<span class="pass-exam">{_esc(e.get("exam", "FMGE"))} PASSED<small>{_esc(e.get("subline", ""))}</small></span></div>\n'
+            f'      {big}\n'
+            f'      <blockquote>{_esc(e["quote"])}</blockquote>\n'
+            f'      <p class="pass-who">{_esc(e["name"])}</p>{link}\n'
+            f'    </li>')
+    if not cards:
+        return []
+    block = "\n".join([
+        '  <p class="eyebrow">Passed with Ciel Study</p>',
+        f'  <h2>{len(cards)} of our students cleared FMGE October 2026</h2>',
+        '  <p class="lede">In their own words, exactly as they sent them. Each one agreed to be shown here.</p>',
+        '  <div class="pass-rail">',
+        '  <button class="pass-nav prev" type="button" aria-label="Previous">←</button>',
+        '  <ul class="pass-track" tabindex="0" aria-label="Students who passed">',
+        *cards,
+        '  </ul>',
+        '  <button class="pass-nav next" type="button" aria-label="Next">→</button>',
+        '  </div>',
+        # the arrows work with or without the motion layer (reduced motion keeps them)
+        '  <script>(function(){var t=document.querySelector(".pass-track");if(!t)return;'
+        'document.querySelectorAll(".pass-nav").forEach(function(b){b.addEventListener("click",function(){'
+        'var c=t.querySelector(".pass-card");var w=c?c.getBoundingClientRect().width+18:320;'
+        't.scrollBy({left:b.classList.contains("next")?w:-w,behavior:"smooth"});});});})();</script>',
+    ])
+    s = old = idx.read_text(encoding="utf-8")
+    pat = re.compile(r"(<!--PASSES:START-->).*?(<!--PASSES:END-->)", re.S)
+    if not pat.search(s):
+        print("⚠ index.html has no PASSES markers - band not injected")
+        return []
+    s = pat.sub(lambda _m: f"<!--PASSES:START-->\n{block}\n  <!--PASSES:END-->", s)
+    if s != old:
+        if not CHECK:
+            idx.write_text(s, encoding="utf-8", newline="\n")
+        return ["index.html (passes)"]
+    return []
+
+
 def render_exams() -> list[str]:
     """The home page's exam-dates band, from exam_dates.json.
 
@@ -694,7 +761,7 @@ if __name__ == "__main__":
           "⚠ .env unreadable - free-tier numbers left untouched")
     print(f".env     -> donate link " + ("configured" if donate_url() else "NOT SET (support page will say 'not open yet')"))
     changed = (sync_stats(n) + sync_exam_pages(n) + sync_fmge_pyq() + render_fixes() + render_support()
-               + render_milestones(n) + render_exams() + sync_llms(n))
+               + render_milestones(n) + render_exams() + render_passes() + sync_llms(n))
     if CHECK:
         # ⚠ ASCII ONLY ON THIS LINE. It used to print a tick emoji and crashed with
         # UnicodeEncodeError under Windows' cp1252 console — after having already

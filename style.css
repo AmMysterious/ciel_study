@@ -793,3 +793,46 @@ ol.milestones li::before { top: 16px; }
 .news-exam, .news-src { font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); }
 .news-exam { color: var(--amber); min-width: 5.5em; }
 .news-note, .news-none { font-size: .86rem; color: var(--faint) !important; margin-top: 10px; }
+
+/* ── Passed with Ciel Study (S77, 11 Nov) ────────────────────────────────────
+   Real students' own words, from the laptop's testimonials list (sync_site.py
+   render_passes). No photos by design - an amber monogram stands in. A row you
+   swipe on a phone; on a laptop it also drags, tilts to the pointer and the
+   arrows step one card. Everything is readable with motion off. */
+.pass-rail { position: relative; margin-top: 30px; }
+.pass-track { list-style: none; margin: 0; padding: 6px 2px 22px; display: flex; gap: 18px;
+  overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: var(--slate-600) transparent;
+  cursor: grab; outline: none; }
+.pass-track.dragging { cursor: grabbing; scroll-snap-type: none; user-select: none; }
+.pass-track:focus-visible { box-shadow: 0 0 0 2px var(--amber); border-radius: var(--radius); }
+.pass-card { flex: 0 0 min(320px, 84%); scroll-snap-align: start; position: relative; display: flex; flex-direction: column;
+  gap: 14px; padding: 24px 22px 22px; border-radius: var(--radius); background: var(--surface);
+  border: 1px solid var(--line); transform-style: preserve-3d; will-change: transform; overflow: hidden; }
+.pass-card::after { content: ""; position: absolute; inset: 0; pointer-events: none; border-radius: inherit; opacity: 0;
+  transition: opacity .3s; background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 0%),
+  rgba(245,197,66,.13), transparent 70%); }
+.pass-card:hover::after { opacity: 1; }
+.pass-top { display: flex; align-items: center; gap: 13px; }
+.pass-mono { flex: none; width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center;
+  font-weight: 800; font-size: 1.02rem; letter-spacing: .5px; color: var(--on-accent); background: var(--amber); }
+.pass-exam { font-weight: 800; font-size: .78rem; letter-spacing: 2px; color: var(--amber); line-height: 1.3; }
+.pass-exam small { display: block; letter-spacing: 0; font-weight: 600; font-size: .85rem; color: var(--text-dim); }
+.pass-score { margin: 2px 0 0; line-height: 1; min-height: 66px; display: flex; align-items: flex-end; gap: 8px; }
+.pass-score b { font-size: 4rem; font-weight: 900; letter-spacing: -2px; color: var(--text); }
+.pass-score > span { color: var(--faint); font-weight: 700; padding-bottom: 8px; }
+.pass-stamp { display: inline-block; font-weight: 900; font-size: 1.85rem; letter-spacing: 5px; color: var(--amber);
+  padding: 4px 13px 5px 18px; border: 4px solid var(--amber); border-radius: 9px; outline: 2px solid var(--amber);
+  outline-offset: 3px; transform: rotate(-7deg); margin: 0 0 8px 6px; }
+.pass-card blockquote { margin: 0; flex: 1; font-size: .98rem; line-height: 1.6; color: var(--text);
+  font-style: italic; quotes: "\201C" "\201D"; }
+.pass-card blockquote::before { content: open-quote; color: var(--amber); font-weight: 800; margin-right: 2px; }
+.pass-card blockquote::after { content: close-quote; color: var(--amber); font-weight: 800; }
+.pass-who { margin: 0; font-weight: 800; }
+.pass-ig { font-size: .88rem; font-weight: 600; color: var(--amber); text-decoration: none; margin-top: -8px; }
+.pass-ig:hover { text-decoration: underline; }
+.pass-nav { position: absolute; top: -56px; z-index: 2; width: 42px; height: 42px; border-radius: 50%;
+  border: 1px solid var(--line); background: var(--surface-2); color: var(--text); font-size: 1.1rem; cursor: pointer;
+  box-shadow: var(--shadow); transition: transform .2s, border-color .2s; }
+.pass-nav:hover { border-color: var(--amber); transform: scale(1.08); }
+.pass-nav.prev { right: 52px; } .pass-nav.next { right: 0; }
+@media (max-width: 700px) { .pass-nav { display: none; } }
