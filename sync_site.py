@@ -549,7 +549,14 @@ def render_passes() -> list[str]:
         return []
     data = json.loads(src.read_text(encoding="utf-8"))
     cards = []
-    for slug, e in data.items():
+    # highest mark first; a private mark (PASSED stamp) after all marks; ties keep arrival order (his call, 14 Nov)
+    def _rank(kv):
+        s = kv[1].get("score") if isinstance(kv[1], dict) else None
+        try:
+            return (0, -float(s))
+        except (TypeError, ValueError):
+            return (1, 0)
+    for slug, e in sorted(data.items(), key=_rank):
         if slug.startswith("_") or not (e.get("posted") or {}).get("instagram"):
             continue
         words = [w for w in re.sub(r"^Dr\.?\s+", "", e["name"]).split() if w[:1].isalpha()]
