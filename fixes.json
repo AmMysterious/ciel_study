@@ -2,16 +2,16 @@
  "_comment": "Public log. PRIVACY RULE: never name a reporter, quote their message, or include a Telegram id. Show that reports get fixed, not who reported them. status: fixed | in progress | planned | wont fix. ⚠ Only list PLANNED items you actually intend to build, and never put a DATE on one — a missed date on a public page is a promise broken in writing.",
  "fixes": [
   {
-   "date": "2026-11-16",
+   "date": "2026-11-17",
    "area": "Answer keys",
-   "status": "in progress",
-   "what": "Two Community Medicine questions corrected from student reports: the ASHA's home visits for a baby born at home run to day 42, not 28, and a primary-prevention question that had two defensible answers now has one. Both explanations rewritten; live with the next question update."
+   "status": "fixed",
+   "what": "Two Community Medicine questions corrected from student reports: the ASHA's home visits for a baby born at home run to day 42, not 28, and a primary-prevention question that had two defensible answers now has one. Both explanations rewritten."
   },
   {
-   "date": "2026-11-16",
+   "date": "2026-11-17",
    "area": "Explanations",
-   "status": "in progress",
-   "what": "Long, bullet-heavy explanations rewritten into short, clear ones: the answer first, then one line on why each other option is wrong. All 2,100+ are done and checked; they go live together with the next question update. A few questions found to have two right answers or an unreadable picture were taken out."
+   "status": "fixed",
+   "what": "2,129 long, bullet-heavy explanations rewritten into short, clear ones: the answer first, then one line on why each other option is wrong. Eight answer keys were corrected with a visible note, and 81 questions found to have two right answers or an unreadable picture were taken out."
   },
   {
    "date": "2026-11-15",
