@@ -529,7 +529,7 @@ html.lenis { scroll-behavior: auto; }
 /* The only things hidden before the script runs: the hero's own pieces, which
    are on screen at load and would otherwise flash in and then animate. */
 .motion .hero h1, .motion .hero .eyebrow, .motion .hero .sub,
-.motion .hero .cta-row, .motion .hero .cta-note, .motion .hero-media { opacity: 0; }
+.motion .hero .cta-row, .motion .hero .cta-checkup, .motion .hero .cta-note, .motion .hero-media { opacity: 0; }
 
 .scroll-bar { position: fixed; inset: 0 0 auto 0; height: 2px; z-index: 60;
   background: var(--amber); transform-origin: 0 50%; transform: scaleX(0);
@@ -836,3 +836,38 @@ ol.milestones li::before { top: 16px; }
 .pass-nav:hover { border-color: var(--amber); transform: scale(1.08); }
 .pass-nav.prev { right: 52px; } .pass-nav.next { right: 0; }
 @media (max-width: 700px) { .pass-nav { display: none; } }
+
+/* ── Free check-up bar (16 Nov 2026) - every page, built by checkup.js ─────────
+   Slim, fixed to the bottom, never in the middle of the screen. Fixed = no layout
+   shift; .has-checkup gives the body room so the footer is not hidden under it. */
+.checkup-bar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+  display: flex; align-items: center; gap: 4px;
+  padding: 0 4px 0 16px; padding-bottom: env(safe-area-inset-bottom, 0);
+  background: var(--surface-2); border-top: 1px solid var(--amber);
+  box-shadow: 0 -6px 22px rgba(0,0,0,.28);
+  font-size: .9rem; line-height: 1.35;
+}
+.checkup-link {
+  flex: 1; min-width: 0; display: flex; align-items: center; gap: 8px;
+  max-width: var(--maxw); margin: 0 auto; padding: 10px 0;
+  color: var(--text-dim); text-decoration: none;
+}
+.checkup-link b { color: var(--text); font-weight: 650; }
+.checkup-go { color: var(--amber); font-weight: 650; white-space: nowrap; }
+.checkup-link:hover .checkup-go, .checkup-link:focus-visible .checkup-go { text-decoration: underline; }
+.checkup-x {
+  flex: none; width: 40px; height: 40px; border: 0; border-radius: 999px;
+  background: none; color: var(--faint); font-size: 1.3rem; line-height: 1; cursor: pointer;
+}
+.checkup-x:hover, .checkup-x:focus-visible { color: var(--text); background: var(--surface); }
+.has-checkup body { padding-bottom: 64px; }
+@media (max-width: 620px) {
+  .checkup-bar { font-size: .84rem; padding-left: 12px; }
+  .has-checkup body { padding-bottom: 76px; }
+}
+@media (prefers-color-scheme: light) { .checkup-go { color: #8a6300; } }
+.cta-checkup { margin: 10px 0 0; font-size: .92rem; color: var(--text-dim); }
+.cta-checkup a { color: var(--amber); font-weight: 650; text-decoration: none; }
+.cta-checkup a:hover { text-decoration: underline; }
+@media (prefers-color-scheme: light) { .cta-checkup a { color: #8a6300; } }

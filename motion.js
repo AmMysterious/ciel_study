@@ -61,7 +61,7 @@
       hero.fromTo(h1, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8 }, 0);
     }
     if (isHome) {
-      hero.fromTo(all('.hero .eyebrow, .hero .sub, .hero .cta-row, .hero .cta-note'),
+      hero.fromTo(all('.hero .eyebrow, .hero .sub, .hero .cta-row, .hero .cta-checkup, .hero .cta-note'),
         { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.7, stagger: 0.08 }, 0.25);
       hero.fromTo(all('.hero-media'), { opacity: 0, y: 26, scale: 0.965 },
         { opacity: 1, y: 0, scale: 1, duration: 1, clearProps: 'transform' }, 0.3);
