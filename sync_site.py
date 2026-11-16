@@ -334,7 +334,7 @@ def render_fixes() -> list[str]:
             "<tr><td>{d}</td><td>{a}</td><td>{w}</td><td>{s}</td></tr>".format(
                 d=_esc(e.get("date", "")), a=_esc(e.get("area", "")),
                 w=_esc(e.get("what", "")),
-                s=("✅ " if e.get("status") == "fixed" else "⏳ ") + _esc(e.get("status", "")))
+                s={"fixed": "✅ ", "wont fix": "🚫 ", "planned": "🗓 "}.get(e.get("status"), "⏳ ") + _esc(e.get("status", "")))
             for e in by_year[year])
         blocks.append(FIXES_TEMPLATE.format(year=year, rows=rows))
 
