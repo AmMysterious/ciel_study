@@ -1,0 +1,317 @@
+<!doctype html>
+<!-- Ciel Study Bot - the 🪑 Study room (Mini App, look B "night library"). Opens inside Telegram only.
+     Static page; the live data comes from the bot (bot_roomweb.py), signed in with Telegram on every request.
+     Built from ciel_study_bot/study_room_mock/look_b.html (17 Nov 2026). -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Study room</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="config.js"></script>
+<style>
+:root{--bg:#0e1118;--ink:#e9e6df;--mute:#a9afbc;--chip:#1a1f2b;--line:#262c3a;--warm:#f6c66a;--teal:#4fc7a2;--violet:#9a90f0}
+*{box-sizing:border-box;margin:0}
+html,body{background:var(--bg);color:var(--ink);font-family:system-ui,"Segoe UI",Roboto,sans-serif;-webkit-tap-highlight-color:transparent}
+body{padding:14px 16px calc(24px + env(safe-area-inset-bottom));max-width:480px;margin:0 auto}
+.top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.top h1{font-size:19px;font-weight:600}
+.top span{font-size:12px;color:var(--mute)}
+.chips{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.chip{font-size:12px;padding:5px 10px;border-radius:999px;background:var(--chip);color:#b9bfcc;border:1px solid var(--line)}
+.chip.sprint{background:#33260e;color:var(--warm);border-color:#5a4216;cursor:pointer}
+.host{display:flex;align-items:flex-end;gap:10px;margin:14px 0 4px;min-height:74px}
+.ciel{width:52px;flex:none;animation:bob 2.4s ease-in-out infinite;filter:drop-shadow(0 6px 8px #000a);cursor:pointer}
+.ciel.walk{animation:walk 1.2s ease-in-out infinite}
+.bubble{background:#f4efe4;color:#2a241b;font-size:13px;line-height:1.3;padding:8px 11px;border-radius:14px 14px 14px 4px;box-shadow:0 8px 20px #000a;max-width:280px;cursor:pointer}
+.bubble b{display:block;font-size:11px;color:#8a5a12;margin-bottom:2px}
+.tbl{position:relative;display:grid;grid-template-columns:1fr 64px 1fr;row-gap:14px;margin-top:14px;padding:6px 0}
+.tbl::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:64px;transform:translateX(-50%);border-radius:16px;background:linear-gradient(90deg,#2b2019,#3a2b20 50%,#2b2019);border:1px solid #4a382a;box-shadow:inset 0 0 24px #0008,0 18px 40px #000a}
+.tname{font-size:12px;color:var(--mute);margin-top:18px}
+.seat{position:relative;text-align:center;min-height:98px;cursor:pointer;z-index:1}
+.seat.l{grid-column:1}.seat.r{grid-column:3}
+.seat .pool{position:absolute;top:10px;width:150px;height:100px;border-radius:50%;pointer-events:none;mix-blend-mode:screen;animation:glow 4s ease-in-out infinite;z-index:-1}
+.seat.l .pool{left:40%}.seat.r .pool{right:40%}
+.seat.lit .pool{background:radial-gradient(closest-side,#ffd58acc,#ffb84d55 45%,#0000 72%)}
+.seat.violet .pool{background:radial-gradient(closest-side,#b9aaffcc,#7f77dd55 45%,#0000 72%)}
+.seat.dim .pool{background:radial-gradient(closest-side,#ffd58a55,#0000 70%)}
+.lab{display:inline-block;max-width:100%;font-size:12px;line-height:1;padding:5px 9px;border-radius:999px;background:#0f3b31;color:#9fe1cb;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.av{width:44px;height:44px;border-radius:50%;margin:5px auto 4px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;background:#12352d;color:#b7ecd9;border:2px solid var(--teal)}
+.nm{font-size:12px;color:#cfd3dc;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.nm b{font-weight:600;color:#fff}.nm i{font-style:normal;color:var(--mute)}
+.seat.violet .lab{background:#2b2466;color:#cfc9fb}.seat.violet .av{background:#2a2460;color:#d6d0ff;border-color:var(--violet)}
+.seat.off .lab,.seat.dim .lab{background:#23272f;color:#b3b9c5}.seat.off .av{background:#1b1f27;color:var(--mute);border-color:#3a404d}
+.seat.me .av{outline:2px solid var(--warm);outline-offset:3px}
+.seat.empty .av{background:none;border:1.5px dashed #3a404d;color:#8a909d;font-weight:400;font-size:20px}
+.seat.empty .nm{color:#8a909d}
+.react{position:absolute;left:50%;top:18px;font-size:20px;white-space:nowrap;pointer-events:none;animation:rise 3.2s ease-out forwards}
+.react.txt{font-size:12px;background:#f4efe4;color:#2a241b;padding:3px 8px;border-radius:10px}
+.others{margin-top:12px;display:grid;gap:6px}
+.others div{font-size:13px;padding:9px 12px;border-radius:12px;background:var(--chip);border:1px solid var(--line);color:#c6cbd6}
+.bars{margin-top:14px;display:grid;gap:9px}
+.bar label{display:flex;justify-content:space-between;font-size:12px;color:#9aa0ad;margin-bottom:5px}
+.bar label b{color:var(--ink);font-weight:600}
+.track{height:6px;border-radius:3px;background:#232836;overflow:hidden}.track i{display:block;height:100%;border-radius:3px;transition:width .6s}
+.tech{display:flex;gap:8px;margin-top:16px;overflow-x:auto;padding-bottom:2px}
+.t{flex:none;font-size:12.5px;padding:8px 11px;border-radius:12px;background:#171c27;color:#c6cbd6;border:1px solid var(--line);white-space:nowrap;cursor:pointer}
+.t.on{background:#3a2c10;color:#ffd58a;border-color:#8a6a22}
+.t small{margin-left:6px;opacity:.75;padding:2px}
+.go{margin-top:14px;width:100%;border:0;border-radius:16px;padding:15px;font-size:16px;font-weight:600;background:var(--warm);color:#2a1c02;cursor:pointer}
+.go.quiet{background:#232836;color:var(--ink)}
+.go:disabled{opacity:.6}
+.mine{margin-top:10px;text-align:center;font-size:13px;color:#c6cbd6}
+.row{display:flex;gap:8px;margin-top:12px}
+.row button{flex:1;font-size:12.5px;padding:9px;border-radius:12px;background:#171c27;color:#c6cbd6;border:1px solid var(--line);cursor:pointer}
+.note{margin-top:12px;text-align:center;font-size:12px;color:#9aa0ad}
+.sheet{position:fixed;inset:0;background:#000a;display:none;align-items:flex-end;justify-content:center;z-index:10}
+.sheet.show{display:flex}
+.card{background:#151a24;border:1px solid var(--line);border-radius:20px 20px 0 0;padding:18px 18px calc(18px + env(safe-area-inset-bottom));width:100%;max-width:480px}
+.card h2{font-size:16px;margin-bottom:8px}.card p{font-size:14px;line-height:1.45;color:#c6cbd6;margin-top:6px}
+.card .opts{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.card .opts button{font-size:15px;padding:10px 14px;border-radius:12px;background:#232836;color:var(--ink);border:1px solid var(--line);cursor:pointer}
+.card .go{margin-top:16px}
+.msg{padding:40px 10px;text-align:center;color:#c6cbd6;line-height:1.5}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#f4efe4;color:#2a241b;font-size:13px;padding:8px 14px;border-radius:12px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:20}
+.toast.show{opacity:1}
+@keyframes glow{50%{opacity:.86}}
+@keyframes bob{50%{transform:translateY(-4px)}}
+@keyframes walk{25%{transform:translateX(-5px) rotate(-3deg)}75%{transform:translateX(5px) rotate(3deg)}}
+@keyframes rise{0%{transform:translate(-50%,8px);opacity:0}20%{opacity:1}100%{transform:translate(-50%,-34px);opacity:0}}
+@media (prefers-reduced-motion:reduce){.ciel,.seat .pool{animation:none}}
+</style>
+</head>
+<body>
+<div id="app"><p class="msg">Opening the room…</p></div>
+
+<div class="sheet" id="sheet"><div class="card" id="card"></div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+(function () {
+  "use strict";
+  var tg = window.Telegram && window.Telegram.WebApp;
+  var API = (window.ROOM_API || "").replace(/\/$/, "");
+  var INIT = tg ? tg.initData : "";
+  var S = null, offset = 0, pick = "p25", seenReacts = {}, timer = null, busy = false;
+  var app = document.getElementById("app");
+
+  // ⓘ cards - the wording is Nawar's to edit (STUDY_ROOM_BRAINSTORM.md §5); no big claims.
+  var INFO = {
+    p25: ["Pomodoro 25 + 5", "Focus 25 minutes, rest 5. After four rounds, take a 15-minute break.",
+          "Best for: starting, and for days when your mind wanders.",
+          "Why: in a university study, students on fixed breaks felt less tired and more focused than students who took a break whenever they felt like it."],
+    p50: ["Pomodoro 50 + 10", "Focus 50 minutes, rest 10.", "Best for: deep reading - one long topic or a video lecture.",
+          "The same clock as the room's two daily sprints."],
+    t10: ["Just 10 minutes", "One 10-minute block, no break after it.", "Best for: a day when starting is the hard part.",
+          "It counts like any other block. Often you keep going."]
+  };
+  var BREAK = ["Breathe in for 4, hold for 4, out for 6. Five times. Shoulders down.",
+               "Stand up. Reach for the ceiling, then touch your toes. Roll your neck slowly, both ways.",
+               "Look at something far away for 20 seconds - your eyes have been on a page.",
+               "Drink some water. The next block goes better with it.",
+               "You sat down and did the work. That is most of it."];
+
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function toast(t) { var x = document.getElementById("toast"); x.textContent = t; x.classList.add("show"); setTimeout(function () { x.classList.remove("show"); }, 2200); }
+  function msg(t) { app.innerHTML = ""; app.appendChild(el("p", "msg", t)); }
+  function now() { return Date.now() + offset; }
+  function parse(iso) { return iso ? new Date(iso).getTime() : 0; }   // server sends India local time without a zone
+  function mmss(ms) {
+    if (ms < 0) ms = 0; var s = Math.floor(ms / 1000), h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60); s = s % 60;
+    return (h ? h + ":" + String(m).padStart(2, "0") : m) + ":" + String(s).padStart(2, "0");
+  }
+  function hm(iso) { var d = new Date(iso); var h = d.getHours(), m = d.getMinutes(); return (h % 12 || 12) + ":" + String(m).padStart(2, "0") + (h < 12 ? " am" : " pm"); }
+  function hrs(min) { return min >= 60 ? Math.floor(min / 60) + " h " + String(min % 60).padStart(2, "0") : min + " min"; }
+
+  function call(path, body) {
+    return fetch(API + path, { method: "POST", headers: { "Content-Type": "application/json", "X-Init-Data": INIT },
+                               body: JSON.stringify(body || {}) })
+      .then(function (r) { return r.json().catch(function () { return { ok: false, why: "net" }; }).then(function (j) { j._status = r.status; return j; }); });
+  }
+
+  function load() {
+    if (document.hidden) return;
+    call("/room/api/state").then(function (j) {
+      if (j._status === 401) return msg("Please open the room again from the Study Bot - your sign-in has expired.");
+      if (j._status === 403) return msg(j.why === "soon" ? "🪑 The study room opens soon." : "🪑 The study room is closed right now.");
+      if (j._status === 429) return;
+      if (!j.ok) return msg("Can't reach the room right now. It will try again in a moment.");
+      // the server's clock is India time without a zone; the phone compares in its own zone, so keep the difference
+      offset = parse(j.now) - Date.now();
+      S = j; render();
+      if (!S.me.notice_seen) notice();
+    }).catch(function () { if (!S) msg("Can't reach the room right now. It will try again in a moment."); });
+  }
+
+  function act(body, ok) {
+    if (busy) return; busy = true;
+    call("/room/api/act", body).then(function (j) {
+      busy = false;
+      if (j.ok) { if (ok) toast(ok); if (tg && tg.HapticFeedback) tg.HapticFeedback.notificationOccurred("success"); }
+      else toast({ busy: "A block is already running.", day_cap: "That's 14 hours today - rest well!", late: "More than 15 minutes passed - not counted.",
+                   slow: "Easy - a few per minute.", off: "They switched reactions off.", self: "That's you!", none: "No sprint to join right now.",
+                   gone: "They just left." }[j.why] || "Didn't work - try again.");
+      setTimeout(load, 300);
+    }).catch(function () { busy = false; toast("No connection."); });
+  }
+
+  function seatEl(s, side) {
+    var d = el("div", "seat " + side);
+    if (!s) {
+      d.classList.add("empty");
+      var l0 = el("span", "lab", "."); l0.style.visibility = "hidden"; d.appendChild(l0);
+      d.appendChild(el("div", "av", "+")); d.appendChild(el("div", "nm", "Sit here"));
+      d.onclick = function () { document.getElementById("go").scrollIntoView({ behavior: "smooth" }); };
+      return d;
+    }
+    d.classList.add(s.lamp); if (s.me) d.classList.add("me");
+    d.dataset.seat = s.seat;
+    d.appendChild(el("div", "pool"));
+    d.appendChild(el("span", "lab", s.lamp === "off" ? "On a break" : s.lamp === "dim" ? "Time's up" : s.label));
+    d.appendChild(el("div", "av", s.me ? "You" : s.initials));
+    var nm = el("div", "nm"); nm.appendChild(el("b", null, s.me ? "You" : s.name));
+    var tail = el("i", null, s.lamp === "violet" ? " · in the bank" : ""); tail.dataset.ends = s.ends_at || "";
+    nm.appendChild(tail); d.appendChild(nm);
+    if (!s.me) d.onclick = function () { reactSheet(s); };
+    return d;
+  }
+
+  function render() {
+    var m = S.me; app.innerHTML = "";
+    var top = el("div", "top"); top.appendChild(el("h1", null, "Study hall"));
+    top.appendChild(el("span", null, m.streak ? "🔥 study streak " + m.streak : "")); app.appendChild(top);
+    var chips = el("div", "chips");
+    chips.appendChild(el("span", "chip", S.counts.focus + " focusing"));
+    chips.appendChild(el("span", "chip", S.counts.bank + " answering in the bank"));
+    var sp = S.sprint, sc;
+    if (sp.state === "soon") sc = el("span", "chip sprint", m.sprint_joined ? "✓ In the " + hm(sp.at) + " sprint" : "🏃 Join the " + hm(sp.at) + " sprint");
+    else if (sp.state === "on") sc = el("span", "chip sprint", m.sprint_joined ? "🏃 Sprint on" : "🏃 Sprint on - join");
+    else sc = el("span", "chip", "Next sprint " + hm(sp.at));
+    if (sp.state && !m.sprint_joined) sc.onclick = function () { act({ act: "join" }, "You're in the sprint ✅"); };
+    chips.appendChild(sc); app.appendChild(chips);
+
+    var host = el("div", "host"); var ci = el("img", "ciel" + (S.ciel.walk ? " walk" : "")); ci.src = "ciel.png"; ci.alt = "Ciel";
+    var bub = el("div", "bubble"); bub.appendChild(el("b", null, "Ciel · only you see this")); bub.appendChild(document.createTextNode(S.ciel.line));
+    var tapCiel = function () {
+      if (S.ciel.walk) act({ act: "done" }, "Counted ✅");
+      else if (S.ciel.break) sheet("☕ Break", [BREAK[Math.floor(Math.random() * BREAK.length)]]);
+    };
+    ci.onclick = tapCiel; bub.onclick = tapCiel;
+    host.appendChild(ci); host.appendChild(bub); app.appendChild(host);
+
+    S.tables.forEach(function (t, i) {
+      if (S.tables.length > 1 || i > 0) app.appendChild(el("div", "tname", "Table " + t.n + (t.mine ? " · yours" : "")));
+      var g = el("div", "tbl");
+      t.seats.forEach(function (s, k) { g.appendChild(seatEl(s, k % 2 ? "r" : "l")); });
+      app.appendChild(g);
+    });
+    if (S.more_tables.length) {
+      var o = el("div", "others");
+      S.more_tables.forEach(function (t) { o.appendChild(el("div", null, "Table " + t.n + " · " + t.count + " studying")); });
+      app.appendChild(o);
+    }
+
+    var bars = el("div", "bars");
+    bars.appendChild(bar("Room goal today", (S.goal.done / 60).toFixed(1) + " / " + Math.round(S.goal.target / 60) + " h", S.goal.done / S.goal.target, "var(--teal)"));
+    bars.appendChild(bar("Your target", hrs(m.today_min) + " / " + hrs(m.target_min), m.today_min / m.target_min, "var(--warm)"));
+    app.appendChild(bars);
+
+    var mine = el("p", "mine", "🏷 " + m.label + (m.note ? "  ·  📝 " + m.note : "")); app.appendChild(mine);
+    if (m.reacts_got) app.appendChild(el("p", "note", m.reacts_got + " reaction" + (m.reacts_got > 1 ? "s" : "") + " while you studied"));
+
+    var go = el("button", "go"); go.id = "go";
+    if (m.status === "none" || m.status === "break") {
+      var tech = el("div", "tech");
+      S.techs.forEach(function (x) {
+        var c = el("span", "t" + (x.code === pick ? " on" : ""), INFO[x.code] ? INFO[x.code][0] : x.name);
+        var i = el("small", null, "ⓘ"); i.onclick = function (e) { e.stopPropagation(); info(x.code); };
+        c.appendChild(i); c.onclick = function () { pick = x.code; render(); }; tech.appendChild(c);
+      });
+      app.appendChild(tech);
+      go.textContent = m.status === "break" ? "Skip the break - start focusing" : "Start focusing";
+      go.onclick = function () { act({ act: "start", tech: pick }, "Focus started"); };
+    } else if (m.status === "await") {
+      go.textContent = "Done - count it"; go.onclick = function () { act({ act: "done" }, "Counted ✅"); };
+    } else {
+      go.className = "go quiet"; go.textContent = "Stop early";
+      go.onclick = function () { act({ act: "stop" }, "Stopped - the time so far is kept"); };
+    }
+    app.appendChild(go);
+
+    var row = el("div", "row");
+    var hb = el("button", null, m.hidden ? "🙈 Name hidden" : "👤 Name shown");
+    hb.onclick = function () { act({ act: "hide", on: !m.hidden }, m.hidden ? "Your first name is shown" : "Hidden - others see " + "Doctor N"); };
+    var rb = el("button", null, m.reactions_on ? "🔥 Reactions on" : "Reactions off");
+    rb.onclick = function () { act({ act: "reactions", on: !m.reactions_on }); };
+    var lb = el("button", null, "🏷 Change label");
+    lb.onclick = function () { if (tg) tg.openTelegramLink("https://t.me/Ciel_Study_bot?start=room"); };
+    row.appendChild(hb); row.appendChild(rb); row.appendChild(lb); app.appendChild(row);
+    app.appendChild(el("p", "note", "Lamp on = focusing · violet = answering in the bot · lamp off = break"));
+
+    S.reactions.slice().reverse().forEach(function (r) {
+      if (seenReacts[r.id]) return; seenReacts[r.id] = 1;
+      var seat = app.querySelector('[data-seat="' + r.seat + '"]'); if (!seat) return;
+      var f = el("div", "react" + (r.what.length > 2 ? " txt" : ""), r.what); seat.appendChild(f);
+      setTimeout(function () { f.remove(); }, 3300);
+    });
+    tick();
+  }
+
+  function bar(name, val, frac, color) {
+    var b = el("div", "bar"), l = el("label"); l.appendChild(el("span", null, name)); l.appendChild(el("b", null, val));
+    var t = el("div", "track"), i = el("i"); i.style.width = Math.max(0, Math.min(100, frac * 100)) + "%"; i.style.background = color;
+    t.appendChild(i); b.appendChild(l); b.appendChild(t); return b;
+  }
+
+  function tick() {
+    app.querySelectorAll("[data-ends]").forEach(function (e) {
+      if (e.dataset.ends) e.textContent = " · " + mmss(parse(e.dataset.ends) - now());
+    });
+    var m = S && S.me, go = document.getElementById("go");
+    if (m && go && m.status === "focus" && m.ends_at) go.textContent = "Stop early · " + mmss(parse(m.ends_at) - now()) + " left";
+    if (m && m.status === "focus" && m.ends_at && parse(m.ends_at) - now() < -2000) { m.status = "?"; load(); }
+  }
+
+  function sheet(title, lines, buttons) {
+    var c = document.getElementById("card"); c.innerHTML = "";
+    c.appendChild(el("h2", null, title)); lines.forEach(function (p) { c.appendChild(el("p", null, p)); });
+    if (buttons) c.appendChild(buttons);
+    var close = el("button", "go quiet", "Close"); close.onclick = hide; c.appendChild(close);
+    document.getElementById("sheet").classList.add("show");
+  }
+  function hide() { document.getElementById("sheet").classList.remove("show"); }
+  document.getElementById("sheet").onclick = function (e) { if (e.target.id === "sheet") hide(); };
+
+  function info(code) { var x = INFO[code]; sheet("ⓘ " + x[0], x.slice(1)); }
+
+  function reactSheet(s) {
+    if (!S.me.reactions_on) return toast("Reactions are off - turn them on below.");
+    var o = el("div", "opts");
+    S.presets.forEach(function (p) { var b = el("button", null, p); b.onclick = function () { hide(); act({ act: "react", seat: s.seat, what: p }, "Sent " + p); }; o.appendChild(b); });
+    sheet(s.name + " · " + s.label, ["Send a cheer. Nothing typed - only these."], o);
+  }
+
+  function notice() {
+    var c = document.getElementById("card"); c.innerHTML = "";
+    c.appendChild(el("h2", null, "🪑 Before you sit down"));
+    c.appendChild(el("p", null, "Others here see your first name, what you are studying and your timer. Nothing else - no number, no profile, no messages."));
+    c.appendChild(el("p", null, "Rather not show your name? One tap and you are \"Doctor\" with a number."));
+    var o = el("div", "opts");
+    var h = el("button", null, "🙈 Hide my name"); h.onclick = function () { hide(); call("/room/api/act", { act: "hide", on: true }).then(function () { call("/room/api/act", { act: "notice" }).then(load); }); };
+    var k = el("button", null, "OK, show my first name"); k.onclick = function () { hide(); call("/room/api/act", { act: "notice" }).then(load); };
+    o.appendChild(k); o.appendChild(h); c.appendChild(o);
+    document.getElementById("sheet").classList.add("show");
+  }
+
+  if (!API) return msg("🪑 The study room is being connected. Open it from the Study Bot in a little while.");
+  if (!tg || !INIT) return msg("Open the study room from the Study Bot in Telegram.");
+  tg.ready(); tg.expand();
+  try { tg.setHeaderColor("#0e1118"); tg.setBackgroundColor("#0e1118"); } catch (e) {}
+  load();
+  setInterval(load, 20000);
+  setInterval(function () { if (S) tick(); }, 1000);
+  document.addEventListener("visibilitychange", function () { if (!document.hidden) load(); });
+})();
+</script>
+</body>
+</html>
