@@ -3,6 +3,18 @@
  "fixes": [
   {
    "date": "2026-11-17",
+   "area": "Question bank",
+   "status": "fixed",
+   "what": "1,972 more FMGE previous-year questions added, from 2018 to 2025 papers that were missing from the bank. Each has a short explanation and a reason why every other option is wrong. Where the recalled paper had a wrong key or a broken option, it is corrected with a visible note; questions with two right answers were left out."
+  },
+  {
+   "date": "2026-11-17",
+   "area": "Question bank",
+   "status": "fixed",
+   "what": "Two reader reports fixed: a gynaecology question now says the uterus is firm and of multiparous size (it read as if the uterus itself were multiparous), and a stray letter after 'HELLP syndrome' in an obstetrics option is removed, with its broken explanation rewritten."
+  },
+  {
+   "date": "2026-11-17",
    "area": "Answer keys",
    "status": "fixed",
    "what": "Two Community Medicine questions corrected from student reports: the ASHA's home visits for a baby born at home run to day 42, not 28, and a primary-prevention question that had two defensible answers now has one. Both explanations rewritten."
