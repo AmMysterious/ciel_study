@@ -73,6 +73,23 @@ body{padding:14px 16px calc(24px + env(safe-area-inset-bottom));max-width:480px;
 .msg{padding:40px 10px;text-align:center;color:#c6cbd6;line-height:1.5}
 .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#f4efe4;color:#2a241b;font-size:13px;padding:8px 14px;border-radius:12px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:20}
 .toast.show{opacity:1}
+.card{max-height:82vh;overflow-y:auto}
+.sit{margin-top:12px;padding:10px 12px;border-radius:12px;background:#33260e;color:var(--warm);border:1px solid #5a4216;font-size:13.5px;text-align:center}
+.seat.free .av{border-color:var(--warm);color:var(--warm);animation:pulse 1.8s ease-in-out infinite}
+.seat.free .nm{color:var(--warm)}
+.seat.closed{opacity:.4;cursor:default}
+.seat.ghost .av{background:#33260e;color:var(--warm);border:2px dashed var(--warm)}
+.seat.ghost .nm b{color:var(--warm)}
+.go2{margin-top:8px;width:100%;border:1px solid var(--line);border-radius:14px;padding:11px;font-size:14px;background:#171c27;color:var(--ink);cursor:pointer}
+.tl{display:grid;gap:8px;margin-top:12px}
+.tl .r{display:flex;gap:8px}
+.tl .r button{font-size:14.5px;padding:11px 12px;border-radius:12px;background:#232836;color:var(--ink);border:1px solid var(--line);cursor:pointer;text-align:left}
+.tl .r button.n{flex:1}.tl .r button.lk{color:#9aa0ad}.tl .r button.cur{border-color:#8a6a22;background:#3a2c10;color:#ffd58a}
+.tl .r button.i{flex:none;width:46px;text-align:center}
+.card textarea{width:100%;margin-top:8px;min-height:70px;border-radius:12px;background:#0f131b;color:var(--ink);border:1px solid var(--line);padding:10px;font:inherit;font-size:14px}
+.card h3{font-size:13px;color:var(--mute);font-weight:600;margin-top:16px}
+.card .opts button.on{background:#3a2c10;color:#ffd58a;border-color:#8a6a22}
+@keyframes pulse{50%{box-shadow:0 0 0 6px #f6c66a33}}
 @keyframes glow{50%{opacity:.86}}
 @keyframes bob{50%{transform:translateY(-4px)}}
 @keyframes walk{25%{transform:translateX(-5px) rotate(-3deg)}75%{transform:translateX(5px) rotate(3deg)}}
@@ -92,19 +109,14 @@ body{padding:14px 16px calc(24px + env(safe-area-inset-bottom));max-width:480px;
   var tg = window.Telegram && window.Telegram.WebApp;
   var API = (window.ROOM_API || "").replace(/\/$/, "");
   var INIT = tg ? tg.initData : "";
-  var S = null, offset = 0, pick = "p25", seenReacts = {}, timer = null, busy = false;
+  var S = null, offset = 0, seenReacts = {}, timer = null, busy = false, opened = false;
   var app = document.getElementById("app");
-
-  // ⓘ cards - the wording is Nawar's to edit (STUDY_ROOM_BRAINSTORM.md §5); no big claims.
-  var INFO = {
-    p25: ["Pomodoro 25 + 5", "Focus 25 minutes, rest 5. After four rounds, take a 15-minute break.",
-          "Best for: starting, and for days when your mind wanders.",
-          "Why: in a university study, students on fixed breaks felt less tired and more focused than students who took a break whenever they felt like it."],
-    p50: ["Pomodoro 50 + 10", "Focus 50 minutes, rest 10.", "Best for: deep reading - one long topic or a video lecture.",
-          "The same clock as the room's two daily sprints."],
-    t10: ["Just 10 minutes", "One 10-minute block, no break after it.", "Best for: a day when starting is the hard part.",
-          "It counts like any other block. Often you keep going."]
-  };
+  // the last timer picked (and its choices), kept on this phone only
+  var pick = "p25", pickOpts = {};
+  try { var sv = JSON.parse(localStorage.getItem("room_pick") || "null"); if (sv && sv.code) { pick = sv.code; pickOpts = sv.opts || {}; } } catch (e) {}
+  function savePick(code, opts) { pick = code; pickOpts = opts || {}; try { localStorage.setItem("room_pick", JSON.stringify({ code: code, opts: pickOpts })); } catch (e) {} }
+  // the ⓘ cards come from the bot (one wording for the bot and the page - STUDY_ROOM_BRAINSTORM.md §5)
+  function tm(code) { return S && S.timers ? S.timers.list.filter(function (x) { return x.code === code; })[0] : null; }
   var BREAK = ["Breathe in for 4, hold for 4, out for 6. Five times. Shoulders down.",
                "Stand up. Reach for the ceiling, then touch your toes. Roll your neck slowly, both ways.",
                "Look at something far away for 20 seconds - your eyes have been on a page.",
@@ -131,7 +143,8 @@ body{padding:14px 16px calc(24px + env(safe-area-inset-bottom));max-width:480px;
 
   function load() {
     if (document.hidden) return;
-    call("/room/api/state").then(function (j) {
+    var first = !opened; opened = true;                    // the first read of this opening = a new visit
+    call("/room/api/state", first ? { open: true } : {}).then(function (j) {
       if (j._status === 401) return msg("Please open the room again from the Study Bot - your sign-in has expired.");
       if (j._status === 403) return msg(j.why === "soon" ? "🪑 The study room opens soon." : "🪑 The study room is closed right now.");
       if (j._status === 429) return;
@@ -143,25 +156,46 @@ body{padding:14px 16px calc(24px + env(safe-area-inset-bottom));max-width:480px;
     }).catch(function () { if (!S) msg("Can't reach the room right now. It will try again in a moment."); });
   }
 
-  function act(body, ok) {
+  // `then(j)` may take a reply over: return true and the usual message is not shown
+  function act(body, ok, then) {
     if (busy) return; busy = true;
     call("/room/api/act", body).then(function (j) {
       busy = false;
+      if (then && then(j)) { setTimeout(load, 300); return; }
       if (j.ok) { if (ok) toast(ok); if (tg && tg.HapticFeedback) tg.HapticFeedback.notificationOccurred("success"); }
-      else toast({ busy: "A block is already running.", day_cap: "That's 14 hours today - rest well!", late: "More than 15 minutes passed - not counted.",
+      else toast({ taken: "Someone just took that seat - pick another.", need_subject: "Pick what you're studying first.",
+                   locked: "🔒 That timer comes with the paid plans.", busy: "A block is already running.", day_cap: "That's 14 hours today - rest well!", late: "More than 15 minutes passed - not counted.",
                    slow: "Easy - a few per minute.", off: "They switched reactions off.", self: "That's you!", none: "No sprint to join right now.",
                    gone: "They just left." }[j.why] || "Didn't work - try again.");
       setTimeout(load, 300);
     }).catch(function () { busy = false; toast("No connection."); });
   }
 
-  function seatEl(s, side) {
-    var d = el("div", "seat " + side);
+  function seatEl(s, side, t, k) {
+    var d = el("div", "seat " + side), me = S.me;
     if (!s) {
-      d.classList.add("empty");
       var l0 = el("span", "lab", "."); l0.style.visibility = "hidden"; d.appendChild(l0);
-      d.appendChild(el("div", "av", "+")); d.appendChild(el("div", "nm", "Sit here"));
-      d.onclick = function () { document.getElementById("go").scrollIntoView({ behavior: "smooth" }); };
+      if (me.seat && me.seat.table === t.n && me.seat.place === k) {        // picked, no timer yet
+        d.classList.add("ghost"); d.appendChild(el("div", "av", "You"));
+        var nm0 = el("div", "nm"); nm0.appendChild(el("b", null, "You · pick a timer")); d.appendChild(nm0);
+        d.onclick = timerSheet; return d;
+      }
+      d.classList.add("empty");
+      if (!t.open) {                                           // tables fill in order - never a new one early
+        d.classList.add("closed"); d.appendChild(el("div", "av", "·")); d.appendChild(el("div", "nm", "next table"));
+        d.onclick = function () { toast("This table opens when the one before is full."); };
+        return d;
+      }
+      var seated = me.status !== "none";
+      if (!seated) d.classList.add("free");
+      d.appendChild(el("div", "av", "+")); d.appendChild(el("div", "nm", seated ? "Move here" : "Sit here"));
+      d.onclick = function () {
+        act({ act: "sit", table: t.n, place: k }, null, function (j) {
+          if (j.ok) { if (!seated) timerSheet(); else toast("Moved ✅"); return true; }
+          if (j.why === "fills_first") { toast("Table " + j.table + " fills first - pick a seat there."); return true; }
+          return false;
+        });
+      };
       return d;
     }
     d.classList.add(s.lamp); if (s.me) d.classList.add("me");
@@ -199,10 +233,12 @@ body{padding:14px 16px calc(24px + env(safe-area-inset-bottom));max-width:480px;
     ci.onclick = tapCiel; bub.onclick = tapCiel;
     host.appendChild(ci); host.appendChild(bub); app.appendChild(host);
 
+    if (m.status === "none") app.appendChild(el("div", "sit", m.seat ? "🪑 Your seat is saved - pick a timer to sit down."
+                                                                  : "🪑 Tap a glowing seat to sit down, then pick a timer."));
     S.tables.forEach(function (t, i) {
-      if (S.tables.length > 1 || i > 0) app.appendChild(el("div", "tname", "Table " + t.n + (t.mine ? " · yours" : "")));
+      if (S.tables.length > 1 || i > 0) app.appendChild(el("div", "tname", "Table " + t.n + (t.mine ? " · yours" : t.open ? " · sit here" : "")));
       var g = el("div", "tbl");
-      t.seats.forEach(function (s, k) { g.appendChild(seatEl(s, k % 2 ? "r" : "l")); });
+      t.seats.forEach(function (s, k) { g.appendChild(seatEl(s, k % 2 ? "r" : "l", t, k)); });
       app.appendChild(g);
     });
     if (S.more_tables.length) {
@@ -221,31 +257,37 @@ body{padding:14px 16px calc(24px + env(safe-area-inset-bottom));max-width:480px;
 
     var go = el("button", "go"); go.id = "go";
     if (m.status === "none" || m.status === "break") {
-      var tech = el("div", "tech");
-      S.techs.forEach(function (x) {
-        var c = el("span", "t" + (x.code === pick ? " on" : ""), INFO[x.code] ? INFO[x.code][0] : x.name);
-        var i = el("small", null, "ⓘ"); i.onclick = function (e) { e.stopPropagation(); info(x.code); };
-        c.appendChild(i); c.onclick = function () { pick = x.code; render(); }; tech.appendChild(c);
-      });
-      app.appendChild(tech);
-      go.textContent = m.status === "break" ? "Skip the break - start focusing" : "Start focusing";
-      go.onclick = function () { act({ act: "start", tech: pick }, "Focus started"); };
+      var cur = tm(pick); if (!cur || !cur.open) { cur = tm("p25"); pickOpts = {}; }
+      go.textContent = (m.status === "break" ? "Skip the break · " : "Start · ") + (cur ? cur.name : "Pomodoro");
+      go.onclick = function () { choose(cur, true); };
+      app.appendChild(go);
+      var ch = el("button", "go2", "⏲ Choose a timer (" + (S.timers ? S.timers.list.length : 3) + ")"); ch.onclick = timerSheet;
+      app.appendChild(ch);
     } else if (m.status === "await") {
       go.textContent = "Done - count it"; go.onclick = function () { act({ act: "done" }, "Counted ✅"); };
+      app.appendChild(go);
+    } else if (m.count_up) {                                   // Flowtime: you end it when your focus fades
+      go.textContent = "Done - count it"; go.onclick = function () {
+        act({ act: "done" }, "Counted ✅", function (j) {
+          if (j.why === "short") { toast("Under 5 minutes - kept in your day, not a completed block."); return true; } return false; });
+      };
+      app.appendChild(go);
+      var st2 = el("button", "go2", "Stop early"); st2.onclick = function () { act({ act: "stop" }, "Stopped - the time so far is kept"); };
+      app.appendChild(st2);
     } else {
       go.className = "go quiet"; go.textContent = "Stop early";
       go.onclick = function () { act({ act: "stop" }, "Stopped - the time so far is kept"); };
+      app.appendChild(go);
     }
-    app.appendChild(go);
 
     var row = el("div", "row");
     var hb = el("button", null, m.hidden ? "🙈 Name hidden" : "👤 Name shown");
     hb.onclick = function () { act({ act: "hide", on: !m.hidden }, m.hidden ? "Your first name is shown" : "Hidden - others see " + "Doctor N"); };
     var rb = el("button", null, m.reactions_on ? "🔥 Reactions on" : "Reactions off");
     rb.onclick = function () { act({ act: "reactions", on: !m.reactions_on }); };
-    var lb = el("button", null, "🏷 Change label");
-    lb.onclick = function () { if (tg) tg.openTelegramLink("https://t.me/Ciel_Study_bot?start=room"); };
-    row.appendChild(hb); row.appendChild(rb); row.appendChild(lb); app.appendChild(row);
+    var lb = el("button", null, "🏷 Label"); lb.onclick = labelSheet;
+    var mb = el("button", null, "⚙️ More"); mb.onclick = moreSheet;
+    row.appendChild(hb); row.appendChild(rb); row.appendChild(lb); row.appendChild(mb); app.appendChild(row);
     app.appendChild(el("p", "note", "Lamp on = focusing · violet = answering in the bot · lamp off = break"));
 
     S.reactions.slice().reverse().forEach(function (r) {
@@ -269,6 +311,7 @@ body{padding:14px 16px calc(24px + env(safe-area-inset-bottom));max-width:480px;
     });
     var m = S && S.me, go = document.getElementById("go");
     if (m && go && m.status === "focus" && m.ends_at) go.textContent = "Stop early · " + mmss(parse(m.ends_at) - now()) + " left";
+    if (m && go && m.status === "focus" && m.count_up && m.started_at) go.textContent = "Done - count it · " + mmss(now() - parse(m.started_at));
     if (m && m.status === "focus" && m.ends_at && parse(m.ends_at) - now() < -2000) { m.status = "?"; load(); }
   }
 
@@ -282,7 +325,136 @@ body{padding:14px 16px calc(24px + env(safe-area-inset-bottom));max-width:480px;
   function hide() { document.getElementById("sheet").classList.remove("show"); }
   document.getElementById("sheet").onclick = function (e) { if (e.target.id === "sheet") hide(); };
 
-  function info(code) { var x = INFO[code]; sheet("ⓘ " + x[0], x.slice(1)); }
+  function opts(list, fn) {           // a row of option buttons: list = [[text, value, on?], ...]
+    var o = el("div", "opts");
+    list.forEach(function (x) { var b = el("button", x[2] ? "on" : null, x[0]); b.onclick = function () { fn(x[1]); }; o.appendChild(b); });
+    return o;
+  }
+
+  // ── timers: all 10, with their ⓘ cards; locks and the money ask come from the bot ──
+  function timerSheet() {
+    var T = S.timers, wrap = el("div");
+    wrap.appendChild(el("p", null, T.paid ? "⭐ Your plan opens every timer." :
+      T.trial_until ? "🎁 Trial: every timer is open until the end of " + T.trial_until + ". Pomodoro stays free after." :
+      "🍅 Pomodoro and Just 10 minutes are free. 🔒 The others come with every paid plan."));
+    var l = el("div", "tl");
+    T.list.forEach(function (x) {
+      var r = el("div", "r");
+      var n = el("button", "n" + (x.open ? "" : " lk") + (x.code === pick ? " cur" : ""), (x.open ? "" : "🔒 ") + x.name);
+      n.onclick = function () { choose(x, false); };
+      var i = el("button", "i", "ⓘ"); i.onclick = function () { info(x.code); };
+      r.appendChild(n); r.appendChild(i); l.appendChild(r);
+    });
+    wrap.appendChild(l);
+    sheet("⏲ Pick a timer", ["The next round never starts by itself - you tap when you are ready."], wrap);
+  }
+
+  // again = the big button: reuse the last choices for Custom / Exam clock / Timed questions
+  function choose(x, again) {
+    if (!x) return;
+    if (x.open && x.code === "cu" && !(again && pickOpts.focus)) return customSheet(x);
+    if (x.open && x.code === "ex" && !(again && pickOpts.paper)) return paperSheet(x);
+    if (x.open && x.code === "tq" && !(again && pickOpts.n)) return timedSheet(x);
+    startTimer(x.code, again && pick === x.code ? pickOpts : {});
+  }
+
+  function startTimer(code, o) {
+    var body = { act: "start", tech: code };
+    for (var k in o) body[k] = o[k];
+    act(body, "Focus started", function (j) {
+      if (j.ok) { savePick(code, o); hide(); return false; }
+      if (j.why === "locked") { if (j.ask) lockSheet(j.name); else toast("🔒 " + j.name + " comes with the paid plans - see /subscribe in the bot."); return true; }
+      if (j.why === "need_subject") { toast("Recall cycle asks questions on what you read - pick a subject first."); labelSheet(); return true; }
+      return false;
+    });
+  }
+
+  function customSheet(x) {
+    var C = S.timers.custom, w = el("div"), f = null;
+    if (C.last) w.appendChild(opts([["▶️ Same as last: " + C.last[0] + " + " + C.last[1], 1]], function () { startTimer("cu", { focus: C.last[0], brk: C.last[1] }); }));
+    w.appendChild(el("h3", null, "Focus (2 hours at most)"));
+    var fo = opts(C.focus.map(function (m) { return [m + " min", m]; }), function (m) {
+      f = m; fo.querySelectorAll("button").forEach(function (b) { b.classList.toggle("on", b.textContent === m + " min"); });
+    });
+    w.appendChild(fo); w.appendChild(el("h3", null, "Then a break of"));
+    w.appendChild(opts(C.brk.map(function (m) { return [m + " min", m]; }), function (b) {
+      if (!f) return toast("Pick the focus length first.");
+      startTimer("cu", { focus: f, brk: b });
+    }));
+    sheet("⚙️ Custom", [x.what], w);
+  }
+  function paperSheet(x) {
+    sheet("🎓 Exam clock", ["Which paper? It runs the paper's real length."],
+          opts(S.timers.papers.map(function (p) { return [p.label + " · " + p.min + " min", p.code]; }), function (p) { startTimer("ex", { paper: p }); }));
+  }
+  function timedSheet(x) {
+    sheet("📝 Timed questions", ["How many? The clock runs at your exam's pace. Answer them in the bot while it runs."],
+          opts(S.timers.timed.map(function (t) { return [t.n + " questions · " + t.min + " min", t.n]; }), function (n) { startTimer("tq", { n: n }); }));
+  }
+
+  function lockSheet(name) {
+    var o = opts([["⭐ See the plans", 1]], function () {
+      act({ act: "buy" }, null, function () {
+        toast("The plans are in your chat with the bot."); setTimeout(function () { if (tg) tg.close(); }, 1200); return true;
+      });
+    });
+    sheet("🔒 " + name, ["comes with the paid plans. Every plan opens all the timers - there is no extra price for the room.",
+                         "Your 3-day trial of every timer has ended. 🍅 Pomodoro and ⏱ Just 10 minutes stay free."], o);
+  }
+
+  function info(code) {
+    var x = tm(code); if (!x) return;
+    var o = opts([["▶️ Start this", 1]], function () { choose(x, false); });
+    sheet("ⓘ " + x.name, [x.what, "Best for: " + x.best].concat(x.why ? ["Why: " + x.why] : []), o);
+  }
+
+  // ── the label, inside the page (subject → chapter, or a kind) ──
+  function labelSheet() {
+    var L = S.labels, w = el("div");
+    w.appendChild(el("h3", null, "Subject"));
+    w.appendChild(opts(L.subjects.map(function (s, i) { return [s, i, s === S.me.subject]; }), chapterSheet));
+    w.appendChild(el("h3", null, "Or the kind of work"));
+    w.appendChild(opts(L.kinds.map(function (k, i) { return [k, i, k === S.me.kind]; }), function (i) {
+      act({ act: "label", kind: i }, "Label saved", function (j) { if (j.ok) hide(); return false; });
+    }));
+    sheet("🏷 What are you studying?", ["Only this label is shown to others - nothing you type."], w);
+  }
+  function chapterSheet(si) {
+    call("/room/api/act", { act: "chapters", subject: si }).then(function (j) {
+      if (!j.ok) return toast("Didn't work - try again.");
+      var setLabel = function (ci) { act({ act: "label", subject: si, chapter: ci }, "Label saved", function (r) { if (r.ok) hide(); return false; }); };
+      if (!j.chapters.length) return setLabel(-1);
+      var w = el("div");
+      w.appendChild(opts([["Just " + j.subject, -1]], setLabel));
+      w.appendChild(opts(j.chapters.map(function (c, i) { return [c, i]; }), setLabel));
+      sheet("🏷 " + j.subject + " - which chapter?", [], w);
+    }).catch(function () { toast("No connection."); });
+  }
+
+  // ── the rest of the room's settings, inside the page ──
+  function moreSheet() {
+    var m = S.me, w = el("div");
+    w.appendChild(el("h3", null, "📝 Private note - other students never see it"));
+    var ta = el("textarea"); ta.maxLength = 300; ta.value = m.note || ""; ta.placeholder = "e.g. finish beta-blockers + make a table";
+    w.appendChild(ta);
+    w.appendChild(opts([["Save note", 1]], function () {
+      act({ act: "note", text: ta.value }, null, function (j) {
+        if (j.ok) { toast(ta.value.trim() ? (j.why === "block" ? "Saved with this block." : "Saved for your next block.") : "Note cleared."); hide(); return true; }
+        return false;
+      });
+    }));
+    w.appendChild(el("h3", null, "🏁 Daily focus target"));
+    w.appendChild(opts(S.targets.map(function (t) { return [t % 60 ? hrs(t) : t / 60 + " h", t, t === m.target_min]; }), function (t) {
+      act({ act: "target", min: t }, "Target saved", function (j) { if (j.ok) hide(); return false; });
+    }));
+    w.appendChild(el("h3", null, "Messages from the bot"));
+    w.appendChild(opts([["🔔 Break-end ping: " + (m.break_ping ? "on" : "off"), "ping"],
+                        ["🏃 Sprint reminders: " + (m.sprint_remind ? "on" : "off"), "remind"]], function (k) {
+      act({ act: k, on: !(k === "ping" ? m.break_ping : m.sprint_remind) }, "Saved", function (j) { if (j.ok) hide(); return false; });
+    }));
+    w.appendChild(el("p", null, "Sprint reminders also need your daily reminder on in the bot."));
+    sheet("⚙️ Room settings", [], w);
+  }
 
   function reactSheet(s) {
     if (!S.me.reactions_on) return toast("Reactions are off - turn them on below.");
