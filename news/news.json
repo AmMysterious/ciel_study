@@ -32,6 +32,26 @@
   },
   {
    "exam": "NEET-PG",
+   "title": "PG counselling: Notice for Reporting schedule of Round 2 of PG Counselling 2026",
+   "date": "2026-11-20",
+   "source": "MCC",
+   "url": "https://cdnbbsr.s3waas.gov.in/s3e0f7a4d0ef9b84b83b693bbf3feb8e6e/uploads/2026/11/20261120750611410.pdf",
+   "id": "9b934d504583",
+   "first_seen": "2026-11-20",
+   "posted": false
+  },
+  {
+   "exam": "NEET-PG",
+   "title": "PG counselling: Final Allotment Result for PG 2026 Round 2",
+   "date": "2026-11-20",
+   "source": "MCC",
+   "url": "https://cdnbbsr.s3waas.gov.in/s3e0f7a4d0ef9b84b83b693bbf3feb8e6e/uploads/2026/11/202611202051238408.pdf",
+   "id": "d4c92f6905fd",
+   "first_seen": "2026-11-20",
+   "posted": false
+  },
+  {
+   "exam": "NEET-PG",
    "title": "PG counselling: Notice for result of Round-2 of PG Counselling 2026",
    "date": "2026-11-17",
    "source": "MCC",
@@ -188,6 +208,16 @@
    "url": "https://cdnbbsr.s3waas.gov.in/s3e0f7a4d0ef9b84b83b693bbf3feb8e6e/uploads/2026/11/20261107776874972.pdf",
    "id": "2ff6cff0c28f",
    "first_seen": "2026-11-08",
+   "posted": true
+  },
+  {
+   "exam": "NEET-PG",
+   "title": "Publication of Updated Seat Matrix for Postgraduate (PG) Broad Speciality Courses for the Academic Year 2026–27",
+   "date": "2026-11-06",
+   "source": "NMC",
+   "url": "https://nmc.org.in/whats-new/download/1884",
+   "id": "e367316536c7",
+   "first_seen": "2026-11-20",
    "posted": true
   },
   {
@@ -358,6 +388,26 @@
    "url": "https://www.natboard.edu.in/viewNotice.php?NBE=ZW52K0Y4aDBpSTdWSGVhYldReUoxZz09",
    "id": "4605ef2a913f",
    "first_seen": "2026-11-08",
+   "posted": true
+  },
+  {
+   "exam": "FMGE",
+   "title": "Online Application for Eligibility Certificate - reg",
+   "date": "2026-09-30",
+   "source": "NMC",
+   "url": "https://nmc.org.in/whats-new/download/1872",
+   "id": "c3896f594e88",
+   "first_seen": "2026-11-20",
+   "posted": true
+  },
+  {
+   "exam": "NEET-PG",
+   "title": "Seat Matrix for Postgraduate (PG) seats for the Academic Year 2026–27 as on 29.09.2026 – Reg",
+   "date": "2026-09-29",
+   "source": "NMC",
+   "url": "https://nmc.org.in/whats-new/download/1871",
+   "id": "694ab5ebc97b",
+   "first_seen": "2026-11-20",
    "posted": true
   },
   {
@@ -749,77 +799,38 @@
    "id": "6a644ba10235",
    "first_seen": "2026-11-08",
    "posted": true
-  },
-  {
-   "exam": "NEET-PG",
-   "title": "Reduction in qualifying percentile of NEET-PG 2024",
-   "date": "2025-02-25",
-   "source": "NBEMS",
-   "url": "https://www.natboard.edu.in/viewNotice.php?NBE=enRZZ2h6a3NUWHJkZFhTemJXQ1ZYZz09",
-   "id": "a56b4cced7a0",
-   "first_seen": "2026-11-08",
-   "posted": true
-  },
-  {
-   "exam": "FMGE",
-   "title": "Distribution of FMGE (Screening Test) December 2024 Pass Certificates",
-   "date": "2025-02-11",
-   "source": "NBEMS",
-   "url": "https://www.natboard.edu.in/viewNotice.php?NBE=bzYzamFxUXV0SWJUSjZZY3FYdjRMdz09",
-   "id": "0e494af66dbd",
-   "first_seen": "2026-11-08",
-   "posted": true
-  },
-  {
-   "exam": "FMGE",
-   "title": "Result of Foreign Medical Graduate Examination - December 2024",
-   "date": "2025-01-19",
-   "source": "NBEMS",
-   "url": "https://www.natboard.edu.in/viewNotice.php?NBE=VGJRejZicGdzaHkxRU04YmtyRnR1dz09",
-   "id": "f5cd77c4cd72",
-   "first_seen": "2026-11-08",
-   "posted": true
-  },
-  {
-   "exam": "NEET-PG",
-   "title": "Reduction in qualifying percentile in NEET-PG 2024",
-   "date": "2025-01-06",
-   "source": "NBEMS",
-   "url": "https://www.natboard.edu.in/viewNotice.php?NBE=MjA4dHFqZWtTaEZHRGhTQ3BsYjJwQT09",
-   "id": "a953583b4014",
-   "first_seen": "2026-11-08",
-   "posted": true
-  },
-  {
-   "exam": "FMGE",
-   "title": "Final opportunity to submit deficient documents - FMGE December 2024",
-   "date": "2025-01-02",
-   "source": "NBEMS",
-   "url": "https://www.natboard.edu.in/viewNotice.php?NBE=T1hhV0tyWjJMMnlJN0R6U0hqYzNJdz09",
-   "id": "97765a8545c6",
-   "first_seen": "2026-11-08",
-   "posted": true
   }
  ],
  "sources": {
   "NBEMS": {
    "ok": false,
-   "at": "2026-11-20T17:21+05:30",
+   "at": "2026-11-20T23:47+05:30",
    "error": "403 Client Error: Forbidden for url: https://www.natboard.edu.in/deptnotice",
    "failing_since": "2026-11-14"
   },
   "AIIMS": {
    "ok": true,
-   "at": "2026-11-20T17:21+05:30",
+   "at": "2026-11-20T23:47+05:30",
    "found": 0
   },
   "MCC": {
    "ok": true,
-   "at": "2026-11-20T17:21+05:30",
+   "at": "2026-11-20T23:47+05:30",
    "found": 16
+  },
+  "NMC": {
+   "ok": true,
+   "at": "2026-11-20T23:47+05:30",
+   "found": 3
   }
  },
  "unconfirmed": [
+  {
+   "exam": "FMGE",
+   "title": "FMGE October 2026 Pass Certificates to Be Issued from December 1: Check Schedule - Shiksha.com",
+   "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPX0xDZUd6SUVSQmhaUWEtRkNtOGQ4MzB6RFNJd2Job3l5Zjl4eW9Jd0pjTXdxNDIyRUFWbjZpWEM2SEc0MWxxUG9xWTNMMGpzZVV1WVAxQ2ZHYVpQdHlRYUFtUVFPTE5FZXB0QWQ1MXhrckZtNUlmNW1iWHA4S2RvUGpOZjM1WXp6MjVxYXlzdEN5eHVuOWxkQmZPbjRNZkFGeVota3dDdWh2R2FGTlVqa1loR2d6WFZ4RXFvYVdJUFBUSDFpYV9FcmZ1MEZ5WVg1NmNuSjlweTBQS2l4RFVQcw?oc=5",
+   "date": "Fri, 20 Nov 2026 11:16:00 GMT"
+  },
   {
    "exam": "FMGE",
    "title": "FMGE January 2027: Dates, Application Form, Admit Card, Result - Careers360",
@@ -837,6 +848,12 @@
    "title": "ICAR AIEEA 2027 Notification Expected Soon: Check NTA Admission Schedule for PG and PhD Courses - Shiksha.com",
    "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQTE13RHJzOFNleGI4MzUxRXhDRDktMWo4TUtEWmlMckF2c1lQb1RCVEQ0T1pYWmo0ZW5Ob3dlcWo5WlF6TThQekZlNEl0aWFqWk1nazVJQXZhMDZvNnpxNGR0ZGtDTEtBdlBtXzctc1pUMmhuZ2JzSF9LeGx0WFhDc0Qtdmt1UVNaQi01dUlLV3BlcmdSY2hvZDVxc0VJTmFKR1pRSm5JcC1zNGxqWGJ6VTlTWWtSUnc4U2pqSUZTVGEyaE9mSUUwa1lEUnZSQzlQVnFvVjl4MTljS2V1V2c?oc=5",
    "date": "Fri, 20 Nov 2026 09:19:15 GMT"
+  },
+  {
+   "exam": "NEET-PG",
+   "title": "Facing backlash, Assam Medical College rolls back order asking resident doctors to postpone marriage - The Indian Express",
+   "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOa1BjbnczNE9vZC1DeS1MbXVIWWRnbVNOQlFLTHQxSG5ORDRBaFFWWWNVaGtDZjNENldWbjl5ZEJyTHh1UWNSdkdlTW1hZ3FLWEc3c1IzYzdvdjRTWXJfT2FTeE15b0pKVy1ZcEdHR0J4SGVvbjQwNDNiRWlsR0JOVDktSkVYSktwSDJDUzFELVVoS1oyQzB2MWI3R1VldjVWYmM0YV93VnRReGgwZXFjYUV3SGt4TExMd0h3OHNrdWdUTG9ET3VRLVVwU1Q1Y3NGUGM1ZFdhcVJDRjN0UElzbi1PMk5yVEhl0gHvAUFVX3lxTFBXR1MyRFBGay03cXJqR2NkSzFXbFIyTG1NdUpqQXNWUURicS1IOHVGckdNVlpJLWgzN3F3cGtYMVFZT3ZDVWxsVzJ0enlVc08zeDI0RHp1dG5vaTlpby04LWVDM0JydncyX2NkZl9lblZtVGkwbjhJYWYzWHJHZTZIS3ZPb1Jxa2pGR2N6UkJYN1dlTnlnemtXZVZqMnBhRDBiZVRacWg1VEYxclZ6Yl8taE45T0NJbGtXVXlJNnBOQUJReVVYWTRPNDc5X0hlTDN3Y3BNWld1MkFlSHU0cE1PcFA1RHc4VXlpNnRHUExn?oc=5",
+   "date": "Fri, 20 Nov 2026 05:14:55 GMT"
   },
   {
    "exam": "INI-CET",
@@ -857,7 +874,7 @@
    "date": "Thu, 19 Nov 2026 07:17:13 GMT"
   }
  ],
- "checked": "2026-11-20T17:21+05:30",
+ "checked": "2026-11-20T23:47+05:30",
  "seen": [
   "007bb1065d0e",
   "008510bc5ab6",
@@ -959,6 +976,7 @@
   "64efca6833d1",
   "6540c1c9ed8e",
   "6924101cc763",
+  "694ab5ebc97b",
   "69aa520a8c2e",
   "69e6f3ff847b",
   "6a226abf5fdb",
@@ -1002,6 +1020,7 @@
   "98f96e018773",
   "9a6f6490d731",
   "9b741bef2223",
+  "9b934d504583",
   "9c9bb1ff6421",
   "9dd717ea1314",
   "a1b9b1c6fcb6",
@@ -1036,6 +1055,7 @@
   "bc979051daef",
   "bdad8404c518",
   "c1fee76f6fe1",
+  "c3896f594e88",
   "c67909e338f9",
   "c851474d77cd",
   "c928c9d9f1c0",
@@ -1051,6 +1071,7 @@
   "d13047f55bba",
   "d163b09ef2db",
   "d3cbfbdb0471",
+  "d4c92f6905fd",
   "d58a33796db1",
   "d5c3714f1128",
   "d680e45671ac",
@@ -1062,6 +1083,7 @@
   "dfd746b60f17",
   "e0da2c3b1c63",
   "e31fb4e2fa80",
+  "e367316536c7",
   "e506db39b3ff",
   "e58b3e48ff4b",
   "e66de3e61f32",
