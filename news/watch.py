@@ -172,6 +172,38 @@ def nmc() -> list[dict]:
     return out
 
 
+#: Medical Dialogues' education feed (added 20 Nov 2026, his OK: "Yes, add it"). Why: natboard.edu.in sits behind a
+#: Cloudflare challenge since 14 Nov (403 to every automated reader - NOT worked around, on purpose), so the FMGE
+#: result / scorecard / certificate notices never reached the site. This feed carried the NBEMS certificate dates and
+#: the NMC FMGL draft the same day, each article with an exact copy of the official PDF. It is a NEWS SITE, so its
+#: items show its own name as the source and link to its article; only FMG / FMGE / NBEMS-exam stories are kept.
+MD_FEED = "https://medicaldialogues.in/news/education/feed"
+MD_FMG = r"\bFMGE?s?\b|FMGL|Foreign Medical Graduate|\bNExT\b|National Exit Test"
+MD_NBE = r"\bNBE(?:MS)?\b"
+
+
+def medicaldialogues() -> list[dict]:
+    items = list(ET.fromstring(get(MD_FEED)).iter("item"))
+    if not items:
+        raise RuntimeError("feed has no items - moved?")
+    out = []
+    for it in items:
+        t = clean(it.findtext("title") or "")
+        ex = None
+        if re.search(MD_FMG, t, re.I):
+            ex = "FMGE"
+        elif re.search(MD_NBE, t) and re.search(r"NEET[- ]?PG", t, re.I):
+            ex = "NEET-PG"
+        elif re.search(r"INI[- ]?CET", t, re.I):
+            ex = "INI-CET"
+        if not ex:
+            continue
+        day = dt.datetime.strptime((it.findtext("pubDate") or "")[:25].strip(), "%a, %d %b %Y %H:%M:%S")
+        day = day.replace(tzinfo=dt.timezone.utc).astimezone(IST).date().isoformat()
+        out.append({"exam": ex, "title": t, "date": day, "source": "Medical Dialogues", "url": it.findtext("link") or MD_FEED})
+    return out
+
+
 EVENT = r"result|admit card|scorecard|answer key|exam date|schedule|counsell?ing|registration|application|cut[- ]?off|postpone|declared|released"
 QUERIES = {"FMGE": "FMGE", "NEET-PG": '"NEET PG"', "INI-CET": '"INI CET"', "UPSC CMS": '"UPSC CMS"'}
 
@@ -213,7 +245,7 @@ def render(store: dict) -> list[str]:
         body = (f'<ul class="news-list">\n{li}\n</ul>' if show else '<p class="news-none">No new official notice yet.</p>')
         block = (f'<!--NEWS:{exam}-->\n<section class="news" aria-labelledby="news-{PAGES[exam][0][:-5]}">\n'
                  f'<h2 id="news-{PAGES[exam][0][:-5]}">Latest official notices</h2>\n{body}\n'
-                 f'<p class="news-note">Straight from NBEMS, NMC, MCC and AIIMS, each linked to the original. '
+                 f'<p class="news-note">From NBEMS, NMC, MCC and AIIMS, plus Medical Dialogues news (labelled), each linked to its source. '
                  f'Read every 3 hours.</p>\n</section>\n<!--/NEWS-->')
         f = SITE / page
         s = f.read_text(encoding="utf-8")
@@ -246,7 +278,8 @@ def main() -> int:
     # UPSC is OFF on GitHub: upsc.gov.in times out from GitHub's (US) servers every run (8 Nov, two runs) - it reads
     # fine from India. Turn it back on (add ("UPSC", upsc)) only from a runner that can reach it.
     new_source = set()                               # a source read for the first time: its old notices are not news
-    for name, fn in (("NBEMS", nbems), ("AIIMS", aiims), ("MCC", mcc), ("NMC", nmc)):
+    for name, fn in (("NBEMS", nbems), ("AIIMS", aiims), ("MCC", mcc), ("NMC", nmc),
+                     ("Medical Dialogues", medicaldialogues)):
         if name not in store["sources"]:
             new_source.add(name)
         try:
