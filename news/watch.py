@@ -8,6 +8,7 @@ always links there. Its title is the body's own words; nothing is summarised or 
   AIIMS  aiimsexams.ac.in home + notices   INI-CET          (dated; needs a real browser - Playwright)
   UPSC   upsc.gov.in/whats-new             UPSC CMS         (no date on the site: the date first seen here)
   MCC    mcc.nic.in/pg-medical-counselling NEET-PG counselling (date from the PDF's own upload name)
+  NMC    nmc.org.in/whats-new             FMG + PG notices (dated; NOT everything - Gazette-only drafts never appear)
 News sites (Google News RSS) are read only as a CROSS-CHECK: a fresh headline about a result / admit card / date that
 has no official notice yet is listed under "unconfirmed" in news.json and never shown. If one stays unconfirmed for
 long, a source parser may be broken - the run summary says so.
@@ -145,6 +146,32 @@ def mcc() -> list[dict]:
     return out
 
 
+#: NMC "What's New" (added 20 Nov 2026). Only notices that matter to our students: FMGs (FMGE, FMGL, internship,
+#: eligibility certificate, NExT) and PG seats. ⚠ NMC does NOT list everything here: the Nov 2026 draft FMGL
+#: amendment was only in the Gazette of India, never on this list (checked 20 Nov).
+NMC_FMG = r"Foreign Medical|\bFMG|FMGL|Screening Test|internship|CRMI|Eligibility Certificate|study(?:ing)? abroad|\bNExT\b|National Exit Test"
+NMC_PG = r"Post ?graduate|\bPG\b|NEET[- ]?PG"
+
+
+def nmc() -> list[dict]:
+    s = get("https://nmc.org.in/whats-new")
+    rows = re.findall(r'<a href="(https://nmc\.org\.in/whats-new/download/\d+)"[^>]*class="wn-title-link"[^>]*>(.*?)</a>',
+                      s, re.S)
+    if not rows:
+        raise RuntimeError("no What's New rows - page layout changed?")
+    out = []
+    for href, t in rows:
+        m = re.match(r"(\d{2})/(\d{2})/(\d{4})\s*-\s*(.*)", clean(t))
+        if not m:
+            continue
+        title = re.sub(r"\s*New!?$", "", m.group(4)).strip()
+        ex = "FMGE" if re.search(NMC_FMG, title, re.I) else "NEET-PG" if re.search(NMC_PG, title, re.I) else None
+        if ex:
+            out.append({"exam": ex, "title": title, "date": f"{m.group(3)}-{m.group(2)}-{m.group(1)}",
+                        "source": "NMC", "url": href})
+    return out
+
+
 EVENT = r"result|admit card|scorecard|answer key|exam date|schedule|counsell?ing|registration|application|cut[- ]?off|postpone|declared|released"
 QUERIES = {"FMGE": "FMGE", "NEET-PG": '"NEET PG"', "INI-CET": '"INI CET"', "UPSC CMS": '"UPSC CMS"'}
 
@@ -186,7 +213,7 @@ def render(store: dict) -> list[str]:
         body = (f'<ul class="news-list">\n{li}\n</ul>' if show else '<p class="news-none">No new official notice yet.</p>')
         block = (f'<!--NEWS:{exam}-->\n<section class="news" aria-labelledby="news-{PAGES[exam][0][:-5]}">\n'
                  f'<h2 id="news-{PAGES[exam][0][:-5]}">Latest official notices</h2>\n{body}\n'
-                 f'<p class="news-note">Straight from NBEMS, MCC and AIIMS, each linked to the original. '
+                 f'<p class="news-note">Straight from NBEMS, NMC, MCC and AIIMS, each linked to the original. '
                  f'Read every 3 hours.</p>\n</section>\n<!--/NEWS-->')
         f = SITE / page
         s = f.read_text(encoding="utf-8")
@@ -218,7 +245,10 @@ def main() -> int:
     found, new = [], []
     # UPSC is OFF on GitHub: upsc.gov.in times out from GitHub's (US) servers every run (8 Nov, two runs) - it reads
     # fine from India. Turn it back on (add ("UPSC", upsc)) only from a runner that can reach it.
-    for name, fn in (("NBEMS", nbems), ("AIIMS", aiims), ("MCC", mcc)):
+    new_source = set()                               # a source read for the first time: its old notices are not news
+    for name, fn in (("NBEMS", nbems), ("AIIMS", aiims), ("MCC", mcc), ("NMC", nmc)):
+        if name not in store["sources"]:
+            new_source.add(name)
         try:
             got = fn()
             store["sources"][name] = {"ok": True, "at": now().isoformat(timespec="minutes"), "found": len(got)}
@@ -235,7 +265,7 @@ def main() -> int:
         if it["date"] is None:                       # UPSC (and an odd MCC file): no date on the site
             it["date"] = today
             it["hidden"] = seeding                   # never show an old notice with a made-up date
-        it["posted"] = seeding                       # the bot announces only what is new after the first run
+        it["posted"] = seeding or it["source"] in new_source   # the bot announces only what is new after the first run
         store["items"].append(it)
         have[it["id"]] = it
         new.append(it)
