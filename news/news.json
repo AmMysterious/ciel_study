@@ -1,6 +1,26 @@
 {
  "items": [
   {
+   "exam": "FMGE",
+   "title": "NBE announces FMGE October 2026 Pass Certificate Distribution dates, check complete details",
+   "date": "2026-11-20",
+   "source": "Medical Dialogues",
+   "url": "https://medicaldialogues.in/news/education/nbe-announces-fmge-october-2026-pass-certificate-distribution-dates-check-complete-details-183671",
+   "id": "963cbd7db739",
+   "first_seen": "2026-11-21",
+   "posted": true
+  },
+  {
+   "exam": "FMGE",
+   "title": "FMGL amendment regulations 2026: NMC proposes change to license rule",
+   "date": "2026-11-20",
+   "source": "Medical Dialogues",
+   "url": "https://medicaldialogues.in/health-news/nmc/fmgl-amendment-regulations-2026-nmc-proposes-change-to-license-rule-183630",
+   "id": "88121a7abe1d",
+   "first_seen": "2026-11-21",
+   "posted": true
+  },
+  {
    "exam": "NEET-PG",
    "title": "PG counselling: Provisional Allotment Result of NEET PG Round -2 2026",
    "date": "2026-11-20",
@@ -49,6 +69,16 @@
    "id": "d4c92f6905fd",
    "first_seen": "2026-11-20",
    "posted": false
+  },
+  {
+   "exam": "FMGE",
+   "title": "FMG interns to get stipend at par with Indian Medical Graduates: DGHS issues order",
+   "date": "2026-11-19",
+   "source": "Medical Dialogues",
+   "url": "https://medicaldialogues.in/state-news/delhi/fmg-interns-to-get-stipend-at-par-with-indian-medical-graduates-dghs-issues-order-183604",
+   "id": "b257d788077e",
+   "first_seen": "2026-11-21",
+   "posted": true
   },
   {
    "exam": "NEET-PG",
@@ -769,74 +799,37 @@
    "id": "cb4f42785635",
    "first_seen": "2026-11-08",
    "posted": true
-  },
-  {
-   "exam": "NEET-PG",
-   "title": "Clarification regarding Conduct of NEET-PG 2025",
-   "date": "2025-06-02",
-   "source": "NBEMS",
-   "url": "https://www.natboard.edu.in/viewNotice.php?NBE=OGxET1E5elRkRWgyVGFFQ2VBOFhSUT09",
-   "id": "2e560ddb0f80",
-   "first_seen": "2026-11-08",
-   "posted": true
-  },
-  {
-   "exam": "FMGE",
-   "title": "Applications Invited for Foreign Medical Graduate Examination(FMGE) – June 2025",
-   "date": "2025-04-28",
-   "source": "NBEMS",
-   "url": "https://www.natboard.edu.in/viewNotice.php?NBE=bmJqL0w4dEtYOEhxVXBuMFpzazk2UT09",
-   "id": "6540c1c9ed8e",
-   "first_seen": "2026-11-08",
-   "posted": true
-  },
-  {
-   "exam": "NEET-PG",
-   "title": "Conduct of NEET-PG 2025",
-   "date": "2025-03-17",
-   "source": "NBEMS",
-   "url": "https://www.natboard.edu.in/viewNotice.php?NBE=NGNQZks4OE00VmNvdVorL2FuMFNZUT09",
-   "id": "6a644ba10235",
-   "first_seen": "2026-11-08",
-   "posted": true
   }
  ],
  "sources": {
   "NBEMS": {
    "ok": false,
-   "at": "2026-11-20T23:47+05:30",
+   "at": "2026-11-21T00:12+05:30",
    "error": "403 Client Error: Forbidden for url: https://www.natboard.edu.in/deptnotice",
    "failing_since": "2026-11-14"
   },
   "AIIMS": {
    "ok": true,
-   "at": "2026-11-20T23:47+05:30",
+   "at": "2026-11-21T00:12+05:30",
    "found": 0
   },
   "MCC": {
    "ok": true,
-   "at": "2026-11-20T23:47+05:30",
+   "at": "2026-11-21T00:12+05:30",
    "found": 16
   },
   "NMC": {
    "ok": true,
-   "at": "2026-11-20T23:47+05:30",
+   "at": "2026-11-21T00:12+05:30",
+   "found": 3
+  },
+  "Medical Dialogues": {
+   "ok": true,
+   "at": "2026-11-21T00:12+05:30",
    "found": 3
   }
  },
  "unconfirmed": [
-  {
-   "exam": "FMGE",
-   "title": "FMGE October 2026 Pass Certificates to Be Issued from December 1: Check Schedule - Shiksha.com",
-   "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPX0xDZUd6SUVSQmhaUWEtRkNtOGQ4MzB6RFNJd2Job3l5Zjl4eW9Jd0pjTXdxNDIyRUFWbjZpWEM2SEc0MWxxUG9xWTNMMGpzZVV1WVAxQ2ZHYVpQdHlRYUFtUVFPTE5FZXB0QWQ1MXhrckZtNUlmNW1iWHA4S2RvUGpOZjM1WXp6MjVxYXlzdEN5eHVuOWxkQmZPbjRNZkFGeVota3dDdWh2R2FGTlVqa1loR2d6WFZ4RXFvYVdJUFBUSDFpYV9FcmZ1MEZ5WVg1NmNuSjlweTBQS2l4RFVQcw?oc=5",
-   "date": "Fri, 20 Nov 2026 11:16:00 GMT"
-  },
-  {
-   "exam": "FMGE",
-   "title": "FMGE January 2027: Dates, Application Form, Admit Card, Result - Careers360",
-   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9fUFI5RkliOHRZdEpPVEFXcGt4VnNIN0N5YUNST0JaQXVEYTJDckdTTFZsbDhMdFVWUEx5LXB5ZjEwOHJVR1lFVVl2YUc2Q1FEeTRjcTdpWDNSOEtHUkpDbkZmUEo4dUxaZUE?oc=5",
-   "date": "Thu, 19 Nov 2026 11:03:00 GMT"
-  },
   {
    "exam": "NEET-PG",
    "title": "NEET PG Seat Matrix 2026 Released: State-wise & Course-wise Seats - Careers360",
@@ -872,9 +865,15 @@
    "title": "HP NEET PG 2026 Counselling Round 1 Final Seat Allotment Result OUT: Direct Link - Careers360",
    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUXBkTncwc3gzeWtpVEJMUEluZzV0QkdVSkFXZlBkdzN4NnYxWFJncEZUdnFZY3pVclZUWGU1ZVlEbWMxbFpWYktrQ3N2QmUycFBDV1prcjRma3JUcElWTkVmWEpEd1VqaE90RWgyelh2eDVHdERHQnRJQ3RUQXdzMU1pSXBFVm5rdTVobS1vTDI1dUx2VFNoRUpHdXFDV0E?oc=5",
    "date": "Thu, 19 Nov 2026 07:17:13 GMT"
+  },
+  {
+   "exam": "INI-CET",
+   "title": "NEET PG 2026 Round 2 Counselling: Registration & Choice Filling - Shiksha.com",
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQb1hGVUM4LW5CVEVKanlLNXBuejhWcEE5aXIyOEY0bmMza0gwTmdENHJSbkpEZXk1TmRKd3RBZHYyZ3diVzVLQmU4X2gzdDZvb20wTVV1bHI4SHJ2RXBZOXJiSllhQ0hMOVNWVUFfRE9fRmRWN3NDdV9Rc0pjNUNJOXN6U0dsYU9lRmtwVW9TQko2bFFQRkdScHFrQVd2dEVrZTJBNjhsT3JjQQ?oc=5",
+   "date": "Fri, 20 Nov 2026 17:47:26 GMT"
   }
  ],
- "checked": "2026-11-20T23:47+05:30",
+ "checked": "2026-11-21T00:12+05:30",
  "seen": [
   "007bb1065d0e",
   "008510bc5ab6",
@@ -1006,6 +1005,7 @@
   "8577284a6f74",
   "85bb7859af03",
   "87026f509e16",
+  "88121a7abe1d",
   "8afd59f5e31b",
   "8b0146724619",
   "8b7860d4c172",
@@ -1015,6 +1015,7 @@
   "8f8a1306c12a",
   "934b0906b218",
   "9459d813e5f4",
+  "963cbd7db739",
   "96e0afb62bc3",
   "97765a8545c6",
   "98f96e018773",
@@ -1043,6 +1044,7 @@
   "b0610425a12b",
   "b0dd06b667b9",
   "b1ec1831eca8",
+  "b257d788077e",
   "b2fb4002350c",
   "b34058778f30",
   "b42c948c5aab",
