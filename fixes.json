@@ -2,6 +2,30 @@
  "_comment": "Public log. PRIVACY RULE: never name a reporter, quote their message, or include a Telegram id. Show that reports get fixed, not who reported them. status: fixed | in progress | planned | wont fix. ⚠ Only list PLANNED items you actually intend to build, and never put a DATE on one — a missed date on a public page is a promise broken in writing.",
  "fixes": [
   {
+   "date": "2026-11-21",
+   "area": "Exam news",
+   "status": "fixed",
+   "what": "The exam news on this site missed NBEMS notices from 14 Nov, because the NBEMS website now blocks automated readers. It now also reads NMC's notices and Medical Dialogues' medical education news (shown with its own name), so the FMGE certificate dates and the NMC draft on the FMGL licence rule are listed."
+  },
+  {
+   "date": "2026-11-21",
+   "area": "Answer keys",
+   "status": "wont fix",
+   "what": "Two questions reported as having a missing or unclear picture were checked: one picture is clear and its answer right, and the other is a text-only question that never had a picture. No change needed."
+  },
+  {
+   "date": "2026-11-19",
+   "area": "Question bank",
+   "status": "fixed",
+   "what": "Picture questions stopped appearing for a few hours on 19 Nov after an update. They were restored the same evening, and a new check now blocks any update that would lose a question's picture."
+  },
+  {
+   "date": "2026-11-19",
+   "area": "Videos",
+   "status": "fixed",
+   "what": "New free YouTube channel: a short video every day and a longer lesson each week. In the free study group, the 8 PM question now has Watch buttons for that day's videos."
+  },
+  {
    "date": "2026-11-17",
    "area": "Question bank",
    "status": "fixed",
