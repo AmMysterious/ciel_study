@@ -2,6 +2,16 @@
  "items": [
   {
    "exam": "FMGE",
+   "title": "TN Medical council flags fake certificates in FMG registration applications, details verification process",
+   "date": "2026-11-22",
+   "source": "Medical Dialogues",
+   "url": "https://medicaldialogues.in/state-news/tamil-nadu/tn-medical-council-flags-fake-certificates-in-fmg-registration-applications-details-verification-process-183723",
+   "id": "2fa4ca53532f",
+   "first_seen": "2026-11-23",
+   "posted": false
+  },
+  {
+   "exam": "FMGE",
    "title": "Draft of National Medical Commission (Foreign Medical Graduate Licentiate) (Amendment) Regulations 2026 Gazette Notification dated 17.11.2026",
    "date": "2026-11-22",
    "source": "NMC",
@@ -789,52 +799,48 @@
    "id": "eb33dea32d90",
    "first_seen": "2026-11-08",
    "posted": true
-  },
-  {
-   "exam": "NEET-PG",
-   "title": "Conduct of NEET-PG 2025 regarding",
-   "date": "2025-06-07",
-   "source": "NBEMS",
-   "url": "https://www.natboard.edu.in/viewNotice.php?NBE=TG1JT2xTQ3ZyRElKeVF0OGl0eFloZz09",
-   "id": "9c9bb1ff6421",
-   "first_seen": "2026-11-08",
-   "posted": true
   }
  ],
  "sources": {
   "NBEMS": {
    "ok": false,
-   "at": "2026-11-22T17:00+05:30",
+   "at": "2026-11-23T01:14+05:30",
    "error": "403 Client Error: Forbidden for url: https://www.natboard.edu.in/deptnotice",
    "failing_since": "2026-11-14"
   },
   "AIIMS": {
    "ok": true,
-   "at": "2026-11-22T17:00+05:30",
+   "at": "2026-11-23T01:14+05:30",
    "found": 0
   },
   "MCC": {
    "ok": true,
-   "at": "2026-11-22T17:00+05:30",
+   "at": "2026-11-23T01:14+05:30",
    "found": 16
   },
   "NMC": {
    "ok": true,
-   "at": "2026-11-22T17:00+05:30",
+   "at": "2026-11-23T01:14+05:30",
    "found": 4
   },
   "Medical Dialogues": {
    "ok": true,
-   "at": "2026-11-22T17:00+05:30",
-   "found": 3
+   "at": "2026-11-23T01:14+05:30",
+   "found": 4
   }
  },
  "unconfirmed": [
   {
    "exam": "NEET-PG",
+   "title": "NBEMS NEET PG City Intimation Slip 2026 (Released); How to Download @natboard.edu.in - Shiksha.com",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQdEpZUkFob2xVeUxOWW5fVkNCeHB2ODZYNG03VjZvZXVIbVhEV3NabTBVSjg2eVBUcDdBOHBzM0FONzdaNUlRcmFGTXNkblhwVmw2NThJd0NyU1dEb3E0WWpPNmhwMXBmeVRRZGl1RDJQeTIwLU9sNGpqR2JZS2NIVHJZV3Q0QUd4NHAwUzZWN00xeHUzMnhhUlc5STl2SUVoNXBWX05aQ1lWVEJMOFdJ?oc=5",
+   "date": "Sun, 22 Nov 2026 11:46:12 GMT"
+  },
+  {
+   "exam": "NEET-PG",
    "title": "UPSC CMS 2027 Application Form: Start Date, Last Date and Process - PW",
-   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE44Y2lyUUYyWmljN21TV2lQenI4dncxSXp4ZHFQaXJWMG5ucU9zZWlGYkFHRkhob3lEZjlwX2lWeUYwejZSSkZxUEctMjJ0bGQzRi1paldXeUlqazFYcDgzYk5zYXMyM0Y0aVAwdnRSc0ptUQ?oc=5",
-   "date": "Sat, 21 Nov 2026 21:17:17 GMT"
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9sVnlla0NtQUlNUVhvY0c4RGY2UGJxQzZZNU9GZFQtV1J0Vm84SVJuZElSVThwSUp0ZzBtUnlhTk05S1hNR0RMcjJJb0VJLVMyczRSNDNrRHRwdW8?oc=5",
+   "date": "Sun, 22 Nov 2026 11:06:35 GMT"
   },
   {
    "exam": "NEET-PG",
@@ -845,8 +851,8 @@
   {
    "exam": "NEET-PG",
    "title": "UPSC CMS 2027 Application Form: Start Date, Last Date and Process - PW",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9sVnlla0NtQUlNUVhvY0c4RGY2UGJxQzZZNU9GZFQtV1J0Vm84SVJuZElSVThwSUp0ZzBtUnlhTk05S1hNR0RMcjJJb0VJLVMyczRSNDNrRHRwdW8?oc=5",
-   "date": "Sat, 21 Nov 2026 21:17:16 GMT"
+   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE44Y2lyUUYyWmljN21TV2lQenI4dncxSXp4ZHFQaXJWMG5ucU9zZWlGYkFHRkhob3lEZjlwX2lWeUYwejZSSkZxUEctMjJ0bGQzRi1paldXeUlqazFYcDgzYk5zYXMyM0Y0aVAwdnRSc0ptUQ?oc=5",
+   "date": "Sat, 21 Nov 2026 21:17:17 GMT"
   },
   {
    "exam": "NEET-PG",
@@ -855,22 +861,16 @@
    "date": "Sat, 21 Nov 2026 13:03:31 GMT"
   },
   {
-   "exam": "NEET-PG",
-   "title": "CLAT 2027 Admit Card Released: Check Download Link For UG, PG Hall Ticket, Exam Date, Timing Details - Jagran Josh",
-   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPaHd4cmptNTY2SU5GT3ZUOHVobFczQU5Wb0l3VlpZV2UtbU9Tei1vVmRqb296OGw4cWNrejA1RWx6X0JEWW9OMHRWYlBIc0Q3aXB3Y0xzb0Q5UW9sTWFNdkRQWmZHcjRYZnkyM0NvSDZJNy0waVFTNjI5NDJmRUZLWlBOc0FmdVBQS3Y4dUNCT0dXeV9MbDFxZHhTUHplOWo0Nk1acDNJMmHSAa8BQVVfeXFMTmhkb0k0MFJDRmRDeS1oVGpaemF3M0xCTnJCWEpyaTR4NW5nSXktTXlIVHFaZGxVM3ZuUVYxOUdTNWNuZ1BXdmtuUGZ1WHhrMmh0TFEzcFRROFpaeWl0VlQ5VkFfcTI3eWRFdmYxUFI5U3B4c0QtSGxWRXRsbUtvb2tESzhJcXVtajVIQjVsVUVBVWRUeklxVkNVcDVGcXRXVERwSndPUkNHQkoxdDE4cw?oc=5",
-   "date": "Sat, 21 Nov 2026 07:03:34 GMT"
-  },
-  {
    "exam": "INI-CET",
-   "title": "NEET PG 2026 Round 2 Counselling: Registration & Choice Filling - Shiksha.com",
-   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQb1hGVUM4LW5CVEVKanlLNXBuejhWcEE5aXIyOEY0bmMza0gwTmdENHJSbkpEZXk1TmRKd3RBZHYyZ3diVzVLQmU4X2gzdDZvb20wTVV1bHI4SHJ2RXBZOXJiSllhQ0hMOVNWVUFfRE9fRmRWN3NDdV9Rc0pjNUNJOXN6U0dsYU9lRmtwVW9TQko2bFFQRkdScHFrQVd2dEVrZTJBNjhsT3JjQQ?oc=5",
-   "date": "Sun, 22 Nov 2026 06:53:54 GMT"
+   "title": "NBEMS NEET PG City Intimation Slip 2026 (Released); How to Download @natboard.edu.in - Shiksha.com",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQdEpZUkFob2xVeUxOWW5fVkNCeHB2ODZYNG03VjZvZXVIbVhEV3NabTBVSjg2eVBUcDdBOHBzM0FONzdaNUlRcmFGTXNkblhwVmw2NThJd0NyU1dEb3E0WWpPNmhwMXBmeVRRZGl1RDJQeTIwLU9sNGpqR2JZS2NIVHJZV3Q0QUd4NHAwUzZWN00xeHUzMnhhUlc5STl2SUVoNXBWX05aQ1lWVEJMOFdJ?oc=5",
+   "date": "Sun, 22 Nov 2026 11:46:12 GMT"
   },
   {
    "exam": "UPSC CMS",
    "title": "UPSC CMS 2027 Application Form: Start Date, Last Date and Process - PW",
    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9sVnlla0NtQUlNUVhvY0c4RGY2UGJxQzZZNU9GZFQtV1J0Vm84SVJuZElSVThwSUp0ZzBtUnlhTk05S1hNR0RMcjJJb0VJLVMyczRSNDNrRHRwdW8?oc=5",
-   "date": "Sat, 21 Nov 2026 21:17:16 GMT"
+   "date": "Sun, 22 Nov 2026 11:06:35 GMT"
   },
   {
    "exam": "UPSC CMS",
@@ -891,7 +891,7 @@
    "date": "Sat, 21 Nov 2026 05:28:13 GMT"
   }
  ],
- "checked": "2026-11-22T17:00+05:30",
+ "checked": "2026-11-23T01:14+05:30",
  "seen": [
   "007bb1065d0e",
   "008510bc5ab6",
@@ -935,6 +935,7 @@
   "2e560ddb0f80",
   "2ea973d5eca5",
   "2f86e1100865",
+  "2fa4ca53532f",
   "2fd6f86a0034",
   "2ff6cff0c28f",
   "307df6b993fa",
