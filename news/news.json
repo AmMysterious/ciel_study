@@ -1,6 +1,16 @@
 {
  "items": [
   {
+   "exam": "NEET-PG",
+   "title": "PG counselling: Notice for Resignation from Rounds 1 or 2 seat dated 23.11.2026",
+   "date": "2026-11-23",
+   "source": "MCC",
+   "url": "https://cdnbbsr.s3waas.gov.in/s3e0f7a4d0ef9b84b83b693bbf3feb8e6e/uploads/2026/11/20261123617658977.pdf",
+   "id": "32a659e39459",
+   "first_seen": "2026-11-23",
+   "posted": false
+  },
+  {
    "exam": "FMGE",
    "title": "TN Medical council flags fake certificates in FMG registration applications, details verification process",
    "date": "2026-11-22",
@@ -789,43 +799,33 @@
    "id": "69e6f3ff847b",
    "first_seen": "2026-11-08",
    "posted": true
-  },
-  {
-   "exam": "NEET-PG",
-   "title": "Tentative list of Exam cities and procedure to select the Exam city of NEET-PG 2025 regarding",
-   "date": "2025-06-11",
-   "source": "NBEMS",
-   "url": "https://www.natboard.edu.in/viewNotice.php?NBE=ZU5SSGJHaGNzbFdTR1NXQ044SUVaZz09",
-   "id": "eb33dea32d90",
-   "first_seen": "2026-11-08",
-   "posted": true
   }
  ],
  "sources": {
   "NBEMS": {
    "ok": false,
-   "at": "2026-11-23T01:14+05:30",
+   "at": "2026-11-23T18:21+05:30",
    "error": "403 Client Error: Forbidden for url: https://www.natboard.edu.in/deptnotice",
    "failing_since": "2026-11-14"
   },
   "AIIMS": {
    "ok": true,
-   "at": "2026-11-23T01:14+05:30",
+   "at": "2026-11-23T18:22+05:30",
    "found": 0
   },
   "MCC": {
    "ok": true,
-   "at": "2026-11-23T01:14+05:30",
+   "at": "2026-11-23T18:22+05:30",
    "found": 16
   },
   "NMC": {
    "ok": true,
-   "at": "2026-11-23T01:14+05:30",
+   "at": "2026-11-23T18:22+05:30",
    "found": 4
   },
   "Medical Dialogues": {
    "ok": true,
-   "at": "2026-11-23T01:14+05:30",
+   "at": "2026-11-23T18:22+05:30",
    "found": 4
   }
  },
@@ -834,19 +834,7 @@
    "exam": "NEET-PG",
    "title": "NBEMS NEET PG City Intimation Slip 2026 (Released); How to Download @natboard.edu.in - Shiksha.com",
    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQdEpZUkFob2xVeUxOWW5fVkNCeHB2ODZYNG03VjZvZXVIbVhEV3NabTBVSjg2eVBUcDdBOHBzM0FONzdaNUlRcmFGTXNkblhwVmw2NThJd0NyU1dEb3E0WWpPNmhwMXBmeVRRZGl1RDJQeTIwLU9sNGpqR2JZS2NIVHJZV3Q0QUd4NHAwUzZWN00xeHUzMnhhUlc5STl2SUVoNXBWX05aQ1lWVEJMOFdJ?oc=5",
-   "date": "Sun, 22 Nov 2026 11:46:12 GMT"
-  },
-  {
-   "exam": "NEET-PG",
-   "title": "UPSC CMS 2027 Application Form: Start Date, Last Date and Process - PW",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9sVnlla0NtQUlNUVhvY0c4RGY2UGJxQzZZNU9GZFQtV1J0Vm84SVJuZElSVThwSUp0ZzBtUnlhTk05S1hNR0RMcjJJb0VJLVMyczRSNDNrRHRwdW8?oc=5",
-   "date": "Sun, 22 Nov 2026 11:06:35 GMT"
-  },
-  {
-   "exam": "NEET-PG",
-   "title": "Facing backlash, Assam Medical College rolls back order asking resident doctors to postpone marriage - The Indian Express",
-   "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOa1BjbnczNE9vZC1DeS1MbXVIWWRnbVNOQlFLTHQxSG5ORDRBaFFWWWNVaGtDZjNENldWbjl5ZEJyTHh1UWNSdkdlTW1hZ3FLWEc3c1IzYzdvdjRTWXJfT2FTeE15b0pKVy1ZcEdHR0J4SGVvbjQwNDNiRWlsR0JOVDktSkVYSktwSDJDUzFELVVoS1oyQzB2MWI3R1VldjVWYmM0YV93VnRReGgwZXFjYUV3SGt4TExMd0h3OHNrdWdUTG9ET3VRLVVwU1Q1Y3NGUGM1ZFdhcVJDRjN0UElzbi1PMk5yVEhl0gHvAUFVX3lxTFBXR1MyRFBGay03cXJqR2NkSzFXbFIyTG1NdUpqQXNWUURicS1IOHVGckdNVlpJLWgzN3F3cGtYMVFZT3ZDVWxsVzJ0enlVc08zeDI0RHp1dG5vaTlpby04LWVDM0JydncyX2NkZl9lblZtVGkwbjhJYWYzWHJHZTZIS3ZPb1Jxa2pGR2N6UkJYN1dlTnlnemtXZVZqMnBhRDBiZVRacWg1VEYxclZ6Yl8taE45T0NJbGtXVXlJNnBOQUJReVVYWTRPNDc5X0hlTDN3Y3BNWld1MkFlSHU0cE1PcFA1RHc4VXlpNnRHUExn?oc=5",
-   "date": "Sat, 21 Nov 2026 05:26:00 GMT"
+   "date": "Mon, 23 Nov 2026 04:35:25 GMT"
   },
   {
    "exam": "NEET-PG",
@@ -864,13 +852,7 @@
    "exam": "INI-CET",
    "title": "NBEMS NEET PG City Intimation Slip 2026 (Released); How to Download @natboard.edu.in - Shiksha.com",
    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQdEpZUkFob2xVeUxOWW5fVkNCeHB2ODZYNG03VjZvZXVIbVhEV3NabTBVSjg2eVBUcDdBOHBzM0FONzdaNUlRcmFGTXNkblhwVmw2NThJd0NyU1dEb3E0WWpPNmhwMXBmeVRRZGl1RDJQeTIwLU9sNGpqR2JZS2NIVHJZV3Q0QUd4NHAwUzZWN00xeHUzMnhhUlc5STl2SUVoNXBWX05aQ1lWVEJMOFdJ?oc=5",
-   "date": "Sun, 22 Nov 2026 11:46:12 GMT"
-  },
-  {
-   "exam": "UPSC CMS",
-   "title": "UPSC CMS 2027 Application Form: Start Date, Last Date and Process - PW",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9sVnlla0NtQUlNUVhvY0c4RGY2UGJxQzZZNU9GZFQtV1J0Vm84SVJuZElSVThwSUp0ZzBtUnlhTk05S1hNR0RMcjJJb0VJLVMyczRSNDNrRHRwdW8?oc=5",
-   "date": "Sun, 22 Nov 2026 11:06:35 GMT"
+   "date": "Mon, 23 Nov 2026 04:35:25 GMT"
   },
   {
    "exam": "UPSC CMS",
@@ -883,15 +865,9 @@
    "title": "UPSC CMS 2027 Exam Date: Complete Schedule and Important Dates - PW",
    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9OYnRvQmxKZmJzVEZISnN6VnM3a0Y2Tm1QSGJWa09ObWQ1dTZhU19Hcl9ObC1IQ0FWejdBU3U5T1RFQ0RHZThiNkFCQTVSZFRMZHZSVk04UDVoYWFmMU1RaGtHV25fVDBG?oc=5",
    "date": "Sat, 21 Nov 2026 13:03:31 GMT"
-  },
-  {
-   "exam": "UPSC CMS",
-   "title": "ULLAS Scheme: 11 States and UTs Declared Fully Literate – Objectives, Features, Achievements and Significance - StudyIQ",
-   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9wSS1QM3lOVVJpZnZ1TDZBSVpmeTNQZ3JRdVZhT2ZmZmlORkhIZHNzZ1o2ZTRDbFpNX3FqeVZIT1UxMWhDU0NzM1J4SEJSQ1EtSWFmaW5mdXhJU2h2?oc=5",
-   "date": "Sat, 21 Nov 2026 05:28:13 GMT"
   }
  ],
- "checked": "2026-11-23T01:14+05:30",
+ "checked": "2026-11-23T18:22+05:30",
  "seen": [
   "007bb1065d0e",
   "008510bc5ab6",
@@ -941,6 +917,7 @@
   "307df6b993fa",
   "309571cfc504",
   "317cd6fc3592",
+  "32a659e39459",
   "335f6578d79e",
   "34052255ea4a",
   "340b38f3c9ca",
