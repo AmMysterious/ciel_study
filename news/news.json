@@ -1,6 +1,16 @@
 {
  "items": [
   {
+   "exam": "FMGE",
+   "title": "FMGE: CIC directs NBE to disclose names, marks of June 2025 qualifiers, advises annual publication",
+   "date": "2026-11-24",
+   "source": "Medical Dialogues",
+   "url": "https://medicaldialogues.in/news/education/fmge-cic-directs-nbe-to-disclose-names-marks-of-june-2025-qualifiers-advises-annual-publication-183859",
+   "id": "3346d5d0517c",
+   "first_seen": "2026-11-24",
+   "posted": false
+  },
+  {
    "exam": "NEET-PG",
    "title": "PG counselling: Notice for Resignation from Rounds 1 or 2 seat dated 23.11.2026",
    "date": "2026-11-23",
@@ -789,85 +799,51 @@
    "id": "d58a33796db1",
    "first_seen": "2026-11-08",
    "posted": true
-  },
-  {
-   "exam": "NEET-PG",
-   "title": "Caution regarding Spoofed Notices / Emails / SMS / Social media contents in the name of NBEMS regarding NEET-PG 2025",
-   "date": "2025-07-10",
-   "source": "NBEMS",
-   "url": "https://www.natboard.edu.in/viewNotice.php?NBE=SnlyT2N0V0MwR2RkcXFVdWJwTjRBdz09",
-   "id": "69e6f3ff847b",
-   "first_seen": "2026-11-08",
-   "posted": true
   }
  ],
  "sources": {
   "NBEMS": {
    "ok": false,
-   "at": "2026-11-23T18:21+05:30",
+   "at": "2026-11-24T19:18+05:30",
    "error": "403 Client Error: Forbidden for url: https://www.natboard.edu.in/deptnotice",
    "failing_since": "2026-11-14"
   },
   "AIIMS": {
    "ok": true,
-   "at": "2026-11-23T18:22+05:30",
+   "at": "2026-11-24T19:18+05:30",
    "found": 0
   },
   "MCC": {
    "ok": true,
-   "at": "2026-11-23T18:22+05:30",
+   "at": "2026-11-24T19:18+05:30",
    "found": 16
   },
   "NMC": {
    "ok": true,
-   "at": "2026-11-23T18:22+05:30",
+   "at": "2026-11-24T19:18+05:30",
    "found": 4
   },
   "Medical Dialogues": {
    "ok": true,
-   "at": "2026-11-23T18:22+05:30",
-   "found": 4
+   "at": "2026-11-24T19:18+05:30",
+   "found": 5
   }
  },
  "unconfirmed": [
   {
-   "exam": "NEET-PG",
-   "title": "NBEMS NEET PG City Intimation Slip 2026 (Released); How to Download @natboard.edu.in - Shiksha.com",
-   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQdEpZUkFob2xVeUxOWW5fVkNCeHB2ODZYNG03VjZvZXVIbVhEV3NabTBVSjg2eVBUcDdBOHBzM0FONzdaNUlRcmFGTXNkblhwVmw2NThJd0NyU1dEb3E0WWpPNmhwMXBmeVRRZGl1RDJQeTIwLU9sNGpqR2JZS2NIVHJZV3Q0QUd4NHAwUzZWN00xeHUzMnhhUlc5STl2SUVoNXBWX05aQ1lWVEJMOFdJ?oc=5",
-   "date": "Mon, 23 Nov 2026 04:35:25 GMT"
-  },
-  {
-   "exam": "NEET-PG",
-   "title": "UPSC CMS 2027 Application Form: Start Date, Last Date and Process - PW",
-   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE44Y2lyUUYyWmljN21TV2lQenI4dncxSXp4ZHFQaXJWMG5ucU9zZWlGYkFHRkhob3lEZjlwX2lWeUYwejZSSkZxUEctMjJ0bGQzRi1paldXeUlqazFYcDgzYk5zYXMyM0Y0aVAwdnRSc0ptUQ?oc=5",
-   "date": "Sat, 21 Nov 2026 21:17:17 GMT"
-  },
-  {
-   "exam": "NEET-PG",
-   "title": "UPSC CMS 2027 Exam Date: Complete Schedule and Important Dates - PW",
-   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9OYnRvQmxKZmJzVEZISnN6VnM3a0Y2Tm1QSGJWa09ObWQ1dTZhU19Hcl9ObC1IQ0FWejdBU3U5T1RFQ0RHZThiNkFCQTVSZFRMZHZSVk04UDVoYWFmMU1RaGtHV25fVDBG?oc=5",
-   "date": "Sat, 21 Nov 2026 13:03:31 GMT"
+   "exam": "FMGE",
+   "title": "CBSE Class 12 exam date 2027 likely to be revised as paper clash with Holi on March 22; Check tentative CBSE 12th date sheet 2027 here - Education Times",
+   "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxQbE9mZW1SNG9JMUQyc2ZDU3FhMlJaWFJtdFZJVkZXMnpLdFJSME1ySkphdDV2cndSenpFbnA3VHQ1a3BLcTNRYUhIRFJRQnctZW5SQnlfTXloVzJEcFpQYzdqY1lUaC16MWRXY0QtYlI3NFByRzNRT241VXMzYTVkNmtMMG5zYl9JRi1pbjh3VWJxN1UwbklVYjgxZTJld1p3bXlQSjdLbU84dGEyZmRFZTY2ZlI0VFV5OVdVSUJRQWpTS0dEQV9hQ3djMngyY3lYX2d1YlF2Z2JqcVZFN1gzcmdPS1BlR2l0c05kWFJnWVZkTjAtSzdaWDhja3JMNmpQcmU5Q0dkaVhCTDFhYVZaZGlKNURlbEVEaC0ya0pZRHU?oc=5",
+   "date": "Mon, 23 Nov 2026 20:39:00 GMT"
   },
   {
    "exam": "INI-CET",
-   "title": "NBEMS NEET PG City Intimation Slip 2026 (Released); How to Download @natboard.edu.in - Shiksha.com",
-   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQdEpZUkFob2xVeUxOWW5fVkNCeHB2ODZYNG03VjZvZXVIbVhEV3NabTBVSjg2eVBUcDdBOHBzM0FONzdaNUlRcmFGTXNkblhwVmw2NThJd0NyU1dEb3E0WWpPNmhwMXBmeVRRZGl1RDJQeTIwLU9sNGpqR2JZS2NIVHJZV3Q0QUd4NHAwUzZWN00xeHUzMnhhUlc5STl2SUVoNXBWX05aQ1lWVEJMOFdJ?oc=5",
-   "date": "Mon, 23 Nov 2026 04:35:25 GMT"
-  },
-  {
-   "exam": "UPSC CMS",
-   "title": "UPSC CMS 2027 Application Form: Start Date, Last Date and Process - PW",
-   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE44Y2lyUUYyWmljN21TV2lQenI4dncxSXp4ZHFQaXJWMG5ucU9zZWlGYkFHRkhob3lEZjlwX2lWeUYwejZSSkZxUEctMjJ0bGQzRi1paldXeUlqazFYcDgzYk5zYXMyM0Y0aVAwdnRSc0ptUQ?oc=5",
-   "date": "Sat, 21 Nov 2026 21:17:17 GMT"
-  },
-  {
-   "exam": "UPSC CMS",
-   "title": "UPSC CMS 2027 Exam Date: Complete Schedule and Important Dates - PW",
-   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9OYnRvQmxKZmJzVEZISnN6VnM3a0Y2Tm1QSGJWa09ObWQ1dTZhU19Hcl9ObC1IQ0FWejdBU3U5T1RFQ0RHZThiNkFCQTVSZFRMZHZSVk04UDVoYWFmMU1RaGtHV25fVDBG?oc=5",
-   "date": "Sat, 21 Nov 2026 13:03:31 GMT"
+   "title": "MCC NEET PG Counselling 2026 Seat Resignation Facility Open @mcc.nic.in: Surrender Seat by November 25 - Shiksha.com",
+   "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQbGMtWjFRVkZaTGxvU3VYSUtEcGFSVXhWV1Y1R2ZlSFY2TTF1N1drcURXVWRsUmhtLXZMVmVPeXNoX3VLbnR5ajNPSDhRcEdaRmx3ZFd5d0ZEMlNNOG1wNnVQTGJYZTRVaEhyTGxtejkwdTRRckRVRW96d2xybzFXaWl1Y0JaakZDQ21XZ0JWbEwyLXhIcXNpN1dqNlRKZnFsRHU5WUFwSlV5OTF4ZHhXa0FkT3BZeTJRZDhhRUFxcjVtNGNMM3hzUXZhSU9ibkZvTFVzZE1tWUNDRkY3TEJCbEJXLTk3Nkt0eWNOMDRpaFlDZ0Eyb1YtNXk2T2luUjZmVEE?oc=5",
+   "date": "Tue, 24 Nov 2026 07:40:41 GMT"
   }
  ],
- "checked": "2026-11-23T18:22+05:30",
+ "checked": "2026-11-24T19:18+05:30",
  "seen": [
   "007bb1065d0e",
   "008510bc5ab6",
@@ -918,6 +894,7 @@
   "309571cfc504",
   "317cd6fc3592",
   "32a659e39459",
+  "3346d5d0517c",
   "335f6578d79e",
   "34052255ea4a",
   "340b38f3c9ca",
