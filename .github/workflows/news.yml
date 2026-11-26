@@ -26,11 +26,13 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: Read the official sites
         run: python news/watch.py
+      - name: Newest public PYT Explained lesson (news/lesson.py)
+        run: python news/lesson.py
       - name: Publish if anything changed
         run: |
           git config user.name "Ciel Study news"
           git config user.email "news-bot@users.noreply.github.com"
-          git add news/news.json exams.html exam-*.html
+          git add news/news.json news/lesson.json index.html exams.html exam-*.html
           if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
           git commit -m "Exam news: checked $(date -u +%Y-%m-%dT%H:%MZ)"
           git pull --rebase --quiet origin main
