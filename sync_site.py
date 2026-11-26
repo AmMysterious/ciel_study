@@ -579,8 +579,9 @@ def render_passes() -> list[str]:
     if not cards:
         return []
     block = "\n".join([
-        '  <p class="eyebrow">Passed with Ciel Study</p>',
-        f'  <h2>{len(cards)} of our students cleared FMGE October 2026</h2>',
+        # 26 Nov 2026 (Nawar): they had a main source too - say they practised with us, not that we got them through
+        '  <p class="eyebrow">Pass stories</p>',
+        f'  <h2>{len(cards)} students who passed FMGE October 2026 practised with Ciel Study</h2>',
         '  <p class="lede">In their own words, exactly as they sent them. Each one agreed to be shown here.</p>',
         '  <div class="pass-rail">',
         '  <button class="pass-nav prev" type="button" aria-label="Previous">←</button>',
