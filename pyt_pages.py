@@ -86,6 +86,8 @@ def build(notes_file: Path) -> tuple[str, str]:
         S["ids"] |= qids[tid]
         S["rank"] = max(S["rank"], rank)
         title = notes.get(tid, {}).get("title")
+        if len(qids[tid]) < 3 and tid not in notes:
+            continue                            # 0-2 questions and no note: nothing useful to show yet
         if topic:
             S["topics"].append((tid, title or topic, rank, marks, len(qids[tid])))
         elif tid in notes:                      # a whole-section topic (e.g. "Most repeated antidotes")
