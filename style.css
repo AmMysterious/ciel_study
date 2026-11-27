@@ -913,3 +913,28 @@ details.more-feat .card { opacity: 1 !important; transform: none !important; vis
 .toc a { padding: 3px 9px; border: 1px solid var(--line); border-radius: 99px; text-decoration: none; color: var(--text); white-space: nowrap; }
 .toc a:hover { border-color: var(--amber); color: var(--amber); }
 h2[id], section[id] { scroll-margin-top: 80px; }
+/* Topics block, round 2 (27 Nov): icon cards + "find a topic" search (topic-find.js) */
+.topic-tiles a { display: grid; grid-template-columns: 36px 1fr; grid-template-rows: auto auto; column-gap: 10px; align-items: center; padding: 12px 14px; }
+.topic-tiles i { grid-row: 1 / span 2; font-style: normal; font-size: 1.45rem; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 10px; background: rgba(245,197,66,.10); transition: transform .2s; }
+.topic-tiles a:hover i, .topic-tiles a:focus-visible i { transform: scale(1.12) rotate(-4deg); }
+.topic-tiles a:active { transform: scale(.98); }
+.topic-find { position: relative; margin: 16px 0 4px; max-width: 560px; }
+.topic-find input { width: 100%; box-sizing: border-box; padding: 12px 14px 12px 40px; border-radius: var(--radius-sm); border: 1px solid var(--line); background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none' stroke='%23a8b2b8' stroke-width='2'%3E%3Ccircle cx='8' cy='8' r='6'/%3E%3Cpath d='M13 13l4 4'/%3E%3C/svg%3E") no-repeat 13px center; color: var(--text); font: inherit; font-size: 1rem; }
+.topic-find input:focus { outline: none; border-color: var(--amber); box-shadow: 0 0 0 3px rgba(245,197,66,.18); }
+.topic-hits { list-style: none; margin: 6px 0 0; padding: 0; }
+.topic-hits:empty { display: none; }
+.topic-hits li { margin: 0; max-width: none; }
+.topic-hits a { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; padding: 9px 12px; border-bottom: 1px solid var(--line); text-decoration: none; }
+.topic-hits a:hover { background: var(--surface); }
+.topic-hits b { color: var(--text); }
+.topic-hits span { color: var(--text-dim); font-size: .82rem; }
+.topic-hits .none { padding: 9px 12px; color: var(--text-dim); }
+@media (max-width: 620px) {
+  .topic-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .topic-tiles a { grid-template-columns: 30px minmax(0, 1fr); column-gap: 8px; padding: 10px; min-width: 0; }
+  .topic-tiles i { width: 30px; height: 30px; font-size: 1.15rem; }
+  .topic-tiles b { font-size: .9rem; overflow-wrap: anywhere; }
+}
+.pyt .topic[id] { scroll-margin-top: 84px; }
+.pyt .topic:target { border-color: var(--amber); animation: topic-glow 1.6s ease-out 1; }
+@keyframes topic-glow { from { box-shadow: 0 0 0 6px rgba(245,197,66,.35); } to { box-shadow: 0 0 0 0 rgba(245,197,66,0); } }

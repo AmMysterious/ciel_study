@@ -65,4 +65,17 @@ for name in PAGES:
         changed.append(name)
         if not CHECK:
             f.write_text(s, encoding="utf-8", newline="\n")
+# 27 Nov: phones kept an old style.css after a push (Nawar's screenshot showed the new Topics tiles as a bare list).
+# Every page links the stylesheet as style.css?v=<first 8 of its sha256>, so a changed file is a new address.
+import hashlib
+ver = hashlib.sha256((HERE / "style.css").read_bytes()).hexdigest()[:8]
+for f in sorted(HERE.rglob("*.html")):
+    if "vendor" in f.parts:
+        continue
+    s = old = f.read_text(encoding="utf-8")
+    s = re.sub(r'href="((?:\.\./)*)style\.css(?:\?v=[0-9a-f]+)?"', lambda m: f'href="{m.group(1)}style.css?v={ver}"', s)
+    if s != old:
+        changed.append(f.name)
+        if not CHECK:
+            f.write_text(s, encoding="utf-8", newline="\n")
 print(("would change: " if CHECK else "written: ") + (", ".join(changed) or "nothing"))

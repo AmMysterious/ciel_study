@@ -116,7 +116,8 @@ def build(notes_file: Path) -> tuple[str, str]:
         body.append(f'<h2>{e(s)} <small>{len(S["ids"]):,} questions</small></h2>')
         for tid, topic, rank, marks, n in S["topics"]:
             note = notes.get(tid, {})
-            body.append('<article class="topic">')
+            body.append(f'<article class="topic" id="t-{e(tid.replace(".", "-"))}">')
+            INDEX.append({"s": subject, "t": topic, "u": f"pyt-{slug}.html#t-{tid.replace('.', '-')}", "n": n})
             body.append(f'<h3>{e(topic)}</h3><p class="badges">{badges(rank, marks)}'
                         f'<span class="n">{n:,} past questions</span></p>')
             if note.get("note"):
@@ -224,6 +225,13 @@ def NOTES():
             if json.loads(nf.read_text(encoding="utf-8")).get("reviewed")]
 
 
+ICONS = {"anatomy": "🦴", "physiology": "🫀", "biochemistry": "🧪", "pathology": "🔬", "pharmacology": "💊",
+         "microbiology": "🦠", "forensic-medicine": "⚖️", "community-medicine": "🏘️", "medicine": "🩺",
+         "surgery": "🔪", "obstetrics-gynaecology": "🤰", "paediatrics": "🧒", "ophthalmology": "👁️", "ent": "👂",
+         "orthopaedics": "🦿", "dermatology": "🧴", "psychiatry": "🧠", "radiodiagnosis": "🩻", "anaesthesia": "😷"}
+INDEX: list = []      # every topic on every page, for the topic search on the home and hub pages
+
+
 def main():
     changed = []
     for nf in NOTES():
@@ -236,6 +244,13 @@ def main():
             changed.append(name)
             if not CHECK:
                 f.write_text(page, encoding="utf-8", newline="\n")
+    # pyt_index.json feeds the "find a topic" box (27 Nov: Nawar wanted the Topics block more interactive)
+    ix = HERE / "pyt_index.json"
+    data = json.dumps(sorted(INDEX, key=lambda r: (r["s"], -r["n"])), ensure_ascii=False, separators=(",", ":"))
+    if not ix.exists() or ix.read_text(encoding="utf-8") != data:
+        changed.append(ix.name)
+        if not CHECK:
+            ix.write_text(data, encoding="utf-8")
     # the FMGE PYQ page lists every subject page that exists, between its PYT markers
     hub = HERE / "fmge-previous-year-questions.html"
     subs = sorted((json.loads(nf.read_text(encoding="utf-8")) for nf in NOTES()),
@@ -254,8 +269,14 @@ def main():
         pg = HERE / f'pyt-{n["slug"]}.html'
         k = pg.read_text(encoding="utf-8").count('class="topic"') if pg.exists() else 0
         name = n["subject"].replace(" (PSM)", "").replace("Obstetrics & Gynaecology", "OBG")
-        tiles.append(f'<li><a href="pyt-{n["slug"]}.html"><b>{e(name)}</b><span>{k} topics</span></a></li>')
-    grid = '<ul class="topic-tiles">' + "".join(tiles) + "</ul>"
+        ic = ICONS.get(n["slug"], "📘")
+        tiles.append(f'<li><a href="pyt-{n["slug"]}.html"><i aria-hidden="true">{ic}</i><b>{e(name)}</b>'
+                     f'<span>{k} topics</span></a></li>')
+    # a search box over pyt_index.json (topic-find.js); without JavaScript it stays hidden and the tiles still work
+    finder = ('<div class="topic-find" hidden><input type="search" placeholder="Find a topic: anaemia, glaucoma, '
+              'rabies..." aria-label="Find a topic" autocomplete="off"><ul class="topic-hits"></ul></div>'
+              '<script defer src="topic-find.js"></script>')
+    grid = finder + '<ul class="topic-tiles">' + "".join(tiles) + "</ul>"
     h = home.read_text(encoding="utf-8")
     h2 = re.sub(r"<!--PYT:grid-->.*?<!--/PYT-->", lambda _: f"<!--PYT:grid-->{grid}<!--/PYT-->", h, flags=re.S)
     if h2 != h:
