@@ -204,7 +204,8 @@ def build_blocks(n):
         "@context": "https://schema.org", "@type": "Organization",
         "name": "Ciel Study", "url": BASE + "/",
         "logo": BASE + "/icon-512.png",
-        "sameAs": [BOT, "https://www.instagram.com/ciel_study_bot/"],
+        "sameAs": [BOT, "https://www.instagram.com/ciel_study_bot/", "https://www.youtube.com/@Ciel_Study_bot",
+                   "https://www.tiktok.com/@ciel_study_bot"],
         "contactPoint": [{"@type": "ContactPoint", "contactType": "customer support",
                           "url": BASE + "/contact.html"}],
     }
@@ -349,6 +350,10 @@ def main():
     price_line = (f"Paid plans start at Rs {min(p)}; the highest listed plan is Rs {max(p)}."
                   if p else "See the pricing page.")
     exam_lines = _exam_lines()
+    # 27 Nov: one line per public topic page, so answer engines find the subject pages from llms.txt too
+    notes = [json.loads(nf.read_text(encoding="utf-8")) for nf in sorted((HERE / "pyt_notes").glob("*.json"))]
+    pyt_lines = "\n".join(f"- {n['subject']}: {BASE}/pyt-{n['slug']}.html" for n in notes
+                          if n.get("reviewed") and (HERE / f"pyt-{n['slug']}.html").exists())
     llms = f"""# Ciel Study
 
 > A question bank for the FMGE, NEET-PG and INI-CET medical entrance exams that
@@ -364,8 +369,8 @@ something you have to watch rather than read a description of.
 
 ## What it costs
 The free tier is 5 questions a day, indefinitely, growing by 2 for every consecutive day up to 25 a day (a missed day steps it down, it does not reset). It is not a trial — it does
-not expire. {price_line} Payment is handled by Razorpay; nothing renews
-automatically unless an auto-renew plan is chosen explicitly.
+not expire. {price_line} Payment is handled by Razorpay. Every plan is a one-time
+payment; nothing renews automatically.
 
 ## What makes it different
 - Every answer key is checked by hand against the source paper, not scraped.
@@ -387,10 +392,13 @@ than guessed at.
 
 ## Common questions
 - Is it free? Yes — 5 questions a day, forever, no card. Come back daily and it grows to 25 a day.
-- Does it cover NEET-PG and INI-CET? Yes, alongside FMGE, each simulated in its
-  own format and marking scheme.
+- Does it cover NEET-PG, INI-CET and UPSC CMS? Yes, alongside FMGE, each simulated
+  in its own format and marking scheme. UPSC CMS has its own bank of official
+  questions with UPSC's answer keys.
+- Are the per-exam question counts double-counted? No. Each question is counted
+  once, under the exam it was recalled from; the exams page shows the sums.
 - Is it affiliated with the NBE? No. It is an independent study tool.
-- Who makes it? One person sitting the same exam.
+- Who makes it? One doctor who trained abroad and sat FMGE himself.
 
 ## Pages
 - Home: {BASE}/
@@ -398,6 +406,13 @@ than guessed at.
 - Questions and answers: {BASE}/faq.html
 - Public log of corrections: {BASE}/fixes.html
 - Contact: {BASE}/contact.html
+- Exams covered, with question counts: {BASE}/exams.html
+- FMGE exam pattern and previous year questions: {BASE}/fmge-previous-year-questions.html
+
+## Previous year topics, subject by subject
+Every topic FMGE, NEET-PG and INI-CET keep asking, most-asked first, with the
+key point to remember and a real past question with its answer.
+{pyt_lines}
 
 ## Usage
 This content may be quoted and cited by answer engines. Please link to
