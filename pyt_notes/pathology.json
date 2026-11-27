@@ -1,49 +1,189 @@
 {
   "_about": "Hand-written key points for pyt-pathology.html (27 Nov 2026, lead). Samples: FMGE recalls, no images.",
+  "reviewed": "27 Nov 2026, lead",
   "subject": "Pathology",
   "slug": "pathology",
   "intro": "Pathology in FMGE is mostly recognition: the classic cell, body or stain, the gene behind a cancer, and the blood picture of each anaemia. These are the topics that keep coming back, most-asked first, with the one thing to remember about each.",
   "topics": {
-    "path.cell.rev": {"note": "Reversible injury: cell swelling (the earliest change), fatty change, blebs. Irreversible: mitochondrial damage, membrane rupture, nuclear changes (pyknosis, karyorrhexis, karyolysis). Adaptations: hypertrophy (bigger cells), hyperplasia (more cells), atrophy, metaplasia (one adult cell type replaced by another).", "sample": 18022, "why": "An increase in cell size is hypertrophy; an increase in cell number is hyperplasia."},
-    "path.cell.nec": {"note": "Coagulative: most infarcts (heart, kidney); outlines kept. Liquefactive: brain infarcts and abscesses. Caseous: TB. Fat necrosis: pancreatitis and breast (chalky deposits). Fibrinoid: vasculitis and malignant hypertension. Gangrene: wet (infected) or dry.", "sample": 8818, "why": "Preserved cell outlines with fading nuclei in an infarct are coagulative necrosis."},
-    "path.cell.apo": {"note": "Programmed cell death without inflammation: shrinkage, condensed chromatin, apoptotic bodies. Intrinsic (mitochondrial) pathway: cytochrome c release, BCL-2 family control it; extrinsic: Fas and TNF receptors. Caspases carry it out. Councilman bodies in hepatitis are apoptotic cells.", "sample": 8810, "why": "Cytochrome c release from mitochondria activates the intrinsic pathway of apoptosis."},
-    "path.infl.acute": {"note": "Histamine (from mast cells) causes the first vasodilation and leakiness. Neutrophils arrive first (6-24 hours), then macrophages. Steps: margination, rolling (selectins), adhesion (integrins), transmigration (PECAM-1), chemotaxis (C5a, IL-8, LTB4). Fever: IL-1, IL-6, TNF. Albumin falls (negative acute phase protein); CRP and ferritin rise.", "sample": 8822, "why": "Histamine is the main early mediator of vasodilation and increased vascular permeability."},
-    "path.infl.chronic": {"note": "Granuloma: a collection of epithelioid macrophages, often with giant cells (Langhans in TB, foreign body type). Formed by type IV (T-cell) hypersensitivity with IFN-γ. Caseating: TB; non-caseating: sarcoidosis, Crohn disease.", "sample": 8807, "why": "TB granulomas are a type IV, T-cell mediated reaction."},
-    "path.infl.heal": {"note": "Order: inflammation, then proliferation (granulation tissue, angiogenesis by VEGF), then remodelling. Type III collagen first, replaced by type I. Scar strength reaches about 70-80% of normal at 3 months. Vitamin C and zinc are needed; keloids extend beyond the wound edge.", "sample": 8824, "why": "Healing goes inflammation, then proliferation, then remodelling."},
-    "path.haem.anem": {"note": "Haemolysis: low haptoglobin, high LDH, unconjugated bilirubin, reticulocytosis. Sickle cell: HbS (valine for glutamic acid at position 6), crises with bone pain. Hereditary spherocytosis: osmotic fragility, high MCHC, cured by splenectomy. G6PD: Heinz bodies, bite cells after oxidant drugs. Thalassaemia: target cells, HbA2 raised in trait.", "sample": 10174, "why": "Recurrent bone pain crises with anaemia and jaundice in a child point to sickle cell anaemia."},
-    "path.haem.leuk": {"note": "AML: Auer rods, MPO positive; M3 (APML) t(15;17), DIC, ATRA. ALL: TdT positive, PAS positive; children. CML: t(9;22) Philadelphia, low LAP score. CLL: smudge cells, CD5 positive B cells. Hairy cell: TRAP positive, CD11c, CD25, CD103, dry tap, big spleen.", "sample": 18032, "why": "CD11c, CD25 and CD103 together mark hairy cell leukaemia."},
-    "path.haem.lym": {"note": "Hodgkin: Reed-Sternberg cells (CD15, CD30); nodular sclerosis is the commonest type, lymphocyte-rich has the best outlook. Non-Hodgkin: Burkitt t(8;14) c-MYC, starry sky; follicular t(14;18) BCL-2; mantle cell t(11;14) cyclin D1. An excision biopsy of the whole node is the diagnostic test.", "sample": 19472, "why": "Lymphoma needs a whole-node biopsy to see the architecture; FNAC is not enough."},
-    "path.haem.pc": {"note": "Multiple myeloma: CRAB (high Calcium, Renal failure, Anaemia, Bone lytic lesions), M spike, Bence Jones protein, rouleaux, punched-out skull lesions, plasma cells over 10% in marrow. Waldenström: IgM, hyperviscosity.", "sample": 8801, "why": "Hypercalcaemia is the C in the CRAB criteria for myeloma."},
-    "path.haem.mpn": {"note": "Polycythaemia vera: JAK2 V617F, high red cell mass, low erythropoietin, itching after a bath. Essential thrombocythaemia: platelets over 450,000. Primary myelofibrosis: teardrop cells, leucoerythroblastic picture, dry tap, huge spleen. CML: BCR-ABL.", "sample": 8799, "why": "Teardrop cells, nucleated red cells and marrow fibrosis make up primary myelofibrosis."},
-    "path.neo.onc": {"note": "Oncogenes need one hit (gain of function): RAS (commonest), MYC, HER2/neu, BCR-ABL, RET, KIT. Tumour suppressors need two hits (loss of function). Point mutation (RAS), amplification (MYC, HER2) and translocation (BCR-ABL) switch oncogenes on.", "sample": 8835, "why": "A growth signal that stays on without its ligand comes from an activated oncogene."},
-    "path.neo.tsg": {"note": "p53 (guardian of the genome): stops the cell cycle at G1/S to allow repair, or triggers apoptosis; the commonest mutated gene in cancer; Li-Fraumeni. RB: retinoblastoma and osteosarcoma (two-hit hypothesis). APC: familial polyposis. BRCA1/2: breast and ovary. NF1, WT1, VHL.", "sample": 8815, "why": "p53 halts the cell cycle after DNA damage so it can be repaired (or the cell dies)."},
-    "path.neo.mol": {"note": "Lynch syndrome (HNPCC): mismatch repair genes (MLH1, MSH2), microsatellite instability, right-sided colon cancers, endometrial cancer. Familial polyposis: APC, hundreds of polyps. BRCA defects: homologous recombination repair.", "sample": 8840, "why": "Lynch syndrome comes from defective DNA mismatch repair, which shows as microsatellite instability."},
-    "path.neo.met": {"note": "Carcinomas spread by lymph; sarcomas by blood (exceptions: renal cell, liver and follicular thyroid cancers spread by blood). Bone metastases: breast, prostate (osteoblastic), lung, kidney, thyroid. The commonest malignant liver tumour is a metastasis."},
-    "path.imm.hs": {"note": "Type I: IgE and mast cells (anaphylaxis, asthma, hay fever). Type II: antibodies against cells (transfusion reactions, Goodpasture, myasthenia, Graves). Type III: immune complexes (SLE, serum sickness, post-strep GN, Arthus). Type IV: T cells (TB granuloma, Mantoux, contact dermatitis, graft rejection)."},
-    "path.imm.auto": {"note": "Goodpasture: anti-GBM antibodies against type IV collagen, lung bleeding and nephritis (linear IgG on immunofluorescence). SLE: anti-dsDNA and anti-Smith. Sjögren: anti-Ro and anti-La. Most autoimmune diseases are commoner in women.", "sample": 16199, "why": "Haemoptysis with haematuria and anti-GBM antibodies is Goodpasture syndrome."},
-    "path.imm.tx": {"note": "Hyperacute rejection (minutes): pre-formed antibodies, type II. Acute (weeks to months): T cells and antibodies; treatable. Chronic (months to years): vascular narrowing and fibrosis. Graft-versus-host disease: donor T cells attack skin, gut and liver, after bone marrow transplants."},
-    "path.hemo.coag": {"note": "PT tests the extrinsic pathway (factor VII) and warfarin; aPTT tests the intrinsic pathway (VIII, IX, XI, XII) and heparin. Vitamin K deficiency prolongs PT first (factor VII has the shortest half-life); haemophilia prolongs only aPTT. Bleeding time tests platelets.", "sample": 8792, "why": "Vitamin K deficiency prolongs PT; haemophilia A leaves PT normal."},
-    "path.hemo.dis": {"note": "von Willebrand disease: the commonest inherited bleeding disorder, long bleeding time with long aPTT. DIC: low platelets and fibrinogen, high D-dimer, schistocytes. TTP: ADAMTS13 deficiency (pentad: fever, low platelets, haemolysis, kidney, brain). ITP is the commonest reason for elective splenectomy.", "sample": 16200, "why": "Chronic ITP that fails medical treatment is the commonest indication for an elective splenectomy."},
-    "path.hemo.thr": {"note": "Virchow triad: endothelial injury, stasis, hypercoagulability. Factor V Leiden is the commonest inherited cause of a clotting tendency. Lines of Zahn show a clot formed in flowing blood (before death). Leg vein clots travel to the pulmonary arteries.", "sample": 8800, "why": "A clot from the leg veins travels through the right heart and lodges in the pulmonary artery."},
-    "path.gen.chr": {"note": "Trisomy 21 Down; trisomy 18 Edwards (rocker-bottom feet, clenched hands); trisomy 13 Patau (cleft lip and palate, polydactyly, holoprosencephaly). 45,XO Turner; 47,XXY Klinefelter. Prader-Willi (paternal deletion) and Angelman (maternal deletion) of 15q are imprinting disorders.", "sample": 16618, "why": "Cleft lip and palate with intellectual disability points to Patau syndrome (trisomy 13)."},
-    "path.gen.tech": {"note": "FISH: finds specific deletions and translocations. Karyotyping: whole-chromosome changes. PCR amplifies DNA; RT-PCR, RNA. Southern blot: DNA; Northern: RNA; Western: protein. Microarrays find small copy-number changes."},
-    "path.cvs.mi": {"note": "Changes over time: coagulative necrosis by 4-12 hours, neutrophils 1-3 days, macrophages 3-7 days (rupture risk highest at 3-7 days), granulation tissue 1-2 weeks, scar by 2 months. TTC stain shows the infarct pale against red healthy muscle in the first hours.", "sample": 16197, "why": "Triphenyl tetrazolium chloride stains living muscle red and leaves the infarct pale."},
-    "path.cvs.ie": {"note": "Acute: Staph aureus on normal valves (IV drug users: tricuspid). Subacute: viridans strep on damaged valves. Signs: Osler nodes (painful), Janeway lesions (painless), Roth spots, splinter haemorrhages. Diagnosis: Duke criteria, blood cultures and echo."},
-    "path.cvs.rf": {"note": "Follows group A strep throat infection by 2-3 weeks (molecular mimicry). Aschoff bodies with Anitschkow (caterpillar) cells. Jones criteria: carditis, arthritis, chorea, erythema marginatum, subcutaneous nodules. Mitral valve is most affected.", "sample": 18076, "why": "Aschoff bodies contain Anitschkow cells with caterpillar-shaped nuclei; they are the mark of rheumatic carditis."},
-    "path.ren.nephrotic": {"note": "Minimal change: children, podocyte foot process effacement on electron microscopy, steroid-responsive. FSGS: commonest in adults in many places, HIV and heroin. Membranous: adults, spike and dome on silver stain, PLA2R antibodies. Diabetic: Kimmelstiel-Wilson nodules.", "sample": 19130, "why": "Spike-and-dome capillary walls on silver stain are membranous nephropathy."},
-    "path.ren.nephritic": {"note": "Haematuria, red cell casts, hypertension, oedema. Post-strep: subepithelial humps, low C3. IgA nephropathy: haematuria 1-2 days after a sore throat, the commonest GN worldwide. Rapidly progressive (crescents): Goodpasture, ANCA vasculitis, immune complex. Alport: collagen IV, deafness, eye changes."},
-    "path.ren.dn": {"note": "The earliest change is thickening of the glomerular basement membrane; then mesangial expansion and Kimmelstiel-Wilson nodules (nodular glomerulosclerosis). Microalbuminuria is the first clinical sign. Hyaline arteriolosclerosis of both arterioles."},
-    "path.liv.hep": {"note": "Viral hepatitis: ballooning degeneration, Councilman (acidophil) bodies, ground-glass cells in hepatitis B. Alcoholic hepatitis: Mallory-Denk bodies, neutrophils, AST:ALT over 2. Autoimmune hepatitis: plasma cells, interface hepatitis."},
-    "path.liv.cirr": {"note": "Diffuse fibrosis with regenerating nodules. Causes in India: alcohol, hepatitis B and C, fatty liver. Leads to portal hypertension, liver failure and hepatocellular cancer. Wilson (copper) and haemochromatosis (iron, Prussian blue) are inherited causes."},
-    "path.liv.hcc": {"note": "Risk: hepatitis B and C, cirrhosis, aflatoxin (p53 mutation). AFP rises and is used to monitor treatment. Spreads through the blood (portal vein invasion). Fibrolamellar variant: young adults, normal AFP, better outlook.", "sample": 8797, "why": "AFP is the tumour marker for hepatocellular carcinoma and is used to follow treatment."},
-    "path.lung.copd": {"note": "Emphysema: centriacinar in smokers (upper lobes), panacinar in α1-antitrypsin deficiency (lower lobes). Neutrophil elastase and MMP-12 destroy elastin. Chronic bronchitis: Reid index over 0.4 (mucous gland hyperplasia).", "sample": 10355, "why": "Neutrophil elastase and macrophage MMP-12 break down alveolar elastin in COPD."},
-    "path.lung.ild": {"note": "Usual interstitial pneumonia (IPF): patchy fibrosis, fibroblastic foci, honeycombing at the bases. Sarcoid: non-caseating granulomas, asteroid and Schaumann bodies. Asbestosis: ferruginous bodies. Silicosis: nodules in the upper lobes."},
-    "path.lung.ca": {"note": "Adenocarcinoma: the commonest type overall and in non-smokers, peripheral, glands and mucin (EGFR, ALK). Squamous: central, smokers, keratin pearls, PTHrP (high calcium). Small cell: central, neuroendocrine, ADH (low sodium) and ACTH, Lambert-Eaton.", "sample": 8802, "why": "High calcium in a smoker with a lung mass points to squamous cell carcinoma making PTHrP."},
-    "path.gi.barrett": {"note": "Intestinal metaplasia of the lower oesophagus (goblet cells replacing squamous lining) from long-standing reflux. Raises the risk of adenocarcinoma; followed with endoscopy and biopsy."},
-    "path.gi.gastric": {"note": "Intestinal type: H. pylori, glands, older men. Diffuse type: signet ring cells, linitis plastica (leather bottle stomach), E-cadherin loss. Spread: Virchow node, Krukenberg tumour (ovaries), Sister Mary Joseph nodule."},
-    "path.gi.ibd": {"note": "Crohn: transmural, skip lesions, non-caseating granulomas, fistulas, creeping fat. Ulcerative colitis: mucosal, continuous from the rectum, crypt abscesses, pseudopolyps. Faecal calprotectin and lactoferrin show bowel inflammation.", "sample": 16202, "why": "Faecal lactoferrin comes from neutrophils in the bowel and marks intestinal inflammation."},
-    "path.gi.crc": {"note": "Adenoma-carcinoma sequence: APC loss first, then KRAS, then p53. Villous adenomas carry the highest cancer risk. Right-sided cancers bleed (anaemia); left-sided ones obstruct. CEA for follow-up.", "sample": 8838, "why": "Loss of APC is the first step in the adenoma-carcinoma sequence."},
-    "path.endo.thy": {"note": "Papillary: commonest, Orphan Annie nuclei, nuclear grooves, psammoma bodies, lymph node spread, radiation link. Follicular: capsule and vessel invasion, spreads by blood. Medullary: C cells, calcitonin, amyloid, MEN2 (RET). Anaplastic: elderly, fatal. Hashimoto: Hürthle cells, lymphocytes, risk of lymphoma.", "sample": 18121, "why": "Medullary thyroid cancer with phaeochromocytoma and mucosal neuromas is MEN2B, from RET mutations."},
-    "path.tl": {"title": "Must-memorise translocations", "note": "t(9;22) CML (BCR-ABL); t(15;17) acute promyelocytic leukaemia (PML-RARA); t(8;14) Burkitt (c-MYC); t(14;18) follicular lymphoma (BCL-2); t(11;14) mantle cell (cyclin D1); t(11;22) Ewing sarcoma (EWS-FLI1); t(X;18) synovial sarcoma; t(12;21) childhood ALL (good outlook)."}
+    "path.cell.rev": {
+      "note": "Reversible injury: cell swelling (the earliest change), fatty change, blebs. Irreversible: mitochondrial damage, membrane rupture, nuclear changes (pyknosis, karyorrhexis, karyolysis). Adaptations: hypertrophy (bigger cells), hyperplasia (more cells), atrophy, metaplasia (one adult cell type replaced by another).",
+      "sample": 18022,
+      "why": "An increase in cell size is hypertrophy; an increase in cell number is hyperplasia."
+    },
+    "path.cell.nec": {
+      "note": "Coagulative: most infarcts (heart, kidney); outlines kept. Liquefactive: brain infarcts and abscesses. Caseous: TB. Fat necrosis: pancreatitis and breast (chalky deposits). Fibrinoid: vasculitis and malignant hypertension. Gangrene: wet (infected) or dry.",
+      "sample": 8818,
+      "why": "Preserved cell outlines with fading nuclei in an infarct are coagulative necrosis."
+    },
+    "path.cell.apo": {
+      "note": "Programmed cell death without inflammation: shrinkage, condensed chromatin, apoptotic bodies. Intrinsic (mitochondrial) pathway: cytochrome c release, BCL-2 family control it; extrinsic: Fas and TNF receptors. Caspases carry it out. Councilman bodies in hepatitis are apoptotic cells.",
+      "sample": 8810,
+      "why": "Cytochrome c release from mitochondria activates the intrinsic pathway of apoptosis."
+    },
+    "path.infl.acute": {
+      "note": "Histamine (from mast cells) causes the first vasodilation and leakiness. Neutrophils arrive first (6-24 hours), then macrophages. Steps: margination, rolling (selectins), adhesion (integrins), transmigration (PECAM-1), chemotaxis (C5a, IL-8, LTB4). Fever: IL-1, IL-6, TNF. Albumin falls (negative acute phase protein); CRP and ferritin rise.",
+      "sample": 8822,
+      "why": "Histamine is the main early mediator of vasodilation and increased vascular permeability."
+    },
+    "path.infl.chronic": {
+      "note": "Granuloma: a collection of epithelioid macrophages, often with giant cells (Langhans in TB, foreign body type). Formed by type IV (T-cell) hypersensitivity with IFN-γ. Caseating: TB; non-caseating: sarcoidosis, Crohn disease.",
+      "sample": 8807,
+      "why": "TB granulomas are a type IV, T-cell mediated reaction."
+    },
+    "path.infl.heal": {
+      "note": "Order: inflammation, then proliferation (granulation tissue, angiogenesis by VEGF), then remodelling. Type III collagen first, replaced by type I. Scar strength reaches about 70-80% of normal at 3 months. Vitamin C and zinc are needed; keloids extend beyond the wound edge.",
+      "sample": 8824,
+      "why": "Healing goes inflammation, then proliferation, then remodelling."
+    },
+    "path.haem.anem": {
+      "note": "Haemolysis: low haptoglobin, high LDH, unconjugated bilirubin, reticulocytosis. Sickle cell: HbS (valine for glutamic acid at position 6), crises with bone pain. Hereditary spherocytosis: osmotic fragility, high MCHC, cured by splenectomy. G6PD: Heinz bodies, bite cells after oxidant drugs. Thalassaemia: target cells, HbA2 raised in trait.",
+      "sample": 10174,
+      "why": "Recurrent bone pain crises with anaemia and jaundice in a child point to sickle cell anaemia."
+    },
+    "path.haem.leuk": {
+      "note": "AML: Auer rods, MPO positive; M3 (APML) t(15;17), DIC, ATRA. ALL: TdT positive, PAS positive; children. CML: t(9;22) Philadelphia, low LAP score. CLL: smudge cells, CD5 positive B cells. Hairy cell: TRAP positive, CD11c, CD25, CD103, dry tap, big spleen.",
+      "sample": 18032,
+      "why": "CD11c, CD25 and CD103 together mark hairy cell leukaemia."
+    },
+    "path.haem.lym": {
+      "note": "Hodgkin: Reed-Sternberg cells (CD15, CD30); nodular sclerosis is the commonest type, lymphocyte-rich has the best outlook. Non-Hodgkin: Burkitt t(8;14) c-MYC, starry sky; follicular t(14;18) BCL-2; mantle cell t(11;14) cyclin D1. An excision biopsy of the whole node is the diagnostic test.",
+      "sample": 19472,
+      "why": "Lymphoma needs a whole-node biopsy to see the architecture; FNAC is not enough."
+    },
+    "path.haem.pc": {
+      "note": "Multiple myeloma: CRAB (high Calcium, Renal failure, Anaemia, Bone lytic lesions), M spike, Bence Jones protein, rouleaux, punched-out skull lesions, plasma cells over 10% in marrow. Waldenström: IgM, hyperviscosity.",
+      "sample": 8801,
+      "why": "Hypercalcaemia is the C in the CRAB criteria for myeloma."
+    },
+    "path.haem.mpn": {
+      "note": "Polycythaemia vera: JAK2 V617F, high red cell mass, low erythropoietin, itching after a bath. Essential thrombocythaemia: platelets over 450,000. Primary myelofibrosis: teardrop cells, leucoerythroblastic picture, dry tap, huge spleen. CML: BCR-ABL.",
+      "sample": 8799,
+      "why": "Teardrop cells, nucleated red cells and marrow fibrosis make up primary myelofibrosis."
+    },
+    "path.neo.onc": {
+      "note": "Oncogenes need one hit (gain of function): RAS (commonest), MYC, HER2/neu, BCR-ABL, RET, KIT. Tumour suppressors need two hits (loss of function). Point mutation (RAS), amplification (MYC, HER2) and translocation (BCR-ABL) switch oncogenes on.",
+      "sample": 8835,
+      "why": "A growth signal that stays on without its ligand comes from an activated oncogene."
+    },
+    "path.neo.tsg": {
+      "note": "p53 (guardian of the genome): stops the cell cycle at G1/S to allow repair, or triggers apoptosis; the commonest mutated gene in cancer; Li-Fraumeni. RB: retinoblastoma and osteosarcoma (two-hit hypothesis). APC: familial polyposis. BRCA1/2: breast and ovary. NF1, WT1, VHL.",
+      "sample": 8815,
+      "why": "p53 halts the cell cycle after DNA damage so it can be repaired (or the cell dies)."
+    },
+    "path.neo.mol": {
+      "note": "Lynch syndrome (HNPCC): mismatch repair genes (MLH1, MSH2), microsatellite instability, right-sided colon cancers, endometrial cancer. Familial polyposis: APC, hundreds of polyps. BRCA defects: homologous recombination repair.",
+      "sample": 8840,
+      "why": "Lynch syndrome comes from defective DNA mismatch repair, which shows as microsatellite instability."
+    },
+    "path.neo.met": {
+      "note": "Carcinomas spread by lymph; sarcomas by blood (exceptions: renal cell, liver and follicular thyroid cancers spread by blood). Bone metastases: breast, prostate (osteoblastic), lung, kidney, thyroid. The commonest malignant liver tumour is a metastasis."
+    },
+    "path.imm.hs": {
+      "note": "Type I: IgE and mast cells (anaphylaxis, asthma, hay fever). Type II: antibodies against cells (transfusion reactions, Goodpasture, myasthenia, Graves). Type III: immune complexes (SLE, serum sickness, post-strep GN, Arthus). Type IV: T cells (TB granuloma, Mantoux, contact dermatitis, graft rejection)."
+    },
+    "path.imm.auto": {
+      "note": "Goodpasture: anti-GBM antibodies against type IV collagen, lung bleeding and nephritis (linear IgG on immunofluorescence). SLE: anti-dsDNA and anti-Smith. Sjögren: anti-Ro and anti-La. Most autoimmune diseases are commoner in women.",
+      "sample": 16199,
+      "why": "Haemoptysis with haematuria and anti-GBM antibodies is Goodpasture syndrome."
+    },
+    "path.imm.tx": {
+      "note": "Hyperacute rejection (minutes): pre-formed antibodies, type II. Acute (weeks to months): T cells and antibodies; treatable. Chronic (months to years): vascular narrowing and fibrosis. Graft-versus-host disease: donor T cells attack skin, gut and liver, after bone marrow transplants."
+    },
+    "path.hemo.coag": {
+      "note": "PT tests the extrinsic pathway (factor VII) and warfarin; aPTT tests the intrinsic pathway (VIII, IX, XI, XII) and heparin. Vitamin K deficiency prolongs PT first (factor VII has the shortest half-life); haemophilia prolongs only aPTT. Bleeding time tests platelets.",
+      "sample": 8792,
+      "why": "Vitamin K deficiency prolongs PT; haemophilia A leaves PT normal."
+    },
+    "path.hemo.dis": {
+      "note": "von Willebrand disease: the commonest inherited bleeding disorder, long bleeding time with long aPTT. DIC: low platelets and fibrinogen, high D-dimer, schistocytes. TTP: ADAMTS13 deficiency (pentad: fever, low platelets, haemolysis, kidney, brain). ITP is the commonest reason for elective splenectomy.",
+      "sample": 16200,
+      "why": "Chronic ITP that fails medical treatment is the commonest indication for an elective splenectomy."
+    },
+    "path.hemo.thr": {
+      "note": "Virchow triad: endothelial injury, stasis, hypercoagulability. Factor V Leiden is the commonest inherited cause of a clotting tendency. Lines of Zahn show a clot formed in flowing blood (before death). Leg vein clots travel to the pulmonary arteries.",
+      "sample": 8800,
+      "why": "A clot from the leg veins travels through the right heart and lodges in the pulmonary artery."
+    },
+    "path.gen.chr": {
+      "note": "Trisomy 21 Down; trisomy 18 Edwards (rocker-bottom feet, clenched hands); trisomy 13 Patau (cleft lip and palate, polydactyly, holoprosencephaly). 45,XO Turner; 47,XXY Klinefelter. Prader-Willi (paternal deletion) and Angelman (maternal deletion) of 15q are imprinting disorders.",
+      "sample": 16618,
+      "why": "Cleft lip and palate with intellectual disability points to Patau syndrome (trisomy 13)."
+    },
+    "path.gen.tech": {
+      "note": "FISH: finds specific deletions and translocations. Karyotyping: whole-chromosome changes. PCR amplifies DNA; RT-PCR, RNA. Southern blot: DNA; Northern: RNA; Western: protein. Microarrays find small copy-number changes."
+    },
+    "path.cvs.mi": {
+      "note": "Changes over time: coagulative necrosis by 4-12 hours, neutrophils 1-3 days, macrophages 3-7 days (rupture risk highest at 3-7 days), granulation tissue 1-2 weeks, scar by 2 months. TTC stain shows the infarct pale against red healthy muscle in the first hours.",
+      "sample": 16197,
+      "why": "Triphenyl tetrazolium chloride stains living muscle red and leaves the infarct pale."
+    },
+    "path.cvs.ie": {
+      "note": "Acute: Staph aureus on normal valves (IV drug users: tricuspid). Subacute: viridans strep on damaged valves. Signs: Osler nodes (painful), Janeway lesions (painless), Roth spots, splinter haemorrhages. Diagnosis: Duke criteria, blood cultures and echo."
+    },
+    "path.cvs.rf": {
+      "note": "Follows group A strep throat infection by 2-3 weeks (molecular mimicry). Aschoff bodies with Anitschkow (caterpillar) cells. Jones criteria: carditis, arthritis, chorea, erythema marginatum, subcutaneous nodules. Mitral valve is most affected.",
+      "sample": 18076,
+      "why": "Aschoff bodies contain Anitschkow cells with caterpillar-shaped nuclei; they are the mark of rheumatic carditis."
+    },
+    "path.ren.nephrotic": {
+      "note": "Minimal change: children, podocyte foot process effacement on electron microscopy, steroid-responsive. FSGS: commonest in adults in many places, HIV and heroin. Membranous: adults, spike and dome on silver stain, PLA2R antibodies. Diabetic: Kimmelstiel-Wilson nodules.",
+      "sample": 19130,
+      "why": "Spike-and-dome capillary walls on silver stain are membranous nephropathy."
+    },
+    "path.ren.nephritic": {
+      "note": "Haematuria, red cell casts, hypertension, oedema. Post-strep: subepithelial humps, low C3. IgA nephropathy: haematuria 1-2 days after a sore throat, the commonest GN worldwide. Rapidly progressive (crescents): Goodpasture, ANCA vasculitis, immune complex. Alport: collagen IV, deafness, eye changes."
+    },
+    "path.ren.dn": {
+      "note": "The earliest change is thickening of the glomerular basement membrane; then mesangial expansion and Kimmelstiel-Wilson nodules (nodular glomerulosclerosis). Microalbuminuria is the first clinical sign. Hyaline arteriolosclerosis of both arterioles."
+    },
+    "path.liv.hep": {
+      "note": "Viral hepatitis: ballooning degeneration, Councilman (acidophil) bodies, ground-glass cells in hepatitis B. Alcoholic hepatitis: Mallory-Denk bodies, neutrophils, AST:ALT over 2. Autoimmune hepatitis: plasma cells, interface hepatitis."
+    },
+    "path.liv.cirr": {
+      "note": "Diffuse fibrosis with regenerating nodules. Causes in India: alcohol, hepatitis B and C, fatty liver. Leads to portal hypertension, liver failure and hepatocellular cancer. Wilson (copper) and haemochromatosis (iron, Prussian blue) are inherited causes."
+    },
+    "path.liv.hcc": {
+      "note": "Risk: hepatitis B and C, cirrhosis, aflatoxin (p53 mutation). AFP rises and is used to monitor treatment. Spreads through the blood (portal vein invasion). Fibrolamellar variant: young adults, normal AFP, better outlook.",
+      "sample": 8797,
+      "why": "AFP is the tumour marker for hepatocellular carcinoma and is used to follow treatment."
+    },
+    "path.lung.copd": {
+      "note": "Emphysema: centriacinar in smokers (upper lobes), panacinar in α1-antitrypsin deficiency (lower lobes). Neutrophil elastase and MMP-12 destroy elastin. Chronic bronchitis: Reid index over 0.4 (mucous gland hyperplasia).",
+      "sample": 10355,
+      "why": "Neutrophil elastase and macrophage MMP-12 break down alveolar elastin in COPD."
+    },
+    "path.lung.ild": {
+      "note": "Usual interstitial pneumonia (IPF): patchy fibrosis, fibroblastic foci, honeycombing at the bases. Sarcoid: non-caseating granulomas, asteroid and Schaumann bodies. Asbestosis: ferruginous bodies. Silicosis: nodules in the upper lobes."
+    },
+    "path.lung.ca": {
+      "note": "Adenocarcinoma: the commonest type overall and in non-smokers, peripheral, glands and mucin (EGFR, ALK). Squamous: central, smokers, keratin pearls, PTHrP (high calcium). Small cell: central, neuroendocrine, ADH (low sodium) and ACTH, Lambert-Eaton.",
+      "sample": 8802,
+      "why": "High calcium in a smoker with a lung mass points to squamous cell carcinoma making PTHrP."
+    },
+    "path.gi.barrett": {
+      "note": "Intestinal metaplasia of the lower oesophagus (goblet cells replacing squamous lining) from long-standing reflux. Raises the risk of adenocarcinoma; followed with endoscopy and biopsy."
+    },
+    "path.gi.gastric": {
+      "note": "Intestinal type: H. pylori, glands, older men. Diffuse type: signet ring cells, linitis plastica (leather bottle stomach), E-cadherin loss. Spread: Virchow node, Krukenberg tumour (ovaries), Sister Mary Joseph nodule."
+    },
+    "path.gi.ibd": {
+      "note": "Crohn: transmural, skip lesions, non-caseating granulomas, fistulas, creeping fat. Ulcerative colitis: mucosal, continuous from the rectum, crypt abscesses, pseudopolyps. Faecal calprotectin and lactoferrin show bowel inflammation.",
+      "sample": 16202,
+      "why": "Faecal lactoferrin comes from neutrophils in the bowel and marks intestinal inflammation."
+    },
+    "path.gi.crc": {
+      "note": "Adenoma-carcinoma sequence: APC loss first, then KRAS, then p53. Villous adenomas carry the highest cancer risk. Right-sided cancers bleed (anaemia); left-sided ones obstruct. CEA for follow-up.",
+      "sample": 8838,
+      "why": "Loss of APC is the first step in the adenoma-carcinoma sequence."
+    },
+    "path.endo.thy": {
+      "note": "Papillary: commonest, Orphan Annie nuclei, nuclear grooves, psammoma bodies, lymph node spread, radiation link. Follicular: capsule and vessel invasion, spreads by blood. Medullary: C cells, calcitonin, amyloid, MEN2 (RET). Anaplastic: elderly, fatal. Hashimoto: Hürthle cells, lymphocytes, risk of lymphoma.",
+      "sample": 18121,
+      "why": "Medullary thyroid cancer with phaeochromocytoma and mucosal neuromas is MEN2B, from RET mutations."
+    },
+    "path.tl": {
+      "title": "Must-memorise translocations",
+      "note": "t(9;22) CML (BCR-ABL); t(15;17) acute promyelocytic leukaemia (PML-RARA); t(8;14) Burkitt (c-MYC); t(14;18) follicular lymphoma (BCL-2); t(11;14) mantle cell (cyclin D1); t(11;22) Ewing sarcoma (EWS-FLI1); t(X;18) synovial sarcoma; t(12;21) childhood ALL (good outlook)."
+    }
   }
 }

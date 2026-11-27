@@ -1,48 +1,184 @@
 {
   "_about": "Hand-written key points for pyt-surgery.html (27 Nov 2026, lead). Samples: FMGE recalls, no images.",
+  "reviewed": "27 Nov 2026, lead",
   "subject": "Surgery",
   "slug": "surgery",
   "intro": "Surgery in FMGE asks the same things again and again: trauma first steps, burns fluids, the investigation of choice, the classic sign and which lymph nodes drain where. These are the topics that keep coming back, most-asked first, with the one thing to remember about each.",
   "topics": {
-    "sur.basic.wound": {"note": "Healing by first intention (clean, sutured) or second intention (left open, heals by granulation). Phases: inflammation, proliferation, remodelling; collagen type III is laid down first, then replaced by type I. A pink serosanguinous discharge from a laparotomy wound around day 5-8 is the warning sign of burst abdomen (dehiscence).", "sample": 16374, "why": "A sudden copious serosanguinous discharge is the classic sign that the deep layers have given way."},
-    "sur.basic.shock": {"note": "ATLS classes of blood loss: I under 15%, II 15-30% (pulse up), III 30-40% (BP falls, confusion), IV over 40%. Class III and IV need blood. Start with 1 L warm crystalloid; avoid big volumes. Hypovolaemic shock is the commonest in trauma."},
-    "sur.basic.burn": {"note": "Rule of nines for burn area (palm of the patient's hand = 1%). Parkland: 4 mL × kg × % burn in 24 hours, half in the first 8 hours from the time of burn. Current ATLS starts adults at 2 mL × kg × % (Ringer lactate) and adjusts to urine output of 0.5 mL/kg/hour. Electrical burns need more.", "sample": 10253, "why": "ATLS: 2 mL × 50 kg × 20% = 2,000 mL in the first 24 hours (Parkland's 4 mL would give 4,000)."},
-    "sur.basic.inf": {"note": "Wound classes: clean, clean-contaminated, contaminated, dirty. Necrotising fasciitis: pain out of proportion, crepitus, rapid spread; urgent wide debridement plus antibiotics. Give prophylactic antibiotics within 60 minutes before the incision."},
-    "sur.basic.sut": {"note": "Absorbable: catgut, polyglactin (Vicryl), polydioxanone (PDS, slowest). Non-absorbable: silk, nylon, polypropylene (Prolene, used for vessels and hernia mesh). Blades: No. 11 pointed for stabbing and incision and drainage; No. 10 and 22 for skin incisions; No. 15 for small precise cuts.", "sample": 9576, "why": "The pointed No. 11 blade is used for stab incisions such as draining an abscess."},
-    "sur.trauma.survey": {"note": "Primary survey, in order: A airway with cervical spine protection, B breathing, C circulation and bleeding control, D disability (GCS, pupils), E exposure (and prevent hypothermia). Fix each problem as it is found. Then the secondary survey: head-to-toe and history (AMPLE)."},
-    "sur.trauma.tri": {"note": "Trimodal death in trauma: first peak within minutes (brain, heart, great vessel injury; only prevention helps), second peak in the first hours (the golden hour, where ATLS saves lives), third peak days to weeks later (sepsis, multi-organ failure)."},
-    "sur.trauma.abd": {"note": "FAST scan for free fluid in an unstable patient. Unstable with a positive FAST, or not responding to fluids: laparotomy. Stable: CT abdomen. The spleen is the most injured organ in blunt trauma; the small bowel in penetrating trauma.", "sample": 9586, "why": "Shock after blunt trauma that does not respond to fluids means ongoing bleeding: go straight to laparotomy."},
-    "sur.trauma.comp": {"note": "Pain out of proportion and pain on passive stretch are the early signs; pulses are lost late. Compartment pressure over 30 mmHg, or within 30 mmHg of the diastolic BP. Treat with urgent fasciotomy. Common after tibial fractures and tight casts."},
-    "sur.trauma.bt": {"note": "Cryoprecipitate: fibrinogen, factor VIII, von Willebrand factor, factor XIII. FFP: all clotting factors. Massive transfusion: give plasma, platelets and red cells about 1:1:1. Platelets are stored at 20-24 °C with agitation, red cells at 2-6 °C.", "sample": 9565, "why": "Cryoprecipitate is rich in factor VIII (and fibrinogen)."},
-    "sur.gi.eso": {"note": "From the upper incisors: the cricopharynx is about 15 cm, the aortic arch 25 cm, the GE junction 40 cm. Achalasia: loss of the nerve plexus (low NO), bird-beak on barium; Heller myotomy or POEM. Oesophageal cancer: squamous in the middle third, adenocarcinoma (Barrett) at the lower end.", "sample": 9610, "why": "The gastro-oesophageal junction is about 40 cm from the upper incisors."},
-    "sur.gi.stom": {"note": "Bleeding ulcer: a posterior duodenal ulcer erodes the gastroduodenal artery; a lesser-curve gastric ulcer, the left gastric artery. Perforation: air under the diaphragm; Graham patch repair. Gastric cancer: signet ring cells, Virchow node, Krukenberg tumour; H. pylori is a risk factor.", "sample": 9615, "why": "The left gastric artery runs along the upper lesser curvature, so a high lesser-curve ulcer bleeds from it."},
-    "sur.gi.sbo": {"note": "Commonest cause: adhesions after surgery (hernia where no previous surgery). Colicky pain, vomiting, distension, no flatus; X-ray shows dilated loops and air-fluid levels. Start with drip and suck; operate if strangulation is suspected. Gallstone ileus: pneumobilia, small bowel obstruction and an ectopic gallstone (Rigler triad).", "sample": 19385, "why": "Air in the bile tree, small bowel obstruction and a stone in the bowel make up Rigler's triad of gallstone ileus."},
-    "sur.gi.app": {"note": "Pain starts around the umbilicus and moves to the right iliac fossa (McBurney point). Alvarado score (MANTRELS): migration 1, anorexia 1, nausea or vomiting 1, tenderness in RIF 2, rebound 1, raised temperature 1, leucocytosis 2, shift to the left 1. Score 7 or more: likely appendicitis.", "sample": 13084, "why": "In the Alvarado score rebound tenderness scores 1, not 2; tenderness in the right iliac fossa and leucocytosis score 2."},
-    "sur.gi.crc": {"note": "Right-sided cancers present with anaemia; left-sided with altered bowel habit and obstruction. CEA for follow-up. Below the dentate line the anal canal drains to the superficial inguinal nodes; above it, to the internal iliac and pararectal nodes. Familial polyposis: APC gene.", "sample": 17726, "why": "The anal verge lies below the dentate line, which drains to the superficial inguinal nodes."},
-    "sur.gi.hernia": {"note": "Indirect inguinal hernia: lateral to the inferior epigastric vessels, through the deep ring, commonest in all ages. Direct: medial, through Hesselbach triangle. Femoral: below and lateral to the pubic tubercle, high risk of strangulation, commoner in women. Lichtenstein tension-free mesh repair (permanent polypropylene, large-pore, lightweight).", "sample": 9650, "why": "An absorbable mesh dissolves and the hernia comes back; repair meshes are permanent."},
-    "sur.hpb.gs": {"note": "Ultrasound is the investigation of choice for gallstones. Cholecystitis: Murphy sign, treat with early laparoscopic cholecystectomy. HIDA scan when ultrasound is unclear. Charcot triad of cholangitis: fever, jaundice, right upper pain (add shock and confusion for Reynolds pentad).", "sample": 9667, "why": "Ultrasound is the first-line investigation for the gallbladder: cheap, safe and accurate for stones."},
-    "sur.hpb.oj": {"note": "Obstructive jaundice: conjugated bilirubin, dark urine, pale stools, itching, high ALP. Painless progressive jaundice with a palpable gallbladder (Courvoisier law) suggests cancer of the pancreatic head, not stones. MRCP to map the ducts; ERCP to drain or stent.", "sample": 19041, "why": "A blocked bile duct backs up bilirubin that the liver has already conjugated."},
-    "sur.hpb.panc": {"note": "Commonest causes: gallstones, then alcohol. Diagnosis needs 2 of 3: typical pain, amylase or lipase over 3 times normal, imaging. Lipase is more specific. Severity: Ranson, BISAP, the revised Atlanta classification. Treat with fluids, pain relief and early feeding; ERCP if there is cholangitis.", "sample": 9682, "why": "Gallstones are the commonest cause of acute pancreatitis, followed by alcohol."},
-    "sur.hpb.cbd": {"note": "Choledochal cysts: Todani classification, type I (fusiform dilatation of the bile duct) is the commonest. Triad: pain, jaundice, a mass. Excised with a hepaticojejunostomy because of cancer risk. CBD stones: ERCP to clear them, then cholecystectomy."},
-    "sur.endo.thy": {"note": "A thyroid nodule is investigated first with TSH, ultrasound and fine-needle aspiration (Bethesda system). Papillary cancer is the commonest (Orphan Annie nuclei, psammoma bodies, spreads to nodes). Medullary: calcitonin, MEN2. Graves eye signs: Dalrymple, von Graefe, Stellwag, Möbius. Pemberton sign is for retrosternal goitre.", "sample": 9597, "why": "Pemberton sign (facial congestion on raising the arms) shows a retrosternal goitre, not Graves eye disease."},
-    "sur.endo.pth": {"note": "Primary hyperparathyroidism: high calcium and high PTH; usually a single adenoma. 'Bones, stones, groans and moans'. Localise the adenoma with a Tc-99m sestamibi scan before surgery. After parathyroid surgery watch for low calcium (hungry bone syndrome).", "sample": 16709, "why": "A sestamibi scan finds the overactive parathyroid adenoma before surgery."},
-    "sur.endo.men": {"note": "MEN1: parathyroid, pituitary, pancreatic tumours. MEN2A: medullary thyroid cancer, phaeochromocytoma, hyperparathyroidism. MEN2B: medullary thyroid cancer, phaeochromocytoma, mucosal neuromas. In MEN2, remove the phaeochromocytoma before the thyroid."},
-    "sur.breast.ca": {"note": "Commonest site: the upper outer quadrant. Triple assessment: examination, imaging (mammogram over 35, ultrasound under 35), core biopsy. Risk: BRCA1 and 2, Li-Fraumeni (p53), early menarche, late menopause, no children. Treatment depends on stage and receptors (ER/PR, HER2: trastuzumab).", "sample": 9592, "why": "BRCA1, BRCA2 and Li-Fraumeni carry high lifetime risks; ataxia-telangiectasia carriers have only a moderate rise."},
-    "sur.breast.fa": {"note": "Fibroadenoma: a breast mouse, a mobile painless smooth lump in young women (15-25). Confirm with ultrasound and core biopsy; can be left if small. Phyllodes tumour: older, grows fast, leaf-like pattern; needs wide excision.", "sample": 9588, "why": "Fibroadenoma is commonest in young women, in their late teens and twenties."},
-    "sur.breast.snb": {"note": "Sentinel node biopsy stages the axilla in clinically node-negative early breast cancer, using blue dye and/or radioactive tracer. If the sentinel node is negative, axillary clearance is avoided (less lymphoedema)."},
-    "sur.uro.stone": {"note": "Calcium oxalate is the commonest stone. Struvite (staghorn) with urease-making bacteria (Proteus). Uric acid stones are radiolucent; dissolve with urine alkalinisation. Ammonium urate stones with laxative abuse. Non-contrast CT is the investigation of choice. Obstructed infected kidney: drain urgently (stent or nephrostomy).", "sample": 9690, "why": "Laxative abuse causes bicarbonate loss and low urine volume, which favours ammonium urate stones."},
-    "sur.uro.pros": {"note": "BPH grows in the transitional zone; cancer in the peripheral zone (felt on rectal examination). PSA for screening and follow-up. BPH: α-blockers (tamsulosin) and 5α-reductase inhibitors (finasteride), TURP for failed drugs. Prostate cancer spreads to bone (osteoblastic) and is graded by Gleason score.", "sample": 9704, "why": "Endogenous prostatic stones form in the gland itself and are mostly calcium phosphate."},
-    "sur.uro.testis": {"note": "Seminoma is the commonest testicular tumour; very sensitive to radiotherapy. Markers: AFP (yolk sac), β-hCG (choriocarcinoma), LDH. Undescended testis raises the risk. Orchidectomy through an inguinal incision, never the scrotum. Lymph spread goes first to the para-aortic nodes.", "sample": 16368, "why": "The testis develops near the kidney, so its lymph drains first to the para-aortic nodes."},
-    "sur.uro.hydro": {"note": "Bilateral hydronephrosis: an obstruction at or below the bladder (posterior urethral valves, BPH, stricture, phimosis). Unilateral: a cause above the bladder (stone, PUJ obstruction, retrocaval ureter). An obstructed infected kidney needs urgent drainage.", "sample": 10273, "why": "Infection behind an obstructing stone is an emergency: drain the kidney first with a stent or nephrostomy."},
-    "sur.vasc.vv": {"note": "Great saphenous vein incompetence is commonest. Tests: Trendelenburg (saphenofemoral junction), Perthes (deep veins), Doppler or duplex is the investigation of choice. Treatment now: endovenous radiofrequency or laser ablation; sclerotherapy for small veins. Complication: venous ulcer above the medial malleolus.", "sample": 16375, "why": "Endovenous radiofrequency ablation has replaced stripping and ligation as the preferred treatment."},
-    "sur.vasc.dvt": {"note": "Virchow triad: stasis, vessel wall injury, high clotting tendency (surgery, pill, pregnancy, cancer). Duplex ultrasound to diagnose; D-dimer rules out when low. Treat with low molecular weight heparin, then an oral anticoagulant. The fear is a pulmonary embolism.", "sample": 9640, "why": "Recent surgery plus the pill (Virchow triad) and a swollen tender leg point to deep vein thrombosis."},
-    "sur.vasc.pad": {"note": "Intermittent claudication; rest pain and gangrene mean critical ischaemia. Ankle-brachial index under 0.9 is abnormal (very high in calcified vessels, as in diabetes). Acute ischaemia: the 6 Ps (pain, pallor, pulselessness, paraesthesia, paralysis, perishing cold). Buerger disease: young male smokers."},
-    "sur.neuro.icp": {"note": "Cushing triad of raised pressure: high BP, slow pulse, irregular breathing. Treat: head up 30°, keep CO2 normal-low, mannitol or hypertonic saline. Do not give mannitol when serum osmolality is over 320 mOsm/kg.", "sample": 19438, "why": "Mannitol works by drawing water out; above 320 mOsm/kg it risks kidney damage, so it is stopped."},
-    "sur.neuro.hi": {"note": "Extradural haematoma: middle meningeal artery, lucid interval, biconvex (lens) shape on CT. Subdural: bridging veins, crescent shape, elderly and alcoholics. GCS: eyes 4, verbal 5, motor 6; 8 or less means intubate. Raccoon eyes and Battle sign mean a base of skull fracture.", "sample": 10106, "why": "Round holes in the skull after treatment for raised pressure are burr holes from earlier surgery."},
-    "sur.onc.tnm": {"note": "T = the primary tumour's size and spread, N = nodes, M = distant metastasis. Breast T4: chest wall (4a), skin ulcer, peau d'orange or satellite nodules (4b), both (4c), inflammatory carcinoma (4d). Stage IV always means distant spread."},
-    "sur.onc.tm": {"note": "CEA: colorectal (follow-up). AFP: liver cancer and yolk sac tumours. CA-125: ovary. CA 19-9: pancreas. PSA: prostate. Calcitonin: medullary thyroid. β-hCG: choriocarcinoma. Markers are mostly for follow-up, not screening."},
-    "sur.mas": {"title": "Laparoscopic (minimal access) surgery", "note": "CO2 is used for pneumoperitoneum (pressure about 12-15 mmHg). Laparoscopic hernia repair (TEP or TAPP) is most useful for bilateral and recurrent hernias. Laparoscopic cholecystectomy: the critical view of safety before clipping.", "sample": 9654, "why": "Laparoscopy repairs both sides through the same small ports, so bilateral hernias gain the most."},
-    "sur.tx.org": {"note": "Cold storage at about 4 °C in University of Wisconsin solution. Safe cold times: heart about 4-6 hours, liver about 12, kidney up to 24-36. Reperfusion syndrome in liver transplant comes when the portal vein clamp is released."},
-    "sur.tx.tpn": {"note": "Enteral feeding is preferred whenever the gut works. TPN goes through a central line; complications: line sepsis, hyperglycaemia, liver dysfunction, refeeding syndrome (low phosphate, potassium, magnesium)."}
+    "sur.basic.wound": {
+      "note": "Healing by first intention (clean, sutured) or second intention (left open, heals by granulation). Phases: inflammation, proliferation, remodelling; collagen type III is laid down first, then replaced by type I. A pink serosanguinous discharge from a laparotomy wound around day 5-8 is the warning sign of burst abdomen (dehiscence).",
+      "sample": 16374,
+      "why": "A sudden copious serosanguinous discharge is the classic sign that the deep layers have given way."
+    },
+    "sur.basic.shock": {
+      "note": "ATLS classes of blood loss: I under 15%, II 15-30% (pulse up), III 30-40% (BP falls, confusion), IV over 40%. Class III and IV need blood. Start with 1 L warm crystalloid; avoid big volumes. Hypovolaemic shock is the commonest in trauma."
+    },
+    "sur.basic.burn": {
+      "note": "Rule of nines for burn area (palm of the patient's hand = 1%). Parkland: 4 mL × kg × % burn in 24 hours, half in the first 8 hours from the time of burn. Current ATLS starts adults at 2 mL × kg × % (Ringer lactate) and adjusts to urine output of 0.5 mL/kg/hour. Electrical burns need more.",
+      "sample": 10253,
+      "why": "ATLS: 2 mL × 50 kg × 20% = 2,000 mL in the first 24 hours (Parkland's 4 mL would give 4,000)."
+    },
+    "sur.basic.inf": {
+      "note": "Wound classes: clean, clean-contaminated, contaminated, dirty. Necrotising fasciitis: pain out of proportion, crepitus, rapid spread; urgent wide debridement plus antibiotics. Give prophylactic antibiotics within 60 minutes before the incision."
+    },
+    "sur.basic.sut": {
+      "note": "Absorbable: catgut, polyglactin (Vicryl), polydioxanone (PDS, slowest). Non-absorbable: silk, nylon, polypropylene (Prolene, used for vessels and hernia mesh). Blades: No. 11 pointed for stabbing and incision and drainage; No. 10 and 22 for skin incisions; No. 15 for small precise cuts.",
+      "sample": 9576,
+      "why": "The pointed No. 11 blade is used for stab incisions such as draining an abscess."
+    },
+    "sur.trauma.survey": {
+      "note": "Primary survey, in order: A airway with cervical spine protection, B breathing, C circulation and bleeding control, D disability (GCS, pupils), E exposure (and prevent hypothermia). Fix each problem as it is found. Then the secondary survey: head-to-toe and history (AMPLE)."
+    },
+    "sur.trauma.tri": {
+      "note": "Trimodal death in trauma: first peak within minutes (brain, heart, great vessel injury; only prevention helps), second peak in the first hours (the golden hour, where ATLS saves lives), third peak days to weeks later (sepsis, multi-organ failure)."
+    },
+    "sur.trauma.abd": {
+      "note": "FAST scan for free fluid in an unstable patient. Unstable with a positive FAST, or not responding to fluids: laparotomy. Stable: CT abdomen. The spleen is the most injured organ in blunt trauma; the small bowel in penetrating trauma.",
+      "sample": 9586,
+      "why": "Shock after blunt trauma that does not respond to fluids means ongoing bleeding: go straight to laparotomy."
+    },
+    "sur.trauma.comp": {
+      "note": "Pain out of proportion and pain on passive stretch are the early signs; pulses are lost late. Compartment pressure over 30 mmHg, or within 30 mmHg of the diastolic BP. Treat with urgent fasciotomy. Common after tibial fractures and tight casts."
+    },
+    "sur.trauma.bt": {
+      "note": "Cryoprecipitate: fibrinogen, factor VIII, von Willebrand factor, factor XIII. FFP: all clotting factors. Massive transfusion: give plasma, platelets and red cells about 1:1:1. Platelets are stored at 20-24 °C with agitation, red cells at 2-6 °C.",
+      "sample": 9565,
+      "why": "Cryoprecipitate is rich in factor VIII (and fibrinogen)."
+    },
+    "sur.gi.eso": {
+      "note": "From the upper incisors: the cricopharynx is about 15 cm, the aortic arch 25 cm, the GE junction 40 cm. Achalasia: loss of the nerve plexus (low NO), bird-beak on barium; Heller myotomy or POEM. Oesophageal cancer: squamous in the middle third, adenocarcinoma (Barrett) at the lower end.",
+      "sample": 9610,
+      "why": "The gastro-oesophageal junction is about 40 cm from the upper incisors."
+    },
+    "sur.gi.stom": {
+      "note": "Bleeding ulcer: a posterior duodenal ulcer erodes the gastroduodenal artery; a lesser-curve gastric ulcer, the left gastric artery. Perforation: air under the diaphragm; Graham patch repair. Gastric cancer: signet ring cells, Virchow node, Krukenberg tumour; H. pylori is a risk factor.",
+      "sample": 9615,
+      "why": "The left gastric artery runs along the upper lesser curvature, so a high lesser-curve ulcer bleeds from it."
+    },
+    "sur.gi.sbo": {
+      "note": "Commonest cause: adhesions after surgery (hernia where no previous surgery). Colicky pain, vomiting, distension, no flatus; X-ray shows dilated loops and air-fluid levels. Start with drip and suck; operate if strangulation is suspected. Gallstone ileus: pneumobilia, small bowel obstruction and an ectopic gallstone (Rigler triad).",
+      "sample": 19385,
+      "why": "Air in the bile tree, small bowel obstruction and a stone in the bowel make up Rigler's triad of gallstone ileus."
+    },
+    "sur.gi.app": {
+      "note": "Pain starts around the umbilicus and moves to the right iliac fossa (McBurney point). Alvarado score (MANTRELS): migration 1, anorexia 1, nausea or vomiting 1, tenderness in RIF 2, rebound 1, raised temperature 1, leucocytosis 2, shift to the left 1. Score 7 or more: likely appendicitis.",
+      "sample": 13084,
+      "why": "In the Alvarado score rebound tenderness scores 1, not 2; tenderness in the right iliac fossa and leucocytosis score 2."
+    },
+    "sur.gi.crc": {
+      "note": "Right-sided cancers present with anaemia; left-sided with altered bowel habit and obstruction. CEA for follow-up. Below the dentate line the anal canal drains to the superficial inguinal nodes; above it, to the internal iliac and pararectal nodes. Familial polyposis: APC gene.",
+      "sample": 17726,
+      "why": "The anal verge lies below the dentate line, which drains to the superficial inguinal nodes."
+    },
+    "sur.gi.hernia": {
+      "note": "Indirect inguinal hernia: lateral to the inferior epigastric vessels, through the deep ring, commonest in all ages. Direct: medial, through Hesselbach triangle. Femoral: below and lateral to the pubic tubercle, high risk of strangulation, commoner in women. Lichtenstein tension-free mesh repair (permanent polypropylene, large-pore, lightweight).",
+      "sample": 9650,
+      "why": "An absorbable mesh dissolves and the hernia comes back; repair meshes are permanent."
+    },
+    "sur.hpb.gs": {
+      "note": "Ultrasound is the investigation of choice for gallstones. Cholecystitis: Murphy sign, treat with early laparoscopic cholecystectomy. HIDA scan when ultrasound is unclear. Charcot triad of cholangitis: fever, jaundice, right upper pain (add shock and confusion for Reynolds pentad).",
+      "sample": 9667,
+      "why": "Ultrasound is the first-line investigation for the gallbladder: cheap, safe and accurate for stones."
+    },
+    "sur.hpb.oj": {
+      "note": "Obstructive jaundice: conjugated bilirubin, dark urine, pale stools, itching, high ALP. Painless progressive jaundice with a palpable gallbladder (Courvoisier law) suggests cancer of the pancreatic head, not stones. MRCP to map the ducts; ERCP to drain or stent.",
+      "sample": 19041,
+      "why": "A blocked bile duct backs up bilirubin that the liver has already conjugated."
+    },
+    "sur.hpb.panc": {
+      "note": "Commonest causes: gallstones, then alcohol. Diagnosis needs 2 of 3: typical pain, amylase or lipase over 3 times normal, imaging. Lipase is more specific. Severity: Ranson, BISAP, the revised Atlanta classification. Treat with fluids, pain relief and early feeding; ERCP if there is cholangitis.",
+      "sample": 9682,
+      "why": "Gallstones are the commonest cause of acute pancreatitis, followed by alcohol."
+    },
+    "sur.hpb.cbd": {
+      "note": "Choledochal cysts: Todani classification, type I (fusiform dilatation of the bile duct) is the commonest. Triad: pain, jaundice, a mass. Excised with a hepaticojejunostomy because of cancer risk. CBD stones: ERCP to clear them, then cholecystectomy."
+    },
+    "sur.endo.thy": {
+      "note": "A thyroid nodule is investigated first with TSH, ultrasound and fine-needle aspiration (Bethesda system). Papillary cancer is the commonest (Orphan Annie nuclei, psammoma bodies, spreads to nodes). Medullary: calcitonin, MEN2. Graves eye signs: Dalrymple, von Graefe, Stellwag, Möbius. Pemberton sign is for retrosternal goitre.",
+      "sample": 9597,
+      "why": "Pemberton sign (facial congestion on raising the arms) shows a retrosternal goitre, not Graves eye disease."
+    },
+    "sur.endo.pth": {
+      "note": "Primary hyperparathyroidism: high calcium and high PTH; usually a single adenoma. 'Bones, stones, groans and moans'. Localise the adenoma with a Tc-99m sestamibi scan before surgery. After parathyroid surgery watch for low calcium (hungry bone syndrome).",
+      "sample": 16709,
+      "why": "A sestamibi scan finds the overactive parathyroid adenoma before surgery."
+    },
+    "sur.endo.men": {
+      "note": "MEN1: parathyroid, pituitary, pancreatic tumours. MEN2A: medullary thyroid cancer, phaeochromocytoma, hyperparathyroidism. MEN2B: medullary thyroid cancer, phaeochromocytoma, mucosal neuromas. In MEN2, remove the phaeochromocytoma before the thyroid."
+    },
+    "sur.breast.ca": {
+      "note": "Commonest site: the upper outer quadrant. Triple assessment: examination, imaging (mammogram over 35, ultrasound under 35), core biopsy. Risk: BRCA1 and 2, Li-Fraumeni (p53), early menarche, late menopause, no children. Treatment depends on stage and receptors (ER/PR, HER2: trastuzumab).",
+      "sample": 9592,
+      "why": "BRCA1, BRCA2 and Li-Fraumeni carry high lifetime risks; ataxia-telangiectasia carriers have only a moderate rise."
+    },
+    "sur.breast.fa": {
+      "note": "Fibroadenoma: a breast mouse, a mobile painless smooth lump in young women (15-25). Confirm with ultrasound and core biopsy; can be left if small. Phyllodes tumour: older, grows fast, leaf-like pattern; needs wide excision.",
+      "sample": 9588,
+      "why": "Fibroadenoma is commonest in young women, in their late teens and twenties."
+    },
+    "sur.breast.snb": {
+      "note": "Sentinel node biopsy stages the axilla in clinically node-negative early breast cancer, using blue dye and/or radioactive tracer. If the sentinel node is negative, axillary clearance is avoided (less lymphoedema)."
+    },
+    "sur.uro.stone": {
+      "note": "Calcium oxalate is the commonest stone. Struvite (staghorn) with urease-making bacteria (Proteus). Uric acid stones are radiolucent; dissolve with urine alkalinisation. Ammonium urate stones with laxative abuse. Non-contrast CT is the investigation of choice. Obstructed infected kidney: drain urgently (stent or nephrostomy).",
+      "sample": 9690,
+      "why": "Laxative abuse causes bicarbonate loss and low urine volume, which favours ammonium urate stones."
+    },
+    "sur.uro.pros": {
+      "note": "BPH grows in the transitional zone; cancer in the peripheral zone (felt on rectal examination). PSA for screening and follow-up. BPH: α-blockers (tamsulosin) and 5α-reductase inhibitors (finasteride), TURP for failed drugs. Prostate cancer spreads to bone (osteoblastic) and is graded by Gleason score.",
+      "sample": 9704,
+      "why": "Endogenous prostatic stones form in the gland itself and are mostly calcium phosphate."
+    },
+    "sur.uro.testis": {
+      "note": "Seminoma is the commonest testicular tumour; very sensitive to radiotherapy. Markers: AFP (yolk sac), β-hCG (choriocarcinoma), LDH. Undescended testis raises the risk. Orchidectomy through an inguinal incision, never the scrotum. Lymph spread goes first to the para-aortic nodes.",
+      "sample": 16368,
+      "why": "The testis develops near the kidney, so its lymph drains first to the para-aortic nodes."
+    },
+    "sur.uro.hydro": {
+      "note": "Bilateral hydronephrosis: an obstruction at or below the bladder (posterior urethral valves, BPH, stricture, phimosis). Unilateral: a cause above the bladder (stone, PUJ obstruction, retrocaval ureter). An obstructed infected kidney needs urgent drainage.",
+      "sample": 10273,
+      "why": "Infection behind an obstructing stone is an emergency: drain the kidney first with a stent or nephrostomy."
+    },
+    "sur.vasc.vv": {
+      "note": "Great saphenous vein incompetence is commonest. Tests: Trendelenburg (saphenofemoral junction), Perthes (deep veins), Doppler or duplex is the investigation of choice. Treatment now: endovenous radiofrequency or laser ablation; sclerotherapy for small veins. Complication: venous ulcer above the medial malleolus.",
+      "sample": 16375,
+      "why": "Endovenous radiofrequency ablation has replaced stripping and ligation as the preferred treatment."
+    },
+    "sur.vasc.dvt": {
+      "note": "Virchow triad: stasis, vessel wall injury, high clotting tendency (surgery, pill, pregnancy, cancer). Duplex ultrasound to diagnose; D-dimer rules out when low. Treat with low molecular weight heparin, then an oral anticoagulant. The fear is a pulmonary embolism.",
+      "sample": 9640,
+      "why": "Recent surgery plus the pill (Virchow triad) and a swollen tender leg point to deep vein thrombosis."
+    },
+    "sur.vasc.pad": {
+      "note": "Intermittent claudication; rest pain and gangrene mean critical ischaemia. Ankle-brachial index under 0.9 is abnormal (very high in calcified vessels, as in diabetes). Acute ischaemia: the 6 Ps (pain, pallor, pulselessness, paraesthesia, paralysis, perishing cold). Buerger disease: young male smokers."
+    },
+    "sur.neuro.icp": {
+      "note": "Cushing triad of raised pressure: high BP, slow pulse, irregular breathing. Treat: head up 30°, keep CO2 normal-low, mannitol or hypertonic saline. Do not give mannitol when serum osmolality is over 320 mOsm/kg.",
+      "sample": 19438,
+      "why": "Mannitol works by drawing water out; above 320 mOsm/kg it risks kidney damage, so it is stopped."
+    },
+    "sur.neuro.hi": {
+      "note": "Extradural haematoma: middle meningeal artery, lucid interval, biconvex (lens) shape on CT. Subdural: bridging veins, crescent shape, elderly and alcoholics. GCS: eyes 4, verbal 5, motor 6; 8 or less means intubate. Raccoon eyes and Battle sign mean a base of skull fracture.",
+      "sample": 10106,
+      "why": "Round holes in the skull after treatment for raised pressure are burr holes from earlier surgery."
+    },
+    "sur.onc.tnm": {
+      "note": "T = the primary tumour's size and spread, N = nodes, M = distant metastasis. Breast T4: chest wall (4a), skin ulcer, peau d'orange or satellite nodules (4b), both (4c), inflammatory carcinoma (4d). Stage IV always means distant spread."
+    },
+    "sur.onc.tm": {
+      "note": "CEA: colorectal (follow-up). AFP: liver cancer and yolk sac tumours. CA-125: ovary. CA 19-9: pancreas. PSA: prostate. Calcitonin: medullary thyroid. β-hCG: choriocarcinoma. Markers are mostly for follow-up, not screening."
+    },
+    "sur.mas": {
+      "title": "Laparoscopic (minimal access) surgery",
+      "note": "CO2 is used for pneumoperitoneum (pressure about 12-15 mmHg). Laparoscopic hernia repair (TEP or TAPP) is most useful for bilateral and recurrent hernias. Laparoscopic cholecystectomy: the critical view of safety before clipping.",
+      "sample": 9654,
+      "why": "Laparoscopy repairs both sides through the same small ports, so bilateral hernias gain the most."
+    },
+    "sur.tx.org": {
+      "note": "Cold storage at about 4 °C in University of Wisconsin solution. Safe cold times: heart about 4-6 hours, liver about 12, kidney up to 24-36. Reperfusion syndrome in liver transplant comes when the portal vein clamp is released."
+    },
+    "sur.tx.tpn": {
+      "note": "Enteral feeding is preferred whenever the gut works. TPN goes through a central line; complications: line sepsis, hyperglycaemia, liver dysfunction, refeeding syndrome (low phosphate, potassium, magnesium)."
+    }
   }
 }

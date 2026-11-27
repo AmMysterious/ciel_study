@@ -214,9 +214,16 @@ STYLE = """<style>
 """
 
 
+def NOTES():
+    """Only notes the lead has reviewed ("reviewed" set) become public pages. A helper's draft has no such key, so a
+    rebuild for another subject can never publish it or link to it by accident (27 Nov: helpers draft some subjects)."""
+    return [nf for nf in sorted((HERE / "pyt_notes").glob("*.json"))
+            if json.loads(nf.read_text(encoding="utf-8")).get("reviewed")]
+
+
 def main():
     changed = []
-    for nf in sorted((HERE / "pyt_notes").glob("*.json")):
+    for nf in NOTES():
         name, page = build(nf)
         f = HERE / name
         old = f.read_text(encoding="utf-8") if f.exists() else ""
@@ -228,7 +235,7 @@ def main():
                 f.write_text(page, encoding="utf-8", newline="\n")
     # the FMGE PYQ page lists every subject page that exists, between its PYT markers
     hub = HERE / "fmge-previous-year-questions.html"
-    subs = sorted((json.loads(nf.read_text(encoding="utf-8")) for nf in (HERE / "pyt_notes").glob("*.json")),
+    subs = sorted((json.loads(nf.read_text(encoding="utf-8")) for nf in NOTES()),
                   key=lambda n: n["subject"])
     links = ", ".join(f'<a href="pyt-{n["slug"]}.html">{e(n["subject"])}</a>' for n in subs)
     h = hub.read_text(encoding="utf-8")
