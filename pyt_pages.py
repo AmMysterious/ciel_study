@@ -105,12 +105,14 @@ def build(notes_file: Path) -> tuple[str, str]:
             f"free on Telegram.")
     url = f"{BASE}/pyt-{slug}.html"
 
-    body, quiz = [], []
+    body, quiz, toc = [], [], []
     for s in order:
         S = sections[s]
         if not S["topics"]:
             continue
-        body.append(f'<section class="sec" id="{e(re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-"))}">')
+        sid = re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
+        toc.append(f'<a href="#{e(sid)}">{e(s)}</a>')
+        body.append(f'<section class="sec" id="{e(sid)}">')
         body.append(f'<h2>{e(s)} <small>{len(S["ids"]):,} questions</small></h2>')
         for tid, topic, rank, marks, n in S["topics"]:
             note = notes.get(tid, {})
@@ -174,6 +176,7 @@ def build(notes_file: Path) -> tuple[str, str]:
             f'<span class="b b-hy">High-yield</span> asked often · <span class="b b-rep">Repeated</span> the same '
             f'idea has come back in later papers. A question can belong to more than one topic, so the topic counts '
             f'add up to more than {total:,}. Updated {stamp}, rebuilt from the question bank.</p>\n'
+            + (f'<nav class="toc" aria-label="Sections"><span>Jump to</span>{"".join(toc)}</nav>\n' if len(toc) > 1 else "")
             + "\n".join(body) +
             f'\n<p class="end"><a class="btn btn-primary" href="{BOT}?start=pyt_{slug}" rel="noopener">'
             f'Practise {subject} free on Telegram</a></p>\n' + foot)

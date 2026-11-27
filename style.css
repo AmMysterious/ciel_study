@@ -907,3 +907,9 @@ details.more-feat > .grid { margin-top: 10px; }
 @media (max-width: 620px) { .topic-tiles { grid-template-columns: repeat(2, 1fr); } }
 /* cards inside the fold are hidden until opened, so the scroll reveal never sees them: show them plainly */
 details.more-feat .card { opacity: 1 !important; transform: none !important; visibility: visible !important; }
+/* "On this page" / "Jump to" lists (toc_build.py, pyt_pages.py) - 27 Nov tidy-up */
+.toc { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 10px 0 18px; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); font-size: .84rem; }
+.toc span { color: var(--text-dim); font-weight: 700; margin-right: 4px; }
+.toc a { padding: 3px 9px; border: 1px solid var(--line); border-radius: 99px; text-decoration: none; color: var(--text); white-space: nowrap; }
+.toc a:hover { border-color: var(--amber); color: var(--amber); }
+h2[id], section[id] { scroll-margin-top: 80px; }
