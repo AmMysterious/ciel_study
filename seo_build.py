@@ -65,6 +65,8 @@ PAGES = [
     ("terms.html",    "0.3", "yearly"),
     ("privacy.html",  "0.3", "yearly"),
 ]
+# 27 Nov 2026: one previous-year-topics page per subject (pyt_pages.py), rebuilt weekly from the bank
+PAGES += [(f.name, "0.8", "weekly") for f in sorted(HERE.glob("pyt-*.html"))]
 
 # ⚠ THE ALLOW LIST IS DELIBERATE AND WORTH RE-READING BEFORE CHANGING IT.
 # These are the agents that read a page in order to ANSWER A QUESTION with it.

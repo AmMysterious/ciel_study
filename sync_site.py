@@ -283,9 +283,17 @@ def sync_exam_pages(n: dict) -> list[str]:
         if not f.exists():
             continue
         s = old = f.read_text(encoding="utf-8")
-        for key in ("exam_fmge", "exam_neetpg", "exam_inicet", "exam_cms"):
-            s = re.sub(rf'(<b data-stat="{key}">)[^<]*(</b>)', rf'\g<1>{n[key]:,}\g<2>', s)
+        # 27 Nov: the per-exam counts never overlap (each question is counted once, under the exam it was
+        # recalled from). ChatGPT read "share one bank" as possible double counting, so the page now spells out
+        # the sums, and the date moves only when a count actually changed.
+        vals = {k: n[k] for k in ("exam_fmge", "exam_neetpg", "exam_inicet", "exam_cms")}
+        vals["exam_shared"] = vals["exam_fmge"] + vals["exam_neetpg"] + vals["exam_inicet"]
+        vals["exam_all"] = vals["exam_shared"] + vals["exam_cms"]
+        for key, val in vals.items():
+            s = re.sub(rf'(<b data-stat="{key}">)[^<]*(</b>)', rf'\g<1>{val:,}\g<2>', s)
         if s != old:
+            d = datetime.date.today()
+            s = re.sub(r'(<span data-stat="exam_asof">)[^<]*(</span>)', rf'\g<1>{d.day} {d:%b %Y}\g<2>', s)
             if not CHECK:
                 f.write_text(s, encoding="utf-8", newline="\n")
             changed.append(f.name)
@@ -312,6 +320,11 @@ def sync_fmge_pyq() -> list[str]:
     day = datetime.date.today().strftime("%d %B %Y").lstrip("0")
     s = old = f.read_text(encoding="utf-8")
     s = re.sub(r'<ul class="subs">.*?</ul>', lambda _: ul, s, count=1, flags=re.S)
+    # 27 Nov: the headline count (title tags + first paragraph) was still the 1 Nov "3,148" while the table and the
+    # exams page said 7,861 - an AI reading both pages called the counts inconsistent. Same total as the table now.
+    tot = f"{sum(k for _, k in rows):,}"
+    s = re.sub(r"[\d,]+ FMGE previous-year recall questions", f"{tot} FMGE previous-year recall questions", s)
+    s = re.sub(r"<strong>[\d,]+ FMGE recall questions</strong>", f"<strong>{tot} FMGE recall questions</strong>", s)
     s = re.sub(r"FMGE recall questions in the bank on [^.]+\. [\d,]+ come with a picture",
                f"FMGE recall questions in the bank on {day}. {pics:,} come with a picture", s)
     if s != old and not CHECK:
