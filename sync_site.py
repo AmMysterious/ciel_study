@@ -537,8 +537,7 @@ def render_milestones(n: dict) -> list[str]:
     s = old = idx.read_text(encoding="utf-8")
     pat = re.compile(r"(<!--MILESTONES:START-->).*?(<!--MILESTONES:END-->)", re.S)
     if not pat.search(s):
-        print("⚠ index.html has no MILESTONES markers — band not injected")
-        return []
+        return []   # 27 Nov: the home page no longer carries the history band (it is on fixes.html)
     s = pat.sub(lambda _m: f"<!--MILESTONES:START-->\n{block}\n  <!--MILESTONES:END-->", s)
     if s != old:
         if not CHECK:

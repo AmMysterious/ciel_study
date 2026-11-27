@@ -244,6 +244,21 @@ def main():
         changed.append(hub.name)
         if not CHECK:
             hub.write_text(h2, encoding="utf-8", newline="\n")
+    # the home page's Topics band: one tile per subject page, with its topic count (27 Nov tidy-up)
+    home = HERE / "index.html"
+    tiles = []
+    for n in subs:
+        pg = HERE / f'pyt-{n["slug"]}.html'
+        k = pg.read_text(encoding="utf-8").count('class="topic"') if pg.exists() else 0
+        name = n["subject"].replace(" (PSM)", "").replace("Obstetrics & Gynaecology", "OBG")
+        tiles.append(f'<li><a href="pyt-{n["slug"]}.html"><b>{e(name)}</b><span>{k} topics</span></a></li>')
+    grid = '<ul class="topic-tiles">' + "".join(tiles) + "</ul>"
+    h = home.read_text(encoding="utf-8")
+    h2 = re.sub(r"<!--PYT:grid-->.*?<!--/PYT-->", lambda _: f"<!--PYT:grid-->{grid}<!--/PYT-->", h, flags=re.S)
+    if h2 != h:
+        changed.append(home.name)
+        if not CHECK:
+            home.write_text(h2, encoding="utf-8", newline="\n")
     print(("would change: " if CHECK else "written: ") + (", ".join(changed) or "nothing"))
 
 
