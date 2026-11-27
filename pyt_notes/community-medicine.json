@@ -1,0 +1,190 @@
+{
+  "_about": "Hand-written key points for pyt-community-medicine.html (27 Nov 2026, lead). Samples: FMGE recalls, no images.",
+  "subject": "Community Medicine (PSM)",
+  "slug": "community-medicine",
+  "intro": "PSM is one of FMGE's highest-scoring subjects: formulas, schedules, programmes and cut-offs that are asked almost word for word every year. These are the topics that keep coming back, most-asked first, with the one thing to remember about each.",
+  "topics": {
+    "psm.epi.design": {
+      "note": "Case-control: start from disease, look back at exposure; gives the odds ratio; good for rare diseases. Cohort: start from exposure, follow forward; gives incidence and relative risk. RCT: the best evidence; randomisation removes confounding, blinding removes observer bias. Hawthorne effect: people behave differently when watched.",
+      "sample": 9056,
+      "why": "Changing behaviour because one knows one is being observed is the Hawthorne effect."
+    },
+    "psm.epi.meas": {
+      "note": "Incidence = new cases in a period; prevalence = all existing cases (prevalence = incidence × duration). Crude death rate uses the mid-year population (1 July). IMR per 1,000 live births; MMR per 100,000 live births. Case fatality rate shows how deadly a disease is.",
+      "sample": 9050,
+      "why": "Rates use the mid-year population, counted on 1 July."
+    },
+    "psm.epi.risk": {
+      "note": "Relative risk = incidence in exposed ÷ incidence in unexposed (cohort). Odds ratio = ad/bc (case-control). Attributable risk = incidence in exposed − incidence in unexposed; as a percentage of the exposed incidence it shows how much could be prevented. NNT = 1 ÷ absolute risk reduction.",
+      "sample": 18589,
+      "why": "Smokers 40/400 = 10%, non-smokers 10/500 = 2%: relative risk = 10 ÷ 2 = 5."
+    },
+    "psm.epi.screen": {
+      "note": "Sensitivity = TP/(TP+FN), true positive rate, good for ruling out. Specificity = TN/(TN+FP), good for ruling in. PPV = TP/(TP+FP), rises with prevalence; NPV falls as prevalence rises. Sensitivity and specificity do not change with prevalence.",
+      "sample": 10222,
+      "why": "Of 10,000 people, 100 are sick: 80 true positives; 9,900 well: 990 false positives. PPV = 80 ÷ 1,070 ≈ 7.5%."
+    },
+    "psm.epi.trans": {
+      "note": "Secondary attack rate = new cases among susceptible contacts ÷ total susceptible contacts (the first case excluded), within one incubation period. Herd immunity protects the unvaccinated when enough are immune. Chronic carriers shed the organism for a long time (typhoid: gallbladder).",
+      "sample": 9066,
+      "why": "Chronic carriers keep shedding the organism for a long time, like typhoid carriers."
+    },
+    "psm.epi.nat": {
+      "note": "Levels of prevention: primordial (stop risk factors from arising, e.g. healthy habits in children), primary (before disease: vaccines, hand washing), secondary (early diagnosis and treatment: screening), tertiary (limit disability and rehabilitate).",
+      "sample": 10458,
+      "why": "Screening finds disease early, before symptoms: that is secondary prevention."
+    },
+    "psm.bio.central": {
+      "note": "Mean is pulled by outliers; median is best for skewed data; mode is the most frequent value. Measures of spread: range, standard deviation, variance, coefficient of variation (SD/mean × 100). Standard error measures how precise a sample estimate is, not spread."
+    },
+    "psm.bio.normal": {
+      "note": "A bell-shaped curve: mean = median = mode. About 68% of values lie within 1 SD, 95% within 2 SD (1.96 exactly), 99.7% within 3 SD. Skewed right: mean > median > mode.",
+      "sample": 16589,
+      "why": "About 68% of values fall within one standard deviation of the mean."
+    },
+    "psm.bio.hyp": {
+      "note": "p under 0.05 is called significant. Type I error (α): saying there is a difference when there is none; type II (β): missing a real difference; power = 1 − β. Tests: paired t-test (same group before and after), unpaired t-test (two groups), ANOVA (3+ groups), chi-square (proportions).",
+      "sample": 10440,
+      "why": "The same patients measured before and after the drug: a paired t-test."
+    },
+    "psm.bio.samp": {
+      "note": "Simple random: every unit has an equal chance. Systematic: every kth unit. Stratified: random samples from each subgroup (good when groups differ). Cluster: whole groups such as villages (used in immunisation surveys, 30 × 7). Snowball: subjects refer others (hidden populations).",
+      "sample": 9196,
+      "why": "Recruiting through referrals from earlier subjects is snowball sampling."
+    },
+    "psm.vac.nis": {
+      "note": "Pregnancy: Td 2 doses 4 weeks apart, or one booster if fully vaccinated in the last 3 years. Children: BCG, OPV-0 and hepatitis B at birth; pentavalent, OPV and rotavirus at 6, 10, 14 weeks; MR at 9-12 and 16-24 months; Td at 10 and 16 years. Mission Indradhanush covers the routine schedule's diseases.",
+      "sample": 16267,
+      "why": "A woman vaccinated in a pregnancy within the last 3 years needs only one Td booster."
+    },
+    "psm.vac.types": {
+      "note": "Live: BCG, OPV, measles, MR/MMR, rotavirus, yellow fever, varicella, typhoid Ty21a. Killed or subunit: IPV, hepatitis B, DPT components, rabies, typhoid Vi. Live vaccines are avoided in pregnancy and in the immunocompromised. Thiomersal preserves multi-dose DPT, pentavalent and hepatitis B vials.",
+      "sample": 9075,
+      "why": "Thiomersal is the preservative in DPT; live vaccines like BCG, OPV and MR do not use it."
+    },
+    "psm.vac.cold": {
+      "note": "Most sensitive to heat: OPV (then measles). Most sensitive to freezing: hepatitis B, DPT, Td, pentavalent (check with the shake test). Ice-lined refrigerator +2 to +8 °C; deep freezer −15 to −25 °C. Vaccine vial monitor: discard when the square matches or is darker than the circle.",
+      "sample": 9077,
+      "why": "A dial thermometer uses a bimetallic strip that bends as temperature changes."
+    },
+    "psm.cd.tb": {
+      "note": "Infection (not disease) prevalence is measured with the Mantoux (tuberculin) test. Disease: sputum CBNAAT. Annual risk of TB infection is the best index of TB problem in a community. Treatment under NTEP; notify on Nikshay.",
+      "sample": 9088,
+      "why": "The tuberculin (Mantoux) test shows infection, so it is used for infection prevalence surveys."
+    },
+    "psm.cd.rabies": {
+      "note": "Category I (touching, licks on intact skin): no treatment. II (nibbling, minor scratches without bleeding): wound wash and vaccine. III (bleeding bites, licks on broken skin or mucosa, any bat contact): wound wash, vaccine and rabies immunoglobulin. Wash with soap and running water for 15 minutes. IM schedule: days 0, 3, 7, 14, 28 (Essen); ID: 0, 3, 7, 28.",
+      "sample": 9103,
+      "why": "Rabies passes through saliva on mucosa or broken skin; eating meat of an infected animal is not a route."
+    },
+    "psm.cd.malaria": {
+      "note": "Incubation: falciparum about 12 days, vivax 14, malariae 28. Indices: annual parasite incidence (API) per 1,000, slide positivity rate. India: vivax with chloroquine plus 14-day primaquine; falciparum with ACT (artesunate + sulfadoxine-pyrimethamine; artemether-lumefantrine in the north-east).",
+      "sample": 9125,
+      "why": "Falciparum has the shortest incubation period, about 12 days."
+    },
+    "psm.cd.measles": {
+      "note": "Infectious from 4 days before to 4 days after the rash appears; isolate for that time. Secondary attack rate about 80%. Vaccine within 72 hours of exposure can protect; immunoglobulin within 6 days. Give vitamin A to every case."
+    },
+    "psm.cd.dengue": {
+      "note": "Aedes aegypti, a day biter that breeds in clean stored water; flight range about 100 m. Larval indices: house index, container index, Breteau index (best). A second infection with a different serotype raises the risk of severe dengue."
+    },
+    "psm.cd.hiv": {
+      "note": "Needle-stick risk: hepatitis B about 30%, hepatitis C about 3%, HIV about 0.3%. Post-exposure prophylaxis within 72 hours (best within 2 hours), for 28 days. Mother to child: ART for the mother, nevirapine for the baby."
+    },
+    "psm.nhp.ntep": {
+      "note": "National TB Elimination Programme. Nikshay is the online case notification and tracking portal; Nikshay Poshan Yojana pays patients for nutrition. Diagnosis by CBNAAT/TrueNat; daily fixed-dose treatment by weight bands. Goal: end TB in India.",
+      "sample": 16583,
+      "why": "Nikshay is the web portal for TB notification and patient tracking."
+    },
+    "psm.nhp.nacp": {
+      "note": "National AIDS Control Programme: ICTC for testing and counselling, ART centres, PPTCT (prevention of parent-to-child transmission), targeted interventions for high-risk groups, blood safety. Test and treat: ART for everyone diagnosed."
+    },
+    "psm.nhp.nvbdcp": {
+      "note": "Covers malaria, dengue, chikungunya, Japanese encephalitis, kala-azar and filariasis. Long-lasting insecticidal nets use synthetic pyrethroids such as deltamethrin. Filariasis elimination: mass drug administration (DEC with albendazole, plus ivermectin in some areas).",
+      "sample": 9122,
+      "why": "Insecticide-treated bed nets use pyrethroids such as deltamethrin and cyfluthrin."
+    },
+    "psm.nhp.rmnch": {
+      "note": "RMNCH+A covers reproductive, maternal, newborn, child and adolescent health. JSY (cash for institutional delivery), JSSK (free delivery and newborn care), RBSK (child screening for 4 Ds), RKSK (adolescents), PMSMA (antenatal check on the 9th of every month)."
+    },
+    "psm.nhp.nhm": {
+      "note": "ASHA: one per 1,000 population (rural), a woman from the village. Home-based newborn care: ASHA visits on days 3, 7, 14, 21, 28 and 42 after a hospital birth; a home birth adds a visit on day 1. Anganwadi worker under ICDS; ANM at the subcentre.",
+      "sample": 9142,
+      "why": "Home-based newborn care visits continue up to day 42."
+    },
+    "psm.plan.levels": {
+      "note": "Subcentre: 5,000 population in plains (3,000 hilly or tribal). PHC: 30,000 (20,000). CHC: 120,000 (80,000), 30 beds, 4 specialists, the first referral unit. Health and Wellness Centres (Ayushman Arogya Mandir) upgrade subcentres and PHCs."
+    },
+    "psm.plan.comm": {
+      "note": "Bhore Committee (1946): the foundation of primary health care in India, the PHC idea. Mudaliar (1962): strengthen PHCs. Kartar Singh (1973): multipurpose workers. Shrivastava (1975): community health volunteers.",
+      "sample": 10235,
+      "why": "The Bhore Committee (1946) laid out India's health planning and the primary health centre."
+    },
+    "psm.plan.ind": {
+      "note": "HDI: life expectancy, education and income. DALY = years of life lost + years lived with disability. IMR is the best indicator of a community's health and development. Physical Quality of Life Index: IMR, life expectancy at age 1, literacy."
+    },
+    "psm.plan.uhc": {
+      "note": "Universal health coverage: everyone gets the services they need without financial hardship. WHO's old target: at least 5% of GNP spent on health. In India, Ayushman Bharat PM-JAY covers hospital care up to ₹5 lakh per family per year.",
+      "sample": 16276,
+      "why": "WHO suggested that at least 5% of GNP be spent on health."
+    },
+    "psm.scr.crit": {
+      "note": "Wilson and Jungner: an important health problem, a recognisable early stage, an acceptable test, an effective treatment, and a cost that is worth it. Screening is secondary prevention."
+    },
+    "psm.scr.bias": {
+      "note": "Lead time bias: screening finds disease earlier, so survival looks longer even if death comes at the same time. Length bias: screening picks up slow-growing disease more often. Selection bias: healthier people volunteer for screening."
+    },
+    "psm.nut.vit": {
+      "note": "Vitamin A deficiency: night blindness (earliest), conjunctival xerosis, Bitot spots, keratomalacia. Programme dose: 100,000 IU at 9 months, then 200,000 IU every 6 months to 5 years. Iodine: salt iodised to 30 ppm at production, 15 ppm at the consumer.",
+      "sample": 16263,
+      "why": "Dryness of the eyes (xerophthalmia) is caused by vitamin A deficiency."
+    },
+    "psm.nut.pem": {
+      "note": "Wasting = low weight-for-height (acute). Stunting = low height-for-age (chronic). Underweight = low weight-for-age (both). SAM: weight-for-height under −3 SD, MUAC under 11.5 cm, or bilateral oedema.",
+      "sample": 9144,
+      "why": "Low weight for height is wasting, a sign of acute malnutrition."
+    },
+    "psm.nut.prog": {
+      "note": "ICDS (Anganwadi): supplementary food, growth monitoring, preschool education, immunisation. Mid-Day Meal (PM POSHAN): school children. Anaemia Mukt Bharat: iron-folic acid by age group (6x6x6 strategy). POSHAN Abhiyaan targets stunting, anaemia and low birth weight."
+    },
+    "psm.mch.anc": {
+      "note": "At least 4 antenatal visits; PMSMA check on the 9th of each month. Iron-folic acid daily from the second trimester for 180 days; calcium; deworming after the first trimester. Average weight gain in pregnancy about 10-12 kg."
+    },
+    "psm.mch.ind": {
+      "note": "MMR per 100,000 live births; maternal death up to 42 days after the end of pregnancy. Commonest direct cause: haemorrhage; commonest indirect cause in India: anaemia. IMR per 1,000 live births; perinatal mortality from 28 weeks of pregnancy to 7 days after birth.",
+      "sample": 16404,
+      "why": "Anaemia is the commonest indirect cause of maternal death in India."
+    },
+    "psm.mch.growth": {
+      "note": "WHO growth charts (2006). Weight-for-height shows wasting; height-for-age shows stunting; weight-for-age shows underweight. The growth chart (road to health) is kept by the mother; a flat or falling line is the earliest warning.",
+      "sample": 16590,
+      "why": "Wasting is measured by weight-for-height."
+    },
+    "psm.dis": {
+      "title": "Disaster management",
+      "note": "The disaster cycle: response, rehabilitation, mitigation, preparedness. Triage colours: red (immediate), yellow (urgent), green (walking wounded), black (dead or expectant). After floods, watch for diarrhoea, leptospirosis and vector-borne diseases."
+    },
+    "psm.bmw": {
+      "title": "Biomedical waste management",
+      "note": "Colour codes (2016 rules): yellow, infectious and anatomical waste, soiled dressings (incinerated); red, contaminated recyclables like tubing, catheters, gloves (autoclaved); white translucent puncture-proof, sharps; blue, glassware and metallic implants. Untreated waste must not be stored beyond 48 hours."
+    },
+    "psm.env": {
+      "title": "Environmental health: water, air, sanitation",
+      "note": "Water: chlorine demand, residual free chlorine 0.5 mg/L after 1 hour contact; Horrock's apparatus measures chlorine demand. Coliforms are the indicator of faecal contamination. Fluoride over 1.5 mg/L causes fluorosis. Noise: over 85 dB damages hearing."
+    },
+    "psm.occ": {
+      "title": "Occupational health",
+      "note": "Pneumoconioses: silicosis (the commonest in India; mining, sandblasting), asbestosis (mesothelioma), byssinosis (cotton, Monday fever), bagassosis (sugarcane). Lead poisoning: basophilic stippling, Burton line, wrist drop. ESI Act covers workers' medical and cash benefits. Needle-stick HIV risk is the lowest of the blood-borne viruses.",
+      "sample": 18316,
+      "why": "HIV transmission after a needle-stick is about 0.3%, far lower than hepatitis B or C."
+    },
+    "psm.he": {
+      "title": "Health education and communication",
+      "note": "Approaches: regulatory, service, health education, primary health care. Communication: one-way lecture vs two-way discussion. Group methods: panel discussion, symposium, workshop, role play. KAP = knowledge, attitude, practice; behaviour change is the aim."
+    },
+    "psm.intl": {
+      "title": "SDGs and international health",
+      "note": "17 Sustainable Development Goals; goal 3 is good health and well-being, with targets for 2030 (MMR under 70 per 100,000, newborn deaths under 12 per 1,000, under-5 deaths under 25 per 1,000). WHO headquarters is in Geneva; the South-East Asia office is in New Delhi."
+    }
+  }
+}
