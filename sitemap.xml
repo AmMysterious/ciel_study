@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://ammysterious.github.io/ciel_study/faq.html</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -89,6 +89,12 @@
     <lastmod>2026-11-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ammysterious.github.io/ciel_study/pyt-obstetrics-gynaecology.html</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ammysterious.github.io/ciel_study/pyt-pharmacology.html</loc>

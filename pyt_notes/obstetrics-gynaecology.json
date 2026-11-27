@@ -1,0 +1,147 @@
+{
+  "_about": "Hand-written key points for pyt-obstetrics-gynaecology.html (27 Nov 2026, lead). Samples: FMGE recalls, no images.",
+  "subject": "Obstetrics & Gynaecology",
+  "slug": "obstetrics-gynaecology",
+  "sections": {
+    "obg.ob": "Obstetrics",
+    "obg.gy": "Gynaecology",
+    "obg.onc": "Gynaecologic oncology"
+  },
+  "intro": "OBG in FMGE is heavy on management: what to do next in labour, bleeding, high blood pressure and infertility, plus contraception choices and the classic cut-offs. These are the topics that keep coming back, most-asked first, with the one thing to remember about each.",
+  "topics": {
+    "obg.ob.labor": {
+      "note": "Know the partograph: the alert and action lines (WHO), and that the active phase is now counted from 5 cm (WHO 2018 labour care guide). Stages: first (to full dilatation), second (to birth), third (to placenta, managed actively with oxytocin). Sudden loss of contractions, bleeding and lost fetal heart in a scarred uterus means rupture: laparotomy.",
+      "sample": 19632,
+      "why": "Bleeding, loss of contractions and an absent fetal heart after a previous caesarean mean uterine rupture, which needs immediate laparotomy."
+    },
+    "obg.ob.anc": {
+      "note": "At least 4 antenatal visits (8 contacts in the WHO model). Routine: Hb, blood group and Rh, HIV, syphilis, HBsAg, urine, OGTT, TT/Td, iron-folic acid from the second trimester. Recurrent second-trimester losses point to cervical incompetence or a uterine anomaly: check the cervix and uterus by ultrasound.",
+      "sample": 19685,
+      "why": "Two second-trimester losses suggest cervical incompetence or a uterine anomaly, which a transvaginal scan shows."
+    },
+    "obg.ob.htn": {
+      "note": "Pre-eclampsia: BP 140/90 or more after 20 weeks with proteinuria or organ involvement. Magnesium sulfate prevents and treats eclampsia (watch knee jerks, breathing, urine; antidote calcium gluconate). Labetalol and nifedipine control BP. Delivery is the only cure: deliver severe disease at 34 weeks or more once stable.",
+      "sample": 9901,
+      "why": "Severe pre-eclampsia at 34 weeks: stabilise with magnesium and antihypertensives, then deliver."
+    },
+    "obg.ob.pph": {
+      "note": "PPH: blood loss of 500 mL or more after vaginal birth (1,000 mL after caesarean). Causes, the 4 Ts: tone (atony, the commonest), trauma, tissue, thrombin. Atony: massage, oxytocin, then ergometrine, carboprost, misoprostol; tranexamic acid within 3 hours; then balloon tamponade or surgery.",
+      "sample": 19548,
+      "why": "A soft, boggy uterus after delivery is uterine atony, the commonest cause of PPH."
+    },
+    "obg.ob.fm": {
+      "note": "CTG: early decelerations = head compression (benign); variable = cord compression; late = uteroplacental insufficiency (worrying). Reactive NST: 2 accelerations in 20 minutes. Growth restriction is followed with umbilical artery Doppler; absent or reversed end-diastolic flow is serious.",
+      "sample": 16963,
+      "why": "Variable decelerations, changing in timing and shape, come from cord compression."
+    },
+    "obg.ob.emerg": {
+      "note": "Shoulder dystocia: call for help, McRoberts with suprapubic pressure first; never fundal pressure. Cord prolapse: lift the presenting part off the cord, knee-chest position, urgent delivery. Amniotic fluid embolism: sudden collapse, hypoxia and DIC in labour.",
+      "sample": 19523,
+      "why": "McRoberts manoeuvre with suprapubic pressure is the first step for shoulder dystocia; fundal pressure and strong traction make it worse."
+    },
+    "obg.ob.aph": {
+      "note": "Placenta previa: painless, recurrent bright bleeding, soft uterus; never do a vaginal examination before a scan. Abruption: painful bleeding, tense tender uterus, fetal distress; linked to pre-eclampsia, trauma and cocaine; can cause DIC.",
+      "sample": 19501,
+      "why": "Painful bleeding with a tense, tender uterus and fetal distress is placental abruption."
+    },
+    "obg.ob.twin": {
+      "note": "Chorionicity is decided best on a first-trimester scan: lambda sign = dichorionic, T sign = monochorionic. Twin-to-twin transfusion happens only in monochorionic twins. After the first twin, a transverse second twin is delivered by internal podalic version and breech extraction.",
+      "sample": 9742,
+      "why": "A transverse second twin after vaginal delivery of the first is turned by internal podalic version."
+    },
+    "obg.ob.gdm": {
+      "note": "India (DIPSI): one-step 75 g glucose, 2-hour value 140 mg/dL or more = GDM, done fasting or not. IADPSG cut-offs: fasting 92, 1 hour 180, 2 hours 153; any one value is enough. First treatment is diet and exercise, then insulin or metformin. Babies: macrosomia, hypoglycaemia, shoulder dystocia.",
+      "sample": 9744,
+      "why": "A fasting value of 96 and a 2-hour value of 156 each cross the IADPSG cut-offs (92 and 153): gestational diabetes."
+    },
+    "obg.ob.rh": {
+      "note": "Give anti-D within 72 hours of delivery to an Rh-negative mother with an Rh-positive baby whose indirect Coombs test is negative. Also give it at 28 weeks and after any sensitising event (abortion, ectopic, bleeding, amniocentesis). The Kleihauer-Betke test decides extra doses. Monitor an affected fetus with MCA Doppler.",
+      "sample": 9802,
+      "why": "Anti-D works best within 72 hours of delivery."
+    },
+    "obg.ob.ptl": {
+      "note": "Preterm labour before 37 weeks: steroids (betamethasone) from 24 to 34 weeks for lung maturity, magnesium sulfate under 32 weeks for neuroprotection, tocolysis (nifedipine) only to buy time for steroids. Ruptured membranes are confirmed with nitrazine, fern or the more specific PAMG-1 test.",
+      "sample": 9804,
+      "why": "PAMG-1 is the most specific bedside test for rupture of membranes; nitrazine gives false positives."
+    },
+    "obg.ob.fmed": {
+      "note": "First-trimester combined test (11 to 14 weeks): nuchal translucency, PAPP-A and free β-hCG. Quadruple test in the second trimester. NIPT (cell-free DNA) is the best screen. Diagnosis needs CVS (10 to 13 weeks) or amniocentesis (from 15 weeks).",
+      "sample": 9865,
+      "why": "Nuchal translucency with PAPP-A and free β-hCG is the first-trimester combined screen for Down syndrome."
+    },
+    "obg.gy.contra": {
+      "note": "Combined pills are avoided in high blood pressure, migraine with aura, smokers over 35, breastfeeding under 6 weeks and past clots. Copper T 380A lasts 10 years and works as emergency contraception within 5 days. LNG-IUS reduces bleeding. Pearl index = failures per 100 woman-years.",
+      "sample": 10515,
+      "why": "The oestrogen in combined pills raises blood pressure and clot risk, so they are contraindicated in chronic hypertension."
+    },
+    "obg.gy.inf": {
+      "note": "Work-up: semen analysis first for the man; ovulation by mid-luteal (day 21) progesterone; tubes by hysterosalpingography (or laparoscopy and dye, the gold standard). Ovulation induction: letrozole (first choice in PCOS) or clomiphene. Submucous fibroids that distort the cavity are removed when pregnancy is wanted.",
+      "sample": 9775,
+      "why": "A raised mid-luteal progesterone confirms that ovulation happened."
+    },
+    "obg.gy.pcos": {
+      "note": "Rotterdam criteria, any 2 of 3: irregular or no ovulation, raised androgens (clinical or blood), polycystic ovaries on scan. Raised LH to FSH ratio, insulin resistance. Treatment: weight loss; pills for cycles and hirsutism; letrozole for fertility; metformin for insulin resistance.",
+      "sample": 19493,
+      "why": "Oligomenorrhoea, hirsutism, acne and obesity with raised LH and normal FSH is polycystic ovary syndrome."
+    },
+    "obg.gy.aub": {
+      "note": "FIGO PALM-COEIN: structural (Polyp, Adenomyosis, Leiomyoma, Malignancy) or not (Coagulopathy, Ovulatory, Endometrial, Iatrogenic, Not classified). Postmenopausal bleeding is cancer until proven otherwise: scan, then biopsy or hysteroscopy. Hyperplasia without atypia: the LNG-IUS first.",
+      "sample": 9921,
+      "why": "The LNG-IUS gives the endometrium a high local progestogen dose and is first-line for hyperplasia without atypia."
+    },
+    "obg.gy.fib": {
+      "note": "The commonest benign tumour of the uterus. Submucous fibroids cause heavy bleeding and infertility; red degeneration happens in pregnancy (pain, treat conservatively). Wants fertility: myomectomy (hysteroscopic for submucous). Family complete: hysterectomy. GnRH analogues shrink them before surgery.",
+      "sample": 19540,
+      "why": "A submucous fibroid in a woman who wants to conceive is removed by myomectomy, which keeps the uterus."
+    },
+    "obg.gy.ect": {
+      "note": "Commonest site: the ampulla of the tube. Pain, missed period, bleeding; shock if it ruptures (needs laparotomy). Medical treatment with methotrexate if stable, β-hCG under about 5,000, mass under 3.5 cm and no fetal heartbeat. Risk factors: PID, previous ectopic, tubal surgery, IUCD failure.",
+      "sample": 13087,
+      "why": "Stable, β-hCG 1,800, a small mass and no heartbeat: all fit single-dose methotrexate."
+    },
+    "obg.gy.pop": {
+      "note": "Supports: the cardinal (Mackenrodt) and uterosacral ligaments. Graded by degree or by POP-Q. Young woman who wants children: a sling operation (it keeps the uterus). Fothergill (Manchester) when the family is complete but the uterus is to be kept. Elderly, unfit for surgery: Le Fort colpocleisis, or a pessary.",
+      "sample": 16634,
+      "why": "A young nulliparous woman with prolapse needs a uterus-preserving sling operation, not Fothergill or Le Fort."
+    },
+    "obg.gy.endo": {
+      "note": "Endometriosis: painful periods, deep dyspareunia, infertility, chocolate cysts, a fixed retroverted uterus and uterosacral nodules; diagnosed by laparoscopy. Adenomyosis: a uniformly enlarged, tender, boggy uterus in an older parous woman with heavy, painful periods.",
+      "sample": 19600,
+      "why": "Deep dyspareunia with uterosacral nodules and a fixed retroverted uterus points to deep infiltrating endometriosis."
+    },
+    "obg.gy.meno": {
+      "note": "Menopause: no periods for 12 months, average age about 51. FSH and LH rise, oestrogen and progesterone fall; FSH is the best marker. Hormone therapy needs a progestogen added if the uterus is present (to protect the endometrium). Symptoms: hot flushes, night sweats, vaginal dryness.",
+      "sample": 10512,
+      "why": "The failing ovary makes little oestrogen, so feedback is lost and FSH and LH rise."
+    },
+    "obg.gy.rendo": {
+      "note": "Primary amenorrhoea: Müllerian agenesis (MRKH) has normal pubic hair; androgen insensitivity has breasts but scanty pubic hair, XY, and testes to remove after puberty; Turner has short stature with no breast development. Hyperprolactinaemia: cabergoline first. Sheehan: pituitary failure after a big PPH.",
+      "sample": 10517,
+      "why": "Breasts but scanty pubic hair, a blind vagina and no uterus is androgen insensitivity (XY), not Müllerian agenesis."
+    },
+    "obg.onc": {
+      "note": "Gestational trophoblastic disease: complete mole (46XX, no fetus, very high hCG), partial mole (triploid). Treatment is suction evacuation, then follow hCG to normal. Persistent or rising hCG means trophoblastic neoplasia: methotrexate.",
+      "sample": 10523,
+      "why": "A complete mole is emptied by suction evacuation; follow-up with hCG comes next.",
+      "title": "Gestational trophoblastic disease (molar pregnancy)"
+    },
+    "obg.onc.cx": {
+      "note": "HPV 16 and 18 cause most cervical cancers. India screens women 30 to 65 with VIA (visual inspection with acetic acid). HPV vaccine before sexual activity. Staging is FIGO. Early stage (IB1) is treated by radical (type III) hysterectomy; advanced stages by chemoradiation.",
+      "sample": 18255,
+      "why": "High-risk HPV types 16 and 18 are linked to most cervical cancers; 6 and 11 cause warts."
+    },
+    "obg.onc.endo": {
+      "note": "Risk: unopposed oestrogen, obesity, diabetes, hypertension, nulliparity, PCOS, tamoxifen, Lynch syndrome. Presents as postmenopausal bleeding; an endometrial thickness over 4 mm needs a biopsy. Staging is FIGO surgical staging.",
+      "sample": 9840,
+      "why": "Endometrial cancer is staged surgically with the FIGO system."
+    },
+    "obg.onc.ov": {
+      "note": "Know the tumour markers: CA-125 (epithelial), AFP (yolk sac, Schiller-Duval bodies), β-hCG (choriocarcinoma), LDH (dysgerminoma), inhibin (granulosa cell). Mature cystic teratoma (dermoid) is the commonest germ cell tumour. Meigs syndrome: fibroma with ascites and pleural effusion.",
+      "sample": 19593,
+      "why": "Glomerulus-like Schiller-Duval bodies mean a yolk sac tumour, which makes alpha-fetoprotein."
+    },
+    "obg.onc.vul": {
+      "note": "Mostly squamous cell carcinoma in older women, often after lichen sclerosus or VIN. Itching and a lump or ulcer; it spreads first to the inguinal nodes. Staging is FIGO; treated by wide local excision or radical vulvectomy with node surgery."
+    }
+  }
+}

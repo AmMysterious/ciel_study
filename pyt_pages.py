@@ -75,18 +75,21 @@ def build(notes_file: Path) -> tuple[str, str]:
 
     # group rows into sections, keeping the bank's order; a section row with no topic name only adds questions
     sections, order = {}, []
+    override = N.get("sections", {})          # optional {"id prefix": "section name"}; longest prefix wins
     for tid, sec, topic, rank, marks, _ in rows:
-        sec = sec or subject
+        pre = max((k for k in override if tid == k or tid.startswith(k + ".")), key=len, default=None)
+        sec = override[pre] if pre else (sec or subject)
         if sec not in sections:
             sections[sec] = {"rank": rank, "marks": marks, "ids": set(), "topics": []}
             order.append(sec)
         S = sections[sec]
         S["ids"] |= qids[tid]
         S["rank"] = max(S["rank"], rank)
+        title = notes.get(tid, {}).get("title")
         if topic:
-            S["topics"].append((tid, topic, rank, marks, len(qids[tid])))
+            S["topics"].append((tid, title or topic, rank, marks, len(qids[tid])))
         elif tid in notes:                      # a whole-section topic (e.g. "Most repeated antidotes")
-            S["topics"].append((tid, sec, rank, marks, len(qids[tid])))
+            S["topics"].append((tid, title or sec, rank, marks, len(qids[tid])))
     # most-asked first: rank, then how many past questions
     order.sort(key=lambda s: (-sections[s]["rank"], -len(sections[s]["ids"])))
     total = len(set().union(*qids.values())) if qids else 0
@@ -154,7 +157,8 @@ def build(notes_file: Path) -> tuple[str, str]:
     foot = shell[shell.index("</main>"):]
 
     page = (head + STYLE +
-            f'<link rel="canonical" href="{url}">\n<meta property="og:url" content="{url}">\n'
+            # the same block seo_build.py injects, so the two scripts never fight over it
+            f'<!--SEO:start-->\n<link rel="canonical" href="{url}">\n<meta property="og:url" content="{url}">\n\n<!--SEO:end-->\n'
             + "\n".join('<script type="application/ld+json">\n' + json.dumps(x, ensure_ascii=False, indent=1)
                         + "\n</script>" for x in ld) + "\n"
             + top +
@@ -220,6 +224,17 @@ def main():
             changed.append(name)
             if not CHECK:
                 f.write_text(page, encoding="utf-8", newline="\n")
+    # the FMGE PYQ page lists every subject page that exists, between its PYT markers
+    hub = HERE / "fmge-previous-year-questions.html"
+    subs = sorted((json.loads(nf.read_text(encoding="utf-8")) for nf in (HERE / "pyt_notes").glob("*.json")),
+                  key=lambda n: n["subject"])
+    links = ", ".join(f'<a href="pyt-{n["slug"]}.html">{e(n["subject"])}</a>' for n in subs)
+    h = hub.read_text(encoding="utf-8")
+    h2 = re.sub(r"<!--PYT:list-->.*?<!--/PYT-->", lambda _: f"<!--PYT:list-->{links}<!--/PYT-->", h, flags=re.S)
+    if h2 != h:
+        changed.append(hub.name)
+        if not CHECK:
+            hub.write_text(h2, encoding="utf-8", newline="\n")
     print(("would change: " if CHECK else "written: ") + (", ".join(changed) or "nothing"))
 
 
