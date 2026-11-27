@@ -1,0 +1,126 @@
+{
+  "_about": "Key points for pyt-dermatology.html: drafted by Antigravity (WO), reviewed and corrected line by line by the lead 27 Nov 2026.",
+  "reviewed": "27 Nov 2026, lead (helper draft)",
+  "subject": "Dermatology",
+  "slug": "dermatology",
+  "intro": "Dermatology in FMGE centres on classic signs, morphology, and treatment regimens: vesiculobullous splits, psoriasis signs, leprosy classification and reactions, and sexually transmitted infections. These are the topics that keep coming back, most-asked first, with the one thing to remember about each.",
+  "topics": {
+    "der.vb": {
+      "title": "Vesiculobullous disorders (overview)",
+      "note": "Vesiculobullous diseases are classified by the level of blistering. Intraepidermal blisters (pemphigus) are flaccid, fragile, and rupture easily into painful erosions with a positive Nikolsky sign. Subepidermal blisters (bullous pemphigoid, epidermolysis bullosa, dermatitis herpetiformis) are tense and intact with a negative Nikolsky sign. Direct immunofluorescence on perilesional skin is the investigation of choice to differentiate them.",
+      "sample": 8996,
+      "why": "Tense subepidermal bullae that resist rupture in an elderly patient point to bullous pemphigoid."
+    },
+    "der.vb.pemph": {
+      "note": "Pemphigus vulgaris is an autoimmune intraepidermal blistering disorder caused by IgG antibodies against desmoglein 3 and 1. Oral mucosal erosions precede cutaneous flaccid bullae in most patients; Nikolsky sign and bulla spread sign are positive. Histopathology shows suprabasal acantholysis with a row-of-tombstones appearance of basal cells. Direct immunofluorescence shows intercellular fishnet IgG and C3 deposition, and systemic corticosteroids with immunosuppressants like rituximab or azathioprine are the mainstay of treatment.",
+      "sample": 11326,
+      "why": "Flaccid blisters that rupture readily with suprabasal acantholysis on biopsy are characteristic of pemphigus vulgaris."
+    },
+    "der.pso": {
+      "title": "Psoriasis",
+      "note": "Psoriasis is a chronic T-cell-mediated hyperproliferative papulosquamous disorder affecting extensor surfaces, scalp, and lumbosacral region. Classic signs include silvery-white micaceous scales, candle grease sign, Auspitz sign (pinpoint bleeding on removing scales), and the Koebner phenomenon. Nail findings include irregular pitting (most common), oil-drop spots, and subungual hyperkeratosis. Topical steroids, calcipotriol, and phototherapy are used for limited disease, while methotrexate or biologics are used for severe cases; systemic corticosteroids are avoided to prevent pustular flares.",
+      "sample": 12489,
+      "why": "Systemic steroids are avoided in chronic plaque psoriasis because stopping them can precipitate a severe pustular or erythrodermic flare."
+    },
+    "der.lep": {
+      "title": "Leprosy (Hansen disease)",
+      "note": "Leprosy is caused by Mycobacterium leprae and affects cool superficial tissues including skin and peripheral nerves. The cardinal signs are hypopigmented or erythematous anaesthetic skin lesions, thickened peripheral nerves with sensory or motor impairment, and acid-fast bacilli on slit-skin smear. The posterior tibial, common peroneal, ulnar, and greater auricular nerves are commonly involved. Slit-skin smear stained by Ziehl-Neelsen with 5% sulfuric acid is the investigation of choice for acid-fast bacilli."
+    },
+    "der.lep.class": {
+      "note": "The Ridley-Jopling classification spans from tuberculoid (TT) with strong cell-mediated immunity to lepromatous (LL) with poor cell-mediated immunity and high bacillary load. Tuberculoid leprosy shows few well-demarcated hypopigmented anaesthetic macules with early asymmetric nerve thickening and a positive lepromin test. Lepromatous leprosy shows numerous symmetrical shiny macules or infiltrated plaques, leonine facies, loss of eyebrows (madarosis), glove-and-stocking anaesthesia, and a negative lepromin test. Borderline forms (BT, BB, BL) are immunologically unstable and prone to lepra reactions."
+    },
+    "der.lep.react": {
+      "note": "Type 1 lepra reaction (reversal reaction) is a delayed type IV hypersensitivity reaction seen in borderline forms, presenting with acute erythema and swelling of existing skin lesions and severe neuritis. Type 2 lepra reaction (erythema nodosum leprosum) is a type III immune-complex vasculitis seen in lepromatous disease, presenting with crops of tender evanescent subcutaneous nodules, high fever, arthralgia, and iridocyclitis. Multidrug therapy is never stopped during a reaction. Systemic corticosteroids are the drug of choice for type 1 reactions with neuritis; thalidomide or steroids are used for type 2 reactions, though thalidomide is strictly contraindicated in women of childbearing age.",
+      "sample": 12492,
+      "why": "In pregnancy, type 2 lepra reactions are managed by continuing MDT and giving systemic steroids, as thalidomide is contraindicated."
+    },
+    "der.lep.mdt": {
+      "note": "WHO multidrug therapy prevents drug resistance using rifampicin, dapsone, and clofazimine. Multibacillary leprosy (more than 5 skin lesions or smear-positive) is treated for 12 months with monthly supervised rifampicin 600 mg and clofazimine 300 mg, plus daily unsupervised dapsone 100 mg and clofazimine 50 mg. Paucibacillary leprosy (1 to 5 lesions and smear-negative) is treated for 6 months. Under national guidelines, uniform 3-drug MDT is now recommended for both paucibacillary and multibacillary disease.",
+      "sample": 10090,
+      "why": "Standard adult multibacillary MDT combines monthly supervised rifampicin and clofazimine with daily self-administered dapsone and clofazimine."
+    },
+    "der.drug": {
+      "title": "Severe cutaneous adverse reactions",
+      "note": "Severe drug eruptions include Stevens-Johnson syndrome, toxic epidermal necrolysis, and drug reaction with eosinophilia and systemic symptoms (DRESS). Common offending drugs are aromatic anticonvulsants (phenytoin, carbamazepine), allopurinol, sulfonamides, and nevirapine. In SJS and TEN, detachment of full-thickness epidermis occurs with widespread mucosal involvement; SCORTEN is used to predict mortality. The immediate investigation and management of choice is prompt withdrawal of all suspected drugs followed by intensive supportive care in a burn unit."
+    },
+    "der.drug.fde": {
+      "note": "Fixed drug eruption presents as one or more sharply demarcated, round or oval, dusky violaceous or erythematous plaques that recur at the exact same site on re-exposure to the culprit drug. The lips, glans penis, and extremities are the most frequent locations; lesions may blister and heal with slate-grey post-inflammatory hyperpigmentation. Common causative agents are paracetamol, non-steroidal anti-inflammatory drugs, cotrimoxazole, and metronidazole. Identification and lifelong avoidance of the offending drug is the definitive treatment.",
+      "sample": 12497,
+      "why": "Metronidazole commonly triggers fixed drug eruptions presenting as recurrent well-demarcated dusky plaques."
+    },
+    "der.lp": {
+      "title": "Lichen planus",
+      "note": "Lichen planus is a chronic autoimmune T-cell-mediated disorder of the skin and mucous membranes classically described by the 6 Ps: pruritic, purple, polygonal, planar (flat-topped), papules and plaques. Lacy white streaks over the papules and oral mucosa are Wickham striae, and the Koebner phenomenon is positive. Histopathology shows hyperkeratosis, wedge-shaped hypergranulosis, saw-toothed rete ridges, basal cell degeneration, and a band-like subepidermal lymphocytic infiltrate. Topical potent corticosteroids are the drug of choice for localized cutaneous disease, while oral steroids or phototherapy are used for widespread lesions."
+    },
+    "der.pig.vit": {
+      "note": "Vitiligo is an acquired autoimmune destruction of melanocytes causing chalky-white, sharply demarcated, completely depigmented macules that fluoresce bright blue-white under Wood's lamp. Non-segmental vitiligo is progressive and bilateral, whereas segmental vitiligo develops rapidly in a dermatomal distribution, stabilizes early, and is the best candidate for surgical grafting. Nevus depigmentosus is a congenital, stable, hypopigmented macule present from birth with normal melanocyte numbers but impaired melanosome transfer, showing no bright fluorescence on Wood's lamp. Topical corticosteroids and calcineurin inhibitors are first-line for limited active vitiligo, while phototherapy (NB-UVB) is used for widespread disease.",
+      "sample": 12504,
+      "why": "Segmental vitiligo develops rapidly along a dermatome, stabilizes within months, and is ideal for surgical melanocyte grafting."
+    },
+    "der.pig.wood": {
+      "note": "Wood's lamp emits long-wave ultraviolet light (UVA, around 365 nm) and is a rapid bedside diagnostic tool for pigmentary and cutaneous infections. Vitiligo shows chalky-white or bright blue-white fluorescence due to total absence of melanin. Pityriasis versicolor shows pale golden-yellow fluorescence from Malassezia species. Erythrasma fluoresces characteristic coral red due to coproporphyrin III produced by Corynebacterium minutissimum. Tinea capitis caused by Microsporum species produces bright green to blue-green fluorescence.",
+      "sample": 12501,
+      "why": "Under Wood's lamp, erythrasma glows coral red, pityriasis versicolor yellow, tinea capitis blue-green, and vitiligo chalky milky-white."
+    },
+    "der.inf": {
+      "title": "Cutaneous infections",
+      "note": "Cutaneous infections in FMGE encompass parasitic, bacterial, and mycobacterial dermatoses. Scabies is caused by Sarcoptes scabiei and presents with severe nocturnal pruritus and burrows in web spaces, treated with 5% permethrin cream applied overnight from neck down for all family members. Cutaneous tuberculosis ranges from lupus vulgaris (apple-jelly nodules on diascopy) to scrofuloderma, treated with standard anti-tubercular therapy. Leprosy and cutaneous leishmaniasis present with non-healing nodules or plaques requiring specific antimicrobial therapy."
+    },
+    "der.inf.fung": {
+      "note": "Dermatophyte infections (tinea) are caused by Trichophyton, Microsporum, and Epidermophyton, presenting as annular scaly plaques with active erythematous borders and central clearing. Tinea capitis variants include non-inflammatory black dot (endothrix), grey patch (ectothrix), and inflammatory kerion or favus with scutula. Direct microscopic examination with 10% to 20% potassium hydroxide (KOH) mount is the investigation of choice to visualize septate branching hyphae. Pityriasis versicolor is caused by Malassezia globosa and presents with hypo- or hyperpigmented macules showing a spaghetti-and-meatballs appearance on KOH mount."
+    },
+    "der.inf.vir": {
+      "note": "Molluscum contagiosum is caused by a poxvirus and presents with dome-shaped, pearly, umbilicated papules containing intracytoplasmic Henderson-Patterson inclusion bodies. Viral warts (verrucae) are caused by human papillomavirus (HPV): common warts by HPV 1, 2, and 4; plantar warts by HPV 1; flat warts by HPV 3 and 10; and anogenital warts (condylomata acuminata) by low-risk HPV 6 and 11. High-risk HPV types 16 and 18 cause intraepithelial neoplasia and cervical cancer. Topical salicylic acid, cryotherapy with liquid nitrogen, or podophyllotoxin are common treatments.",
+      "sample": 12486,
+      "why": "HPV transmission occurs by direct skin-to-skin contact with active lesions, so sexual contact should be avoided during active outbreaks."
+    },
+    "der.inf.bact": {
+      "note": "Impetigo is a contagious superficial bacterial skin infection most common in young children. Non-bullous impetigo is caused by Staphylococcus aureus or Streptococcus pyogenes and features honey-coloured, amber crusts on an erythematous base around the mouth and nose. Bullous impetigo is caused by epidermolytic toxin A from Staphylococcus aureus targeting desmoglein 1, causing flaccid subcorneal bullae. Post-streptococcal glomerulonephritis can follow streptococcal impetigo, but rheumatic fever does not; mild localized disease is treated with topical mupirocin, while extensive disease requires oral amoxicillin-clavulanate or cephalexin.",
+      "sample": 9002,
+      "why": "Post-streptococcal glomerulonephritis can follow impetigo, but rheumatic fever occurs exclusively after streptococcal pharyngitis."
+    },
+    "der.sti": {
+      "title": "Sexually transmitted infections",
+      "note": "Sexually transmitted infections are managed under national guidelines using a color-coded syndromic approach without waiting for laboratory confirmation. Urethral and endocervical discharge (Kit 1, grey) is treated with cefixime 400 mg and azithromycin 1 g to cover Neisseria gonorrhoeae and Chlamydia trachomatis. Vaginal discharge (Kit 2, green) treats bacterial vaginosis, trichomoniasis and candidiasis with secnidazole and fluconazole. Partner notification, contact tracing, and barrier contraceptive counselling are mandatory components of syndromic STI control."
+    },
+    "der.sti.syph": {
+      "note": "Syphilis is caused by the spirochaete Treponema pallidum and progresses through primary, secondary, latent, and tertiary stages. Primary syphilis features a solitary, painless, indurated ulcer (hard chancre) with non-tender regional lymphadenopathy. Secondary syphilis develops 6 to 8 weeks later with non-pruritic maculopapular rash on palms and soles, condylomata lata in moist flexures, mucous patches, and moth-eaten alopecia. Dark-ground microscopy is the investigation of choice for primary chancres; benzathine penicillin G is the drug of choice for all stages of syphilis.",
+      "sample": 11638,
+      "why": "A painless, indurated genital chancre accompanied by non-tender regional lymphadenopathy is the hallmark of primary syphilis."
+    },
+    "der.sti.ulcer": {
+      "note": "Genital ulcer diseases are clinically divided into painful and painless presentations. Painful ulcers include chancroid (Haemophilus ducreyi, soft non-indurated ragged ulcers with suppurative bubo) and herpes genitalis (HSV-2, grouped vesicles eroding into painful shallow ulcers). Painless ulcers include primary syphilis (Treponema pallidum, indurated chancre with hard non-tender nodes), lymphogranuloma venereum (Chlamydia trachomatis L1-L3, fleeting papule with grooved buboes), and donovanosis (Klebsiella granulomatis, beefy-red pseudobubo without lymphadenopathy showing Donovan bodies). Under NACO guidelines, non-herpetic genital ulcers are treated with Kit 3 (white kit)."
+    },
+    "der.app.acne": {
+      "note": "Acne vulgaris is a chronic multifactorial inflammatory disorder of the pilosebaceous unit driven by androgens, follicular hyperkeratinization, sebum overproduction, and Cutibacterium acnes colonization. The primary lesion is the microcomedone, progressing to open comedones (blackheads), closed comedones (whiteheads), inflammatory papules, pustules, and nodulocystic lesions. Mild comedonal acne is treated with topical retinoids (adapalene, tretinoin) and benzoyl peroxide; moderate inflammatory acne adds oral doxycycline. Oral isotretinoin is the drug of choice for severe nodulocystic, scarring, or refractory acne, requiring strict contraception due to severe teratogenicity."
+    },
+    "der.app.alop": {
+      "note": "Alopecia areata is an autoimmune T-cell-mediated non-scarring hair loss characterized by smooth, round, circumscribed patches with exclamation-mark hairs at the margins and regular geometric nail pitting. Androgenetic alopecia is non-scarring patterned follicular miniaturization driven by dihydrotestosterone, causing bitemporal recession and vertex thinning in men (Hamilton-Norwood) and midline crown thinning in women (Ludwig). Cicatricial (scarring) alopecias like lichen planopilaris and discoid lupus show permanent loss of follicular ostia. Intralesional triamcinolone is first-line for patchy alopecia areata, while topical minoxidil and oral finasteride are used for androgenetic alopecia.",
+      "sample": 12495,
+      "why": "Androgenetic alopecia, alopecia areata and telogen effluvium are non-scarring forms of hair loss, while frontal fibrosing alopecia causes cicatricial scarring."
+    },
+    "der.diag.dif": {
+      "note": "Direct immunofluorescence on perilesional skin is the investigation of choice to differentiate autoimmune blistering and connective tissue diseases. Pemphigus vulgaris shows an intercellular fishnet pattern of IgG and C3 throughout the epidermis against desmoglein 3. Bullous pemphigoid shows a continuous linear band of IgG and C3 along the dermoepidermal basement membrane zone against BP180 and BP230. Dermatitis herpetiformis shows granular IgA deposits concentrated at the tips of dermal papillae. Lichen planus shows shaggy fibrinogen at the basement membrane and globular IgM in cytoid (Civatte) bodies.",
+      "sample": 11969,
+      "why": "Granular IgA deposition at the tips of dermal papillae on direct immunofluorescence is diagnostic of dermatitis herpetiformis."
+    },
+    "der.geno": {
+      "title": "Genodermatoses",
+      "note": "Genodermatoses are hereditary skin disorders caused by single-gene mutations affecting structural proteins or DNA repair. Epidermolysis bullosa presents with mechanobullous fragility from mutations in keratin (simplex), laminin-332 (junctional), or type VII collagen (dystrophic). Ichthyoses feature widespread fish-like scaling, ranging from ichthyosis vulgaris (filaggrin defect, spares flexures) to X-linked ichthyosis (steroid sulfatase defect, dirty brown scales) and severe congenital collodion baby presentations. Xeroderma pigmentosum results from defective nucleotide excision repair of UV-induced thymine dimers, leading to early photophobia, poikiloderma, and multiple aggressive skin malignancies.",
+      "sample": 12487,
+      "why": "Friction-induced blistering from birth with a similarly affected sibling points to hereditary epidermolysis bullosa."
+    },
+    "der.tum": {
+      "title": "Cutaneous tumours and precancerous lesions",
+      "note": "Basal cell carcinoma is the most common skin cancer, presenting on sun-exposed head and neck as a slow-growing pearly nodule with rolled borders, telangiectasia, and central ulceration (rodent ulcer), rarely metastasizing. Squamous cell carcinoma arises from actinic keratosis or old burn scars (Marjolin ulcer) and shows atypical keratinocytes with keratin pearls on biopsy. Malignant melanoma is the most aggressive form, recognized by ABCDE criteria (Asymmetry, Border irregularity, Colour variation, Diameter over 6 mm, Evolving size) with Breslow thickness being the most important prognostic factor. Wide surgical excision with adequate margins is the primary treatment for localized cutaneous malignancies.",
+      "sample": 9013,
+      "why": "A squamous cell carcinoma arising within a chronic non-healing burn scar is known as a Marjolin ulcer."
+    },
+    "der.nail": {
+      "title": "Nail disorders",
+      "note": "Nail pathology provides critical diagnostic clues for systemic and cutaneous diseases. Psoriasis classically causes irregular pitting (proximal matrix), salmon or oil-drop patches (nail bed), onycholysis, and subungual hyperkeratosis. Lichen planus causes longitudinal grooving, thinning, and dorsal pterygium formation from scarring between the proximal nail fold and matrix. Onychomycosis (tinea unguium) is the commonest nail infection, presenting with distal subungual hyperkeratosis and crumbling, treated with oral terbinafine or topical lacquers like amorolfine. Systemic signs include Beau lines (transverse furrows following severe illness), Mees lines (arsenic or heavy metal poisoning), and clubbing.",
+      "sample": 12506,
+      "why": "Tavaborole is a topical oxaborole antifungal that penetrates the nail plate to treat onychomycosis."
+    }
+  }
+}

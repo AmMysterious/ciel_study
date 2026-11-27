@@ -1,0 +1,120 @@
+{
+  "_about": "Key points for pyt-psychiatry.html: drafted by Antigravity (WO), reviewed and corrected line by line by the lead 27 Nov 2026.",
+  "reviewed": "27 Nov 2026, lead (helper draft)",
+  "subject": "Psychiatry",
+  "slug": "psychiatry",
+  "intro": "Psychiatry in FMGE focuses on diagnostic criteria, hallmark delusions and hallucinations, substance withdrawal protocols, and psychopharmacology side effects. These are the topics that keep coming back, most-asked first, with the one thing to remember about each.",
+  "topics": {
+    "psy.psychotic": {
+      "title": "Psychotic disorders (overview)",
+      "note": "Schizophrenia requires at least 6 months of continuous disturbance under DSM-5 and at least 1 month of active symptoms under ICD-11. Schneiderian first-rank symptoms include thought echo, thought insertion, thought broadcasting, and third-person auditory hallucinations. Atypical antipsychotics are first-line pharmacotherapy; modified electroconvulsive therapy is indicated for severe catatonia or acute suicide risk."
+    },
+    "psy.psychotic.deluz": {
+      "note": "Delusions are fixed, false beliefs out of keeping with socio-cultural background. Capgras syndrome is the delusion of doubles, where a familiar person is believed to be replaced by an identical imposter; Fregoli syndrome is the delusion that different strangers are a single persecutor in disguise. Cotard syndrome involves nihilistic delusions of having lost internal organs or being dead; Othello syndrome is morbid delusional jealousy, commonly linked to chronic alcohol use."
+    },
+    "psy.psychotic.halluc": {
+      "note": "Hallucinations are sensory perceptions occurring without an external stimulus, perceived as real and located in external space. Illusions are misinterpretations of an actual external stimulus, while pseudohallucinations are perceived within internal subjective space. Auditory hallucinations are most characteristic of schizophrenia, whereas visual hallucinations strongly suggest an organic mental etiology or substance withdrawal."
+    },
+    "psy.mood": {
+      "title": "Mood disorders (overview)",
+      "note": "Mood disorders encompass depressive and bipolar spectrum disorders characterized by pervasive disturbances of affect and neurovegetative function. Beck's cognitive triad describes negative automatic thoughts regarding the self, the world, and the future. Bilateral modified electroconvulsive therapy is the treatment of choice for severe depression with high suicide risk, acute catatonia, or severe depressive stupor during pregnancy."
+    },
+    "psy.mood.dep": {
+      "note": "Major depressive disorder requires depressed mood or anhedonia for at least 2 consecutive weeks accompanied by neurovegetative symptoms. Melancholic depression features pervasive anhedonia, diurnal variation worse in the morning, terminal insomnia, and marked anorexia. Atypical depression features preserved mood reactivity, leaden paralysis, hyperphagia, hypersomnia, and rejection sensitivity. Selective serotonin reuptake inhibitors are the first-line pharmacotherapy and must be continued for at least 6 to 9 months after remission."
+    },
+    "psy.mood.bip": {
+      "note": "Mania is characterized by abnormally elevated, expansive, or irritable mood with increased energy lasting at least 1 week and causing marked impairment or requiring hospitalization. Hypomania lasts at least 4 consecutive days without marked social disruption, psychotic features, or hospitalization. Bipolar I requires at least one manic episode, whereas Bipolar II requires at least one hypomanic episode and one major depressive episode. Lithium and sodium valproate are first-line mood stabilizers for acute treatment and long-term maintenance."
+    },
+    "psy.mood.cyc": {
+      "note": "Cyclothymia is a chronic mood instability disorder with fluctuating periods of hypomanic symptoms and mild depressive symptoms lasting at least 2 years in adults and 1 year in children. Dysthymia, or persistent depressive disorder, is a chronic low-grade depressed mood present on most days for at least 2 years without meeting full major depression criteria. Double depression describes a major depressive episode superimposed on pre-existing dysthymia. Cyclothymia is managed with mood stabilizers, while dysthymia is treated with SSRIs and psychotherapy."
+    },
+    "psy.mood.pp": {
+      "note": "Postpartum blues is a benign, transient emotional lability peaking around days 3 to 5 and resolving spontaneously within 2 weeks, requiring reassurance only. Postpartum depression develops within 4 to 6 weeks following childbirth, fulfilling major depressive criteria; sertraline is the preferred drug of choice in breastfeeding mothers due to low milk excretion. Postpartum psychosis is a psychiatric emergency presenting within 1 to 2 weeks with delirium-like confusion, rapid mood swings, and delusions often focused on infant harm, requiring urgent hospitalization."
+    },
+    "psy.anx": {
+      "title": "Anxiety and neurotic disorders (overview)",
+      "note": "Anxiety disorders involve excessive autonomic arousal, apprehension, and avoidance behavior out of proportion to real environmental threat. Selective serotonin reuptake inhibitors and serotonin-norepinephrine reuptake inhibitors are first-line pharmacotherapy for long-term management. Benzodiazepines are restricted to short-term acute symptomatic crisis management due to the risks of dependence and tolerance. Cognitive behavioral therapy utilizing systematic exposure is the most effective psychological intervention."
+    },
+    "psy.anx.gad": {
+      "note": "Generalized anxiety disorder is characterized by excessive, uncontrollable worry about multiple everyday events occurring on most days for at least 6 months, accompanied by motor tension and autonomic restlessness. Panic disorder presents with recurrent, unpredictable panic attacks peaking within minutes, followed by persistent fear of future attacks or agoraphobic avoidance. Specific phobias feature irrational fear of defined objects or situations, best treated with in vivo exposure therapy. Social anxiety disorder responds to SSRIs, with performance-only subtypes managed effectively with propranolol."
+    },
+    "psy.anx.ocd": {
+      "note": "Obsessive-compulsive disorder consists of recurrent, intrusive, ego-dystonic thoughts or impulses neutralized by repetitive, time-consuming compulsions recognized as irrational. High-dose SSRIs or clomipramine combined with exposure and response prevention therapy are first-line treatments. Obsessive-compulsive personality disorder is an ego-syntonic preoccupation with perfectionism, rigid orderliness, and control without true intrusive obsessions or ritualistic compulsions. Neuroimaging in OCD classically demonstrates hyperactivity in the orbitofrontal cortex and caudate nucleus."
+    },
+    "psy.anx.som": {
+      "note": "Somatic symptom disorder involves distressing physical symptoms accompanied by disproportionate, persistent anxiety and medical seeking lasting at least 6 months. Illness anxiety disorder involves an excessive preoccupation with having an undiagnosed serious disease despite normal medical evaluations and absent symptoms. Conversion disorder presents with motor or sensory neurological deficits inconsistent with neuroanatomy, often following psychological conflict and displaying la belle indifférence or Hoover sign. Factitious disorder involves intentional symptom fabrication to adopt the sick role without external incentive, whereas malingering seeks secondary external gain."
+    },
+    "psy.sub": {
+      "title": "Substance use disorders (overview)",
+      "note": "Substance dependence is characterized by tolerance, withdrawal phenomena, craving, and continued use despite demonstrable adverse consequences. The CAGE questionnaire is a validated 4-item clinical screening tool for alcohol use disorder, where two affirmative answers indicate significant misuse. Motivational interviewing and stages-of-change models guide behavioural readiness to achieve and sustain abstinence. Opioid substitution therapy utilizing buprenorphine or methadone provides effective long-term harm reduction."
+    },
+    "psy.sub.alc": {
+      "note": "Uncomplicated alcohol withdrawal presents 6 to 12 hours after cessation with coarse tremor, tachycardia, sweating, and anxiety, progressing to withdrawal seizures within 12 to 48 hours. Alcoholic hallucinosis features vivid auditory hallucinations with clear consciousness and stable vital signs developing around 12 to 24 hours. Delirium tremens is a life-threatening medical emergency developing 48 to 96 hours post-cessation, featuring fluctuating delirium, severe autonomic hyperactivity, and visual hallucinations. Long-acting benzodiazepines are the drug of choice; intravenous thiamine must always precede glucose administration to prevent precipitation of acute Wernicke encephalopathy."
+    },
+    "psy.sub.wk": {
+      "note": "Wernicke encephalopathy is an acute, reversible neuropsychiatric emergency caused by thiamine (vitamin B1) deficiency, classic for the triad of encephalopathy, ataxia, and ophthalmoplegia (nystagmus and abducens nerve palsy). The diagnosis is clinical (treat on suspicion); MRI may show symmetrical signal changes in the mammillary bodies and periaqueductal grey. Korsakoff syndrome is a chronic, irreversible amnestic disorder following untreated Wernicke encephalopathy, featuring profound anterograde amnesia and confabulation with clear consciousness. Urgent high-dose parenteral thiamine is the definitive therapy."
+    },
+    "psy.sub.drug": {
+      "note": "Acute opioid toxicity presents with pinpoint pupils, respiratory depression, and coma, rapidly reversed with intravenous naloxone. Opioid withdrawal manifests with pupillary dilation, lacrimation, rhinorrhoea, piloerection, and severe abdominal cramping, treated symptomatically with clonidine, buprenorphine, or methadone. Benzodiazepine overdose causes sedation and ataxia with stable vitals, reversed with flumazenil; flumazenil is avoided in chronic dependence or mixed overdoses to prevent seizures. Stimulant toxicity produces pupillary dilation, tachycardia, paranoia, and formication, managed primarily with benzodiazepines."
+    },
+    "psy.sub.rec": {
+      "note": "Cannabis produces conjunctival injection, tachycardia, increased appetite, and dry mouth; chronic high-potency use is linked to cannabis-induced psychosis and amotivational syndrome. Lysergic acid diethylamide is a 5-HT2A agonist producing synaesthesia, vivid geometric visual hallucinations, and depersonalization without physical dependence. Phencyclidine causes vertical and horizontal rotatory nystagmus, extreme agitation, analgesia, and hyperthermia. MDMA causes enhanced empathy, bruxism, hyperthermia, and acute hyponatremia due to inappropriate antidiuretic hormone release."
+    },
+    "psy.child": {
+      "title": "Child psychiatry (overview)",
+      "note": "Childhood psychiatric disorders encompass developmental delays, behavioral disruptions, and emotional difficulties presenting before adulthood. Intellectual developmental disorder requires concurrent deficits in intellectual and adaptive functioning identified during the developmental phase. Tourette syndrome requires both multiple motor tics and at least one vocal tic persisting for over 1 year; habit reversal therapy and alpha-2 agonists or dopamine antagonists are standard treatments. Nocturnal enuresis in children aged 5 years or older is managed first-line with moisture sensor alarms and desmopressin."
+    },
+    "psy.child.adhd": {
+      "note": "Attention-deficit hyperactivity disorder is defined by a persistent pattern of inattention, hyperactivity, and impulsivity present across two or more settings before the age of 12 years. Central nervous system stimulants, primarily methylphenidate, represent the first-line pharmacotherapy by blocking dopamine and norepinephrine reuptake. Non-stimulant alternatives include atomoxetine and alpha-2 adrenergic agonists, which are preferred when tics, active anxiety, or substance misuse risks coexist. Common stimulant adverse effects include reduced appetite, weight loss, and sleep onset delay."
+    },
+    "psy.child.asd": {
+      "note": "Autism spectrum disorder is characterized by persistent deficits in reciprocal social communication and interaction, alongside restricted, repetitive patterns of behavior, interests, or sensory sensitivities. Manifestations typically emerge in early childhood before age 3 and are four times more prevalent in boys. Applied behavior analysis and structured early intervention programs form the cornerstone of management. Pharmacotherapy does not treat core social impairments; risperidone and aripiprazole are approved specifically for managing severe irritability, tantrums, and aggression."
+    },
+    "psy.def": {
+      "title": "Defense mechanisms",
+      "note": "Defense mechanisms are unconscious ego operations that mitigate anxiety arising from id-superego conflicts. Mature defenses include sublimation (diverting unacceptable instincts into productive channels), altruism, suppression (conscious, voluntary deferral of distress), and humour. Neurotic defenses include displacement (redirecting feelings to a safer substitute target), reaction formation (converting an urge into its opposite), and repression. Immature defenses include projection (attributing internal undesirable impulses to others), splitting, and denial."
+    },
+    "psy.pers": {
+      "title": "Personality disorders",
+      "note": "Personality disorders are deeply ingrained, maladaptive, enduring behavioral patterns organized into three clinical clusters. Cluster A includes paranoid, schizoid (emotional detachment, voluntary social withdrawal), and schizotypal (magical thinking, eccentric behavior) disorders. Cluster B includes antisocial (disregard for rights of others following childhood conduct disorder), borderline (affective instability, chronic emptiness, recurrent self-harm, splitting), histrionic, and narcissistic disorders. Cluster C encompasses avoidant, dependent, and obsessive-compulsive personality disorders; dialectical behavior therapy is the primary treatment for borderline personality disorder."
+    },
+    "psy.sex": {
+      "title": "Sexual disorders and paraphilias",
+      "note": "Paraphilic disorders involve persistent, intense atypical sexual arousal patterns causing distress, impairment, or harm to non-consenting individuals for at least 6 months. Exhibitionism involves exposing genitals to unsuspecting strangers; voyeurism involves secretly observing naked or disrobing individuals; frotteurism involves rubbing against non-consenting persons in crowded areas. Pedophilic disorder involves sexual urges toward prepubescent children by an individual aged at least 16 years. Dhat syndrome is a recognized culture-bound syndrome characterized by distressing somatic symptoms attributed to semen loss."
+    },
+    "psy.org.dem": {
+      "note": "Alzheimer disease is the most common dementia, presenting with early episodic memory loss, amyloid-beta plaques, neurofibrillary tangles, and responding symptomatically to donepezil, rivastigmine, and memantine. Vascular dementia features sudden onset, stepwise deterioration, and focal neurological signs on magnetic resonance imaging. Frontotemporal dementia presents with early disinhibition, marked personality alterations, and language impairment preceding memory loss. Dementia with Lewy bodies features fluctuating alertness, recurrent detailed visual hallucinations, and extreme neuroleptic sensitivity, while normal pressure hydrocephalus presents with gait disturbance, urinary incontinence, and dementia."
+    },
+    "psy.org.del": {
+      "note": "Delirium is an acute, fluctuating organic brain syndrome characterized by clouded consciousness, impaired attention, altered sleep-wake rhythm, and vivid visual hallucinations or illusions. Dementia presents with insidious, progressive cognitive decline and intact consciousness until advanced stages. The key step is to find and treat the underlying medical or toxic cause. Low-dose haloperidol is the pharmacological agent of choice for severe delirium-associated agitation, but it is not used on its own in delirium tremens (benzodiazepines are the treatment) and is avoided in Lewy body dementia."
+    },
+    "psy.stress": {
+      "title": "Stress-related and adjustment disorders (overview)",
+      "note": "Stress-related disorders develop in direct temporal relationship to psychological stressors or catastrophic life experiences. Adjustment disorder involves emotional or behavioral symptoms emerging within 3 months of an identifiable stressor and resolving within 6 months of stressor cessation. Normal bereavement preserves self-esteem and intermittently permits positive affect, whereas persistent complex bereavement disorder features incapacitating yearning lasting over 12 months. Supportive psychotherapy and cognitive behavioral therapy are the primary therapeutic modalities."
+    },
+    "psy.stress.ptsd": {
+      "note": "Acute stress disorder occurs within 1 month of experiencing or witnessing a life-threatening trauma, lasting between 3 days and 1 month. Post-traumatic stress disorder is diagnosed when traumatic symptoms persist for more than 1 month, categorized into intrusion (flashbacks, nightmares), avoidance, negative alterations in mood, and autonomic hyperarousal. First-line pharmacotherapy consists of SSRIs (sertraline, paroxetine) or venlafaxine, combined with trauma-focused cognitive behavioral therapy. Prazosin is effective in reducing trauma-related nightmares and sleep fragmentation."
+    },
+    "psy.psa": {
+      "title": "Psychoanalysis and psychodynamic concepts",
+      "note": "Freud's structural model comprises the id (unconscious, pleasure principle), ego (reality principle, mediator of conflicts), and superego (internalized societal morals and conscience). The topographic model categorizes mental contents into conscious, preconscious, and repressed unconscious domains. Psychosexual development progresses through oral, anal, phallic (Oedipus and Electra complexes), latency, and adult genital stages. Transference occurs when a patient projects feelings from significant early figures onto the therapist, while countertransference describes the therapist's emotional reaction toward the patient."
+    },
+    "psy.ph.ad": {
+      "note": "Selective serotonin reuptake inhibitors are first-line for major depression, anxiety disorders, and OCD; common adverse effects include nausea, insomnia, and sexual dysfunction. Serotonin-norepinephrine reuptake inhibitors such as venlafaxine and duloxetine are effective in coexisting neuropathic pain but can elevate blood pressure. Tricyclic antidepressant toxicity causes convulsions, coma, and cardiotoxicity with wide QRS complexes, urgently treated with intravenous sodium bicarbonate. Bupropion inhibits dopamine and norepinephrine reuptake without sexual side effects, but is contraindicated in patients with seizure disorders or bulimia."
+    },
+    "psy.ph.ap": {
+      "note": "Typical antipsychotics are potent dopamine D2 receptor antagonists effective for positive symptoms but associated with significant extrapyramidal motor side effects and hyperprolactinemia. Atypical antipsychotics combine D2 and 5-HT2A receptor antagonism, reducing motor risks while carrying increased liability for metabolic syndrome, weight gain, and dyslipidemia. Clozapine is reserved for treatment-resistant schizophrenia and reducing suicide risk, carrying idiosyncratic risks of agranulocytosis, seizures, and myocarditis without inducing extrapyramidal symptoms. Regular absolute neutrophil count monitoring is mandatory during clozapine therapy.",
+      "sample": 19944,
+      "why": "Smoking induces CYP1A2, which clears clozapine. Stopping smoking removes the induction, clozapine levels rise, and seizures follow."
+    },
+    "psy.ph.eps": {
+      "note": "Acute dystonia occurs within hours of starting high-potency typical antipsychotics, presenting as oculogyric crisis or torticollis and treated at once with an injectable anticholinergic or antihistamine such as promethazine, benztropine or diphenhydramine. Akathisia presents as subjective motor restlessness and an irresistible urge to move, managed with propranolol. Drug-induced parkinsonism presents with rigidity and resting tremor, responsive to central anticholinergics. Tardive dyskinesia is a late-onset choreoathetoid movement disorder exacerbated by anticholinergics and managed with VMAT2 inhibitors; neuroleptic malignant syndrome presents with severe hyperthermia, lead-pipe rigidity, and elevated creatine kinase, managed by stopping the neuroleptic and administering dantrolene or bromocriptine."
+    },
+    "psy.ph.li": {
+      "note": "Lithium is the gold-standard mood stabilizer for acute mania, bipolar maintenance, and suicide risk reduction, possessing a narrow therapeutic index of 0.6 to 1.2 mEq/L measured 12 hours post-dose. Common chronic adverse effects include fine hand tremor, nephrogenic diabetes insipidus, hypothyroidism with goitre, and cardiac sinus node dysfunction. First-trimester maternal exposure carries an increased risk of Ebstein anomaly in the fetus. Toxicity manifests with coarse tremors, ataxia, vomiting, and convulsions; thiazide diuretics, ACE inhibitors, and NSAIDs decrease renal lithium clearance and precipitate severe toxicity requiring hemodialysis."
+    },
+    "psy.ph.emerg": {
+      "note": "Acute violent agitation and delirium are managed emergently with parenteral haloperidol combined with promethazine or lorazepam to maintain airway stability. Intravenous naloxone is the specific opioid antagonist of choice to reverse coma and respiratory depression in acute opioid toxicity. Flumazenil competitively reverses benzodiazepine sedation, but is contraindicated in chronic benzodiazepine use or tricyclic antidepressant co-ingestion due to the risk of precipitating seizures. Neuroleptic malignant syndrome requires immediate drug cessation, supportive cooling, and prompt administration of dantrolene or bromocriptine."
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "_about": "Key points for pyt-radiodiagnosis.html: drafted by Antigravity (WO), reviewed and corrected line by line by the lead 27 Nov 2026.",
+  "reviewed": "27 Nov 2026, lead (helper draft)",
+  "subject": "Radiodiagnosis",
+  "slug": "radiodiagnosis",
+  "intro": "Radiodiagnosis in FMGE turns on classic signs, investigation of choice for emergencies and organ systems, and radiation protection rules. These are the topics that keep coming back, most-asked first, with the one thing to remember about each.",
+  "topics": {
+    "rad.chest": {
+      "title": "Chest Radiology (overview)",
+      "note": "Chest X-ray is the standard initial imaging modality for thoracic disease, taken erect in full inspiration with posteroanterior view preferred. High-resolution computed tomography (HRCT) is the investigation of choice for diffuse parenchymal lung diseases, bronchiectasis (signet ring sign), and interstitial lung diseases. Contrast-enhanced computed tomography (CECT) is the investigation of choice for mediastinal masses and vascular anomalies. CT pulmonary angiography is the investigation of choice for acute pulmonary embolism."
+    },
+    "rad.chest.opac": {
+      "note": "Air-space consolidation produces ill-defined fluffy opacities with an air bronchogram, whereas atelectasis causes volume loss with fissure displacement. Cavities with thick, irregular walls suggest bronchogenic carcinoma or fungal infection, while thin smooth walls suggest a resolving abscess or pneumatocele. Solitary pulmonary nodules under 3 cm with popcorn calcification indicate benign hamartoma, while eccentric stippled calcification suggests malignancy. Monod sign (a crescent of air around a fungus ball) represents an aspergilloma within an old tuberculous cavity."
+    },
+    "rad.chest.med": {
+      "note": "The anterior mediastinum is bounded posteriorly by the pericardium and great vessels; its classic masses are the '4 Ts' (thymoma, teratoma, thyroid goitre, and terrible lymphoma). The middle mediastinum contains the heart, trachea, and lymph nodes, commonly involved by lymphadenopathy, bronchogenic cysts, or pericardial cysts. The posterior mediastinum extends behind the posterior pericardium to the spine and is the site of neurogenic tumours (schwannoma, neurofibroma) and paravertebral abscesses. Contrast-enhanced CT is the investigation of choice to characterise mediastinal mass location and tissue composition."
+    },
+    "rad.chest.ptx": {
+      "note": "Pneumothorax appears as an area of hyperlucency devoid of broncho-vascular markings, bounded medially by a sharp visceral pleural line. Tension pneumothorax is a clinical emergency showing flattening or depression of the ipsilateral hemidiaphragm and contralateral tracheal and mediastinal shift. Deep sulcus sign on a supine radiograph indicates pneumothorax, characterised by an abnormally deepened, lucent costophrenic angle. Erect expiratory chest radiograph increases sensitivity for detecting a small or occult apical pneumothorax."
+    },
+    "rad.chest.tb": {
+      "note": "Primary tuberculosis characteristically presents with a Ghon focus in mid or lower zones with ipsilateral hilar lymphadenopathy (Ghon complex), healing with calcification to form a Ranke complex. Post-primary (reactivation) tuberculosis typically involves the apical and posterior segments of the upper lobes, showing patchy consolidation and cavitation without prominent lymphadenopathy. Miliary tuberculosis manifests as diffuse, uniform, 1 to 3 mm micronodules distributed evenly throughout both lungs. On CT, active spread along the airways shows as tree-in-bud nodules."
+    },
+    "rad.chest.signs": {
+      "note": "Air bronchogram occurs when patent air-filled bronchi are rendered visible against surrounding alveolar opacification in pneumonia or pulmonary oedema. The silhouette sign is the loss of a normal cardiac or diaphragmatic border caused by adjacent opacification of identical radiographic density, localising lesions to specific lobes. Golden S curve (reverse S of Golden) occurs with right upper lobe collapse caused by a central hilar mass, producing elevated minor fissure laterally and convex mass medially. Hampton hump (wedge-shaped peripheral opacity) and Westermark sign (regional oligemia) are classic thoracic signs of pulmonary embolism."
+    },
+    "rad.neuro": {
+      "title": "Neuroimaging (overview)",
+      "note": "Non-contrast computed tomography (NCCT) is the rapid investigation of choice for acute head trauma, suspected acute intracranial haemorrhage, and initial triage of acute stroke. Magnetic resonance imaging (MRI) is the investigation of choice for posterior fossa pathology, brainstem lesions, demyelinating diseases, and spinal cord disorders. Diffusion-weighted imaging (DWI) demonstrates cytotoxic oedema within minutes of ischaemic onset as high signal with corresponding hypointensity on the apparent diffusion coefficient (ADC) map. MR spectroscopy assesses metabolites, characteristically showing elevated choline and reduced N-acetylaspartate in aggressive brain neoplasms."
+    },
+    "rad.neuro.hem": {
+      "note": "Extradural haemorrhage (EDH) appears on NCCT as a biconvex (lentiform), hyperdense extra-axial collection that does not cross suture lines, most commonly arising from middle meningeal artery rupture at the pterion. Subdural haemorrhage (SDH) appears as a crescentic hyperdense extra-axial collection that crosses suture lines but not dural attachments, resulting from tearing of bridging cortical veins. Acute subarachnoid haemorrhage (SAH) manifests as hyperdensity filling the basal cisterns and sulci, most commonly caused by ruptured berry aneurysms of the anterior communicating artery. Non-contrast CT is the investigation of choice in acute presentations, with CT angiography used to locate the underlying aneurysm."
+    },
+    "rad.neuro.stroke": {
+      "note": "NCCT head is the immediate investigation of choice in acute stroke to rule out intracranial haemorrhage before thrombolysis. Early ischaemic CT signs include loss of the insular ribbon, obscuration of the lentiform nucleus, sulcal effacement, and the hyperdense middle cerebral artery sign. Diffusion-weighted MRI (DWI) is the most sensitive imaging sequence for detecting hyperacute cerebral infarction within 30 minutes of symptom onset. Diffusion-perfusion mismatch on MRI or CT perfusion identifies the ischaemic penumbra of salvageable brain tissue for extended thrombolytic or endovascular thrombectomy windows."
+    },
+    "rad.neuro.inf": {
+      "note": "Neurocysticercosis progresses through vesicular (cystic lesion with mural scolex, 'hole-with-dot' sign), colloidal vesicular (ring enhancement with surrounding oedema), granular nodular, and calcified nodular stages. Cerebral toxoplasmosis in HIV presents with multiple ring-enhancing lesions in the basal ganglia and corticomedullary junction, showing the pathognomonic eccentric target sign. Tuberculous meningitis demonstrates thick gelatinous basal exudates, hydrocephalus, and vasculitic infarcts, with tuberculomas appearing as ring-enhancing lesions with central caseation. Contrast-enhanced MRI is the investigation of choice for intracranial infections."
+    },
+    "rad.gi": {
+      "title": "GI Radiology (overview)",
+      "note": "Plain abdominal radiographs taken in erect and supine views are standard initial screenings for acute intestinal obstruction and hollow viscus perforation. Contrast-enhanced CT of the abdomen is the investigation of choice for acute abdomen, trauma, retroperitoneal pathology, and acute pancreatitis. Ultrasonography is the investigation of choice for cholelithiasis, acute cholecystitis, and biliary tree dilation. Magnetic resonance cholangiopancreatography (MRCP) is the non-invasive investigation of choice for detailed evaluation of biliary and pancreatic ductal anatomy."
+    },
+    "rad.gi.obs": {
+      "note": "Small bowel obstruction produces centrally located multiple air-fluid levels in a stepped-ladder pattern, with valvulae conniventes (plicae circulares) extending completely across the bowel lumen. Large bowel obstruction produces peripheral distension with haustrations that span only partway across the lumen, most commonly caused by colorectal carcinoma. Sigmoid volvulus produces a closed-loop obstruction presenting with the classic 'coffee-bean' sign arising from the left iliac fossa and apex pointing toward the right upper quadrant. Caecal volvulus presents with a distended comma-shaped or kidney-shaped loop with its apex pointing toward the left upper quadrant."
+    },
+    "rad.gi.pp": {
+      "note": "Pneumoperitoneum is free intraperitoneal air most commonly caused by gastrointestinal perforation (peptic ulcer or diverticular rupture). Erect chest radiograph including the domes of the diaphragm is the most sensitive plain film, demonstrating free gas as a thin lucent crescent under the right hemidiaphragm. Supine abdominal signs include Rigler sign (double-wall sign, where gas outlines both inner and outer bowel walls), the falciform ligament sign, and the football sign. Non-contrast or contrast-enhanced CT of the abdomen is the definitive investigation of choice for identifying occult pneumoperitoneum and locating the perforation site."
+    },
+    "rad.gi.contrast": {
+      "note": "Barium sulfate suspension is the contrast agent of choice for luminal gastrointestinal fluoroscopy, but is contraindicated in suspected perforation where water-soluble iodinated contrast (gastrografin) must be used. Achalasia cardia shows the classic smooth, tapered 'bird-beak' or 'pencil-tip' appearance of the lower oesophagus on barium swallow. Carcinoma of the oesophagus produces an irregular, shouldered luminal narrowing ('rat-tail' appearance), while colorectal cancer demonstrates an 'apple-core' annular constricting lesion on barium enema. Zenker diverticulum arises as a posterior outpouching through Killian's dehiscence above the cricopharyngeus."
+    },
+    "rad.paed": {
+      "title": "Paediatric Radiology (overview)",
+      "note": "Paediatric imaging adheres strictly to the ALARA (As Low As Reasonably Achievable) principle, prioritizing ultrasound and non-ionising techniques to minimise radiation risk. Ultrasonography is the investigation of choice for neonatal developmental dysplasia of the hip, pyloric stenosis, and congenital renal anomalies. Plain abdominal radiographs in neonates with bilious vomiting help identify duodenal atresia or malrotation with midgut volvulus. Voiding cystourethrography (VCUG) is the investigation of choice for diagnosing posterior urethral valves and grading vesicoureteral reflux."
+    },
+    "rad.paed.hps": {
+      "note": "Infantile hypertrophic pyloric stenosis presents in 2- to 8-week-old infants with non-bilious projectile vomiting, hypochloremic hypokalemic metabolic alkalosis, and a palpable 'olive' mass. Ultrasonography is the investigation of choice, demonstrating pyloric muscle thickness greater than 3 mm and pyloric channel length greater than 14 mm ('doughnut' or 'target' sign in transverse section). Barium meal reveals elongation of the pyloric canal ('string sign'), shoulder sign from hypertrophied muscle indenting the antrum, and beak sign. Pyloromyotomy (Ramstedt procedure) is the definitive surgical management following fluid and electrolyte correction."
+    },
+    "rad.paed.cong": {
+      "note": "Duodenal atresia presents in neonates with bilious vomiting and the pathognomonic 'double-bubble' sign on plain abdominal radiograph, strongly associated with Down syndrome (trisomy 21). Tracheoesophageal fistula with esophageal atresia shows a blind-ending upper pouch with a coiling nasogastric tube on plain film, with distal bowel gas confirming a distal fistula (Gross type C). Congenital diaphragmatic hernia (Bochdalek hernia) occurs predominantly on the posterolateral left side, showing loops of bowel in the hemithorax with mediastinal shift. Necrotizing enterocolitis classically demonstrates pneumatosis intestinalis (intramural gas bubbles) and branching portal venous gas."
+    },
+    "rad.msk.om": {
+      "note": "Acute haematogenous osteomyelitis characteristically involves the metaphysis of long bones in children, most commonly caused by Staphylococcus aureus. Plain radiographs are typically normal during the first 7 to 10 days; magnetic resonance imaging is the investigation of choice for early detection, displaying marrow oedema and subperiosteal abscesses. Chronic osteomyelitis demonstrates the triad of sequestrum (dense non-viable bone fragment), involucrum (surrounding shell of reactive new periosteal bone), and cloaca (draining cortical defect). Bone scintigraphy with technetium-99m methylene diphosphonate (MDP) demonstrates increased uptake across all three phases."
+    },
+    "rad.signs": {
+      "title": "Radiological Signs",
+      "note": "Radiological signs provide classic patterns that point directly to specific diagnoses across organ systems. The 'target' or 'doughnut' sign on abdominal ultrasound indicates ileocolic intussusception, while the 'corkscrew' sign on barium meal indicates midgut volvulus. In the chest, the 'steeple' sign represents subglottic narrowing in viral croup, whereas the 'thumb' sign on lateral neck radiograph indicates acute epiglottitis. In neuroimaging, the 'cord sign' on NCCT represents dense thrombosed cortical veins in cerebral venous sinus thrombosis, and the 'hot cross bun' sign on brain MRI indicates multiple system atrophy (MSA-C)."
+    },
+    "rad.mod": {
+      "title": "Imaging Modalities & Contrast (overview)",
+      "note": "Diagnostic imaging balances radiographic contrast, spatial resolution, and radiation safety across ultrasound, CT, MRI, and nuclear medicine. Ultrasonography utilizes acoustic impedance mismatches without ionising radiation, making it ideal for fluid-solid differentiation and obstetrics. Computed tomography provides excellent cortical bone and acute blood resolution with rapid acquisition time. Magnetic resonance imaging provides superior soft tissue contrast and multiplanar capability, avoiding ionising radiation but requiring careful screening for ferromagnetic metallic implants."
+    },
+    "rad.mod.best": {
+      "note": "Ultrasonography is the investigation of choice for acute cholecystitis, biliary colic, testicular torsion, and blunt abdominal trauma in hemodynamically unstable patients (FAST). Contrast-enhanced CT is the investigation of choice for acute pancreatitis, suspected intra-abdominal abscess, staging of gastrointestinal malignancies, and severe blunt polytrauma in stable patients. MRI is the investigation of choice for soft tissue sarcomas, anterior cruciate ligament tears, osteonecrosis of the femoral head, and spinal cord compression. Non-contrast CT is the investigation of choice for suspected nephrolithiasis and acute head trauma."
+    },
+    "rad.mod.contrast": {
+      "note": "Intravenous iodinated contrast agents used in CT can induce contrast-induced nephropathy (CIN), defined by a rise in serum creatinine following administration; hydration with isotonic saline is the primary preventive measure. Gadolinium-based contrast agents used in MRI carry a risk of nephrogenic systemic fibrosis (NSF) in patients with severe renal impairment (eGFR < 30 mL/min/1.73m²). Mild contrast reactions (urticaria, nausea) require reassurance and antihistamines, while severe anaphylactoid reactions require immediate intramuscular adrenaline (1:1000). Non-ionic low-osmolar contrast media have significantly lower adverse reaction rates compared to ionic high-osmolar agents."
+    },
+    "rad.phys": {
+      "title": "Radiation Physics & Protection (overview)",
+      "note": "Radiation protection follows the ALARA principle (As Low As Reasonably Achievable) using the three fundamental rules: maximise Distance, minimise Time, and utilise Shielding (lead aprons and thyroid shields). Radiation effects are classified as stochastic (cancer induction, genetic mutations) which have no threshold dose, and deterministic (erythema, cataracts) which occur only above specific threshold doses. Absorbed dose is measured in Gray (Gy; 1 Gy = 100 rad), while equivalent dose and effective dose are measured in Sievert (Sv; 1 Sv = 100 rem). Lead aprons must have a minimum lead equivalence of 0.25 mm for general diagnostic work and 0.5 mm for fluoroscopic procedures."
+    },
+    "rad.phys.types": {
+      "note": "Ionising radiation carries sufficient energy to liberate electrons from atoms, divided into electromagnetic radiation (X-rays, gamma rays) and particulate radiation (alpha particles, beta particles, neutrons). X-rays are produced when accelerated electrons collide with a tungsten target, generating bremsstrahlung (braking) radiation and characteristic radiation. Gamma rays originate from radioactive decay within atomic nuclei and possess high penetrating power but lower linear energy transfer (LET) compared to alpha particles. Positron emission tomography (PET) utilizes fluorine-18 fluorodeoxyglucose (18F-FDG), which emits positrons that annihilate with electrons to produce two 511 keV gamma photons at 180 degrees."
+    },
+    "rad.phys.sens": {
+      "note": "The law of Bergonié and Tribondeau states that radiosensitivity is directly proportional to cellular reproductive capacity and inversely proportional to cell differentiation. Highly radiosensitive tissues include lymphocytes, erythroblasts, intestinal crypt epithelium, spermatogonia, and embryonic tissues. Intermediate radiosensitivity is seen in skin, thyroid, and growing bone or cartilage. Highly radioresistant tissues include mature neurons, muscle cells, and mature erythrocytes. The presence of oxygen significantly enhances radiation-induced cell killing by fixing free radical damage, termed the oxygen enhancement ratio (OER)."
+    },
+    "rad.phys.dose": {
+      "note": "According to ICRP and AERB guidelines, the occupational effective dose limit for radiation workers is 20 mSv per year averaged over 5 consecutive years, with no single year exceeding 50 mSv. The equivalent dose limit for the lens of the eye in occupational workers is 20 mSv per year, and for the skin and extremities is 500 mSv per year. For members of the general public, the annual effective dose limit is 1 mSv per year. For a pregnant radiation worker, the equivalent dose limit to the abdomen (fetus) is 1 mSv for the remainder of the pregnancy after declaration."
+    },
+    "rad.ir": {
+      "title": "Interventional Radiology / Procedures",
+      "note": "Interventional radiology utilizes fluoroscopy, CT, and ultrasound guidance to perform minimally invasive diagnostic and therapeutic vascular and non-vascular procedures. Transjugular intrahepatic portosystemic shunt (TIPS) is indicated for refractory variceal bleeding and refractory ascites in portal hypertension, connecting the portal vein to a hepatic vein. Transcatheter arterial chemoembolization (TACE) is an established locoregional palliative therapy for unresectable hepatocellular carcinoma. Embolization with coils, polyvinyl alcohol particles, or gelatin sponge is the management of choice for acute arterial gastrointestinal or pelvic haemorrhage refractory to conservative measures."
+    }
+  }
+}
