@@ -1,0 +1,119 @@
+{
+  "_about": "Hand-written key points for pyt-forensic-medicine.html (27 Nov 2026, lead). Samples: FMGE recalls, no images. Law sections = BNS/BNSS/BSA (2023 codes, in force 1 July 2024).",
+  "subject": "Forensic Medicine",
+  "slug": "forensic-medicine",
+  "intro": "Forensic Medicine in FMGE asks named signs, poisons and their antidotes, post-mortem timings and the new BNS law sections. These are the topics that keep coming back, most-asked first, with the one thing to remember about each.",
+  "topics": {
+    "fm.asph.hang": {
+      "note": "Hanging: ligature mark oblique, incomplete, above the thyroid cartilage, with a dribble of saliva; usually suicidal. Ligature strangulation: mark horizontal, complete, low on the neck; usually homicidal. Throttling (manual strangulation): fingernail marks and bruises, hyoid fracture. Amussat sign (a transverse tear in the carotid intima) is seen in hanging.",
+      "sample": 8865,
+      "why": "Amussat's sign, a tear in the carotid intima, is classically seen in hanging."
+    },
+    "fm.asph.lig": {
+      "note": "A horizontal, complete (encircling) mark below the thyroid cartilage, with uniform depth, means ligature strangulation. An oblique mark rising to a knot, not complete, above the thyroid cartilage, means hanging. The base of a hanging mark is parchment-like.",
+      "sample": 8866,
+      "why": "A horizontal mark that fully circles the neck low down is ligature strangulation."
+    },
+    "fm.asph.pet": {
+      "note": "Tardieu spots: small petechial haemorrhages under the pleura, pericardium and in the eyes, typical of asphyxial deaths. Seen most in strangulation and traumatic asphyxia. Not specific on their own.",
+      "sample": 8890,
+      "why": "Tardieu spots are petechial haemorrhages typical of asphyxial deaths."
+    },
+    "fm.tox.co": {
+      "note": "Carbon monoxide: closed rooms with a stove or a running engine. Cherry-red skin, blood and organs; carboxyhaemoglobin. Treat with 100% oxygen, hyperbaric oxygen if severe. Late brain damage (delayed neuropsychiatric syndrome) can follow.",
+      "sample": 8876,
+      "why": "A closed garage with an engine running and cherry-red blood is carbon monoxide poisoning."
+    },
+    "fm.tox.op": {
+      "note": "Organophosphates: pinpoint pupils, salivation, sweating, bronchorrhoea, slow pulse, fasciculations; a kerosene-like smell. Atropine titrated to dry secretions, and pralidoxime early. Commonest poisoning in rural India.",
+      "sample": 8861,
+      "why": "Salivation, pinpoint pupils, sweating and fasciculations after pesticide exposure is organophosphate poisoning."
+    },
+    "fm.tox.coc": {
+      "note": "Cocaine: dilated pupils, high BP, fast pulse, chest pain, arrhythmias; cocaine bugs (formication: feeling insects under the skin, so scratch marks). Treat agitation with benzodiazepines; avoid β-blockers alone.",
+      "sample": 16540,
+      "why": "Formication (cocaine bugs) causes scratch marks; with tachycardia and arrhythmias it points to cocaine."
+    },
+    "fm.tox.alc": {
+      "note": "Blood alcohol is the best evidence of drunkenness; preserve blood with sodium fluoride. Wernicke: confusion, ataxia, eye-movement palsy; give thiamine. Korsakoff: memory loss with confabulation. Delirium tremens: 2-4 days after stopping, with tremor and hallucinations.",
+      "sample": 8898,
+      "why": "Confusion, ataxia and ophthalmoplegia in a chronic alcoholic is Wernicke's encephalopathy."
+    },
+    "fm.tox.cn": {
+      "note": "Cyanide blocks cytochrome c oxidase, so cells cannot use oxygen: bitter almond smell, bright red blood. Treatment: hydroxocobalamin, or nitrites to form methaemoglobin, then sodium thiosulfate.",
+      "sample": 8545,
+      "why": "Cyanide inhibits cytochrome c oxidase (complex IV), stopping cellular respiration."
+    },
+    "fm.tox.datura": {
+      "note": "Datura (anticholinergic): dry as a bone, red as a beet, hot as a hare, blind as a bat, mad as a hatter. Dilated pupils, dry hot skin, delirium, urinary retention. Used in road robbery poisonings. Antidote: physostigmine."
+    },
+    "fm.tox.snake": {
+      "note": "Viper (Russell's, saw-scaled): local swelling, bleeding, kidney failure; test clotting with the 20-minute whole blood clotting test. Cobra and krait (neurotoxic): ptosis, paralysis, breathing failure. Polyvalent anti-snake venom; no tourniquet or incision."
+    },
+    "fm.law.consent": {
+      "note": "A person aged 12 or more can consent to a physical examination; 18 or more for treatment or surgery. A sexual assault victim aged 12 or more consents to her own examination; under 12, a parent or guardian consents. Implied consent covers routine examination; a life-saving emergency may proceed without consent. Informed consent explains risks and alternatives.",
+      "sample": 8860,
+      "why": "A 16-year-old victim can give consent for her own medical examination."
+    },
+    "fm.law.neg": {
+      "note": "Negligence needs four Ds: duty, dereliction (breach), direct causation, damage. Res ipsa loquitur ('the thing speaks for itself'): a swab left inside, operating on the wrong side. Contributory negligence: the patient also at fault. Criminal negligence: BNS 106 (causing death by negligence)."
+    },
+    "fm.law.bns": {
+      "note": "BNS replaced the IPC from 1 July 2024. Key sections: murder 103, culpable homicide 100-101, death by negligence 106, dowry death 80, rape 63 (defined) and 64 (punishment), rape causing death or a vegetative state 66. BNSS replaced CrPC (police inquest: BNSS 194); BSA replaced the Evidence Act."
+    },
+    "fm.law.pocso": {
+      "note": "POCSO Act 2012 covers anyone under 18. Every doctor must report suspected sexual abuse of a child (failing is an offence). A female doctor should examine a girl; a parent or trusted adult present. Free medical care; no need to wait for police."
+    },
+    "fm.law.dd": {
+      "note": "Dying declaration: a statement by a dying person about the cause of death; can be recorded by anyone (best a magistrate), no oath, no cross-examination, admissible under the evidence law (BSA 26, formerly IEA 32). Dying deposition: recorded by a magistrate with the accused present; stronger, rarely used."
+    },
+    "fm.pm.rigor": {
+      "note": "Rigor mortis starts in about 1-2 hours, first in the heart and then the small muscles of the eyelids and jaw (masseter), spreads down the body (Nysten law), fully established by about 12 hours, lasts about 12 hours more. Cadaveric spasm: instant stiffening at death (a weapon gripped in the hand), cannot be faked.",
+      "sample": 8897,
+      "why": "Rigor appears first in small muscles such as the masseter (after the heart)."
+    },
+    "fm.pm.livor": {
+      "note": "Post-mortem staining (hypostasis) begins in 1-2 hours, fixed by about 6-8 hours. Its colour hints at the cause: cherry red (CO, cyanide), chocolate brown (nitrites, methaemoglobin), bright red (cold, hypothermia). Contact pressure areas stay pale."
+    },
+    "fm.pm.tsd": {
+      "note": "Earliest change after death: the body starts cooling (algor mortis) and the eyes change (cornea clouds, retinal vessel 'trucking'). Order: cooling and eye changes, then staining, then rigor, then putrefaction (green colour first over the right iliac fossa), then adipocere or mummification. Vitreous potassium rises steadily after death.",
+      "sample": 18443,
+      "why": "Cooling (algor mortis) starts as soon as circulation stops, before rigor or putrefaction."
+    },
+    "fm.inj.wounds": {
+      "note": "Incised wound: clean edges, longer than deep. Laceration: torn edges, tissue bridges, from blunt force. Stab: deeper than long. Hesitation cuts: several shallow parallel cuts on the wrist of the non-dominant side, typical of suicide. Defence wounds on the forearms and palms suggest homicide.",
+      "sample": 10103,
+      "why": "Multiple shallow parallel cuts on the non-dominant wrist are hesitation cuts of a suicide attempt."
+    },
+    "fm.inj.bruise": {
+      "note": "Colour changes over time: red at first, blue to purple about 1-3 days, green about 5-7 days, yellow about 7-10 days, gone by 2 weeks. Bruises can move under gravity (ectopic bruising). Ageing bruises by colour is only approximate.",
+      "sample": 8859,
+      "why": "A bluish-purple bruise is roughly 1-3 days old."
+    },
+    "fm.inj.abr": {
+      "note": "Abrasions involve only the epidermis and heal without scarring. Types: scratch, graze (shows direction of force), pressure abrasion (ligature mark), and patterned (imprint) abrasion that copies the object's surface, like a tyre tread.",
+      "sample": 18451,
+      "why": "A patterned abrasion reproduces the surface pattern of the object that caused it."
+    },
+    "fm.sex.rape": {
+      "note": "Rape is defined in BNS 63 and punished under 64; rape causing death or a persistent vegetative state is BNS 66. Examination needs consent, a female attendant and evidence collection (swabs, clothing) as early as possible; two-finger test is banned."
+    },
+    "fm.id.age": {
+      "note": "Children: teeth eruption (temporary teeth start at 6 months, complete by about 2.5 years; permanent from 6 years) and ossification centres. Adults: Gustafson's method (six dental changes) and skull suture closure; pubic symphysis changes. X-ray of the wrist and elbow in teens.",
+      "sample": 8875,
+      "why": "Gustafson's method estimates adult age from regressive changes in teeth."
+    },
+    "fm.id.sexd": {
+      "note": "The pelvis is the best bone for sex; the skull is next. Male pelvis: narrow greater sciatic notch, subpubic angle under 70°, heart-shaped inlet. Female: wide notch, subpubic angle over 90°. Male skull: heavier, prominent brow ridges and mastoids, square chin."
+    },
+    "fm.aut.visc": {
+      "note": "Common preservative for viscera: saturated sodium chloride solution. Rectified spirit is used except in alcohol, kerosene, phenol and some other poisonings. Blood for alcohol: sodium fluoride (with potassium oxalate). Formalin is for histology, never for chemical analysis.",
+      "sample": 16560,
+      "why": "Sodium fluoride stops fermentation and keeps the blood alcohol level from changing."
+    },
+    "fm.doc": {
+      "title": "Documents and certificates",
+      "note": "Medical certificates must be true and given only after examination. Death certificate: cause in sequence (immediate, then underlying cause last line in part I). A doctor can refuse to issue a death certificate when foul play is suspected; inform police."
+    }
+  }
+}
