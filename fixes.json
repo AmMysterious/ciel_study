@@ -827,9 +827,9 @@
   },
   {
    "status": "partial",
-   "goal": "Always-on hosting, 24/7: partly done",
-   "why": "The bot now runs on a proper server around the clock, so it no longer depends on my laptop being awake. It is not finished: I am still watching how reliable it is and what it really costs before calling it permanent. If it ever has to move back for a while, nothing is lost: messages queue and payments are picked up automatically.",
-   "when": "Subscriptions cover the monthly server cost"
+   "goal": "Always-on hosting, 24/7: live, load test next",
+   "why": "Since mid-November the bot has run on a cloud server around the clock, with automatic backups and an outside uptime check, so it no longer depends on my laptop. What is not proven yet is how it behaves when very many students use it at the same moment, for example a busy Grand Test evening; that is the next thing to test. If it ever has to move for a while, nothing is lost: messages queue and payments are picked up automatically.",
+   "when": "After a load test with many simultaneous users"
   },
   {
    "status": "done",
